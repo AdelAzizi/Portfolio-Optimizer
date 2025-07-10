@@ -57,6 +57,7 @@ class DataPreprocessor:
         self.failed_symbols_cache_file = self.cache_dir / 'failed_symbols.json'
         self.master_price_df = None
         self.permanently_failed_symbols = self._load_failed_symbols()
+        self.benchmark_cache_file = self.cache_dir / 'benchmark_data_v3.csv'
  
     def is_cache_valid(self, cache_file: Path, max_age_hours: int = 24) -> bool:
         """Check if cache file exists and is not older than specified hours."""
@@ -154,8 +155,8 @@ class DataPreprocessor:
             universe = [s for s in universe if s not in self.permanently_failed_symbols]
             logger.info(f"   🚫 Excluded {initial_len - len(universe)} symbols from the failed symbols snapshot.")
 
-        universe = universe[:1000]
-        logger.info(f"   Further reduced universe to the top {len(universe)} stocks for performance.")
+        # universe = universe[:1000]
+        # logger.info(f"   Further reduced universe to the top {len(universe)} stocks for performance.")
         logger.info(f"   ✅ Filtered universe: {initial_count} → {len(universe)} stocks")
         return universe
 
@@ -363,10 +364,38 @@ class DataPreprocessor:
 
     def _download_benchmark_data(self, years_of_data: float) -> Optional[pd.Series]:
         """
-        Downloads and cleans historical data for the TSE All-Share Index ('شاخص کل')
-        using the correct FinancialIndex class.
+        Downloads and cleans historical data for the TSE All-Share Index ('شاخص کل'),
+        with local caching to avoid redundant downloads.
         """
-        logger.info("📈 Downloading benchmark data (TSE All-Share Index) using FinancialIndex class...")
+        logger.info("📈 Processing benchmark data (TSE All-Share Index)...")
+
+        # 1. Try loading from local CSV cache first
+        if self.benchmark_cache_file.exists():
+            try:
+                hist_data = pd.read_csv(self.benchmark_cache_file, index_col='date', parse_dates=True)
+                
+                if not hist_data.index.empty:
+                    end_date_cached = hist_data.index.max()
+                    # Check if cache is recent (e.g., updated within the last day)
+                    if pd.Timestamp.now() - end_date_cached < pd.Timedelta(days=1):
+                        logger.info(f"✅ Using valid local cache for benchmark data.")
+                        
+                        # Filter by the required date range
+                        end_date = pd.Timestamp.now()
+                        start_date = end_date - pd.DateOffset(years=int(years_of_data))
+                        filtered_data = hist_data[hist_data.index >= start_date]
+                        
+                        if len(filtered_data) > 20:
+                            return filtered_data['close'].rename('شاخص کل')
+                        else:
+                             logger.warning("⚠️ Cached benchmark data is insufficient for the requested time horizon. Re-downloading...")
+                    else:
+                        logger.info("   ⚠️ Benchmark cache is old. Re-downloading...")
+            except Exception as e:
+                logger.warning(f"   ⚠️ Could not read benchmark cache file: {e}. Re-downloading...")
+
+        # 2. If cache is invalid or not found, download from API
+        logger.info("   🌐 Downloading benchmark data from pytse-client API...")
         try:
             # Use the correct class as per the documentation
             hist_data = tse.FinancialIndex(symbol="شاخص کل").history
@@ -375,12 +404,9 @@ class DataPreprocessor:
                 logger.error("❌ No data returned from FinancialIndex for 'شاخص کل'.")
                 return None
 
-            # Check if date is a column and set it as index
             if 'date' in hist_data.columns and not isinstance(hist_data.index, pd.DatetimeIndex):
-                logger.info("   Found 'date' column in benchmark data. Setting it as index.")
                 hist_data.set_index('date', inplace=True)
             
-            # The index is likely the date, let's ensure it's a DatetimeIndex
             hist_data = self._convert_jalali_to_gregorian(hist_data)
 
             if hist_data.empty:
@@ -390,8 +416,12 @@ class DataPreprocessor:
             if 'close' not in hist_data.columns:
                 logger.error("❌ CRITICAL: 'close' column not found in benchmark data.")
                 return None
+            
+            # Save the full history to cache before filtering
+            hist_data.to_csv(self.benchmark_cache_file, encoding='utf-8')
+            logger.info(f"   💾 Successfully downloaded and cached benchmark data to {self.benchmark_cache_file.name}")
 
-            # Filter by date range
+            # Filter by date range for the current run
             end_date = pd.Timestamp.now()
             start_date = end_date - pd.DateOffset(years=int(years_of_data))
             hist_data = hist_data[hist_data.index >= start_date]
@@ -526,7 +556,7 @@ if __name__ == "__main__":
     time_horizons = {
         'short-term': 1.5,
         'mid-term': 3,
-        'long-term': 5
+        'long-term': 7
     }
     preprocessor = DataPreprocessor(time_horizons=time_horizons)
     preprocessor.run_preprocessing()
