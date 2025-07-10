@@ -1,0 +1,98 @@
+====================================================================================================
+IRANIAN STOCK PORTFOLIO OPTIMIZATION REPORT v3.1
+====================================================================================================
+Generated: 2025-07-08 15:39:20
+Risk-free rate: 35.00%
+Analysis period: 7 years
+Optimization engine: pytse-client optimized
+
+Total stocks analyzed: 119
+Date range: 2018-07-10 to 2025-07-07
+Total trading days: 1672
+
+TOP CANDIDATES FOR OPTIMIZATION:
+--------------------------------------------------------------------------------
+         Return  Volatility  Sharpe  Sortino  Composite_Score
+افق ملت  0.5318      0.3512  0.5178   0.7832           0.9200
+قنقش     0.5800      0.4133  0.5564   0.7237           0.8085
+زر       0.5390      0.4052  0.4665   0.6536           0.8052
+صنوین    0.4109      0.2222  0.2739   0.4215           0.6179
+تاپیکو   0.4489      0.4226  0.2341   0.3264           0.4253
+ثروتم    0.3932      0.2587  0.1670   0.2449           0.3854
+فلات     0.4429      0.4320  0.2150   0.3639           0.3809
+تکنار    0.4314      0.4274  0.1903   0.2962           0.3401
+فسدید    0.4064      0.4126  0.1366   0.1477           0.2722
+تابا     0.3994      0.4445  0.1111   0.1441           0.2277
+
+DETAILED STOCK ANALYSIS:
+--------------------------------------------------------------------------------
+
+افق ملت:
+  Annual Return: 53.18%
+  Volatility: 35.12%
+  Sharpe Ratio: 0.52
+  Max Drawdown: -41.29%
+  Composite Score: 0.920
+
+قنقش:
+  Annual Return: 58.00%
+  Volatility: 41.33%
+  Sharpe Ratio: 0.56
+  Max Drawdown: -72.90%
+  Composite Score: 0.809
+
+زر:
+  Annual Return: 53.90%
+  Volatility: 40.52%
+  Sharpe Ratio: 0.47
+  Max Drawdown: -46.85%
+  Composite Score: 0.805
+
+صنوین:
+  Annual Return: 41.09%
+  Volatility: 22.22%
+  Sharpe Ratio: 0.27
+  Max Drawdown: -31.92%
+  Composite Score: 0.618
+
+تاپیکو:
+  Annual Return: 44.89%
+  Volatility: 42.26%
+  Sharpe Ratio: 0.23
+  Max Drawdown: -62.68%
+  Composite Score: 0.425
+
+ثروتم:
+  Annual Return: 39.32%
+  Volatility: 25.87%
+  Sharpe Ratio: 0.17
+  Max Drawdown: -46.75%
+  Composite Score: 0.385
+
+فلات:
+  Annual Return: 44.29%
+  Volatility: 43.20%
+  Sharpe Ratio: 0.21
+  Max Drawdown: -79.05%
+  Composite Score: 0.381
+
+تکنار:
+  Annual Return: 43.14%
+  Volatility: 42.74%
+  Sharpe Ratio: 0.19
+  Max Drawdown: -76.91%
+  Composite Score: 0.340
+
+فسدید:
+  Annual Return: 40.64%
+  Volatility: 41.26%
+  Sharpe Ratio: 0.14
+  Max Drawdown: -64.07%
+  Composite Score: 0.272
+
+تابا:
+  Annual Return: 39.94%
+  Volatility: 44.45%
+  Sharpe Ratio: 0.11
+  Max Drawdown: -72.98%
+  Composite Score: 0.228

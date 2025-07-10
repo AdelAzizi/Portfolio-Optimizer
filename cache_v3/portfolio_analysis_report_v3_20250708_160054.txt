@@ -1,0 +1,106 @@
+====================================================================================================
+IRANIAN STOCK PORTFOLIO OPTIMIZATION REPORT v3.1
+====================================================================================================
+Generated: 2025-07-08 16:00:54
+Risk-free rate: 35.00%
+Analysis period: 2 years
+Optimization engine: pytse-client optimized
+
+Total stocks analyzed: 391
+Date range: 2023-07-09 to 2025-07-07
+Total trading days: 473
+
+TOP CANDIDATES FOR OPTIMIZATION:
+--------------------------------------------------------------------------------
+         Return  Volatility  Sharpe  Sortino  Composite_Score
+نفیس     0.6003      0.3416  0.7329   0.9756           0.8002
+ساربیل   0.5911      0.3414  0.7061   0.9036           0.7718
+تپسی     0.5397      0.3338  0.5683   0.9408           0.7210
+جواهر    0.5721      0.3236  0.6864   0.7980           0.7207
+زر       0.5501      0.3359  0.5956   0.7712           0.6527
+ملت      0.4743      0.3527  0.3523   0.5915           0.4714
+ساروم    0.4767      0.3212  0.3945   0.4628           0.4549
+کاسپین   0.4593      0.3659  0.2987   0.3963           0.3828
+وهنر     0.4447      0.3284  0.2882   0.5349           0.3826
+سهگمت    0.4376      0.3119  0.2807   0.3506           0.3629
+شکربن    0.4229      0.3282  0.2222   0.3645           0.3264
+گارانتی  0.3533      0.1198  0.0275   0.0129           0.3092
+سیدکو    0.4003      0.2790  0.1804   0.2724           0.3064
+شخارک    0.3892      0.2879  0.1362   0.1569           0.2486
+نهال     0.3836      0.2756  0.1220   0.1879           0.2345
+دسینا    0.3815      0.3437  0.0917   0.1362           0.2125
+کایتا    0.3648      0.2808  0.0527   0.0686           0.1258
+ثعتما    0.3550      0.2763  0.0179   0.0237           0.0367
+
+DETAILED STOCK ANALYSIS:
+--------------------------------------------------------------------------------
+
+نفیس:
+  Annual Return: 60.03%
+  Volatility: 34.16%
+  Sharpe Ratio: 0.73
+  Max Drawdown: -32.98%
+  Composite Score: 0.800
+
+ساربیل:
+  Annual Return: 59.11%
+  Volatility: 34.14%
+  Sharpe Ratio: 0.71
+  Max Drawdown: -30.44%
+  Composite Score: 0.772
+
+تپسی:
+  Annual Return: 53.97%
+  Volatility: 33.38%
+  Sharpe Ratio: 0.57
+  Max Drawdown: -25.77%
+  Composite Score: 0.721
+
+جواهر:
+  Annual Return: 57.21%
+  Volatility: 32.36%
+  Sharpe Ratio: 0.69
+  Max Drawdown: -32.08%
+  Composite Score: 0.721
+
+زر:
+  Annual Return: 55.01%
+  Volatility: 33.59%
+  Sharpe Ratio: 0.60
+  Max Drawdown: -34.48%
+  Composite Score: 0.653
+
+ملت:
+  Annual Return: 47.43%
+  Volatility: 35.27%
+  Sharpe Ratio: 0.35
+  Max Drawdown: -30.19%
+  Composite Score: 0.471
+
+ساروم:
+  Annual Return: 47.67%
+  Volatility: 32.12%
+  Sharpe Ratio: 0.39
+  Max Drawdown: -30.26%
+  Composite Score: 0.455
+
+کاسپین:
+  Annual Return: 45.93%
+  Volatility: 36.59%
+  Sharpe Ratio: 0.30
+  Max Drawdown: -29.51%
+  Composite Score: 0.383
+
+وهنر:
+  Annual Return: 44.47%
+  Volatility: 32.84%
+  Sharpe Ratio: 0.29
+  Max Drawdown: -41.81%
+  Composite Score: 0.383
+
+سهگمت:
+  Annual Return: 43.76%
+  Volatility: 31.19%
+  Sharpe Ratio: 0.28
+  Max Drawdown: -27.67%
+  Composite Score: 0.363

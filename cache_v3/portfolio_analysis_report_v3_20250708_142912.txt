@@ -1,0 +1,99 @@
+====================================================================================================
+IRANIAN STOCK PORTFOLIO OPTIMIZATION REPORT v3.1
+====================================================================================================
+Generated: 2025-07-08 14:29:12
+Risk-free rate: 35.00%
+Analysis period: 3 years
+Optimization engine: pytse-client optimized
+
+Total stocks analyzed: 164
+Date range: 2022-07-09 to 2025-07-07
+Total trading days: 709
+
+TOP CANDIDATES FOR OPTIMIZATION:
+--------------------------------------------------------------------------------
+        Return  Volatility  Sharpe  Sortino  Composite_Score
+زر      0.6300      0.3764  0.7438   0.9662           0.8748
+سیدکو   0.5742      0.3270  0.6857   0.9408           0.8537
+وهنر    0.5462      0.3292  0.5960   1.0906           0.7624
+ملت     0.5372      0.3870  0.4837   0.8150           0.6962
+سمازن   0.4980      0.3546  0.4174   0.5223           0.6004
+ثهام    0.4175      0.3159  0.2135   0.3169           0.4585
+ثمین    0.3846      0.2868  0.1207   0.2025           0.3399
+دفارا   0.3939      0.3553  0.1235   0.1742           0.2077
+سخوز    0.3951      0.3725  0.1211   0.1526           0.1926
+ساروج   0.3596      0.3334  0.0288   0.0407           0.1832
+پالایش  0.3696      0.4086  0.0480   0.0863           0.1267
+
+DETAILED STOCK ANALYSIS:
+--------------------------------------------------------------------------------
+
+زر:
+  Annual Return: 63.00%
+  Volatility: 37.64%
+  Sharpe Ratio: 0.74
+  Max Drawdown: -34.48%
+  Composite Score: 0.875
+
+سیدکو:
+  Annual Return: 57.42%
+  Volatility: 32.70%
+  Sharpe Ratio: 0.69
+  Max Drawdown: -30.11%
+  Composite Score: 0.854
+
+وهنر:
+  Annual Return: 54.62%
+  Volatility: 32.92%
+  Sharpe Ratio: 0.60
+  Max Drawdown: -41.81%
+  Composite Score: 0.762
+
+ملت:
+  Annual Return: 53.72%
+  Volatility: 38.70%
+  Sharpe Ratio: 0.48
+  Max Drawdown: -30.38%
+  Composite Score: 0.696
+
+سمازن:
+  Annual Return: 49.80%
+  Volatility: 35.46%
+  Sharpe Ratio: 0.42
+  Max Drawdown: -26.36%
+  Composite Score: 0.600
+
+ثهام:
+  Annual Return: 41.75%
+  Volatility: 31.59%
+  Sharpe Ratio: 0.21
+  Max Drawdown: -20.73%
+  Composite Score: 0.458
+
+ثمین:
+  Annual Return: 38.46%
+  Volatility: 28.68%
+  Sharpe Ratio: 0.12
+  Max Drawdown: -22.84%
+  Composite Score: 0.340
+
+دفارا:
+  Annual Return: 39.39%
+  Volatility: 35.53%
+  Sharpe Ratio: 0.12
+  Max Drawdown: -44.76%
+  Composite Score: 0.208
+
+سخوز:
+  Annual Return: 39.51%
+  Volatility: 37.25%
+  Sharpe Ratio: 0.12
+  Max Drawdown: -46.82%
+  Composite Score: 0.193
+
+ساروج:
+  Annual Return: 35.96%
+  Volatility: 33.34%
+  Sharpe Ratio: 0.03
+  Max Drawdown: -29.92%
+  Composite Score: 0.183

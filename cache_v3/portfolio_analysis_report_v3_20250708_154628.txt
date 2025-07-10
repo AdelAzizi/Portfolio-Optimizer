@@ -1,0 +1,74 @@
+====================================================================================================
+IRANIAN STOCK PORTFOLIO OPTIMIZATION REPORT v3.1
+====================================================================================================
+Generated: 2025-07-08 15:46:28
+Risk-free rate: 35.00%
+Analysis period: 4 years
+Optimization engine: pytse-client optimized
+
+Total stocks analyzed: 247
+Date range: 2021-07-10 to 2025-07-07
+Total trading days: 946
+
+TOP CANDIDATES FOR OPTIMIZATION:
+--------------------------------------------------------------------------------
+        Return  Volatility  Sharpe  Sortino  Composite_Score
+زر      0.5708      0.3556  0.6208   0.8325           0.9415
+سهگمت   0.5198      0.3589  0.4731   0.6285           0.7341
+سیدکو   0.4583      0.3360  0.3223   0.4495           0.5421
+دکپسول  0.3965      0.3756  0.1239   0.1820           0.3226
+نهال    0.3981      0.3237  0.1485   0.2293           0.3093
+ثهام    0.3619      0.3089  0.0386   0.0564           0.2795
+ساذری   0.3789      0.3080  0.0937   0.1403           0.1886
+
+DETAILED STOCK ANALYSIS:
+--------------------------------------------------------------------------------
+
+زر:
+  Annual Return: 57.08%
+  Volatility: 35.56%
+  Sharpe Ratio: 0.62
+  Max Drawdown: -34.48%
+  Composite Score: 0.942
+
+سهگمت:
+  Annual Return: 51.98%
+  Volatility: 35.89%
+  Sharpe Ratio: 0.47
+  Max Drawdown: -37.67%
+  Composite Score: 0.734
+
+سیدکو:
+  Annual Return: 45.83%
+  Volatility: 33.60%
+  Sharpe Ratio: 0.32
+  Max Drawdown: -39.64%
+  Composite Score: 0.542
+
+دکپسول:
+  Annual Return: 39.65%
+  Volatility: 37.56%
+  Sharpe Ratio: 0.12
+  Max Drawdown: -35.06%
+  Composite Score: 0.323
+
+نهال:
+  Annual Return: 39.81%
+  Volatility: 32.37%
+  Sharpe Ratio: 0.15
+  Max Drawdown: -44.91%
+  Composite Score: 0.309
+
+ثهام:
+  Annual Return: 36.19%
+  Volatility: 30.89%
+  Sharpe Ratio: 0.04
+  Max Drawdown: -24.80%
+  Composite Score: 0.279
+
+ساذری:
+  Annual Return: 37.89%
+  Volatility: 30.80%
+  Sharpe Ratio: 0.09
+  Max Drawdown: -58.96%
+  Composite Score: 0.189
