@@ -9,7 +9,7 @@ def analyze_reversal_stability():
     """
     # --- 1. Data Loading ---
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    data_path = os.path.join(script_dir, '..', 'cache_v3', 'master_price_data.feather')
+    data_path = os.path.join(script_dir, '..', '..', 'cache_v3', 'master_price_data.feather')
     try:
         df = pd.read_feather(data_path)
     except FileNotFoundError:
@@ -38,7 +38,7 @@ def analyze_reversal_stability():
 
     # --- 2. Factor Calculation ---
     # Calculate 3-year (756 trading days) historical return
-    reversal_factor = prices.pct_change(periods=756).shift(-756)
+    reversal_factor = prices.pct_change(periods=756, fill_method=None).shift(-756)
 
     # --- 3. Rolling Window Backtesting Engine ---
     window_size = 3 * 252  # 3-year analysis window
@@ -64,7 +64,7 @@ def analyze_reversal_stability():
                 worst_performers = window_factor.nsmallest(num_stocks_to_select).index
                 
                 # --- Calculate Performance ---
-                portfolio_returns = window_prices[worst_performers].pct_change().mean(axis=1)
+                portfolio_returns = window_prices[worst_performers].pct_change(fill_method=None).mean(axis=1)
                 
                 # Calculate annualized return for the 3-year window
                 cumulative_return = (1 + portfolio_returns).prod()

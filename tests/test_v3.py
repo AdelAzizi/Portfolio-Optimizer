@@ -12,13 +12,16 @@ import os
 import sys
 from pathlib import Path
 import warnings
+
+# Add the 'src' directory to the Python path BEFORE importing from it
+# This allows the test script to find modules in the 'src' directory
+SRC_DIR = Path(__file__).resolve().parent.parent / 'src'
+sys.path.insert(0, str(SRC_DIR))
+
 import config
-warnings.filterwarnings('ignore')
-
-# Add the current directory to Python path
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-
 from screener_v3_optimized import IranianStockOptimizerV3
+
+warnings.filterwarnings('ignore')
 
 class TestIranianStockOptimizerV3:
     """Test class for the Iranian Stock Optimizer v3.1"""
@@ -38,7 +41,7 @@ class TestIranianStockOptimizerV3:
         )
         
         # Check if we have CSV data files
-        cls.tickers_data_dir = Path('tickers_data')
+        cls.tickers_data_dir = Path(__file__).resolve().parent.parent / 'data' / 'tickers_data'
         cls.csv_files = []
         if cls.tickers_data_dir.exists():
             cls.csv_files = list(cls.tickers_data_dir.glob('*.csv'))
@@ -452,7 +455,7 @@ def test_integration():
     print("\n🧪 Running integration test with CSV data...")
     
     # Check if we have CSV data
-    tickers_data_dir = Path('tickers_data')
+    tickers_data_dir = Path(__file__).resolve().parent.parent / 'data' / 'tickers_data'
     if not tickers_data_dir.exists():
         pytest.skip("No tickers_data directory found for integration test")
     

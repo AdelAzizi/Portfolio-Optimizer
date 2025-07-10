@@ -27,12 +27,18 @@ import empyrical as ep
 # --- Suppress warnings for cleaner output ---
 warnings.filterwarnings('ignore')
 
+# --- Define Project Root Path ---
+# The script is in 'src/', so we go up one level to get the project root.
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
 # --- Setup Logging ---
+LOGS_DIR = PROJECT_ROOT / 'logs'
+LOGS_DIR.mkdir(exist_ok=True) # Ensure the logs directory exists
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('../logs/portfolio_optimizer.log', encoding='utf-8'),
+        logging.FileHandler(LOGS_DIR / 'portfolio_optimizer.log', encoding='utf-8'),
         logging.StreamHandler()
     ]
 )
@@ -72,7 +78,7 @@ class IranianStockOptimizerV3:
             years_of_data: Number of years of historical data to use.
             risk_free_rate: Annual risk-free rate for Sharpe ratio calculation.
         """
-        self.cache_dir = Path(cache_dir)
+        self.cache_dir = PROJECT_ROOT / cache_dir
         self.years_of_data = years_of_data
         self.risk_free_rate = risk_free_rate
         
@@ -626,7 +632,7 @@ def main():
     
     # Simplified main for basic execution
     optimizer = IranianStockOptimizerV3(
-        cache_dir=f'../{config.CACHE_DIR}',
+        cache_dir=config.CACHE_DIR,
         years_of_data=3,
         risk_free_rate=0.35
     )

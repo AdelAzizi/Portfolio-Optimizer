@@ -18,7 +18,8 @@ def robust_jalali_to_gregorian(date_input) -> pd.Timestamp:
         return pd.to_datetime(gregorian_date)
         
     except (ValueError, TypeError) as e:
-        print(f"Could not convert date: {date_input}, Error: {e}")
+        # This print statement is for debugging and can be removed in production tests.
+        # print(f"Could not convert date: {date_input}, Error: {e}")
         # Return a 'Not a Time' value if conversion fails
         return pd.NaT
 
@@ -26,9 +27,18 @@ def robust_jalali_to_gregorian(date_input) -> pd.Timestamp:
 test_dates = [14020510, '1401-11-22', 13991229, '1400/03/01', 'invalid-date']
 gregorian_results = [robust_jalali_to_gregorian(d) for d in test_dates]
 
-print("Original Jalali Dates:", test_dates)
-print("Converted Gregorian Dates:", gregorian_results)
+# --- Assertions to validate the function's behavior ---
 
-# Verify the type of the output for a valid date
-if gregorian_results and pd.notna(gregorian_results[0]):
-    print("Type of first result:", type(gregorian_results[0]))
+# 1. Check successful conversions
+assert gregorian_results[0] == pd.Timestamp('2023-08-01'), "Test Case 1 Failed"
+assert gregorian_results[1] == pd.Timestamp('2023-02-11'), "Test Case 2 Failed"
+assert gregorian_results[2] == pd.Timestamp('2021-03-19'), "Test Case 3 Failed"
+assert gregorian_results[3] == pd.Timestamp('2021-05-22'), "Test Case 4 Failed"
+
+# 2. Check handling of invalid data
+assert pd.isna(gregorian_results[4]), "Test Case 5 (Invalid Date) Failed"
+
+# 3. Verify the type of a valid output
+assert isinstance(gregorian_results[0], pd.Timestamp), "Type check failed"
+
+print("✅ All date conversion tests passed successfully.")

@@ -25,11 +25,18 @@ import config
 warnings.filterwarnings('ignore')
 
 # --- Setup Logging ---
+# --- Define Project Root Path ---
+# The script is in 'src/', so we go up one level to get the project root.
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
+# --- Setup Logging ---
+LOGS_DIR = PROJECT_ROOT / 'logs'
+LOGS_DIR.mkdir(exist_ok=True) # Ensure the logs directory exists
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('../logs/preprocessor.log', encoding='utf-8'),
+        logging.FileHandler(LOGS_DIR / 'preprocessor.log', encoding='utf-8'),
         logging.StreamHandler()
     ]
 )
@@ -39,18 +46,18 @@ class DataPreprocessor:
     """
     Handles offline data fetching, cleaning, and metric calculation.
     """
-    def __init__(self, time_horizons: Dict[str, float], cache_dir: str = config.CACHE_DIR, tickers_data_dir: str = '../data/tickers_data'):
+    def __init__(self, time_horizons: Dict[str, float], cache_dir: str = config.CACHE_DIR, tickers_data_dir: str = 'data/tickers_data'):
         """
         Initialize the preprocessor with configuration parameters.
         
         Args:
             time_horizons: Dictionary mapping horizon names to years of data.
-            cache_dir: Directory for caching data files.
-            tickers_data_dir: Directory for local ticker data files.
+            cache_dir: Directory for caching data files (relative to project root).
+            tickers_data_dir: Directory for local ticker data files (relative to project root).
         """
         self.time_horizons = time_horizons
-        self.cache_dir = Path(cache_dir)
-        self.tickers_data_dir = Path(tickers_data_dir)
+        self.cache_dir = PROJECT_ROOT / cache_dir
+        self.tickers_data_dir = PROJECT_ROOT / tickers_data_dir
         self.cache_dir.mkdir(exist_ok=True)
         self.tickers_data_dir.mkdir(exist_ok=True)
         
@@ -530,7 +537,8 @@ class DataPreprocessor:
         benchmark_series = self._download_benchmark_data(max_years)
         if benchmark_series is not None:
             self.master_price_df = pd.merge(self.master_price_df, benchmark_series, how='outer', left_index=True, right_index=True)
-            self.master_price_df['شاخص کل'].ffill(inplace=True).bfill(inplace=True)
+            self.master_price_df['شاخص کل'].ffill(inplace=True)
+            self.master_price_df['شاخص کل'].bfill(inplace=True)
             logger.info("   ✅ Benchmark data merged into master price DataFrame.")
 
         # --- Save Master DataFrames ---
@@ -573,5 +581,5 @@ if __name__ == "__main__":
         'mid-term': 3,
         'long-term': 7
     }
-    preprocessor = DataPreprocessor(time_horizons=time_horizons, cache_dir=f'../{config.CACHE_DIR}')
+    preprocessor = DataPreprocessor(time_horizons=time_horizons, cache_dir=config.CACHE_DIR)
     preprocessor.run_preprocessing()

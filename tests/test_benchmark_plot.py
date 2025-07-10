@@ -28,7 +28,8 @@ try:
         raise ValueError(f"Benchmark column '{BENCHMARK_COLUMN_NAME}' not found!")
 
     # Isolate the benchmark prices and drop any missing values
-    benchmark_prices = price_df[BENCHMARK_COLUMN_NAME].dropna()
+    # Ensure the benchmark column is numeric, coercing errors, then isolate and drop NaNs
+    benchmark_prices = pd.to_numeric(price_df[BENCHMARK_COLUMN_NAME], errors='coerce').dropna()
     
     if benchmark_prices.empty:
         print("\nERROR: The benchmark prices series is empty after dropping NaNs.")

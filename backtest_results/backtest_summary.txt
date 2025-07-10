@@ -5,11 +5,11 @@ Backtesting Results for Market Trend-Following Strategies
 Strategy: SMA Crossover (50/200)
 -----------------------------------------
 --- Key Performance Indicators (KPIs) ---
-Cumulative Annualized Return  : -0.0299
-Annualized Volatility         : 0.1336
-Sharpe Ratio                  : -2.8446
-Maximum Drawdown              : -0.5122
-Calmar Ratio                  : -0.0584
+Cumulative Annualized Return  : 0.2926
+Annualized Volatility         : 0.1922
+Sharpe Ratio                  : -0.2985
+Maximum Drawdown              : -0.6207
+Calmar Ratio                  : 0.4714
 Total Number of Trades        : 11.0000
 -----------------------------------------
 
@@ -20,11 +20,11 @@ Plot saved to: backtest_SMA_Crossover_(50200).png
 Strategy: Price vs SMA (200)
 -----------------------------------------
 --- Key Performance Indicators (KPIs) ---
-Cumulative Annualized Return  : 0.0449
-Annualized Volatility         : 0.1300
-Sharpe Ratio                  : -2.3472
-Maximum Drawdown              : -0.2923
-Calmar Ratio                  : 0.1535
+Cumulative Annualized Return  : 0.3841
+Annualized Volatility         : 0.1935
+Sharpe Ratio                  : 0.1763
+Maximum Drawdown              : -0.4169
+Calmar Ratio                  : 0.9213
 Total Number of Trades        : 30.0000
 -----------------------------------------
 
@@ -35,12 +35,12 @@ Plot saved to: backtest_Price_vs_SMA_(200).png
 Strategy: EMA Crossover (20/50)
 -----------------------------------------
 --- Key Performance Indicators (KPIs) ---
-Cumulative Annualized Return  : 0.0582
-Annualized Volatility         : 0.1222
-Sharpe Ratio                  : -2.3883
+Cumulative Annualized Return  : 0.5376
+Annualized Volatility         : 0.1875
+Sharpe Ratio                  : 1.0007
 Maximum Drawdown              : -0.3774
-Calmar Ratio                  : 0.1543
-Total Number of Trades        : 22.0000
+Calmar Ratio                  : 1.4246
+Total Number of Trades        : 26.0000
 -----------------------------------------
 
 
