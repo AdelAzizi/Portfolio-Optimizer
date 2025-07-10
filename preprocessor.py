@@ -19,6 +19,7 @@ import time
 import json
 from pathlib import Path
 import jdatetime
+import config
 
 # --- Suppress warnings for cleaner output ---
 warnings.filterwarnings('ignore')
@@ -38,7 +39,7 @@ class DataPreprocessor:
     """
     Handles offline data fetching, cleaning, and metric calculation.
     """
-    def __init__(self, time_horizons: Dict[str, float], cache_dir: str = 'cache_v3', tickers_data_dir: str = 'tickers_data'):
+    def __init__(self, time_horizons: Dict[str, float], cache_dir: str = config.CACHE_DIR, tickers_data_dir: str = 'tickers_data'):
         """
         Initialize the preprocessor with configuration parameters.
         
@@ -547,7 +548,7 @@ class DataPreprocessor:
             
         final_df = pd.concat(all_metrics)
         
-        output_file = self.cache_dir / 'analysis_ready_data.feather'
+        output_file = self.cache_dir / config.PREPROCESSED_DATA_FILE
         final_df.reset_index().rename(columns={'index': 'Symbol'}).to_feather(output_file)
         
         logger.info(f"✅ Preprocessing complete. Analysis-ready data saved to '{output_file}'")
