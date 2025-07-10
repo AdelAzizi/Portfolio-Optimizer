@@ -1,0 +1,8366 @@
+[
+  {
+    "symbol": "ثمسکنح",
+    "name": "ثمسکنح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قستون",
+    "name": "قستون",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "درازکح",
+    "name": "درازکح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "صبا",
+    "name": "صبا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ستران",
+    "name": "ستران",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کسعدیح",
+    "name": "کسعدیح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "داسوه",
+    "name": "داسوه",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دفارا",
+    "name": "دفارا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "اسیاتک",
+    "name": "اسیاتک",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "میدکو",
+    "name": "میدکو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بالاس",
+    "name": "بالاس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ولغدر",
+    "name": "ولغدر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وثوق",
+    "name": "وثوق",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وصنا",
+    "name": "وصنا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سهرمزح",
+    "name": "سهرمزح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "افق ملت",
+    "name": "افق ملت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "افقح",
+    "name": "افقح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وبشهرح",
+    "name": "وبشهرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غمینو",
+    "name": "غمینو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "18719101",
+    "name": "18719101",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ختوقاح",
+    "name": "ختوقاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سپیدما",
+    "name": "سپیدما",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سکرماح",
+    "name": "سکرماح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وتوسکاح",
+    "name": "وتوسکاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "آپ",
+    "name": "آپ",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فرآورح",
+    "name": "فرآورح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پکرمانح",
+    "name": "پکرمانح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثالوند",
+    "name": "ثالوند",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پرتو",
+    "name": "پرتو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غیوان",
+    "name": "غیوان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شپلی",
+    "name": "شپلی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کفرا",
+    "name": "کفرا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قشهدح",
+    "name": "قشهدح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "چبسپاح",
+    "name": "چبسپاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خصدرا",
+    "name": "خصدرا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خگسترح",
+    "name": "خگسترح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "آتیمس",
+    "name": "آتیمس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لوتوسح",
+    "name": "لوتوسح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تبرک",
+    "name": "تبرک",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کچادح",
+    "name": "کچادح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وپخشح",
+    "name": "وپخشح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خموتورح",
+    "name": "خموتورح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کاذرح",
+    "name": "کاذرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کساوهح",
+    "name": "کساوهح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کیسون",
+    "name": "کیسون",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خمحورح",
+    "name": "خمحورح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قستان",
+    "name": "قستان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پاسا",
+    "name": "پاسا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کیمیاتک",
+    "name": "کیمیاتک",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فکمند",
+    "name": "فکمند",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قرن",
+    "name": "قرن",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "صنهال",
+    "name": "صنهال",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثجنوب",
+    "name": "ثجنوب",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غاذر",
+    "name": "غاذر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پتروصبا",
+    "name": "پتروصبا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خمحور",
+    "name": "خمحور",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "هامرز",
+    "name": "هامرز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وپست",
+    "name": "وپست",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "نوین",
+    "name": "نوین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شصدف",
+    "name": "شصدف",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تفارس",
+    "name": "تفارس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غالبر",
+    "name": "غالبر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دسبحاح",
+    "name": "دسبحاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "گپارس",
+    "name": "گپارس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فن افزار",
+    "name": "فن افزار",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کساپاح",
+    "name": "کساپاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سقاینح",
+    "name": "سقاینح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کازرو",
+    "name": "کازرو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "هامون",
+    "name": "هامون",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خکمک",
+    "name": "خکمک",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پردیسح",
+    "name": "پردیسح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "داریوش",
+    "name": "داریوش",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "زملارد",
+    "name": "زملارد",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کاصفاح",
+    "name": "کاصفاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ولغدرح",
+    "name": "ولغدرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خودران",
+    "name": "خودران",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فاما",
+    "name": "فاما",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لبهمن",
+    "name": "لبهمن",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "عالیس",
+    "name": "عالیس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قجام",
+    "name": "قجام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ولبهمن",
+    "name": "ولبهمن",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وتوسح",
+    "name": "وتوسح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "مروارید",
+    "name": "مروارید",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فنرژی",
+    "name": "فنرژی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ولقمان",
+    "name": "ولقمان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بزاگرس",
+    "name": "بزاگرس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کبورس",
+    "name": "کبورس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسین",
+    "name": "وسین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خزامیا",
+    "name": "خزامیا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شوش",
+    "name": "شوش",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بالبرح",
+    "name": "بالبرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وملت",
+    "name": "وملت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فسپاح",
+    "name": "فسپاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شفاراح",
+    "name": "شفاراح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وپارس",
+    "name": "وپارس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وتوشهح",
+    "name": "وتوشهح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خمهرح",
+    "name": "خمهرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "نخل",
+    "name": "نخل",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "نکالا",
+    "name": "نکالا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "چفیبر",
+    "name": "چفیبر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سلام",
+    "name": "سلام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وآفری",
+    "name": "وآفری",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بنیرو",
+    "name": "بنیرو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دسینا",
+    "name": "دسینا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دتوزیع",
+    "name": "دتوزیع",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قشرین",
+    "name": "قشرین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کچاد",
+    "name": "کچاد",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "البرز",
+    "name": "البرز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وکار",
+    "name": "وکار",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پتروآبان",
+    "name": "پتروآبان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شبصیر",
+    "name": "شبصیر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دامینح",
+    "name": "دامینح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "اکسیژن",
+    "name": "اکسیژن",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وامیر",
+    "name": "وامیر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "نبورس",
+    "name": "نبورس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دروز",
+    "name": "دروز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دجابر",
+    "name": "دجابر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سهام یار",
+    "name": "سهام یار",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "رشد",
+    "name": "رشد",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تفیروح",
+    "name": "تفیروح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شجم",
+    "name": "شجم",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غویتا",
+    "name": "غویتا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وخاورح",
+    "name": "وخاورح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پتروآگاه",
+    "name": "پتروآگاه",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وبیمه",
+    "name": "وبیمه",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دالبر",
+    "name": "دالبر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسگلستا",
+    "name": "وسگلستا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وهور",
+    "name": "وهور",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسیناح",
+    "name": "وسیناح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کحافظ",
+    "name": "کحافظ",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ساروج",
+    "name": "ساروج",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ولصنمح",
+    "name": "ولصنمح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ومدیر",
+    "name": "ومدیر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قپارسح",
+    "name": "قپارسح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثنام",
+    "name": "ثنام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سبجنوح",
+    "name": "سبجنوح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شخارک",
+    "name": "شخارک",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسکاب",
+    "name": "وسکاب",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ممسنی",
+    "name": "ممسنی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وثنو",
+    "name": "وثنو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "داراب",
+    "name": "داراب",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "حپتروح",
+    "name": "حپتروح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کسرامح",
+    "name": "کسرامح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "صدف",
+    "name": "صدف",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شیرانح",
+    "name": "شیرانح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "نتوس",
+    "name": "نتوس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تاصیکوح",
+    "name": "تاصیکوح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "آرمان",
+    "name": "آرمان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وآردلح",
+    "name": "وآردلح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فباهنرح",
+    "name": "فباهنرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ومشان",
+    "name": "ومشان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غدیس",
+    "name": "غدیس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دپارسح",
+    "name": "دپارسح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "حخزر",
+    "name": "حخزر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وبانک",
+    "name": "وبانک",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ملت",
+    "name": "ملت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فسلیر",
+    "name": "فسلیر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "نخریس",
+    "name": "نخریس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شرنگی",
+    "name": "شرنگی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سشرقح",
+    "name": "سشرقح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ولنوین",
+    "name": "ولنوین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بموتو",
+    "name": "بموتو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پکویرح",
+    "name": "پکویرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کساپا",
+    "name": "کساپا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خدیزل",
+    "name": "خدیزل",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسیزد",
+    "name": "وسیزد",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "زاگرس",
+    "name": "زاگرس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سنیر",
+    "name": "سنیر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ددانا",
+    "name": "ددانا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سیتاح",
+    "name": "سیتاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثبات",
+    "name": "ثبات",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دفرا",
+    "name": "دفرا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پرشیا",
+    "name": "پرشیا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شتولی",
+    "name": "شتولی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خلنت",
+    "name": "خلنت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وجامی",
+    "name": "وجامی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دی",
+    "name": "دی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کپارس",
+    "name": "کپارس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ودانا",
+    "name": "ودانا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وهنر",
+    "name": "وهنر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شیراز",
+    "name": "شیراز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "حپترو",
+    "name": "حپترو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "نارین",
+    "name": "نارین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غشاذرح",
+    "name": "غشاذرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قجامح",
+    "name": "قجامح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "چنوپا",
+    "name": "چنوپا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "مدیریت",
+    "name": "مدیریت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بجهرم",
+    "name": "بجهرم",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غیوانح",
+    "name": "غیوانح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "مدار",
+    "name": "مدار",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسپهر",
+    "name": "وسپهر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فایراح",
+    "name": "فایراح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تاپکیش",
+    "name": "تاپکیش",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "حآسا",
+    "name": "حآسا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "اتکامح",
+    "name": "اتکامح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شسپا",
+    "name": "شسپا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قیستو",
+    "name": "قیستو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ولصنم",
+    "name": "ولصنم",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کقزویح",
+    "name": "کقزویح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فایرا",
+    "name": "فایرا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "زر",
+    "name": "زر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سامان",
+    "name": "سامان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ودی",
+    "name": "ودی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تایرا",
+    "name": "تایرا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سخوز",
+    "name": "سخوز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسیلام",
+    "name": "وسیلام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "چکارن",
+    "name": "چکارن",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قشرینح",
+    "name": "قشرینح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تپکو",
+    "name": "تپکو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کمنگنزح",
+    "name": "کمنگنزح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خعمرا",
+    "name": "خعمرا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فصبا",
+    "name": "فصبا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "صایند",
+    "name": "صایند",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "مادیرا",
+    "name": "مادیرا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "اوج",
+    "name": "اوج",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شفا",
+    "name": "شفا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دیسشپ",
+    "name": "دیسشپ",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثملی",
+    "name": "ثملی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسرمد",
+    "name": "وسرمد",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وملیح",
+    "name": "وملیح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "هرمز",
+    "name": "هرمز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بکابل",
+    "name": "بکابل",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وتوصا",
+    "name": "وتوصا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وبوعلیح",
+    "name": "وبوعلیح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کنور",
+    "name": "کنور",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "باخترح",
+    "name": "باخترح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کیا",
+    "name": "کیا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دسیناح",
+    "name": "دسیناح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسمرکز",
+    "name": "وسمرکز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "داسوهح",
+    "name": "داسوهح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سرود",
+    "name": "سرود",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قمرو",
+    "name": "قمرو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "توسن",
+    "name": "توسن",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بموتوح",
+    "name": "بموتوح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تیپیکوح",
+    "name": "تیپیکوح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قنقشح",
+    "name": "قنقشح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پسهند",
+    "name": "پسهند",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "زبینا",
+    "name": "زبینا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وخاور",
+    "name": "وخاور",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پدرخشح",
+    "name": "پدرخشح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کامیاب",
+    "name": "کامیاب",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کچینی",
+    "name": "کچینی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غدشت",
+    "name": "غدشت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دیوان",
+    "name": "دیوان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خاتم",
+    "name": "خاتم",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "توان",
+    "name": "توان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فساز",
+    "name": "فساز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "مرقامح",
+    "name": "مرقامح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "زفجر",
+    "name": "زفجر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تکمبا",
+    "name": "تکمبا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثهام",
+    "name": "ثهام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لبخند",
+    "name": "لبخند",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسبوشهر",
+    "name": "وسبوشهر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شگستر",
+    "name": "شگستر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "زگلدشت",
+    "name": "زگلدشت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بکام",
+    "name": "بکام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "افران",
+    "name": "افران",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "عقیق",
+    "name": "عقیق",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تفیرو",
+    "name": "تفیرو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پتروما",
+    "name": "پتروما",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "درین",
+    "name": "درین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پلولهح",
+    "name": "پلولهح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فراز",
+    "name": "فراز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "داناح",
+    "name": "داناح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کگازح",
+    "name": "کگازح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لخانه",
+    "name": "لخانه",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسزنجان",
+    "name": "وسزنجان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سپاهاح",
+    "name": "سپاهاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تیام",
+    "name": "تیام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وفردا",
+    "name": "وفردا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "حکشتی",
+    "name": "حکشتی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ویستا",
+    "name": "ویستا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وبیمهح",
+    "name": "وبیمهح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فرود",
+    "name": "فرود",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "نیلی",
+    "name": "نیلی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تکنوح",
+    "name": "تکنوح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فملی",
+    "name": "فملی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وشمال",
+    "name": "وشمال",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ولساپا",
+    "name": "ولساپا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "جهرم",
+    "name": "جهرم",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غبشهر",
+    "name": "غبشهر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کرمان",
+    "name": "کرمان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خکاوهح",
+    "name": "خکاوهح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غبشهرح",
+    "name": "غبشهرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسلرستا",
+    "name": "وسلرستا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثمین",
+    "name": "ثمین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کرویح",
+    "name": "کرویح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کسراح",
+    "name": "کسراح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غسالمح",
+    "name": "غسالمح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسدیدح",
+    "name": "وسدیدح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فسلیرح",
+    "name": "فسلیرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شتران",
+    "name": "شتران",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شپنا",
+    "name": "شپنا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وصنعت",
+    "name": "وصنعت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "حرهشا",
+    "name": "حرهشا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سیتا",
+    "name": "سیتا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کپارسح",
+    "name": "کپارسح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "حفارس",
+    "name": "حفارس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شجی",
+    "name": "شجی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "برانسفو",
+    "name": "برانسفو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وحکمت",
+    "name": "وحکمت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شپمچا",
+    "name": "شپمچا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دسانکوح",
+    "name": "دسانکوح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ولشرق",
+    "name": "ولشرق",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وکغدیر",
+    "name": "وکغدیر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وتوسم",
+    "name": "وتوسم",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قشکر",
+    "name": "قشکر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تدبیر",
+    "name": "تدبیر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تکیمیا",
+    "name": "تکیمیا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وساختح",
+    "name": "وساختح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ارزش مسکن",
+    "name": "ارزش مسکن",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غشاذر",
+    "name": "غشاذر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دیبا",
+    "name": "دیبا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کشرق",
+    "name": "کشرق",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وملتح",
+    "name": "وملتح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "حفاری",
+    "name": "حفاری",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پالایش",
+    "name": "پالایش",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "حآفرین",
+    "name": "حآفرین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پارس",
+    "name": "پارس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کلوند",
+    "name": "کلوند",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شخارکح",
+    "name": "شخارکح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لمخابر",
+    "name": "لمخابر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سیدکو",
+    "name": "سیدکو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثعتما",
+    "name": "ثعتما",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسکرد",
+    "name": "وسکرد",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پادا",
+    "name": "پادا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کپشیر",
+    "name": "کپشیر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فاهوازح",
+    "name": "فاهوازح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فروم",
+    "name": "فروم",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "زیتون",
+    "name": "زیتون",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثباغ",
+    "name": "ثباغ",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دحاوی",
+    "name": "دحاوی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پشاهن",
+    "name": "پشاهن",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سیدکوح",
+    "name": "سیدکوح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "گوهران",
+    "name": "گوهران",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کفپارسح",
+    "name": "کفپارسح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سدشتح",
+    "name": "سدشتح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سشرق",
+    "name": "سشرق",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شزنگ",
+    "name": "شزنگ",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دتمادح",
+    "name": "دتمادح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ساذریح",
+    "name": "ساذریح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پترولح",
+    "name": "پترولح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پارتا",
+    "name": "پارتا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثنوساح",
+    "name": "ثنوساح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سمازن",
+    "name": "سمازن",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ولپارس",
+    "name": "ولپارس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کمند",
+    "name": "کمند",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ساحل",
+    "name": "ساحل",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سکرد",
+    "name": "سکرد",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تابا",
+    "name": "تابا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "زفکا",
+    "name": "زفکا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثتران",
+    "name": "ثتران",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غناب",
+    "name": "غناب",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "زنجان",
+    "name": "زنجان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خکرمان",
+    "name": "خکرمان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سایراح",
+    "name": "سایراح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فملیح",
+    "name": "فملیح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غساسا",
+    "name": "غساسا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غگرجی",
+    "name": "غگرجی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "آسام",
+    "name": "آسام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وپارسح",
+    "name": "وپارسح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "برلیان",
+    "name": "برلیان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فنورد",
+    "name": "فنورد",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسنا",
+    "name": "وسنا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "هوشیار",
+    "name": "هوشیار",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ضمان",
+    "name": "ضمان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بازرگام",
+    "name": "بازرگام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ولتجار",
+    "name": "ولتجار",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لمخابرح",
+    "name": "لمخابرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کخاکح",
+    "name": "کخاکح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "اتکای",
+    "name": "اتکای",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تپمپیح",
+    "name": "تپمپیح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غچین",
+    "name": "غچین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سفاسی",
+    "name": "سفاسی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کسعدی",
+    "name": "کسعدی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غبهپاکح",
+    "name": "غبهپاکح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پاکشو",
+    "name": "پاکشو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فولاد",
+    "name": "فولاد",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "حامی1401",
+    "name": "حامی1401",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قلرست",
+    "name": "قلرست",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "آباد",
+    "name": "آباد",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ونیکی",
+    "name": "ونیکی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پاداش",
+    "name": "پاداش",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شپارسح",
+    "name": "شپارسح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فسدید",
+    "name": "فسدید",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دشیمیح",
+    "name": "دشیمیح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سفارسح",
+    "name": "سفارسح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "والبر",
+    "name": "والبر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سدورح",
+    "name": "سدورح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دامین",
+    "name": "دامین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ختورح",
+    "name": "ختورح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فزر",
+    "name": "فزر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وپسا",
+    "name": "وپسا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "آگاس",
+    "name": "آگاس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وکبهمن",
+    "name": "وکبهمن",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شاروم",
+    "name": "شاروم",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "اوان",
+    "name": "اوان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "جمح",
+    "name": "جمح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسخراج",
+    "name": "وسخراج",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فولاژح",
+    "name": "فولاژح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دقاضی",
+    "name": "دقاضی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فوکاح",
+    "name": "فوکاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "آردینه",
+    "name": "آردینه",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دابورح",
+    "name": "دابورح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کهرام",
+    "name": "کهرام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وآیند",
+    "name": "وآیند",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسقزوین",
+    "name": "وسقزوین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وآذر",
+    "name": "وآذر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سمایه",
+    "name": "سمایه",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "داروح",
+    "name": "داروح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "واتی",
+    "name": "واتی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "گنجین",
+    "name": "گنجین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پخش",
+    "name": "پخش",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "مدارانح",
+    "name": "مدارانح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "حفاریح",
+    "name": "حفاریح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وتوشه",
+    "name": "وتوشه",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فبستم",
+    "name": "فبستم",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بهپاک",
+    "name": "بهپاک",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "آکورد",
+    "name": "آکورد",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دیرانح",
+    "name": "دیرانح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کاسپین",
+    "name": "کاسپین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثابت اکسیژن",
+    "name": "ثابت اکسیژن",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لوتوس",
+    "name": "لوتوس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "چفیبرح",
+    "name": "چفیبرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خپویشح",
+    "name": "خپویشح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "واتیح",
+    "name": "واتیح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وآفر",
+    "name": "وآفر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وزمین",
+    "name": "وزمین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لپیامح",
+    "name": "لپیامح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "آ س پ",
+    "name": "آ س پ",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شپاس",
+    "name": "شپاس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سفانوح",
+    "name": "سفانوح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثاخت",
+    "name": "ثاخت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "اونیکس",
+    "name": "اونیکس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سمگا",
+    "name": "سمگا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قثابتح",
+    "name": "قثابتح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دابور",
+    "name": "دابور",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "رافزا",
+    "name": "رافزا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کترام",
+    "name": "کترام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دالبرح",
+    "name": "دالبرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پتایر",
+    "name": "پتایر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قستانح",
+    "name": "قستانح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فمتالح",
+    "name": "فمتالح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شکربن",
+    "name": "شکربن",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شکلر",
+    "name": "شکلر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فروسح",
+    "name": "فروسح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خلیج",
+    "name": "خلیج",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کحافظح",
+    "name": "کحافظح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بکابح",
+    "name": "بکابح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وساپا",
+    "name": "وساپا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وشهر",
+    "name": "وشهر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کرازی",
+    "name": "کرازی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دانیک",
+    "name": "دانیک",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لخزر",
+    "name": "لخزر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خزرح",
+    "name": "خزرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "عشادگان",
+    "name": "عشادگان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خکار",
+    "name": "خکار",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سخزر",
+    "name": "سخزر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شلیا",
+    "name": "شلیا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کیان",
+    "name": "کیان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ختراکح",
+    "name": "ختراکح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وحافظ",
+    "name": "وحافظ",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ما",
+    "name": "ما",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غاذرح",
+    "name": "غاذرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شزنگح",
+    "name": "شزنگح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "حتایدح",
+    "name": "حتایدح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پشاهنح",
+    "name": "پشاهنح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کویرح",
+    "name": "کویرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "رانفورح",
+    "name": "رانفورح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "زکوثر",
+    "name": "زکوثر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "زپارس",
+    "name": "زپارس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کالا",
+    "name": "کالا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثجوان",
+    "name": "ثجوان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قلرستح",
+    "name": "قلرستح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ساذری",
+    "name": "ساذری",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "صنوین",
+    "name": "صنوین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غدامح",
+    "name": "غدامح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سپ",
+    "name": "سپ",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قتربت",
+    "name": "قتربت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وآوا",
+    "name": "وآوا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فولای",
+    "name": "فولای",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وتوسمح",
+    "name": "وتوسمح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لطیف",
+    "name": "لطیف",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سصفها",
+    "name": "سصفها",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دلقما",
+    "name": "دلقما",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "انار",
+    "name": "انار",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "آلومینا",
+    "name": "آلومینا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پخش اول",
+    "name": "پخش اول",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وامین",
+    "name": "وامین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شفارسح",
+    "name": "شفارسح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غگل",
+    "name": "غگل",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثاختح",
+    "name": "ثاختح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "حتوکاح",
+    "name": "حتوکاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "آسامید",
+    "name": "آسامید",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سفارس",
+    "name": "سفارس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "عبهمن",
+    "name": "عبهمن",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فنوال",
+    "name": "فنوال",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وانصارح",
+    "name": "وانصارح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وایران",
+    "name": "وایران",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فولاژ",
+    "name": "فولاژ",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تکشاح",
+    "name": "تکشاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شکفح",
+    "name": "شکفح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بکهنوج",
+    "name": "بکهنوج",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "نهال",
+    "name": "نهال",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "اعتبار",
+    "name": "اعتبار",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ومعادن",
+    "name": "ومعادن",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "گکوثر",
+    "name": "گکوثر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شاراک",
+    "name": "شاراک",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ارمغان",
+    "name": "ارمغان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شسیناح",
+    "name": "شسیناح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "اپال",
+    "name": "اپال",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کایتا",
+    "name": "کایتا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "نمرینو",
+    "name": "نمرینو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تپمپی",
+    "name": "تپمپی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فلامی",
+    "name": "فلامی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فسربح",
+    "name": "فسربح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "اتکاسا",
+    "name": "اتکاسا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قنقش",
+    "name": "قنقش",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "گدنا",
+    "name": "گدنا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پلاسکح",
+    "name": "پلاسکح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ناما",
+    "name": "ناما",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فجهان",
+    "name": "فجهان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تکنو",
+    "name": "تکنو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پلاستح",
+    "name": "پلاستح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کاماح",
+    "name": "کاماح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فپارس",
+    "name": "فپارس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شپارس",
+    "name": "شپارس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تاپیکوح",
+    "name": "تاپیکوح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سغرب",
+    "name": "سغرب",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وبملت",
+    "name": "وبملت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ذوب",
+    "name": "ذوب",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سصفهاح",
+    "name": "سصفهاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثشاهدح",
+    "name": "ثشاهدح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ولیزح",
+    "name": "ولیزح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "گارانتی",
+    "name": "گارانتی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "یارا",
+    "name": "یارا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ساربیل",
+    "name": "ساربیل",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شوشح",
+    "name": "شوشح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کنیلو",
+    "name": "کنیلو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وآردل",
+    "name": "وآردل",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وآرین",
+    "name": "وآرین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "حتوکا",
+    "name": "حتوکا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ونیرو",
+    "name": "ونیرو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "رابین",
+    "name": "رابین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تپکوح",
+    "name": "تپکوح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "آرام",
+    "name": "آرام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بشهابح",
+    "name": "بشهابح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شپمچاح",
+    "name": "شپمچاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فسا",
+    "name": "فسا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غمهراح",
+    "name": "غمهراح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سبهان",
+    "name": "سبهان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سپیدار",
+    "name": "سپیدار",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وانصار",
+    "name": "وانصار",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قچار",
+    "name": "قچار",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "زرنام",
+    "name": "زرنام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "رمپناح",
+    "name": "رمپناح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تنوینح",
+    "name": "تنوینح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دکیمیح",
+    "name": "دکیمیح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ونیروح",
+    "name": "ونیروح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سترانح",
+    "name": "سترانح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فسازانح",
+    "name": "فسازانح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دلر",
+    "name": "دلر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وتوصاح",
+    "name": "وتوصاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قپارس",
+    "name": "قپارس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بفجر",
+    "name": "بفجر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شموادح",
+    "name": "شموادح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسدید",
+    "name": "وسدید",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وساخت",
+    "name": "وساخت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کزغال",
+    "name": "کزغال",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تکنار",
+    "name": "تکنار",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "چافستح",
+    "name": "چافستح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسمحال",
+    "name": "وسمحال",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شمواد",
+    "name": "شمواد",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فاسمین",
+    "name": "فاسمین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پسهندح",
+    "name": "پسهندح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "هم وزن",
+    "name": "هم وزن",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "آکنتورح",
+    "name": "آکنتورح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سپهر",
+    "name": "سپهر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خفنر",
+    "name": "خفنر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فجام",
+    "name": "فجام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کایتاح",
+    "name": "کایتاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کرماشاح",
+    "name": "کرماشاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غکورش",
+    "name": "غکورش",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پرداخت",
+    "name": "پرداخت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "داوه",
+    "name": "داوه",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ساروم",
+    "name": "ساروم",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "رتکوح",
+    "name": "رتکوح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "مبین",
+    "name": "مبین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ماهور",
+    "name": "ماهور",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تاپیکو",
+    "name": "تاپیکو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فاسمینح",
+    "name": "فاسمینح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دپارس",
+    "name": "دپارس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ومعلم",
+    "name": "ومعلم",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شپدیسح",
+    "name": "شپدیسح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "برکت",
+    "name": "برکت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بنو",
+    "name": "بنو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بایکاح",
+    "name": "بایکاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شپاکساح",
+    "name": "شپاکساح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تمدن",
+    "name": "تمدن",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غنیلی",
+    "name": "غنیلی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سیسکو",
+    "name": "سیسکو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دانا",
+    "name": "دانا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "آفاق",
+    "name": "آفاق",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وبرق",
+    "name": "وبرق",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تملت",
+    "name": "تملت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پلوله",
+    "name": "پلوله",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شساختح",
+    "name": "شساختح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بپیوند",
+    "name": "بپیوند",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خگستر",
+    "name": "خگستر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سپید",
+    "name": "سپید",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غصینو",
+    "name": "غصینو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کگلح",
+    "name": "کگلح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وآذرح",
+    "name": "وآذرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "واعتبار",
+    "name": "واعتبار",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "واحصا",
+    "name": "واحصا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "آلا",
+    "name": "آلا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سهگمت",
+    "name": "سهگمت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "والبرح",
+    "name": "والبرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بگیلان",
+    "name": "بگیلان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کسرام",
+    "name": "کسرام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فلات",
+    "name": "فلات",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پیروز",
+    "name": "پیروز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غنوش",
+    "name": "غنوش",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تپسی",
+    "name": "تپسی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خزامیاح",
+    "name": "خزامیاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "رانفور",
+    "name": "رانفور",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسگیلا",
+    "name": "وسگیلا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لسرما",
+    "name": "لسرما",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سیلامح",
+    "name": "سیلامح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غمهرا",
+    "name": "غمهرا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "نفیس",
+    "name": "نفیس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فن آوا",
+    "name": "فن آوا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "مبینح",
+    "name": "مبینح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "متال",
+    "name": "متال",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ترمه",
+    "name": "ترمه",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خکمکح",
+    "name": "خکمکح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "آسیا",
+    "name": "آسیا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کنیلوح",
+    "name": "کنیلوح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کصدف",
+    "name": "کصدف",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فلامیح",
+    "name": "فلامیح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لپویاح",
+    "name": "لپویاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثامید",
+    "name": "ثامید",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کفرآور",
+    "name": "کفرآور",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "چکاوهح",
+    "name": "چکاوهح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "زدشت",
+    "name": "زدشت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثروتم",
+    "name": "ثروتم",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "نوری",
+    "name": "نوری",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خمهر",
+    "name": "خمهر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شگویا",
+    "name": "شگویا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "امین",
+    "name": "امین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پارسانح",
+    "name": "پارسانح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شاوان",
+    "name": "شاوان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کیمیا",
+    "name": "کیمیا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وامیدح",
+    "name": "وامیدح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وتعاون",
+    "name": "وتعاون",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "آبین",
+    "name": "آبین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فروسیل",
+    "name": "فروسیل",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بمیلا",
+    "name": "بمیلا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دکوثرح",
+    "name": "دکوثرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سهگمتح",
+    "name": "سهگمتح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ومعادنح",
+    "name": "ومعادنح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "مانی",
+    "name": "مانی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خچرخش",
+    "name": "خچرخش",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شبریزح",
+    "name": "شبریزح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شپتروح",
+    "name": "شپتروح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کرماشا",
+    "name": "کرماشا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فخوز",
+    "name": "فخوز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قشهد",
+    "name": "قشهد",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قصفها",
+    "name": "قصفها",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ختراک",
+    "name": "ختراک",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خریختح",
+    "name": "خریختح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سپر",
+    "name": "سپر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پارسان",
+    "name": "پارسان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تداوم",
+    "name": "تداوم",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "نماد",
+    "name": "نماد",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کماسهح",
+    "name": "کماسهح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فاخر",
+    "name": "فاخر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قشکرح",
+    "name": "قشکرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کمرجان",
+    "name": "کمرجان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شنفتح",
+    "name": "شنفتح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غبهار",
+    "name": "غبهار",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فسدیدح",
+    "name": "فسدیدح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "زرین",
+    "name": "زرین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سارومح",
+    "name": "سارومح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بورس",
+    "name": "بورس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غپاکح",
+    "name": "غپاکح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دسانکو",
+    "name": "دسانکو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "آساس",
+    "name": "آساس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وگستر",
+    "name": "وگستر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "جوین",
+    "name": "جوین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "اکتیو",
+    "name": "اکتیو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "انرژی2",
+    "name": "انرژی2",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شبندر",
+    "name": "شبندر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "حسیر",
+    "name": "حسیر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کاوهح",
+    "name": "کاوهح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ساوه",
+    "name": "ساوه",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "زکشت",
+    "name": "زکشت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بالبر",
+    "name": "بالبر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شوینده",
+    "name": "شوینده",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لبهمنح",
+    "name": "لبهمنح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دعبیدح",
+    "name": "دعبیدح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سخند",
+    "name": "سخند",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دکپسول",
+    "name": "دکپسول",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دریا",
+    "name": "دریا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "زقیام",
+    "name": "زقیام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ساراب",
+    "name": "ساراب",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قهکمت",
+    "name": "قهکمت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "همای",
+    "name": "همای",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "مداران",
+    "name": "مداران",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "آریان",
+    "name": "آریان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سیلام",
+    "name": "سیلام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سینا",
+    "name": "سینا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وساپاح",
+    "name": "وساپاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "اعتماد",
+    "name": "اعتماد",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سغدیر",
+    "name": "سغدیر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لپارس",
+    "name": "لپارس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خاور",
+    "name": "خاور",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غدشتح",
+    "name": "غدشتح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پترول",
+    "name": "پترول",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تاراز",
+    "name": "تاراز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خشرق",
+    "name": "خشرق",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کهمداح",
+    "name": "کهمداح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "رماس",
+    "name": "رماس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تکاردان",
+    "name": "تکاردان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "جواهر",
+    "name": "جواهر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "امین یکم",
+    "name": "امین یکم",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خبهمنح",
+    "name": "خبهمنح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خراسان",
+    "name": "خراسان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تصمیم",
+    "name": "تصمیم",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سرو",
+    "name": "سرو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فبیراح",
+    "name": "فبیراح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "مدیر",
+    "name": "مدیر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بتهران",
+    "name": "بتهران",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خنصیرح",
+    "name": "خنصیرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خموتور",
+    "name": "خموتور",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "جهش",
+    "name": "جهش",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "حتاید",
+    "name": "حتاید",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ونچر",
+    "name": "ونچر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وپترو",
+    "name": "وپترو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ولراز",
+    "name": "ولراز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فردوس",
+    "name": "فردوس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وتوکا",
+    "name": "وتوکا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خبازرس",
+    "name": "خبازرس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "مارون",
+    "name": "مارون",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تلیسه",
+    "name": "تلیسه",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کایزد",
+    "name": "کایزد",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وکادو",
+    "name": "وکادو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سدشت",
+    "name": "سدشت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فپارسح",
+    "name": "فپارسح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خودروح",
+    "name": "خودروح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خاذینح",
+    "name": "خاذینح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فنرژیح",
+    "name": "فنرژیح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "داتام",
+    "name": "داتام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "حبندر",
+    "name": "حبندر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "صباح",
+    "name": "صباح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غالبرح",
+    "name": "غالبرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ویسا",
+    "name": "ویسا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شتولیح",
+    "name": "شتولیح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خمحرکهح",
+    "name": "خمحرکهح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پاکشوح",
+    "name": "پاکشوح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فاذر",
+    "name": "فاذر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "هیوا",
+    "name": "هیوا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بذر",
+    "name": "بذر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قهکمتح",
+    "name": "قهکمتح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "اتوآگاه",
+    "name": "اتوآگاه",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سفارح",
+    "name": "سفارح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فروس",
+    "name": "فروس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شلوان",
+    "name": "شلوان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کبافق",
+    "name": "کبافق",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دارو",
+    "name": "دارو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فاماح",
+    "name": "فاماح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فبیرا",
+    "name": "فبیرا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وتجارت",
+    "name": "وتجارت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شلرد",
+    "name": "شلرد",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سفاسیت",
+    "name": "سفاسیت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شیرازح",
+    "name": "شیرازح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وپویا",
+    "name": "وپویا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غشان",
+    "name": "غشان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دهدشت",
+    "name": "دهدشت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غچینح",
+    "name": "غچینح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثرود",
+    "name": "ثرود",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثغرب",
+    "name": "ثغرب",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وصناح",
+    "name": "وصناح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "رتاپ",
+    "name": "رتاپ",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسخوز",
+    "name": "وسخوز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کفپارس",
+    "name": "کفپارس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "مهریران",
+    "name": "مهریران",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "مفاخر",
+    "name": "مفاخر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کارام",
+    "name": "کارام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "معیارح",
+    "name": "معیارح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دزهراوی",
+    "name": "دزهراوی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فخاسح",
+    "name": "فخاسح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کپرور",
+    "name": "کپرور",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وآتوس",
+    "name": "وآتوس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سخزرح",
+    "name": "سخزرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دماوند",
+    "name": "دماوند",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "نبروج",
+    "name": "نبروج",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کی بی سی",
+    "name": "کی بی سی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کاریس",
+    "name": "کاریس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "نمرینوح",
+    "name": "نمرینوح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دتماد",
+    "name": "دتماد",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "رکیش",
+    "name": "رکیش",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تاتمس",
+    "name": "تاتمس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثاصفاح",
+    "name": "ثاصفاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ماح",
+    "name": "ماح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پکرمان",
+    "name": "پکرمان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "نگین",
+    "name": "نگین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "چبسپا",
+    "name": "چبسپا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کلوندح",
+    "name": "کلوندح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پی پاد",
+    "name": "پی پاد",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "چکارمح",
+    "name": "چکارمح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فنوالح",
+    "name": "فنوالح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ولملتح",
+    "name": "ولملتح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کباده",
+    "name": "کباده",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ولکار",
+    "name": "ولکار",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بیوتیک",
+    "name": "بیوتیک",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "نبروجح",
+    "name": "نبروجح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسکهبو",
+    "name": "وسکهبو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "اخابرح",
+    "name": "اخابرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وتوس",
+    "name": "وتوس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پارند",
+    "name": "پارند",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثنور",
+    "name": "ثنور",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غپآذر",
+    "name": "غپآذر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "آبادح",
+    "name": "آبادح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قزوینح",
+    "name": "قزوینح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کورز",
+    "name": "کورز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "نیان",
+    "name": "نیان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دشیمی",
+    "name": "دشیمی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تمحرکهح",
+    "name": "تمحرکهح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شکلرح",
+    "name": "شکلرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تمشک",
+    "name": "تمشک",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غشهدح",
+    "name": "غشهدح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شنفت",
+    "name": "شنفت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "یاقوت",
+    "name": "یاقوت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فردا",
+    "name": "فردا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "حسینا",
+    "name": "حسینا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پدناح",
+    "name": "پدناح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خاورح",
+    "name": "خاورح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسبحان",
+    "name": "وسبحان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لبوتان",
+    "name": "لبوتان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قپیراح",
+    "name": "قپیراح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بترانس",
+    "name": "بترانس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ولرازح",
+    "name": "ولرازح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثفارسح",
+    "name": "ثفارسح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شبریز",
+    "name": "شبریز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لابساح",
+    "name": "لابساح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "واحیا",
+    "name": "واحیا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فجوشح",
+    "name": "فجوشح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فاهواز",
+    "name": "فاهواز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "طلا",
+    "name": "طلا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "افق",
+    "name": "افق",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پلاست",
+    "name": "پلاست",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وخارزم",
+    "name": "وخارزم",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سفارودح",
+    "name": "سفارودح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کمنگنز",
+    "name": "کمنگنز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "نطرین",
+    "name": "نطرین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سفانو",
+    "name": "سفانو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وصندوق",
+    "name": "وصندوق",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کترامح",
+    "name": "کترامح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "درهآور",
+    "name": "درهآور",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وطوبی",
+    "name": "وطوبی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خچرخشح",
+    "name": "خچرخشح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غنوشح",
+    "name": "غنوشح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پایا",
+    "name": "پایا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تراکح",
+    "name": "تراکح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثنوسا",
+    "name": "ثنوسا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پارسیان",
+    "name": "پارسیان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کهمدا",
+    "name": "کهمدا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کمینا",
+    "name": "کمینا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثامان",
+    "name": "ثامان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شپدیس",
+    "name": "شپدیس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فرآور",
+    "name": "فرآور",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غدانه",
+    "name": "غدانه",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "آوا",
+    "name": "آوا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کایگچ",
+    "name": "کایگچ",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "امین شهر",
+    "name": "امین شهر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وفتخار",
+    "name": "وفتخار",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خلیبل",
+    "name": "خلیبل",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پتروداریوش",
+    "name": "پتروداریوش",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ختوقا",
+    "name": "ختوقا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ملتح",
+    "name": "ملتح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پویا",
+    "name": "پویا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "جم",
+    "name": "جم",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ولیز",
+    "name": "ولیز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ولکارح",
+    "name": "ولکارح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بشهاب",
+    "name": "بشهاب",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شکف",
+    "name": "شکف",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کابگن",
+    "name": "کابگن",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وهامون",
+    "name": "وهامون",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ورنا",
+    "name": "ورنا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فپنتا",
+    "name": "فپنتا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کگاز",
+    "name": "کگاز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وغدیرح",
+    "name": "وغدیرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فوکا",
+    "name": "فوکا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لازما",
+    "name": "لازما",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قزوین",
+    "name": "قزوین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "نشار",
+    "name": "نشار",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "گنجینه",
+    "name": "گنجینه",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دکیمی",
+    "name": "دکیمی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسمنان",
+    "name": "وسمنان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پارسیانح",
+    "name": "پارسیانح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسمازن",
+    "name": "وسمازن",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سپرمی",
+    "name": "سپرمی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فروی",
+    "name": "فروی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سخاش",
+    "name": "سخاش",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شسم",
+    "name": "شسم",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بازده",
+    "name": "بازده",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شبهرنح",
+    "name": "شبهرنح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "چدن",
+    "name": "چدن",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شاملا",
+    "name": "شاملا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پدنا",
+    "name": "پدنا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فرومح",
+    "name": "فرومح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وصنعتح",
+    "name": "وصنعتح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وخارزمح",
+    "name": "وخارزمح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "امیدح",
+    "name": "امیدح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "حگهر",
+    "name": "حگهر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "آکنتور",
+    "name": "آکنتور",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شهر",
+    "name": "شهر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فارما کیان",
+    "name": "فارما کیان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کورزح",
+    "name": "کورزح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خپارسح",
+    "name": "خپارسح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فلوله",
+    "name": "فلوله",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وغدیر",
+    "name": "وغدیر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "انرژی",
+    "name": "انرژی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "گکیش",
+    "name": "گکیش",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سیناد",
+    "name": "سیناد",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غبهنوشح",
+    "name": "غبهنوشح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کسرا",
+    "name": "کسرا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وساغربی",
+    "name": "وساغربی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پرسپولیس",
+    "name": "پرسپولیس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غشصفا",
+    "name": "غشصفا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لجام",
+    "name": "لجام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "استقلال",
+    "name": "استقلال",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غشهد",
+    "name": "غشهد",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "البرزح",
+    "name": "البرزح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لپارسح",
+    "name": "لپارسح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "آوند",
+    "name": "آوند",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غپونه",
+    "name": "غپونه",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "درسا",
+    "name": "درسا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خاهنح",
+    "name": "خاهنح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شدوص",
+    "name": "شدوص",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شپاکسا",
+    "name": "شپاکسا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کبافقح",
+    "name": "کبافقح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کاوه",
+    "name": "کاوه",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بتک",
+    "name": "بتک",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فجرح",
+    "name": "فجرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شستا",
+    "name": "شستا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خودرو",
+    "name": "خودرو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سمان",
+    "name": "سمان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فسوژ",
+    "name": "فسوژ",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فپنتاح",
+    "name": "فپنتاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "برکتح",
+    "name": "برکتح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فباهنر",
+    "name": "فباهنر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "حریل",
+    "name": "حریل",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کچینیح",
+    "name": "کچینیح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شتهرانح",
+    "name": "شتهرانح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قپیرا",
+    "name": "قپیرا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غپاک",
+    "name": "غپاک",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فیروزه",
+    "name": "فیروزه",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سکارون",
+    "name": "سکارون",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سصوفی",
+    "name": "سصوفی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قاسم",
+    "name": "قاسم",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وارس",
+    "name": "وارس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کتوکا",
+    "name": "کتوکا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لکما",
+    "name": "لکما",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بمپنا",
+    "name": "بمپنا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وساشرقی",
+    "name": "وساشرقی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لجامح",
+    "name": "لجامح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سکرما",
+    "name": "سکرما",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فیروزا",
+    "name": "فیروزا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "معیار",
+    "name": "معیار",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کارین",
+    "name": "کارین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بنیروح",
+    "name": "بنیروح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غسالم",
+    "name": "غسالم",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دسبحانح",
+    "name": "دسبحانح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کقزوی",
+    "name": "کقزوی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کابگنح",
+    "name": "کابگنح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فجوش",
+    "name": "فجوش",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کلر",
+    "name": "کلر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کاذر",
+    "name": "کاذر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قصفهاح",
+    "name": "قصفهاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کرومیت",
+    "name": "کرومیت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "امینح",
+    "name": "امینح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وصندوقح",
+    "name": "وصندوقح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثشاهد",
+    "name": "ثشاهد",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تشتاد",
+    "name": "تشتاد",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دکوثر",
+    "name": "دکوثر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "انرژی1",
+    "name": "انرژی1",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثبهساز",
+    "name": "ثبهساز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خاهن",
+    "name": "خاهن",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "های وب",
+    "name": "های وب",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "جاودان",
+    "name": "جاودان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فالومح",
+    "name": "فالومح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شیران",
+    "name": "شیران",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شپلیح",
+    "name": "شپلیح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خفناور",
+    "name": "خفناور",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لخانهح",
+    "name": "لخانهح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "آذرین",
+    "name": "آذرین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بمان",
+    "name": "بمان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وبملتح",
+    "name": "وبملتح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "زشگزا",
+    "name": "زشگزا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کخاک",
+    "name": "کخاک",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شسمح",
+    "name": "شسمح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثاصفا",
+    "name": "ثاصفا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "امید",
+    "name": "امید",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "اوصتا",
+    "name": "اوصتا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "رافزاح",
+    "name": "رافزاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "مثقال",
+    "name": "مثقال",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وتوکاح",
+    "name": "وتوکاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شپناح",
+    "name": "شپناح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "حاریا",
+    "name": "حاریا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فسپا",
+    "name": "فسپا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قشیر",
+    "name": "قشیر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فولادح",
+    "name": "فولادح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کاج",
+    "name": "کاج",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کاریز",
+    "name": "کاریز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دشیری",
+    "name": "دشیری",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کتوسعه",
+    "name": "کتوسعه",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وستهران",
+    "name": "وستهران",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثفارس",
+    "name": "ثفارس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسینا",
+    "name": "وسینا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "طلوع",
+    "name": "طلوع",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بایکا",
+    "name": "بایکا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قرنح",
+    "name": "قرنح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کگهر",
+    "name": "کگهر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سجام",
+    "name": "سجام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فمرادح",
+    "name": "فمرادح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وبانکح",
+    "name": "وبانکح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لابسا",
+    "name": "لابسا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وبازار",
+    "name": "وبازار",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سیستم",
+    "name": "سیستم",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شراز",
+    "name": "شراز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سدور",
+    "name": "سدور",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وبصادر",
+    "name": "وبصادر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کهرامح",
+    "name": "کهرامح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فاراکح",
+    "name": "فاراکح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بکامح",
+    "name": "بکامح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قنیشاح",
+    "name": "قنیشاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وتجارتح",
+    "name": "وتجارتح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ومعین",
+    "name": "ومعین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خوسازح",
+    "name": "خوسازح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وبوعلی",
+    "name": "وبوعلی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسیستا",
+    "name": "وسیستا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خوساز",
+    "name": "خوساز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فاذرح",
+    "name": "فاذرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خرینگ",
+    "name": "خرینگ",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غنابح",
+    "name": "غنابح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خرینگح",
+    "name": "خرینگح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بهین رو",
+    "name": "بهین رو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تکشا",
+    "name": "تکشا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "میدکوح",
+    "name": "میدکوح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "زنگان",
+    "name": "زنگان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دلقماح",
+    "name": "دلقماح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثعمرا",
+    "name": "ثعمرا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "استیل",
+    "name": "استیل",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فماک",
+    "name": "فماک",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بپردیس",
+    "name": "بپردیس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بکاب",
+    "name": "بکاب",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خلنتح",
+    "name": "خلنتح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دبالک",
+    "name": "دبالک",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وملی",
+    "name": "وملی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فسازان",
+    "name": "فسازان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دتولید",
+    "name": "دتولید",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "عیار",
+    "name": "عیار",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شفارا",
+    "name": "شفارا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پلاسک",
+    "name": "پلاسک",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "گشان",
+    "name": "گشان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کوثر",
+    "name": "کوثر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غشانح",
+    "name": "غشانح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ختور",
+    "name": "ختور",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "چکارم",
+    "name": "چکارم",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شغدیر",
+    "name": "شغدیر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پتایرح",
+    "name": "پتایرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سبزوا",
+    "name": "سبزوا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "زماهان",
+    "name": "زماهان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "چافست",
+    "name": "چافست",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خفولا",
+    "name": "خفولا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وامید",
+    "name": "وامید",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تکالا",
+    "name": "تکالا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شگل",
+    "name": "شگل",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دارا یکم",
+    "name": "دارا یکم",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "داریک",
+    "name": "داریک",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسالت",
+    "name": "وسالت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسهرمز",
+    "name": "وسهرمز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وپخش",
+    "name": "وپخش",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "باختر",
+    "name": "باختر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بتکح",
+    "name": "بتکح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غزر",
+    "name": "غزر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لبوتانح",
+    "name": "لبوتانح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دتهرانح",
+    "name": "دتهرانح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بهیر",
+    "name": "بهیر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "اروند",
+    "name": "اروند",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فنفت",
+    "name": "فنفت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "چکارنح",
+    "name": "چکارنح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وکغدیرح",
+    "name": "وکغدیرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فمراد",
+    "name": "فمراد",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "درازی",
+    "name": "درازی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بوعلی",
+    "name": "بوعلی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خفنرح",
+    "name": "خفنرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پدرخش",
+    "name": "پدرخش",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فگستر",
+    "name": "فگستر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "زشریف",
+    "name": "زشریف",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غپینوح",
+    "name": "غپینوح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "همراهح",
+    "name": "همراهح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "آبادا",
+    "name": "آبادا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غگلستا",
+    "name": "غگلستا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ددامح",
+    "name": "ددامح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شاملاح",
+    "name": "شاملاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شملی",
+    "name": "شملی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سام",
+    "name": "سام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وایرا",
+    "name": "وایرا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "زرفام",
+    "name": "زرفام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شدوصح",
+    "name": "شدوصح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "رتکو",
+    "name": "رتکو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غشصفاح",
+    "name": "غشصفاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تپولا",
+    "name": "تپولا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سخاشح",
+    "name": "سخاشح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "رایکا",
+    "name": "رایکا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بترانسح",
+    "name": "بترانسح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "میهن",
+    "name": "میهن",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "جم پیلن",
+    "name": "جم پیلن",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "رنیک",
+    "name": "رنیک",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سایرا",
+    "name": "سایرا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شصفهاح",
+    "name": "شصفهاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "آفرین",
+    "name": "آفرین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کپشیرح",
+    "name": "کپشیرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شاراکح",
+    "name": "شاراکح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسپه",
+    "name": "وسپه",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فالوم",
+    "name": "فالوم",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خودکفا",
+    "name": "خودکفا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شتوکا",
+    "name": "شتوکا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شگلح",
+    "name": "شگلح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کروی",
+    "name": "کروی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شلعاب",
+    "name": "شلعاب",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "هجرت",
+    "name": "هجرت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "صنم",
+    "name": "صنم",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وبشهر",
+    "name": "وبشهر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دزهراویح",
+    "name": "دزهراویح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خنصیر",
+    "name": "خنصیر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "انتخاب",
+    "name": "انتخاب",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شستان",
+    "name": "شستان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "توسکا",
+    "name": "توسکا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خکاوه",
+    "name": "خکاوه",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تابش",
+    "name": "تابش",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خزر",
+    "name": "خزر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثاژنح",
+    "name": "ثاژنح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "درازک",
+    "name": "درازک",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فبستمح",
+    "name": "فبستمح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شکبیر",
+    "name": "شکبیر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کایگچح",
+    "name": "کایگچح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ولملت",
+    "name": "ولملت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "چخزر",
+    "name": "چخزر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "حپرتو",
+    "name": "حپرتو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثشرقح",
+    "name": "ثشرقح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "گوهر",
+    "name": "گوهر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثقزوی",
+    "name": "ثقزوی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "آکام",
+    "name": "آکام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تاصیکو",
+    "name": "تاصیکو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وثخوز",
+    "name": "وثخوز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "همراه",
+    "name": "همراه",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "آریا",
+    "name": "آریا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شلعابح",
+    "name": "شلعابح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وبهمنح",
+    "name": "وبهمنح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تنوین",
+    "name": "تنوین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غمارگ",
+    "name": "غمارگ",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خبهمن",
+    "name": "خبهمن",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لسرماح",
+    "name": "لسرماح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کویر",
+    "name": "کویر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثتوسا",
+    "name": "ثتوسا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تایراح",
+    "name": "تایراح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غدام",
+    "name": "غدام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فلزفارابی",
+    "name": "فلزفارابی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فافق",
+    "name": "فافق",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فاراک",
+    "name": "فاراک",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غمارگح",
+    "name": "غمارگح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شفارس",
+    "name": "شفارس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سفاسیتح",
+    "name": "سفاسیتح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شفنح",
+    "name": "شفنح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسکرشا",
+    "name": "وسکرشا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پردیس",
+    "name": "پردیس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثاژن",
+    "name": "ثاژن",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کفراح",
+    "name": "کفراح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دسبحا",
+    "name": "دسبحا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کهربا",
+    "name": "کهربا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ددام",
+    "name": "ددام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثنا",
+    "name": "ثنا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تراک",
+    "name": "تراک",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سمتاز",
+    "name": "سمتاز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تماوند",
+    "name": "تماوند",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تکمباح",
+    "name": "تکمباح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فزرین",
+    "name": "فزرین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دسبحان",
+    "name": "دسبحان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شسینا",
+    "name": "شسینا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ونوین",
+    "name": "ونوین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کارا",
+    "name": "کارا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فرابورس",
+    "name": "فرابورس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "رکیشح",
+    "name": "رکیشح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خساپا",
+    "name": "خساپا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "گلدیرا",
+    "name": "گلدیرا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تجلی",
+    "name": "تجلی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خکارح",
+    "name": "خکارح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پرداختح",
+    "name": "پرداختح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسپهح",
+    "name": "وسپهح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "زمگسا",
+    "name": "زمگسا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وتوسکا",
+    "name": "وتوسکا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فجر",
+    "name": "فجر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قنیشا",
+    "name": "قنیشا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شکام",
+    "name": "شکام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شپترو",
+    "name": "شپترو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سهرمز",
+    "name": "سهرمز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غفارس",
+    "name": "غفارس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کنورح",
+    "name": "کنورح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سپاها",
+    "name": "سپاها",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فغدیر",
+    "name": "فغدیر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وکارح",
+    "name": "وکارح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ارزش",
+    "name": "ارزش",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسهمدا",
+    "name": "وسهمدا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شبهرن",
+    "name": "شبهرن",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سباقر",
+    "name": "سباقر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سنیرح",
+    "name": "سنیرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "افرا",
+    "name": "افرا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غمایه",
+    "name": "غمایه",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "چکاوه",
+    "name": "چکاوه",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "نیرو",
+    "name": "نیرو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسصفا",
+    "name": "وسصفا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "آلتون",
+    "name": "آلتون",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ناب",
+    "name": "ناب",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شصفها",
+    "name": "شصفها",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "توریل",
+    "name": "توریل",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ورناح",
+    "name": "ورناح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "موج",
+    "name": "موج",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "الماس",
+    "name": "الماس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسقم",
+    "name": "وسقم",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سکردح",
+    "name": "سکردح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دجابرح",
+    "name": "دجابرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "اخابر",
+    "name": "اخابر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غگلح",
+    "name": "غگلح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سآبیک",
+    "name": "سآبیک",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تمحرکه",
+    "name": "تمحرکه",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سصوفیح",
+    "name": "سصوفیح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خساپاح",
+    "name": "خساپاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غگلپا",
+    "name": "غگلپا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دفراح",
+    "name": "دفراح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ساربیلح",
+    "name": "ساربیلح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لکماح",
+    "name": "لکماح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ورازی",
+    "name": "ورازی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کطبس",
+    "name": "کطبس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قستونح",
+    "name": "قستونح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قثابت",
+    "name": "قثابت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دروزح",
+    "name": "دروزح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثشرق",
+    "name": "ثشرق",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سخوزح",
+    "name": "سخوزح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثامانح",
+    "name": "ثامانح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "رتاپح",
+    "name": "رتاپح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غشوکو",
+    "name": "غشوکو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دتهران",
+    "name": "دتهران",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فجهانح",
+    "name": "فجهانح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سرودح",
+    "name": "سرودح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سشمالح",
+    "name": "سشمالح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قمروح",
+    "name": "قمروح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سحرخیز",
+    "name": "سحرخیز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ونیکیح",
+    "name": "ونیکیح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسفارس",
+    "name": "وسفارس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سبهانح",
+    "name": "سبهانح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کاما",
+    "name": "کاما",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شرنگیح",
+    "name": "شرنگیح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسخراش",
+    "name": "وسخراش",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "اتکام",
+    "name": "اتکام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فمتال",
+    "name": "فمتال",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سخواف",
+    "name": "سخواف",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فنر",
+    "name": "فنر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سفار",
+    "name": "سفار",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لپیام",
+    "name": "لپیام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فارس",
+    "name": "فارس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پاساح",
+    "name": "پاساح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دلرح",
+    "name": "دلرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دامون",
+    "name": "دامون",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "رویین",
+    "name": "رویین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بمولد",
+    "name": "بمولد",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دعبید",
+    "name": "دعبید",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فخوزح",
+    "name": "فخوزح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خمحرکه",
+    "name": "خمحرکه",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ونفت",
+    "name": "ونفت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسرضوی",
+    "name": "وسرضوی",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پیزد",
+    "name": "پیزد",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بفجرح",
+    "name": "بفجرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فخاس",
+    "name": "فخاس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غبهنوش",
+    "name": "غبهنوش",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وپاسار",
+    "name": "وپاسار",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سارابح",
+    "name": "سارابح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غپینو",
+    "name": "غپینو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پارتاح",
+    "name": "پارتاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ومهان",
+    "name": "ومهان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فبیستون",
+    "name": "فبیستون",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ساینا",
+    "name": "ساینا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فسرب",
+    "name": "فسرب",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "اردستان",
+    "name": "اردستان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غساساح",
+    "name": "غساساح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کساوه",
+    "name": "کساوه",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سیمرغ",
+    "name": "سیمرغ",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کرازیح",
+    "name": "کرازیح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "نتوسح",
+    "name": "نتوسح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بسویچ",
+    "name": "بسویچ",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خشرقح",
+    "name": "خشرقح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تیپیکو",
+    "name": "تیپیکو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "اطلس",
+    "name": "اطلس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ولساپاح",
+    "name": "ولساپاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ریشمک",
+    "name": "ریشمک",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "اجداد",
+    "name": "اجداد",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "اپرداز",
+    "name": "اپرداز",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سکارونح",
+    "name": "سکارونح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خبنیان",
+    "name": "خبنیان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فسبزوار",
+    "name": "فسبزوار",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فلولهح",
+    "name": "فلولهح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خریخت",
+    "name": "خریخت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خورشید",
+    "name": "خورشید",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شکربنح",
+    "name": "شکربنح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "حفجر",
+    "name": "حفجر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کطبسح",
+    "name": "کطبسح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "اکالا",
+    "name": "اکالا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "اعتلا",
+    "name": "اعتلا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثپردیس",
+    "name": "ثپردیس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پکویر",
+    "name": "پکویر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کدما",
+    "name": "کدما",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فجامح",
+    "name": "فجامح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وپتروح",
+    "name": "وپتروح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "حشکوه",
+    "name": "حشکوه",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "واعتبارح",
+    "name": "واعتبارح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سشمال",
+    "name": "سشمال",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بسویچح",
+    "name": "بسویچح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وبهمن",
+    "name": "وبهمن",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فافزا",
+    "name": "فافزا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دفاراح",
+    "name": "دفاراح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ونفتح",
+    "name": "ونفتح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسکابح",
+    "name": "وسکابح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شرانل",
+    "name": "شرانل",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شساخت",
+    "name": "شساخت",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کاردان",
+    "name": "کاردان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "حکشتیح",
+    "name": "حکشتیح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قشیرح",
+    "name": "قشیرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شتاب",
+    "name": "شتاب",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ونوینح",
+    "name": "ونوینح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غبهپاک",
+    "name": "غبهپاک",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "چکاپا",
+    "name": "چکاپا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وساربیل",
+    "name": "وساربیل",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کدماح",
+    "name": "کدماح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خپارس",
+    "name": "خپارس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شفن",
+    "name": "شفن",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "نشان",
+    "name": "نشان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سدبیر",
+    "name": "سدبیر",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غگرجیح",
+    "name": "غگرجیح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وسکرمان",
+    "name": "وسکرمان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "تملتح",
+    "name": "تملتح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "گنگین",
+    "name": "گنگین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ارفع",
+    "name": "ارفع",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سپح",
+    "name": "سپح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "زمگساح",
+    "name": "زمگساح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سغربح",
+    "name": "سغربح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "گنج",
+    "name": "گنج",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لخزرح",
+    "name": "لخزرح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بپاس",
+    "name": "بپاس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "شتهران",
+    "name": "شتهران",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دارا",
+    "name": "دارا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سمازنح",
+    "name": "سمازنح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خپویش",
+    "name": "خپویش",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وشستان",
+    "name": "وشستان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سفارود",
+    "name": "سفارود",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فتوسا",
+    "name": "فتوسا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "والماس",
+    "name": "والماس",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وگردش",
+    "name": "وگردش",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کیانا",
+    "name": "کیانا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پکیانح",
+    "name": "پکیانح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لپویا",
+    "name": "لپویا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سقاین",
+    "name": "سقاین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غگیلا",
+    "name": "غگیلا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "خاذین",
+    "name": "خاذین",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "رمپنا",
+    "name": "رمپنا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "فنوردح",
+    "name": "فنوردح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کماسه",
+    "name": "کماسه",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "لازماح",
+    "name": "لازماح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "قاروم",
+    "name": "قاروم",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "اهرم",
+    "name": "اهرم",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "چنوپاح",
+    "name": "چنوپاح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بخاور",
+    "name": "بخاور",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "مرقام",
+    "name": "مرقام",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کگل",
+    "name": "کگل",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "ثمسکن",
+    "name": "ثمسکن",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "دیران",
+    "name": "دیران",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "کاصفا",
+    "name": "کاصفا",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "بساما",
+    "name": "بساما",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "سبجنو",
+    "name": "سبجنو",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "پکیان",
+    "name": "پکیان",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "وپاسارح",
+    "name": "وپاسارح",
+    "market": "بورس",
+    "type": "stock"
+  },
+  {
+    "symbol": "غشهداب",
+    "name": "غشهداب",
+    "market": "بورس",
+    "type": "stock"
+  }
+]

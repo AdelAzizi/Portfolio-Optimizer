@@ -1,1 +1,0 @@
-pip install pandas finpy_tse PyPortfolioOpt matplotlib persiantools
