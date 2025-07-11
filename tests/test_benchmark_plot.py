@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 
 # Define the path to your cached data
-CACHE_FILE_PATH = Path('cache_v3/master_price_data.feather')
+CACHE_FILE_PATH = Path('cache/master_price_data.feather')
 BENCHMARK_COLUMN_NAME = 'شاخص کل' 
 
 print(f"Loading data from {CACHE_FILE_PATH}...")

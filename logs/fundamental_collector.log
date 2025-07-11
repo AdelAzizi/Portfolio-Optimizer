@@ -1,0 +1,611 @@
+2025-07-11 21:25:50,337 - __main__ - INFO - Universe file path: C:\Portfolio-Optimizer\cache\universe.json
+2025-07-11 21:25:50,337 - __main__ - INFO - Output data path: C:\Portfolio-Optimizer\data\fundamental_data.feather
+2025-07-11 21:25:50,337 - __main__ - INFO - 🚀 Starting Professional Fundamental Data Collector...
+2025-07-11 21:25:50,338 - __main__ - INFO - --- Stage 1: Loading Pre-filtered Universe ---
+2025-07-11 21:25:50,338 - __main__ - INFO - ✅ Loaded 571 symbols from universe.json.
+2025-07-11 21:25:50,338 - __main__ - INFO - --- Stage 2: Collecting New Symbol Data ---
+2025-07-11 21:25:50,341 - __main__ - INFO - 571 new symbols to process.
+2025-07-11 21:25:53,952 - __main__ - INFO -   (1/571) Fetched for وسپهر
+2025-07-11 21:25:57,923 - __main__ - INFO -   (2/571) Fetched for شصدف
+2025-07-11 21:26:00,507 - __main__ - WARNING -    - Discarding آکام: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:26:04,215 - __main__ - INFO -   (4/571) Fetched for سبزوا
+2025-07-11 21:26:07,302 - __main__ - INFO -   (5/571) Fetched for اپال
+2025-07-11 21:26:10,719 - __main__ - INFO -   (6/571) Fetched for وبملت
+2025-07-11 21:26:13,002 - __main__ - WARNING -    - Discarding گارانتی: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:26:15,632 - __main__ - WARNING -    - Discarding نشان: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:26:18,909 - __main__ - WARNING -    - Discarding وآذر: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:26:21,511 - __main__ - WARNING -    - Discarding یاقوت: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:26:26,946 - __main__ - INFO -   (11/571) Fetched for حسینا
+2025-07-11 21:26:32,267 - __main__ - INFO -   (12/571) Fetched for کلر
+2025-07-11 21:26:35,362 - __main__ - WARNING -    - Discarding پتروداریوش: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:26:38,812 - __main__ - WARNING -    - Discarding سپیدما: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:26:44,460 - __main__ - INFO -   (15/571) Fetched for وسپه
+2025-07-11 21:26:55,208 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=5, read=4, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='old.tsetmc.com', port=80): Read timed out. (read timeout=5)")': /tsev2/data/instinfofast.aspx?i=2400322364771558&c=0&e=1
+2025-07-11 21:26:56,329 - __main__ - INFO -   (16/571) Fetched for شستا
+2025-07-11 21:27:03,299 - __main__ - INFO -   (17/571) Fetched for غدشت
+2025-07-11 21:27:09,234 - __main__ - INFO -   (18/571) Fetched for خزامیا
+2025-07-11 21:27:16,715 - __main__ - INFO -   (19/571) Fetched for وتوصا
+2025-07-11 21:27:21,927 - __main__ - INFO -   (20/571) Fetched for شاروم
+2025-07-11 21:27:27,883 - __main__ - INFO -   (21/571) Fetched for غدیس
+2025-07-11 21:27:33,907 - __main__ - INFO -   (22/571) Fetched for کدما
+2025-07-11 21:27:39,343 - __main__ - INFO -   (23/571) Fetched for تکنو
+2025-07-11 21:27:43,945 - __main__ - WARNING -    - Discarding حتاید: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:27:47,832 - __main__ - WARNING -    - Discarding افران: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:27:53,983 - __main__ - INFO -   (26/571) Fetched for ثمسکن
+2025-07-11 21:27:58,386 - __main__ - INFO -   (27/571) Fetched for وطوبی
+2025-07-11 21:28:01,869 - __main__ - WARNING -    - Discarding برلیان: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:28:07,601 - __main__ - INFO -   (29/571) Fetched for مفاخر
+2025-07-11 21:28:14,764 - __main__ - INFO -   (30/571) Fetched for غزر
+2025-07-11 21:28:21,227 - __main__ - INFO -   (31/571) Fetched for دلر
+2025-07-11 21:28:27,671 - __main__ - INFO -   (32/571) Fetched for سخاش
+2025-07-11 21:28:33,302 - __main__ - INFO -   (33/571) Fetched for زماهان
+2025-07-11 21:28:36,580 - __main__ - WARNING -    - Discarding خورشید: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:28:42,516 - __main__ - INFO -   (35/571) Fetched for سفانو
+2025-07-11 21:28:48,566 - __main__ - INFO -   (36/571) Fetched for ساراب
+2025-07-11 21:28:54,094 - __main__ - INFO -   (37/571) Fetched for کسرا
+2025-07-11 21:29:00,233 - __main__ - INFO -   (38/571) Fetched for خپویش
+2025-07-11 21:29:05,466 - __main__ - INFO -   (39/571) Fetched for زمگسا
+2025-07-11 21:29:13,346 - __main__ - INFO -   (40/571) Fetched for لپارس
+2025-07-11 21:29:18,152 - __main__ - INFO -   (41/571) Fetched for سیسکو
+2025-07-11 21:29:23,582 - __main__ - INFO -   (42/571) Fetched for داوه
+2025-07-11 21:29:29,519 - __main__ - INFO -   (43/571) Fetched for زفکا
+2025-07-11 21:29:39,819 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=5, read=4, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='old.tsetmc.com', port=80): Read timed out. (read timeout=10)")': /tsev2/data/Export-txt.aspx?t=i&a=1&b=0&i=5516102131364383
+2025-07-11 21:30:10,455 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=4, read=4, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000027BE2D87650>, 'Connection to old.tsetmc.com timed out. (connect timeout=10)')': /tsev2/data/Export-txt.aspx?t=i&a=1&b=0&i=5516102131364383
+2025-07-11 21:30:41,729 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=3, read=4, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000027BE2D87BD0>, 'Connection to old.tsetmc.com timed out. (connect timeout=10)')': /tsev2/data/Export-txt.aspx?t=i&a=1&b=0&i=5516102131364383
+2025-07-11 21:31:14,157 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=2, read=4, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000027BE2D8C510>, 'Connection to old.tsetmc.com timed out. (connect timeout=10)')': /tsev2/data/Export-txt.aspx?t=i&a=1&b=0&i=5516102131364383
+2025-07-11 21:31:49,025 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=1, read=4, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000027BE2D8CDD0>, 'Connection to old.tsetmc.com timed out. (connect timeout=10)')': /tsev2/data/Export-txt.aspx?t=i&a=1&b=0&i=5516102131364383
+2025-07-11 21:31:56,372 - __main__ - INFO -   (44/571) Fetched for غمینو
+2025-07-11 21:32:01,280 - __main__ - INFO -   (45/571) Fetched for حریل
+2025-07-11 21:32:05,115 - __main__ - INFO -   (46/571) Fetched for بخاور
+2025-07-11 21:32:16,449 - __main__ - INFO -   (47/571) Fetched for دسبحان
+2025-07-11 21:32:21,427 - __main__ - INFO -   (48/571) Fetched for وتعاون
+2025-07-11 21:32:25,188 - __main__ - WARNING -    - Discarding ولنوین: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:32:30,044 - __main__ - INFO -   (50/571) Fetched for شگویا
+2025-07-11 21:32:35,502 - __main__ - INFO -   (51/571) Fetched for پارس
+2025-07-11 21:32:41,077 - __main__ - INFO -   (52/571) Fetched for شجم
+2025-07-11 21:32:46,747 - __main__ - INFO -   (53/571) Fetched for غمهرا
+2025-07-11 21:32:50,227 - __main__ - WARNING -    - Discarding اتوآگاه: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:32:54,993 - __main__ - INFO -   (55/571) Fetched for ریشمک
+2025-07-11 21:33:00,197 - __main__ - INFO -   (56/571) Fetched for سشمال
+2025-07-11 21:33:04,147 - __main__ - INFO -   (57/571) Fetched for ومعلم
+2025-07-11 21:33:09,612 - __main__ - INFO -   (58/571) Fetched for وپخش
+2025-07-11 21:33:15,136 - __main__ - INFO -   (59/571) Fetched for پکویر
+2025-07-11 21:33:20,147 - __main__ - INFO -   (60/571) Fetched for زکشت
+2025-07-11 21:33:25,561 - __main__ - INFO -   (61/571) Fetched for ورنا
+2025-07-11 21:33:30,067 - __main__ - INFO -   (62/571) Fetched for وخارزم
+2025-07-11 21:33:35,817 - __main__ - INFO -   (63/571) Fetched for خاهن
+2025-07-11 21:33:38,967 - __main__ - WARNING -    - Discarding جهش: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:33:45,116 - __main__ - INFO -   (65/571) Fetched for شاراک
+2025-07-11 21:33:51,106 - __main__ - INFO -   (66/571) Fetched for شپنا
+2025-07-11 21:33:54,838 - __main__ - INFO -   (67/571) Fetched for فزر
+2025-07-11 21:33:59,580 - __main__ - INFO -   (68/571) Fetched for بالاس
+2025-07-11 21:34:04,986 - __main__ - INFO -   (69/571) Fetched for فگستر
+2025-07-11 21:34:11,841 - __main__ - INFO -   (70/571) Fetched for دزهراوی
+2025-07-11 21:34:17,736 - __main__ - INFO -   (71/571) Fetched for کطبس
+2025-07-11 21:34:23,111 - __main__ - INFO -   (72/571) Fetched for فسپا
+2025-07-11 21:34:27,009 - __main__ - INFO -   (73/571) Fetched for شهر
+2025-07-11 21:34:33,036 - __main__ - INFO -   (74/571) Fetched for پارسیان
+2025-07-11 21:34:38,058 - __main__ - INFO -   (75/571) Fetched for وپاسار
+2025-07-11 21:34:42,606 - __main__ - INFO -   (76/571) Fetched for کپارس
+2025-07-11 21:34:46,346 - __main__ - INFO -   (77/571) Fetched for گدنا
+2025-07-11 21:34:51,876 - __main__ - INFO -   (78/571) Fetched for پسهند
+2025-07-11 21:34:57,557 - __main__ - INFO -   (79/571) Fetched for سیتا
+2025-07-11 21:35:03,146 - __main__ - INFO -   (80/571) Fetched for انتخاب
+2025-07-11 21:35:07,760 - __main__ - INFO -   (81/571) Fetched for ناما
+2025-07-11 21:35:10,590 - __main__ - WARNING -    - Discarding ماهور: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:35:14,096 - __main__ - WARNING -    - Discarding فیروزا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:35:18,217 - __main__ - INFO -   (84/571) Fetched for تملت
+2025-07-11 21:35:24,346 - __main__ - INFO -   (85/571) Fetched for وسکاب
+2025-07-11 21:35:27,717 - __main__ - WARNING -    - Discarding دریا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:35:32,018 - __main__ - WARNING -    - Discarding ولملت: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:35:37,667 - __main__ - INFO -   (88/571) Fetched for اطلس
+2025-07-11 21:35:43,646 - __main__ - INFO -   (89/571) Fetched for شپاکسا
+2025-07-11 21:35:48,756 - __main__ - INFO -   (90/571) Fetched for وبیمه
+2025-07-11 21:35:53,631 - __main__ - INFO -   (91/571) Fetched for سرود
+2025-07-11 21:35:58,746 - __main__ - INFO -   (92/571) Fetched for چدن
+2025-07-11 21:36:02,636 - __main__ - INFO -   (93/571) Fetched for مدیریت
+2025-07-11 21:36:07,167 - __main__ - INFO -   (94/571) Fetched for پخش
+2025-07-11 21:36:11,856 - __main__ - INFO -   (95/571) Fetched for بهپاک
+2025-07-11 21:36:17,057 - __main__ - INFO -   (96/571) Fetched for فسازان
+2025-07-11 21:36:23,010 - __main__ - INFO -   (97/571) Fetched for سصوفی
+2025-07-11 21:36:28,957 - __main__ - INFO -   (98/571) Fetched for زاگرس
+2025-07-11 21:36:35,511 - __main__ - INFO -   (99/571) Fetched for درهآور
+2025-07-11 21:36:39,926 - __main__ - INFO -   (100/571) Fetched for حسیر
+2025-07-11 21:36:45,246 - __main__ - INFO -   (101/571) Fetched for ملت
+2025-07-11 21:36:48,516 - __main__ - WARNING -    - Discarding فراز: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:36:53,641 - __main__ - INFO -   (103/571) Fetched for وبشهر
+2025-07-11 21:36:58,746 - __main__ - INFO -   (104/571) Fetched for شراز
+2025-07-11 21:37:04,595 - __main__ - INFO -   (105/571) Fetched for شنفت
+2025-07-11 21:37:08,227 - __main__ - WARNING -    - Discarding اسیاتک: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:37:10,805 - __main__ - WARNING -    - Discarding آرام: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:37:15,546 - __main__ - INFO -   (108/571) Fetched for سنیر
+2025-07-11 21:37:21,276 - __main__ - INFO -   (109/571) Fetched for غگلپا
+2025-07-11 21:37:26,811 - __main__ - INFO -   (110/571) Fetched for سیلام
+2025-07-11 21:37:31,321 - __main__ - INFO -   (111/571) Fetched for ثبهساز
+2025-07-11 21:37:36,646 - __main__ - INFO -   (112/571) Fetched for فولای
+2025-07-11 21:37:41,055 - __main__ - INFO -   (113/571) Fetched for زملارد
+2025-07-11 21:37:47,086 - __main__ - INFO -   (114/571) Fetched for خلنت
+2025-07-11 21:37:51,589 - __main__ - INFO -   (115/571) Fetched for پردیس
+2025-07-11 21:37:57,336 - __main__ - INFO -   (116/571) Fetched for قزوین
+2025-07-11 21:38:03,474 - __main__ - INFO -   (117/571) Fetched for سکرما
+2025-07-11 21:38:06,636 - __main__ - WARNING -    - Discarding همای: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:38:12,585 - __main__ - INFO -   (119/571) Fetched for سفارس
+2025-07-11 21:38:18,230 - __main__ - INFO -   (120/571) Fetched for ثعمرا
+2025-07-11 21:38:22,766 - __main__ - WARNING -    - Discarding مادیرا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:38:28,362 - __main__ - INFO -   (122/571) Fetched for ساروم
+2025-07-11 21:38:32,755 - __main__ - WARNING -    - Discarding کامیاب: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:38:37,566 - __main__ - WARNING -    - Discarding کارین: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:38:42,745 - __main__ - INFO -   (125/571) Fetched for کخاک
+2025-07-11 21:38:48,317 - __main__ - INFO -   (126/571) Fetched for غفارس
+2025-07-11 21:38:53,186 - __main__ - INFO -   (127/571) Fetched for لطیف
+2025-07-11 21:38:56,963 - __main__ - INFO -   (128/571) Fetched for درازی
+2025-07-11 21:39:00,710 - __main__ - INFO -   (129/571) Fetched for ثالوند
+2025-07-11 21:39:07,385 - __main__ - INFO -   (130/571) Fetched for شاملا
+2025-07-11 21:39:13,095 - __main__ - INFO -   (131/571) Fetched for غبهنوش
+2025-07-11 21:39:16,480 - __main__ - WARNING -    - Discarding سپر: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:39:22,396 - __main__ - INFO -   (133/571) Fetched for خمهر
+2025-07-11 21:39:28,467 - __main__ - INFO -   (134/571) Fetched for وتوسم
+2025-07-11 21:39:34,130 - __main__ - INFO -   (135/571) Fetched for ثاخت
+2025-07-11 21:39:39,835 - __main__ - INFO -   (136/571) Fetched for خنصیر
+2025-07-11 21:39:43,645 - __main__ - WARNING -    - Discarding اهرم: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:39:48,130 - __main__ - WARNING -    - Discarding ثغرب: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:39:51,810 - __main__ - INFO -   (139/571) Fetched for فمراد
+2025-07-11 21:39:57,281 - __main__ - INFO -   (140/571) Fetched for کچاد
+2025-07-11 21:40:01,649 - __main__ - INFO -   (141/571) Fetched for وبهمن
+2025-07-11 21:40:07,063 - __main__ - INFO -   (142/571) Fetched for دتولید
+2025-07-11 21:40:12,325 - __main__ - INFO -   (143/571) Fetched for دفرا
+2025-07-11 21:40:19,666 - __main__ - INFO -   (144/571) Fetched for غپینو
+2025-07-11 21:40:23,965 - __main__ - INFO -   (145/571) Fetched for ثامید
+2025-07-11 21:40:28,880 - __main__ - INFO -   (146/571) Fetched for امید
+2025-07-11 21:40:33,485 - __main__ - INFO -   (147/571) Fetched for آلومینا
+2025-07-11 21:40:36,355 - __main__ - WARNING -    - Discarding پتروآبان: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:40:39,935 - __main__ - WARNING -    - Discarding خاتم: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:40:44,955 - __main__ - INFO -   (150/571) Fetched for ثرود
+2025-07-11 21:40:50,385 - __main__ - INFO -   (151/571) Fetched for نوری
+2025-07-11 21:40:54,070 - __main__ - WARNING -    - Discarding طلوع: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:41:00,625 - __main__ - INFO -   (153/571) Fetched for خکمک
+2025-07-11 21:41:06,665 - __main__ - INFO -   (154/571) Fetched for تایرا
+2025-07-11 21:41:11,375 - __main__ - INFO -   (155/571) Fetched for وهامون
+2025-07-11 21:41:17,372 - __main__ - INFO -   (156/571) Fetched for کفپارس
+2025-07-11 21:41:19,672 - __main__ - WARNING -    - Discarding آلا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:41:26,366 - __main__ - INFO -   (158/571) Fetched for بنیرو
+2025-07-11 21:41:32,815 - __main__ - INFO -   (159/571) Fetched for غشهد
+2025-07-11 21:41:37,900 - __main__ - INFO -   (160/571) Fetched for شپدیس
+2025-07-11 21:41:42,610 - __main__ - INFO -   (161/571) Fetched for نیان
+2025-07-11 21:41:48,885 - __main__ - INFO -   (162/571) Fetched for فاراک
+2025-07-11 21:41:54,185 - __main__ - WARNING -    - Discarding ثتران: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:41:57,295 - __main__ - WARNING -    - Discarding درین: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:42:00,525 - __main__ - INFO -   (165/571) Fetched for سغدیر
+2025-07-11 21:42:05,184 - __main__ - INFO -   (166/571) Fetched for حآفرین
+2025-07-11 21:42:10,870 - __main__ - INFO -   (167/571) Fetched for شغدیر
+2025-07-11 21:42:17,125 - __main__ - INFO -   (168/571) Fetched for بموتو
+2025-07-11 21:42:22,135 - __main__ - INFO -   (169/571) Fetched for وپست
+2025-07-11 21:42:28,725 - __main__ - INFO -   (170/571) Fetched for درازک
+2025-07-11 21:42:33,915 - __main__ - INFO -   (171/571) Fetched for حتوکا
+2025-07-11 21:42:38,455 - __main__ - INFO -   (172/571) Fetched for کوثر
+2025-07-11 21:42:44,150 - __main__ - INFO -   (173/571) Fetched for غگل
+2025-07-11 21:42:48,550 - __main__ - INFO -   (174/571) Fetched for سامان
+2025-07-11 21:42:52,885 - __main__ - INFO -   (175/571) Fetched for تاپیکو
+2025-07-11 21:42:58,295 - __main__ - INFO -   (176/571) Fetched for شبهرن
+2025-07-11 21:43:03,106 - __main__ - INFO -   (177/571) Fetched for کروی
+2025-07-11 21:43:10,769 - __main__ - INFO -   (178/571) Fetched for ختراک
+2025-07-11 21:43:15,894 - __main__ - INFO -   (179/571) Fetched for کپرور
+2025-07-11 21:43:20,304 - __main__ - WARNING -    - Discarding ولغدر: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:43:24,495 - __main__ - INFO -   (181/571) Fetched for تاصیکو
+2025-07-11 21:43:29,234 - __main__ - INFO -   (182/571) Fetched for دکوثر
+2025-07-11 21:43:33,915 - __main__ - INFO -   (183/571) Fetched for کتوسعه
+2025-07-11 21:43:38,285 - __main__ - INFO -   (184/571) Fetched for پارسان
+2025-07-11 21:43:41,960 - __main__ - WARNING -    - Discarding اونیکس: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:43:46,915 - __main__ - INFO -   (186/571) Fetched for فصبا
+2025-07-11 21:43:53,888 - __main__ - INFO -   (187/571) Fetched for قچار
+2025-07-11 21:43:59,626 - __main__ - INFO -   (188/571) Fetched for پدرخش
+2025-07-11 21:44:06,065 - __main__ - INFO -   (189/571) Fetched for کترام
+2025-07-11 21:44:13,235 - __main__ - INFO -   (190/571) Fetched for غالبر
+2025-07-11 21:44:17,365 - __main__ - INFO -   (191/571) Fetched for شگستر
+2025-07-11 21:44:20,403 - __main__ - INFO -   (192/571) Fetched for وپویا
+2025-07-11 21:44:23,644 - __main__ - WARNING -    - Discarding آسامید: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:44:26,744 - __main__ - WARNING -    - Discarding استیل: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:44:31,055 - __main__ - INFO -   (195/571) Fetched for زدشت
+2025-07-11 21:44:35,665 - __main__ - INFO -   (196/571) Fetched for وهور
+2025-07-11 21:44:40,655 - __main__ - INFO -   (197/571) Fetched for فارس
+2025-07-11 21:44:45,804 - __main__ - INFO -   (198/571) Fetched for ونیکی
+2025-07-11 21:44:49,980 - __main__ - INFO -   (199/571) Fetched for تنوین
+2025-07-11 21:44:54,074 - __main__ - INFO -   (200/571) Fetched for ساروج
+2025-07-11 21:44:58,224 - __main__ - INFO -   (201/571) Fetched for وساخت
+2025-07-11 21:45:04,000 - __main__ - INFO -   (202/571) Fetched for وغدیر
+2025-07-11 21:45:09,145 - __main__ - INFO -   (203/571) Fetched for زشگزا
+2025-07-11 21:45:13,240 - __main__ - INFO -   (204/571) Fetched for پی پاد
+2025-07-11 21:45:17,474 - __main__ - WARNING -    - Discarding میهن: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:45:23,310 - __main__ - INFO -   (206/571) Fetched for زشریف
+2025-07-11 21:45:27,275 - __main__ - WARNING -    - Discarding ثبات: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:45:33,525 - __main__ - INFO -   (208/571) Fetched for خبهمن
+2025-07-11 21:45:38,844 - __main__ - INFO -   (209/571) Fetched for سشرق
+2025-07-11 21:45:43,764 - __main__ - INFO -   (210/571) Fetched for جم پیلن
+2025-07-11 21:45:49,174 - __main__ - INFO -   (211/571) Fetched for سدور
+2025-07-11 21:45:54,204 - __main__ - INFO -   (212/571) Fetched for فنر
+2025-07-11 21:46:01,404 - __main__ - INFO -   (213/571) Fetched for شکربن
+2025-07-11 21:46:05,779 - __main__ - INFO -   (214/571) Fetched for اتکام
+2025-07-11 21:46:08,993 - __main__ - WARNING -    - Discarding نخل: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:46:13,364 - __main__ - INFO -   (216/571) Fetched for مبین
+2025-07-11 21:46:18,114 - __main__ - INFO -   (217/571) Fetched for رکیش
+2025-07-11 21:46:23,928 - __main__ - INFO -   (218/571) Fetched for خفنر
+2025-07-11 21:46:28,811 - __main__ - INFO -   (219/571) Fetched for فغدیر
+2025-07-11 21:46:32,723 - __main__ - WARNING -    - Discarding حخزر: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:46:37,419 - __main__ - INFO -   (221/571) Fetched for کزغال
+2025-07-11 21:46:41,724 - __main__ - INFO -   (222/571) Fetched for وبصادر
+2025-07-11 21:46:47,249 - __main__ - INFO -   (223/571) Fetched for سجام
+2025-07-11 21:46:53,624 - __main__ - INFO -   (224/571) Fetched for وبوعلی
+2025-07-11 21:46:58,795 - __main__ - INFO -   (225/571) Fetched for کاسپین
+2025-07-11 21:47:03,964 - __main__ - INFO -   (226/571) Fetched for سیمرغ
+2025-07-11 21:47:07,343 - __main__ - WARNING -    - Discarding زیتون: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:47:12,024 - __main__ - INFO -   (228/571) Fetched for غسالم
+2025-07-11 21:47:16,984 - __main__ - INFO -   (229/571) Fetched for حفاری
+2025-07-11 21:47:22,174 - __main__ - INFO -   (230/571) Fetched for فخوز
+2025-07-11 21:47:26,774 - __main__ - INFO -   (231/571) Fetched for چکاپا
+2025-07-11 21:47:31,684 - __main__ - INFO -   (232/571) Fetched for دلقما
+2025-07-11 21:47:36,504 - __main__ - INFO -   (233/571) Fetched for سپیدار
+2025-07-11 21:47:42,274 - __main__ - INFO -   (234/571) Fetched for سهرمز
+2025-07-11 21:47:46,100 - __main__ - INFO -   (235/571) Fetched for تیپیکو
+2025-07-11 21:47:50,434 - __main__ - INFO -   (236/571) Fetched for ما
+2025-07-11 21:47:55,758 - __main__ - INFO -   (237/571) Fetched for بزاگرس
+2025-07-11 21:48:00,979 - __main__ - INFO -   (238/571) Fetched for فروی
+2025-07-11 21:48:04,144 - __main__ - WARNING -    - Discarding انار: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:48:09,165 - __main__ - INFO -   (240/571) Fetched for نمرینو
+2025-07-11 21:48:12,944 - __main__ - WARNING -    - Discarding آکورد: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:48:17,564 - __main__ - INFO -   (242/571) Fetched for ومدیر
+2025-07-11 21:48:24,124 - __main__ - INFO -   (243/571) Fetched for لبوتان
+2025-07-11 21:48:29,549 - __main__ - INFO -   (244/571) Fetched for تکمبا
+2025-07-11 21:48:35,204 - __main__ - INFO -   (245/571) Fetched for فجام
+2025-07-11 21:48:41,014 - __main__ - INFO -   (246/571) Fetched for ستران
+2025-07-11 21:48:46,432 - __main__ - INFO -   (247/571) Fetched for شسینا
+2025-07-11 21:48:50,274 - __main__ - INFO -   (248/571) Fetched for غگرجی
+2025-07-11 21:48:53,404 - __main__ - WARNING -    - Discarding آوند: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:48:57,784 - __main__ - WARNING -    - Discarding ولشرق: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:49:01,394 - __main__ - WARNING -    - Discarding نیلی: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:49:04,384 - __main__ - WARNING -    - Discarding مروارید: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:49:07,843 - __main__ - WARNING -    - Discarding ارمغان: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:49:12,204 - __main__ - WARNING -    - Discarding لبخند: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:49:17,399 - __main__ - INFO -   (255/571) Fetched for غشان
+2025-07-11 21:49:20,938 - __main__ - WARNING -    - Discarding سیناد: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:49:25,188 - __main__ - INFO -   (257/571) Fetched for آریان
+2025-07-11 21:49:30,856 - __main__ - INFO -   (258/571) Fetched for ساوه
+2025-07-11 21:49:36,214 - __main__ - INFO -   (259/571) Fetched for جم
+2025-07-11 21:49:41,734 - __main__ - INFO -   (260/571) Fetched for سبهان
+2025-07-11 21:49:47,034 - __main__ - INFO -   (261/571) Fetched for کلوند
+2025-07-11 21:49:51,283 - __main__ - INFO -   (262/571) Fetched for پیزد
+2025-07-11 21:49:57,204 - __main__ - INFO -   (263/571) Fetched for خزر
+2025-07-11 21:50:02,128 - __main__ - WARNING -    - Discarding ثنوسا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:50:07,348 - __main__ - INFO -   (265/571) Fetched for وپارس
+2025-07-11 21:50:14,523 - __main__ - INFO -   (266/571) Fetched for دجابر
+2025-07-11 21:50:19,834 - __main__ - INFO -   (267/571) Fetched for زپارس
+2025-07-11 21:50:24,953 - __main__ - INFO -   (268/571) Fetched for میدکو
+2025-07-11 21:50:28,256 - __main__ - WARNING -    - Discarding رابین: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:50:32,843 - __main__ - INFO -   (270/571) Fetched for واتی
+2025-07-11 21:50:38,164 - __main__ - INFO -   (271/571) Fetched for دشیمی
+2025-07-11 21:50:43,591 - __main__ - INFO -   (272/571) Fetched for غشهداب
+2025-07-11 21:50:48,100 - __main__ - INFO -   (273/571) Fetched for بجهرم
+2025-07-11 21:50:55,804 - __main__ - INFO -   (274/571) Fetched for خچرخش
+2025-07-11 21:51:00,333 - __main__ - INFO -   (275/571) Fetched for سمازن
+2025-07-11 21:51:03,788 - __main__ - WARNING -    - Discarding رنیک: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:51:07,328 - __main__ - WARNING -    - Discarding آگاس: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:51:13,188 - __main__ - INFO -   (278/571) Fetched for ونفت
+2025-07-11 21:51:17,698 - __main__ - INFO -   (279/571) Fetched for صبا
+2025-07-11 21:51:23,274 - __main__ - INFO -   (280/571) Fetched for غپاک
+2025-07-11 21:51:28,353 - __main__ - INFO -   (281/571) Fetched for عالیس
+2025-07-11 21:51:32,944 - __main__ - INFO -   (282/571) Fetched for قاسم
+2025-07-11 21:51:37,864 - __main__ - INFO -   (283/571) Fetched for برکت
+2025-07-11 21:51:44,108 - __main__ - INFO -   (284/571) Fetched for دتماد
+2025-07-11 21:51:49,744 - __main__ - INFO -   (285/571) Fetched for فاما
+2025-07-11 21:51:54,244 - __main__ - WARNING -    - Discarding کمند: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:51:57,723 - __main__ - WARNING -    - Discarding بازده: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:52:03,263 - __main__ - INFO -   (288/571) Fetched for ساربیل
+2025-07-11 21:52:09,093 - __main__ - INFO -   (289/571) Fetched for غاذر
+2025-07-11 21:52:12,523 - __main__ - WARNING -    - Discarding اعتبار: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:52:18,003 - __main__ - INFO -   (291/571) Fetched for شپاس
+2025-07-11 21:52:22,303 - __main__ - INFO -   (292/571) Fetched for اردستان
+2025-07-11 21:52:28,153 - __main__ - INFO -   (293/571) Fetched for شبندر
+2025-07-11 21:52:32,753 - __main__ - INFO -   (294/571) Fetched for حفارس
+2025-07-11 21:52:37,978 - __main__ - INFO -   (295/571) Fetched for فملی
+2025-07-11 21:52:43,713 - __main__ - INFO -   (296/571) Fetched for سپاها
+2025-07-11 21:52:49,213 - __main__ - INFO -   (297/571) Fetched for کگل
+2025-07-11 21:52:53,138 - __main__ - INFO -   (298/571) Fetched for قشکر
+2025-07-11 21:52:57,333 - __main__ - INFO -   (299/571) Fetched for والماس
+2025-07-11 21:53:01,213 - __main__ - WARNING -    - Discarding آسام: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:53:05,923 - __main__ - INFO -   (301/571) Fetched for اعتلا
+2025-07-11 21:53:10,358 - __main__ - INFO -   (302/571) Fetched for زفجر
+2025-07-11 21:53:14,213 - __main__ - WARNING -    - Discarding آفاق: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:53:19,193 - __main__ - INFO -   (304/571) Fetched for وصندوق
+2025-07-11 21:53:23,642 - __main__ - INFO -   (305/571) Fetched for سیدکو
+2025-07-11 21:53:28,557 - __main__ - INFO -   (306/571) Fetched for فسبزوار
+2025-07-11 21:53:33,383 - __main__ - INFO -   (307/571) Fetched for توریل
+2025-07-11 21:53:38,204 - __main__ - INFO -   (308/571) Fetched for وساپا
+2025-07-11 21:53:42,893 - __main__ - INFO -   (309/571) Fetched for آبادا
+2025-07-11 21:53:46,513 - __main__ - WARNING -    - Discarding پتروآگاه: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:53:52,313 - __main__ - INFO -   (311/571) Fetched for غویتا
+2025-07-11 21:53:58,081 - __main__ - INFO -   (312/571) Fetched for فاذر
+2025-07-11 21:54:01,903 - __main__ - INFO -   (313/571) Fetched for شتوکا
+2025-07-11 21:54:06,753 - __main__ - INFO -   (314/571) Fetched for شیراز
+2025-07-11 21:54:10,334 - __main__ - WARNING -    - Discarding ثهام: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:54:15,563 - __main__ - INFO -   (316/571) Fetched for شلعاب
+2025-07-11 21:54:21,393 - __main__ - INFO -   (317/571) Fetched for خمحرکه
+2025-07-11 21:54:25,076 - __main__ - WARNING -    - Discarding تداوم: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:54:29,993 - __main__ - INFO -   (319/571) Fetched for قرن
+2025-07-11 21:54:34,603 - __main__ - INFO -   (320/571) Fetched for اتکای
+2025-07-11 21:54:40,653 - __main__ - INFO -   (321/571) Fetched for دروز
+2025-07-11 21:54:46,488 - __main__ - INFO -   (322/571) Fetched for قصفها
+2025-07-11 21:54:49,662 - __main__ - WARNING -    - Discarding فارما کیان: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:54:52,652 - __main__ - WARNING -    - Discarding سمان: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:54:56,773 - __main__ - INFO -   (325/571) Fetched for رانفور
+2025-07-11 21:55:00,207 - __main__ - INFO -   (326/571) Fetched for وکغدیر
+2025-07-11 21:55:05,833 - __main__ - INFO -   (327/571) Fetched for شدوص
+2025-07-11 21:55:11,447 - __main__ - INFO -   (328/571) Fetched for فولاژ
+2025-07-11 21:55:16,498 - __main__ - INFO -   (329/571) Fetched for رتاپ
+2025-07-11 21:55:22,933 - __main__ - INFO -   (330/571) Fetched for سهگمت
+2025-07-11 21:55:26,723 - __main__ - WARNING -    - Discarding وبازار: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:55:32,463 - __main__ - INFO -   (332/571) Fetched for فجر
+2025-07-11 21:55:36,762 - __main__ - INFO -   (333/571) Fetched for بساما
+2025-07-11 21:55:40,963 - __main__ - INFO -   (334/571) Fetched for تلیسه
+2025-07-11 21:55:45,466 - __main__ - INFO -   (335/571) Fetched for وملی
+2025-07-11 21:55:48,662 - __main__ - WARNING -    - Discarding توان: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:55:54,603 - __main__ - INFO -   (337/571) Fetched for پتایر
+2025-07-11 21:56:00,102 - __main__ - INFO -   (338/571) Fetched for سخوز
+2025-07-11 21:56:05,493 - __main__ - INFO -   (339/571) Fetched for خاذین
+2025-07-11 21:56:11,168 - __main__ - INFO -   (340/571) Fetched for غبشهر
+2025-07-11 21:56:15,378 - __main__ - INFO -   (341/571) Fetched for زکوثر
+2025-07-11 21:56:18,863 - __main__ - WARNING -    - Discarding کاج: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:56:22,022 - __main__ - WARNING -    - Discarding بهین رو: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:56:25,027 - __main__ - WARNING -    - Discarding دامون: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:56:29,867 - __main__ - INFO -   (345/571) Fetched for تپمپی
+2025-07-11 21:56:35,126 - __main__ - INFO -   (346/571) Fetched for کبافق
+2025-07-11 21:56:38,107 - __main__ - WARNING -    - Discarding پاداش: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:56:42,707 - __main__ - INFO -   (348/571) Fetched for وسبحان
+2025-07-11 21:56:47,422 - __main__ - INFO -   (349/571) Fetched for قمرو
+2025-07-11 21:56:51,002 - __main__ - WARNING -    - Discarding ارزش: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:56:56,347 - __main__ - INFO -   (351/571) Fetched for کویر
+2025-07-11 21:57:01,138 - __main__ - INFO -   (352/571) Fetched for دسبحا
+2025-07-11 21:57:04,413 - __main__ - WARNING -    - Discarding فلزفارابی: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:57:09,533 - __main__ - INFO -   (354/571) Fetched for فزرین
+2025-07-11 21:57:13,633 - __main__ - WARNING -    - Discarding وگستر: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:57:18,552 - __main__ - INFO -   (356/571) Fetched for ودی
+2025-07-11 21:57:25,412 - __main__ - INFO -   (357/571) Fetched for شرانل
+2025-07-11 21:57:31,077 - __main__ - INFO -   (358/571) Fetched for شگل
+2025-07-11 21:57:33,862 - __main__ - WARNING -    - Discarding کالا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:57:37,197 - __main__ - WARNING -    - Discarding ثابت اکسیژن: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:57:41,893 - __main__ - INFO -   (361/571) Fetched for حآسا
+2025-07-11 21:57:47,120 - __main__ - INFO -   (362/571) Fetched for فروسیل
+2025-07-11 21:57:52,857 - __main__ - INFO -   (363/571) Fetched for غچین
+2025-07-11 21:57:59,402 - __main__ - INFO -   (364/571) Fetched for خساپا
+2025-07-11 21:58:06,461 - __main__ - INFO -   (365/571) Fetched for قثابت
+2025-07-11 21:58:12,206 - __main__ - INFO -   (366/571) Fetched for وسینا
+2025-07-11 21:58:16,572 - __main__ - WARNING -    - Discarding ولساپا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:58:19,553 - __main__ - WARNING -    - Discarding صایند: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:58:22,348 - __main__ - WARNING -    - Discarding یارا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:58:26,552 - __main__ - INFO -   (370/571) Fetched for کیانا
+2025-07-11 21:58:31,762 - __main__ - INFO -   (371/571) Fetched for فجهان
+2025-07-11 21:58:37,602 - __main__ - INFO -   (372/571) Fetched for غپآذر
+2025-07-11 21:58:42,822 - __main__ - INFO -   (373/571) Fetched for سپید
+2025-07-11 21:58:47,022 - __main__ - WARNING -    - Discarding امین یکم: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:58:53,532 - __main__ - INFO -   (375/571) Fetched for خرینگ
+2025-07-11 21:58:59,327 - __main__ - INFO -   (376/571) Fetched for بفجر
+2025-07-11 21:59:05,572 - __main__ - INFO -   (377/571) Fetched for فولاد
+2025-07-11 21:59:10,222 - __main__ - INFO -   (378/571) Fetched for سمگا
+2025-07-11 21:59:14,462 - __main__ - INFO -   (379/571) Fetched for بترانس
+2025-07-11 21:59:14,936 - pytse - ERROR - Cannot read daily trade records for symbol: دقاضی
+2025-07-11 21:59:19,272 - __main__ - INFO -   (380/571) Fetched for دقاضی
+2025-07-11 21:59:24,303 - __main__ - INFO -   (381/571) Fetched for وصنا
+2025-07-11 21:59:27,999 - __main__ - WARNING -    - Discarding هم وزن: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:59:31,767 - __main__ - WARNING -    - Discarding گنجینه: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:59:35,252 - __main__ - WARNING -    - Discarding صنم: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 21:59:40,172 - __main__ - INFO -   (385/571) Fetched for وتوکا
+2025-07-11 21:59:45,072 - __main__ - INFO -   (386/571) Fetched for ونوین
+2025-07-11 21:59:48,492 - __main__ - INFO -   (387/571) Fetched for وخاور
+2025-07-11 21:59:54,192 - __main__ - INFO -   (388/571) Fetched for دسانکو
+2025-07-11 21:59:59,832 - __main__ - INFO -   (389/571) Fetched for واعتبار
+2025-07-11 22:00:04,848 - __main__ - INFO -   (390/571) Fetched for بیوتیک
+2025-07-11 22:00:10,173 - __main__ - INFO -   (391/571) Fetched for وکار
+2025-07-11 22:00:14,952 - __main__ - INFO -   (392/571) Fetched for وبانک
+2025-07-11 22:00:18,362 - __main__ - WARNING -    - Discarding ولپارس: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:00:24,832 - __main__ - INFO -   (394/571) Fetched for بمولد
+2025-07-11 22:00:28,912 - __main__ - WARNING -    - Discarding ولبهمن: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:00:32,392 - __main__ - WARNING -    - Discarding رشد: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:00:37,270 - __main__ - INFO -   (397/571) Fetched for دانا
+2025-07-11 22:00:42,239 - __main__ - INFO -   (398/571) Fetched for غنوش
+2025-07-11 22:00:48,422 - __main__ - INFO -   (399/571) Fetched for شبریز
+2025-07-11 22:00:52,667 - __main__ - INFO -   (400/571) Fetched for خگستر
+2025-07-11 22:00:58,502 - __main__ - INFO -   (401/571) Fetched for دعبید
+2025-07-11 22:01:03,977 - __main__ - INFO -   (402/571) Fetched for شسپا
+2025-07-11 22:01:09,340 - __main__ - INFO -   (403/571) Fetched for خاور
+2025-07-11 22:01:15,102 - __main__ - INFO -   (404/571) Fetched for کاذر
+2025-07-11 22:01:18,291 - __main__ - WARNING -    - Discarding جاودان: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:01:23,201 - __main__ - INFO -   (406/571) Fetched for کرومیت
+2025-07-11 22:01:27,682 - __main__ - INFO -   (407/571) Fetched for انرژی
+2025-07-11 22:01:32,362 - __main__ - INFO -   (408/571) Fetched for تاپکیش
+2025-07-11 22:01:36,291 - __main__ - WARNING -    - Discarding اکسیژن: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:01:41,642 - __main__ - INFO -   (410/571) Fetched for ختور
+2025-07-11 22:01:46,119 - __main__ - INFO -   (411/571) Fetched for بوعلی
+2025-07-11 22:01:52,061 - __main__ - INFO -   (412/571) Fetched for کمنگنز
+2025-07-11 22:01:55,322 - __main__ - WARNING -    - Discarding هامرز: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:01:59,942 - __main__ - INFO -   (414/571) Fetched for کمرجان
+2025-07-11 22:02:04,141 - __main__ - INFO -   (415/571) Fetched for کرمان
+2025-07-11 22:02:08,962 - __main__ - INFO -   (416/571) Fetched for فرود
+2025-07-11 22:02:13,666 - __main__ - INFO -   (417/571) Fetched for آسیا
+2025-07-11 22:02:16,632 - __main__ - WARNING -    - Discarding صدف: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:02:21,957 - __main__ - INFO -   (419/571) Fetched for شتران
+2025-07-11 22:02:27,049 - __main__ - INFO -   (420/571) Fetched for بپاس
+2025-07-11 22:02:32,812 - __main__ - INFO -   (421/571) Fetched for سغرب
+2025-07-11 22:02:37,947 - __main__ - INFO -   (422/571) Fetched for وامید
+2025-07-11 22:02:43,461 - __main__ - INFO -   (423/571) Fetched for دکپسول
+2025-07-11 22:02:46,842 - __main__ - WARNING -    - Discarding بمان: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:02:50,832 - __main__ - WARNING -    - Discarding صنهال: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:02:54,737 - __main__ - INFO -   (426/571) Fetched for تکاردان
+2025-07-11 22:02:57,801 - __main__ - WARNING -    - Discarding رویین: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:03:03,857 - __main__ - INFO -   (428/571) Fetched for چکارن
+2025-07-11 22:03:07,811 - __main__ - WARNING -    - Discarding تمشک: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:03:11,232 - __main__ - INFO -   (430/571) Fetched for تبرک
+2025-07-11 22:03:15,055 - __main__ - WARNING -    - Discarding کیان: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:03:18,596 - __main__ - WARNING -    - Discarding تصمیم: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:03:25,341 - __main__ - INFO -   (433/571) Fetched for مارون
+2025-07-11 22:03:30,186 - __main__ - INFO -   (434/571) Fetched for ثپردیس
+2025-07-11 22:03:35,796 - __main__ - INFO -   (435/571) Fetched for فسرب
+2025-07-11 22:03:41,946 - __main__ - INFO -   (436/571) Fetched for فروس
+2025-07-11 22:03:46,700 - __main__ - INFO -   (437/571) Fetched for زبینا
+2025-07-11 22:03:50,744 - __main__ - WARNING -    - Discarding بنو: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:03:55,964 - __main__ - INFO -   (439/571) Fetched for وتوشه
+2025-07-11 22:04:01,180 - __main__ - INFO -   (440/571) Fetched for گلدیرا
+2025-07-11 22:04:05,891 - __main__ - WARNING -    - Discarding پایا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:04:10,811 - __main__ - INFO -   (442/571) Fetched for آریا
+2025-07-11 22:04:14,191 - __main__ - WARNING -    - Discarding سام: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:04:19,006 - __main__ - INFO -   (444/571) Fetched for شملی
+2025-07-11 22:04:25,046 - __main__ - INFO -   (445/571) Fetched for فنورد
+2025-07-11 22:04:27,721 - __main__ - WARNING -    - Discarding فاخر: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:04:33,131 - __main__ - INFO -   (447/571) Fetched for فسوژ
+2025-07-11 22:04:38,576 - __main__ - INFO -   (448/571) Fetched for دفارا
+2025-07-11 22:04:44,701 - __main__ - INFO -   (449/571) Fetched for قلرست
+2025-07-11 22:04:48,591 - __main__ - WARNING -    - Discarding توسکا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:04:54,941 - __main__ - INFO -   (451/571) Fetched for کرازی
+2025-07-11 22:05:00,491 - __main__ - INFO -   (452/571) Fetched for خموتور
+2025-07-11 22:05:05,181 - __main__ - INFO -   (453/571) Fetched for غگیلا
+2025-07-11 22:05:11,171 - __main__ - INFO -   (454/571) Fetched for وصنعت
+2025-07-11 22:05:14,121 - __main__ - WARNING -    - Discarding اوصتا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:05:19,010 - __main__ - INFO -   (456/571) Fetched for فنوال
+2025-07-11 22:05:24,231 - __main__ - INFO -   (457/571) Fetched for والبر
+2025-07-11 22:05:29,251 - __main__ - INFO -   (458/571) Fetched for خکرمان
+2025-07-11 22:05:33,141 - __main__ - INFO -   (459/571) Fetched for فرابورس
+2025-07-11 22:05:37,156 - __main__ - WARNING -    - Discarding داریوش: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:05:42,551 - __main__ - INFO -   (461/571) Fetched for کایزد
+2025-07-11 22:05:46,041 - __main__ - WARNING -    - Discarding ویستا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:05:50,140 - __main__ - INFO -   (463/571) Fetched for امین
+2025-07-11 22:05:55,371 - __main__ - INFO -   (464/571) Fetched for ومعادن
+2025-07-11 22:05:59,871 - __main__ - INFO -   (465/571) Fetched for لوتوس
+2025-07-11 22:06:05,016 - __main__ - INFO -   (466/571) Fetched for خکار
+2025-07-11 22:06:09,683 - __main__ - INFO -   (467/571) Fetched for ارفع
+2025-07-11 22:06:13,904 - __main__ - INFO -   (468/571) Fetched for غمایه
+2025-07-11 22:06:18,193 - __main__ - INFO -   (469/571) Fetched for وپترو
+2025-07-11 22:06:22,920 - __main__ - INFO -   (470/571) Fetched for پرداخت
+2025-07-11 22:06:27,308 - __main__ - INFO -   (471/571) Fetched for نوین
+2025-07-11 22:06:32,332 - __main__ - INFO -   (472/571) Fetched for غشاذر
+2025-07-11 22:06:36,428 - __main__ - INFO -   (473/571) Fetched for تماوند
+2025-07-11 22:06:42,776 - __main__ - INFO -   (474/571) Fetched for شاوان
+2025-07-11 22:06:47,891 - __main__ - INFO -   (475/571) Fetched for کاوه
+2025-07-11 22:06:53,571 - __main__ - INFO -   (476/571) Fetched for دالبر
+2025-07-11 22:06:58,495 - __main__ - INFO -   (477/571) Fetched for بورس
+2025-07-11 22:07:03,675 - __main__ - INFO -   (478/571) Fetched for حکشتی
+2025-07-11 22:07:09,961 - __main__ - INFO -   (479/571) Fetched for سقاین
+2025-07-11 22:07:15,131 - __main__ - INFO -   (480/571) Fetched for شپارس
+2025-07-11 22:07:18,614 - __main__ - WARNING -    - Discarding مانی: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:07:24,455 - __main__ - INFO -   (482/571) Fetched for دابور
+2025-07-11 22:07:31,000 - __main__ - INFO -   (483/571) Fetched for غشصفا
+2025-07-11 22:07:37,451 - __main__ - INFO -   (484/571) Fetched for غپونه
+2025-07-11 22:07:42,270 - __main__ - WARNING -    - Discarding دارا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:07:47,590 - __main__ - INFO -   (486/571) Fetched for بکابل
+2025-07-11 22:07:53,248 - __main__ - INFO -   (487/571) Fetched for شکلر
+2025-07-11 22:07:57,231 - __main__ - WARNING -    - Discarding دارا یکم: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:08:03,360 - __main__ - INFO -   (489/571) Fetched for تکشا
+2025-07-11 22:08:09,410 - __main__ - INFO -   (490/571) Fetched for کگاز
+2025-07-11 22:08:13,601 - __main__ - INFO -   (491/571) Fetched for غکورش
+2025-07-11 22:08:16,880 - __main__ - WARNING -    - Discarding اوج: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:08:21,901 - __main__ - INFO -   (493/571) Fetched for ونیرو
+2025-07-11 22:08:25,174 - __main__ - WARNING -    - Discarding ساحل: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:08:30,475 - __main__ - INFO -   (495/571) Fetched for پاکشو
+2025-07-11 22:08:34,801 - __main__ - WARNING -    - Discarding کی بی سی: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:08:40,941 - __main__ - INFO -   (497/571) Fetched for لابسا
+2025-07-11 22:08:46,591 - __main__ - INFO -   (498/571) Fetched for ثشاهد
+2025-07-11 22:08:51,280 - __main__ - INFO -   (499/571) Fetched for اپرداز
+2025-07-11 22:08:57,061 - __main__ - INFO -   (500/571) Fetched for خشرق
+2025-07-11 22:09:02,147 - __main__ - INFO -   (501/571) Fetched for وتجارت
+2025-07-11 22:09:05,934 - __main__ - WARNING -    - Discarding شتاب: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:09:10,949 - __main__ - INFO -   (503/571) Fetched for ساینا
+2025-07-11 22:09:15,470 - __main__ - WARNING -    - Discarding سدبیر: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:09:21,800 - __main__ - INFO -   (505/571) Fetched for بپیوند
+2025-07-11 22:09:27,105 - __main__ - INFO -   (506/571) Fetched for نطرین
+2025-07-11 22:09:32,690 - __main__ - INFO -   (507/571) Fetched for غگلستا
+2025-07-11 22:09:36,645 - __main__ - WARNING -    - Discarding سرو: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:09:40,641 - __main__ - INFO -   (509/571) Fetched for وکبهمن
+2025-07-11 22:09:46,691 - __main__ - INFO -   (510/571) Fetched for فایرا
+2025-07-11 22:09:51,300 - __main__ - INFO -   (511/571) Fetched for گوهران
+2025-07-11 22:09:56,595 - __main__ - INFO -   (512/571) Fetched for شفن
+2025-07-11 22:09:59,990 - __main__ - WARNING -    - Discarding فردا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:10:05,465 - __main__ - INFO -   (514/571) Fetched for سکرد
+2025-07-11 22:10:09,130 - __main__ - INFO -   (515/571) Fetched for کتوکا
+2025-07-11 22:10:13,260 - __main__ - WARNING -    - Discarding مداران: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:10:17,400 - __main__ - WARNING -    - Discarding فیروزه: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:10:20,810 - __main__ - WARNING -    - Discarding رایکا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:10:26,931 - __main__ - INFO -   (519/571) Fetched for دماوند
+2025-07-11 22:10:32,670 - __main__ - INFO -   (520/571) Fetched for سبجنو
+2025-07-11 22:10:37,180 - __main__ - INFO -   (521/571) Fetched for توسن
+2025-07-11 22:10:42,621 - __main__ - INFO -   (522/571) Fetched for ددام
+2025-07-11 22:10:48,230 - __main__ - INFO -   (523/571) Fetched for گکوثر
+2025-07-11 22:10:52,331 - __main__ - WARNING -    - Discarding آساس: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:10:59,090 - __main__ - INFO -   (525/571) Fetched for فاسمین
+2025-07-11 22:11:01,332 - __main__ - WARNING -    - Discarding ثمین: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:11:05,535 - __main__ - INFO -   (527/571) Fetched for دتوزیع
+2025-07-11 22:11:10,230 - __main__ - INFO -   (528/571) Fetched for فباهنر
+2025-07-11 22:11:13,420 - __main__ - WARNING -    - Discarding اعتماد: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:11:16,820 - __main__ - WARNING -    - Discarding موج: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:11:22,175 - __main__ - INFO -   (531/571) Fetched for کهمدا
+2025-07-11 22:11:25,608 - __main__ - WARNING -    - Discarding خودران: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:11:32,361 - __main__ - INFO -   (533/571) Fetched for سخزر
+2025-07-11 22:11:36,179 - __main__ - WARNING -    - Discarding پالایش: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:11:42,300 - __main__ - INFO -   (535/571) Fetched for کماسه
+2025-07-11 22:11:46,805 - __main__ - WARNING -    - Discarding دانیک: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:11:53,314 - __main__ - INFO -   (537/571) Fetched for دارو
+2025-07-11 22:11:59,095 - __main__ - INFO -   (538/571) Fetched for وتوس
+2025-07-11 22:12:04,300 - __main__ - INFO -   (539/571) Fetched for فپنتا
+2025-07-11 22:12:09,230 - __main__ - INFO -   (540/571) Fetched for شبصیر
+2025-07-11 22:12:13,750 - __main__ - INFO -   (541/571) Fetched for همراه
+2025-07-11 22:12:17,930 - __main__ - INFO -   (542/571) Fetched for داتام
+2025-07-11 22:12:22,249 - __main__ - INFO -   (543/571) Fetched for ثباغ
+2025-07-11 22:12:26,224 - __main__ - INFO -   (544/571) Fetched for رافزا
+2025-07-11 22:12:30,424 - __main__ - WARNING -    - Discarding کاریس: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:12:35,850 - __main__ - INFO -   (546/571) Fetched for دیران
+2025-07-11 22:12:40,711 - __main__ - INFO -   (547/571) Fetched for پترول
+2025-07-11 22:12:44,455 - __main__ - INFO -   (548/571) Fetched for فن افزار
+2025-07-11 22:12:49,381 - __main__ - INFO -   (549/571) Fetched for شکام
+2025-07-11 22:12:55,690 - __main__ - INFO -   (550/571) Fetched for بشهاب
+2025-07-11 22:13:00,745 - __main__ - INFO -   (551/571) Fetched for ددانا
+2025-07-11 22:13:04,540 - __main__ - WARNING -    - Discarding اوان: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:13:10,054 - __main__ - INFO -   (553/571) Fetched for بکاب
+2025-07-11 22:13:14,870 - __main__ - INFO -   (554/571) Fetched for البرز
+2025-07-11 22:13:20,192 - __main__ - INFO -   (555/571) Fetched for ختوقا
+2025-07-11 22:13:25,695 - __main__ - INFO -   (556/571) Fetched for دپارس
+2025-07-11 22:13:31,064 - __main__ - INFO -   (557/571) Fetched for هرمز
+2025-07-11 22:13:35,750 - __main__ - WARNING -    - Discarding پارند: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:13:38,959 - __main__ - WARNING -    - Discarding دیبا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:13:42,624 - __main__ - WARNING -    - Discarding امین شهر: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:13:48,070 - __main__ - INFO -   (561/571) Fetched for سآبیک
+2025-07-11 22:13:53,570 - __main__ - INFO -   (562/571) Fetched for شخارک
+2025-07-11 22:13:57,264 - __main__ - WARNING -    - Discarding داریک: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:14:02,080 - __main__ - INFO -   (564/571) Fetched for زقیام
+2025-07-11 22:14:08,929 - __main__ - INFO -   (565/571) Fetched for ذوب
+2025-07-11 22:14:15,040 - __main__ - INFO -   (566/571) Fetched for دبالک
+2025-07-11 22:14:20,192 - __main__ - INFO -   (567/571) Fetched for قشیر
+2025-07-11 22:14:24,219 - __main__ - WARNING -    - Discarding ولصنم: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:14:29,159 - __main__ - INFO -   (569/571) Fetched for غصینو
+2025-07-11 22:14:32,790 - __main__ - WARNING -    - Discarding کارا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:14:35,729 - __main__ - WARNING -    - Discarding ارزش مسکن: Does not have at least one valid key factor (P/E or P/S).
+2025-07-11 22:14:35,752 - __main__ - INFO - --- Stage 3: Creating Master DataFrame ---
+2025-07-11 22:14:35,752 - __main__ - INFO - Successfully created master DataFrame with 437 records.
+2025-07-11 22:14:35,752 - __main__ - INFO - --- Stage 4: Imputing Missing Data ---
+2025-07-11 22:14:35,800 - __main__ - INFO -    - Imputed 12 missing 'P/E' values using industry group averages.
+2025-07-11 22:14:35,810 - __main__ - INFO -    - Imputed 56 missing 'P/S' values using industry group averages.
+2025-07-11 22:14:35,819 - __main__ - INFO -    - Filled 106 remaining 'P/S' NaNs with overall median (1.39).
+2025-07-11 22:14:35,830 - __main__ - INFO - --- Stage 5: Handling Outliers ---
+2025-07-11 22:14:35,849 - __main__ - INFO -    - Capped outliers in 'P/E' at the 1st and 99th percentiles.
+2025-07-11 22:14:35,850 - __main__ - INFO -    - Capped outliers in 'P/S' at the 1st and 99th percentiles.
+2025-07-11 22:14:35,850 - __main__ - INFO - --- Stage 6: Saving Analysis-Ready Data ---
+2025-07-11 22:14:36,249 - __main__ - INFO - 💾 Successfully saved final, cleaned dataset to C:\Portfolio-Optimizer\data\fundamental_data.feather
+2025-07-11 22:14:36,249 - __main__ - INFO - --- 📊 FINAL DATA QUALITY REPORT 📊 ---
+2025-07-11 22:14:36,249 - __main__ - INFO - - Symbols loaded from universe file: 571
+2025-07-11 22:14:36,249 - __main__ - INFO - - Symbols already in cache: 0
+2025-07-11 22:14:36,249 - __main__ - INFO - - New symbols processed: 571
+2025-07-11 22:14:36,249 - __main__ - INFO - - Symbols discarded (poor quality): 134
+2025-07-11 22:14:36,249 - __main__ - INFO - - Total symbols in final dataset: 437
+2025-07-11 22:14:36,259 - __main__ - INFO - - Missing values summary (after imputation):
+symbol        0
+group_name    0
+P/E           0
+P/S           0
+EPS           0
+dtype: int64
+2025-07-11 22:14:36,259 - __main__ - INFO - ========================================
+2025-07-11 22:14:36,259 - __main__ - INFO - ✅ Fundamental data pipeline finished successfully.

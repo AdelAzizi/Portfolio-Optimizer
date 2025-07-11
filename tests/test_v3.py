@@ -30,7 +30,7 @@ class TestIranianStockOptimizerV3:
     def setup_class(cls):
         """Setup test environment"""
         print("🧪 Setting up test environment for Iranian Stock Optimizer v3.1")
-        cls.test_cache_dir = Path('test_cache_v3')
+        cls.test_cache_dir = Path('test_cache')
         cls.test_cache_dir.mkdir(exist_ok=True)
         
         # Initialize optimizer with test parameters

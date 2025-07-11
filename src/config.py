@@ -12,4 +12,4 @@ MIN_LIQUIDITY_THRESHOLD = 10000000 # Minimum average daily volume
 # Data Paths
 PREPROCESSED_DATA_FILE = "analysis_ready_data.feather"
 MASTER_PRICE_DATA_FILE = "master_price_data.feather"
-CACHE_DIR = "cache_v3"
+CACHE_DIR = "cache"

@@ -48,7 +48,7 @@ def analyze_trend_filters():
     """
     Loads preprocessed index data and compares three different trend-following strategies.
     """
-    data_path = Path('cache_v3/master_price_data.feather')
+    data_path = Path('cache/master_price_data.feather')
     
     # 1. Load Data
     close_price = load_benchmark_data(data_path)

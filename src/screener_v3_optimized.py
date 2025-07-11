@@ -45,6 +45,22 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
+# ==============================================================================
+# Factor Strategy Functions
+# These functions encapsulate the logic for calculating a specific factor.
+# They take a DataFrame of prices and return a DataFrame of factor scores.
+# ==============================================================================
+
+def strategy_momentum(prices: pd.DataFrame) -> pd.DataFrame:
+    """Calculates the 6-month momentum score for each stock."""
+    return calculate_momentum_6m(prices)
+
+def strategy_low_volatility(prices: pd.DataFrame, window: int = 252) -> pd.DataFrame:
+    """Calculates the annualized volatility, where lower is better."""
+    # We return the negative volatility because the backtester assumes higher scores are better.
+    return -calculate_volatility(prices, window)
+
+
 def robust_jalali_to_gregorian(date_input) -> pd.Timestamp:
     """Converts various Jalali date formats (int or str) to Gregorian datetime."""
     try:
@@ -87,6 +103,8 @@ class IranianStockOptimizerV3:
         self.volume_df = None
         self.top_candidates = None
         self.weights = {}
+        self.fundamental_df = None
+        self.backtest_price_df = None # Add a dedicated df for backtesting
         
         # Enhanced filtering criteria
         self.min_return_threshold = config.MIN_RETURN_THRESHOLD
@@ -100,6 +118,56 @@ class IranianStockOptimizerV3:
         logger.info(f"   Cache Directory: {self.cache_dir}")
         logger.info(f"   Years of Data: {self.years_of_data}")
         logger.info(f"   Risk-free rate: {risk_free_rate:.2%}")
+
+    def run_complete_analysis(self) -> bool:
+        """
+        Runs the complete analysis pipeline from loading data to optimization.
+        """
+        logger.info("🚀 Starting Complete Analysis Pipeline...")
+        
+        # 1. Load data from cache
+        try:
+            price_data_path = self.cache_dir / 'master_price_data.feather'
+            volume_data_path = self.cache_dir / 'master_volume_data.feather'
+            fundamental_data_path = self.cache_dir / 'master_fundamental_data.feather'
+            
+            if not all([price_data_path.exists(), volume_data_path.exists(), fundamental_data_path.exists()]):
+                logger.error(f"❌ Data files not found in {self.cache_dir}. Please run the preprocessor first.")
+                return False
+
+            logger.info(f"📂 Loading data from {self.cache_dir}...")
+            price_df = pd.read_feather(price_data_path)
+            volume_df = pd.read_feather(volume_data_path)
+            fundamental_df = pd.read_feather(fundamental_data_path)
+
+            # Set date as index
+            self.master_price_df = price_df.set_index('date')
+            self.volume_df = volume_df.set_index('date')
+            self.fundamental_df = fundamental_df.set_index('symbol')
+            
+            # Preserve a clean copy of the price data for the backtest
+            self.backtest_price_df = self.master_price_df.copy()
+            
+            logger.info("   ✅ Data loaded successfully.")
+
+        except Exception as e:
+            logger.error(f"❌ Failed to load preprocessed data: {e}")
+            return False
+
+        # 2. Screen stocks using the multi-factor model
+        screen_success = self.screen_stocks_by_multifactor(top_n=20)
+        if not screen_success:
+            logger.error("❌ Stock screening failed. Aborting analysis.")
+            return False
+            
+        # 3. Optimize the portfolio
+        optimize_success = self.optimize_portfolio()
+        if not optimize_success:
+            logger.error("❌ Portfolio optimization failed.")
+            return False
+            
+        logger.info("✅ Complete analysis finished successfully.")
+        return True
 
     def create_master_dataframe(self, price_data: Dict[str, pd.Series]) -> bool:
         """Creates and caches a master DataFrame of all stock prices."""
@@ -121,12 +189,22 @@ class IranianStockOptimizerV3:
             self.master_price_df = None
             return False
 
-    def calculate_max_drawdown(self, price_series: pd.Series) -> pd.Series:
-        """Calculates the maximum drawdown for a given price series."""
-        cumulative_returns = (1 + price_series.pct_change()).cumprod()
-        peak = cumulative_returns.cummax()
-        drawdown = (cumulative_returns - peak) / peak
-        return drawdown.min()
+    def calculate_max_drawdown(self, prices: pd.DataFrame) -> pd.Series:
+        """Calculates the maximum drawdown for each column in a price DataFrame."""
+        if not isinstance(prices, pd.DataFrame):
+            prices = prices.to_frame() # Convert Series to DataFrame
+
+        def get_drawdown(price_series: pd.Series) -> float:
+            """Helper to calculate drawdown for a single series."""
+            numeric_series = pd.to_numeric(price_series, errors='coerce').dropna()
+            if numeric_series.empty:
+                return np.nan
+            cumulative_returns = (1 + numeric_series.pct_change()).cumprod()
+            peak = cumulative_returns.cummax()
+            drawdown = (cumulative_returns - peak) / peak
+            return drawdown.min()
+
+        return prices.apply(get_drawdown)
 
     def calculate_advanced_metrics(self, price_df: pd.DataFrame, volume_df: pd.DataFrame) -> pd.DataFrame:
         """Calculates performance metrics for a given historical price dataframe."""
@@ -234,64 +312,76 @@ class IranianStockOptimizerV3:
         logger.info(self.top_candidates[['Return', 'Volatility', 'Sharpe']].round(4).to_string())
         return True
 
-    def screen_stocks_by_multifactor(self, top_n: int = 20, momentum_weight: float = 0.5, volatility_weight: float = 0.5) -> bool:
+    def screen_stocks_by_multifactor(self, top_n: int = 20) -> bool:
         """
-        Screens stocks based on a weighted combination of momentum and low-volatility factors.
-
-        Args:
-            top_n (int): The number of top candidates to select.
-            momentum_weight (float): The weight to assign to the momentum factor.
-            volatility_weight (float): The weight to assign to the low-volatility factor.
-
-        Returns:
-            bool: True if screening was successful, False otherwise.
+        Screens stocks based on a combination of value, quality, and momentum factors.
+        This model ranks stocks based on four key factors:
+        - Value Factors: P/E Ratio (lower is better) and P/B Ratio (lower is better).
+        - Quality/Profitability Factor: EPS (Earnings Per Share) (higher is better).
+        - Momentum Factor: 6-Month Momentum (higher is better).
+        A composite score is created by summing the ranks of these factors, and the top N
+        stocks with the best (lowest) composite rank are selected.
+        If fundamental data is unavailable, it gracefully falls back to a momentum-only screen.
         """
-        logger.info(f"🎯 STAGE 1: Multi-Factor Stock Screening (Momentum: {momentum_weight:.0%}, Low-Vol: {volatility_weight:.0%})")
+        logger.info("🎯 STAGE 1: Attempting Enhanced Multi-Factor Stock Screening (Value, Quality, Momentum)")
+
+        # Pre-flight check for fundamental data. If it's missing or empty, fall back to momentum.
+        if self.fundamental_df is None or self.fundamental_df.empty:
+            logger.warning("⚠️ Fundamental data is not available or empty. Falling back to momentum-only screening.")
+            return self.screen_stocks_by_momentum(top_n=top_n)
+
         if self.master_price_df is None or self.master_price_df.empty:
             logger.error("❌ Master price DataFrame is not available.")
             return False
 
-        # 1. Calculate factors
+        # 1. Calculate momentum
         momentum_scores = calculate_momentum_6m(self.master_price_df)
-        volatility_scores = calculate_volatility(self.master_price_df, window=252)
-
-        # 2. Get the last valid score for each stock
         last_momentum = momentum_scores.ffill().iloc[-1].dropna()
-        last_volatility = volatility_scores.ffill().iloc[-1].dropna()
 
-        # 3. Create percentile ranks
-        momentum_rank = last_momentum.rank(ascending=False, pct=True)
-        volatility_rank = last_volatility.rank(ascending=True, pct=True) # Lower volatility is better
+        # 2. Combine with fundamental data
+        combined_df = self.fundamental_df.copy()
+        combined_df['Momentum_6M'] = last_momentum
 
-        # 4. Combine ranks with specified weights
-        combined_score = (momentum_rank * momentum_weight) + (volatility_rank * volatility_weight)
+        # 3. Clean data
+        # Replace zeros or negative values in P/E and P/B with NaN to avoid ranking them as good
+        combined_df['p_e_ratio'] = combined_df['p_e_ratio'].apply(lambda x: x if x > 0 else np.nan)
+        combined_df['p_b_ratio'] = combined_df['p_b_ratio'].apply(lambda x: x if x > 0 else np.nan)
+        combined_df.dropna(subset=['p_e_ratio', 'p_b_ratio', 'eps', 'Momentum_6M'], inplace=True)
+
+        if combined_df.empty:
+            logger.warning("⚠️ No stocks with complete fundamental and momentum data. Falling back to momentum-only screening.")
+            return self.screen_stocks_by_momentum(top_n=top_n)
+
+        # 4. Create ranks for each factor.
+        # For P/E and P/B, a lower value is better (ascending rank).
+        pe_rank = combined_df['p_e_ratio'].rank(ascending=True)
+        pb_rank = combined_df['p_b_ratio'].rank(ascending=True)
+        # For EPS and Momentum, a higher value is better (descending rank).
+        eps_rank = combined_df['eps'].rank(ascending=False)
+        momentum_rank = combined_df['Momentum_6M'].rank(ascending=False)
+
+        # 5. Combine ranks into a composite score (lower is better).
+        combined_df['composite_score'] = pe_rank + pb_rank + eps_rank + momentum_rank
+
+        # 6. Select top N stocks with the lowest composite score.
+        top_tickers = combined_df['composite_score'].nsmallest(top_n).index
         
-        # 5. Filter out stocks with insufficient data
+        # 7. Get full metrics for the top candidates
         metrics_df = self.calculate_advanced_metrics(self.master_price_df, self.volume_df)
-        valid_stocks = metrics_df[
-            (metrics_df['Trading_Days'] >= self.min_data_points) &
-            (metrics_df['Avg_Volume'] >= self.min_liquidity_threshold)
-        ].index
+        self.top_candidates = metrics_df.loc[metrics_df.index.isin(top_tickers)].copy()
         
-        final_scores = combined_score[combined_score.index.isin(valid_stocks)].dropna()
-
-        if final_scores.empty:
-            logger.warning("⚠️ No stocks passed the multi-factor screening criteria.")
-            self.top_candidates = pd.DataFrame()
+        if self.top_candidates.empty:
+            logger.warning("⚠️ Top candidates list is empty after screening.")
             return False
 
-        # 6. Select top N stocks based on the lowest combined rank score
-        top_tickers = final_scores.nsmallest(top_n).index
-        self.top_candidates = metrics_df.loc[top_tickers]
-        self.screener_df = metrics_df.loc[final_scores.index]
+        # Add ranks and scores to the output for clarity
+        self.top_candidates['P/E'] = combined_df.loc[top_tickers, 'p_e_ratio']
+        self.top_candidates['P/B'] = combined_df.loc[top_tickers, 'p_b_ratio']
+        self.top_candidates['EPS'] = combined_df.loc[top_tickers, 'eps']
+        self.top_candidates['Composite_Score'] = combined_df.loc[top_tickers, 'composite_score']
 
-        # 7. Log detailed results for top candidates
-        logger.info(f"\n📈 Top {top_n} Candidates based on Multi-Factor Model:")
-        display_df = self.top_candidates.copy()
-        display_df['Momentum_Rank'] = momentum_rank.loc[top_tickers]
-        display_df['Volatility_Rank'] = volatility_rank.loc[top_tickers]
-        display_df['Combined_Score'] = final_scores.loc[top_tickers]
-        logger.info(display_df[['Return', 'Volatility', 'Sharpe', 'Momentum_Rank', 'Volatility_Rank', 'Combined_Score']].round(4).to_string())
+        logger.info(f"\n📈 Top {top_n} Candidates based on Enhanced Multi-Factor Model:")
+        logger.info(self.top_candidates[['Return', 'Volatility', 'Sharpe', 'P/E', 'P/B', 'EPS', 'Composite_Score']].round(4).to_string())
         
         return True
 
@@ -345,7 +435,24 @@ class IranianStockOptimizerV3:
             return False
             
         top_tickers = self.top_candidates.index.tolist()
-        final_price_df = self.master_price_df[top_tickers].dropna(axis=1, how='any')
+        
+        # To ensure we have a common window, we'll use the number of trading days
+        # of the stock with the *least* data in the top candidates as our lookback period.
+        min_trading_days = self.top_candidates['Trading_Days'].min()
+        
+        if pd.isna(min_trading_days) or min_trading_days <= 2: # Need at least 2 data points
+            logger.warning(f"Could not determine a valid lookback period from candidates. Min trading days: {min_trading_days}")
+            return False
+            
+        # Take the tail of the master dataframe corresponding to this lookback period
+        lookback_period = int(min_trading_days)
+        temp_price_df = self.master_price_df[top_tickers].tail(lookback_period)
+        
+        # Find the common index where all selected tickers have data
+        common_index = temp_price_df.dropna().index
+        
+        # Filter the dataframe to only this common index
+        final_price_df = temp_price_df.loc[common_index]
         
         if final_price_df.shape[1] < 2:
             logger.warning(f"Not enough valid assets ({final_price_df.shape[1]}) for optimization.")
@@ -368,17 +475,20 @@ class IranianStockOptimizerV3:
             self.weights = ef.clean_weights()
             self.display_portfolio_results("Max Sharpe", self.weights, ef)
         except Exception as e:
-            logger.warning(f"⚠️ Max Sharpe optimization with default solver failed: {e}. Trying fallback solver.")
+            # Fallback mechanism: If max_sharpe fails (e.g., because no assets have
+            # expected returns exceeding the risk-free rate), we log a warning and
+            # switch to a more robust optimization objective that doesn't depend
+            # on the risk-free rate, such as minimizing portfolio volatility.
+            # This makes the system more resilient to different market conditions.
+            logger.warning(f"⚠️ Max Sharpe optimization failed: {e}. Falling back to Minimum Volatility.")
             try:
-                # Fallback to a different solver if the default fails
-                ef_fallback = EfficientFrontier(mu, S, solver="SLSQP")
-                ef_fallback.add_constraint(lambda w: w >= 0)
-                ef_fallback.add_constraint(lambda w: w <= self.max_position_size)
-                weights = ef_fallback.max_sharpe(risk_free_rate=self.risk_free_rate)
-                self.weights = ef_fallback.clean_weights()
-                self.display_portfolio_results("Max Sharpe (Fallback Solver)", self.weights, ef_fallback)
+                ef_min_vol = EfficientFrontier(mu, S)
+                ef_min_vol.add_constraint(lambda w: w <= self.max_position_size)
+                weights = ef_min_vol.min_volatility()
+                self.weights = ef_min_vol.clean_weights()
+                self.display_portfolio_results("Min Volatility (Fallback)", self.weights, ef_min_vol)
             except Exception as e_fallback:
-                logger.error(f"❌ Max Sharpe optimization failed for this period even with fallback solver: {e_fallback}")
+                logger.error(f"❌ Fallback Minimum Volatility optimization also failed: {e_fallback}")
                 self.weights = {}
                 return False
             
@@ -436,82 +546,85 @@ class IranianStockOptimizerV3:
         except Exception as e:
             logger.error(f"❌ Failed to generate or save the efficient frontier plot: {e}")
 
-    def run_backtest(self, rebalance_freq='3M', top_n=20, transaction_cost=0.005, slippage_rate=0.001):
+    def run_backtest(self, factor_strategy_function, rebalance_freq='3M', top_n=20, transaction_cost=0.005):
         """
-        Runs a full backtest on the multi-factor strategy.
-        """
-        logger.info("🚀 STAGE 3: Running Full Backtest")
-        
-        # 1. Prepare data
-        prices = self.master_price_df
-        volumes = self.volume_df
-        benchmark_symbol = 'شاخص کل' # Assuming this is your benchmark
-        
-        if benchmark_symbol not in prices.columns:
-            logger.error(f"Benchmark symbol '{benchmark_symbol}' not found in price data.")
-            return None
+        Runs a vectorized backtest for a given factor strategy.
 
-        stock_symbols = [col for col in prices.columns if col != benchmark_symbol]
+        Args:
+            factor_strategy_function (function): A function that takes a price DataFrame
+                                                 and returns a factor score DataFrame.
+            rebalance_freq (str): The frequency for rebalancing the portfolio (e.g., 'M', '3M', 'Q').
+            top_n (int): The number of top stocks to select based on the factor score.
+            transaction_cost (float): The cost per transaction as a percentage.
+
+        Returns:
+            pd.Series: A Series containing the net daily returns of the strategy.
+        """
+        logger.info(f"🚀 STAGE 3: Running Vectorized Backtest for strategy: {factor_strategy_function.__name__}")
+
+        # 1. Prepare Data
+        # Use the preserved backtest_price_df to ensure benchmark is present.
+        if self.backtest_price_df is None or 'شاخص کل' not in self.backtest_price_df.columns:
+            logger.error("❌ Benchmark 'شاخص کل' not found in the data loaded for backtesting.")
+            return None
+            
+        prices = self.backtest_price_df.drop(columns=['شاخص کل'])
+        benchmark_returns = self.backtest_price_df['شاخص کل'].pct_change().fillna(0)
         
-        # 2. Set up rebalance dates
+        # 2. Determine Rebalancing Dates
         rebalance_dates = pd.date_range(start=prices.index.min(), end=prices.index.max(), freq=rebalance_freq)
         
-        # 3. Initialize portfolio weights dataframe
-        portfolio_weights = pd.DataFrame(0, index=prices.index, columns=stock_symbols)
+        # 3. Calculate Factor Scores (Vectorized)
+        # This is the core of the vectorized approach: calculate the factor for the entire history at once.
+        logger.info("   Calculating factor scores for the entire history...")
+        factor_scores = factor_strategy_function(prices)
         
-        # 4. Main backtesting loop
-        for i in range(len(rebalance_dates) - 1):
-            rebalance_date = rebalance_dates[i]
-            if rebalance_date not in prices.index:
-                continue
+        # 4. Generate Signals and Weights (Vectorized)
+        logger.info("   Generating trading signals and weights...")
+        
+        # Create an empty DataFrame to store weights, aligned with the price data index and columns.
+        weights = pd.DataFrame(0, index=prices.index, columns=prices.columns)
+        
+        # Loop through rebalancing dates to determine portfolio composition.
+        # This loop is small and only runs on rebalance dates, not every day.
+        for date in rebalance_dates:
+            if date in factor_scores.index:
+                # Get the factor scores on the rebalancing date.
+                current_scores = factor_scores.loc[date].dropna()
+                
+                # Select the top N stocks with the highest factor scores.
+                top_performers = current_scores.nlargest(top_n).index
+                
+                # Assign equal weight to the selected stocks on this specific date.
+                weights.loc[date, top_performers] = 1 / top_n
 
-            # Select data available up to the rebalance date to prevent look-ahead bias
-            self.master_price_df = prices.loc[:rebalance_date]
-            self.volume_df = volumes.loc[:rebalance_date]
+        # Propagate weights forward until the next rebalance date.
+        # This simulates holding the portfolio constant between rebalances.
+        weights = weights.replace(0, np.nan).ffill()
+        weights = weights.fillna(0) # Fill any remaining NaNs at the beginning.
 
-            # Screen stocks based on data up to the rebalance date
-            screen_success = self.screen_stocks_by_multifactor(top_n=top_n)
-            
-            if screen_success and self.top_candidates is not None and not self.top_candidates.empty:
-                # Optimize portfolio based on the selected candidates
-                optimize_success = self.optimize_portfolio()
-                if optimize_success and self.weights:
-                    # Assign weights for the upcoming period
-                    period_end = rebalance_dates[i+1]
-                    for ticker, weight in self.weights.items():
-                        portfolio_weights.loc[rebalance_date:period_end, ticker] = weight
+        # 5. Calculate Portfolio Returns (Vectorized)
+        logger.info("   Calculating portfolio returns...")
+        daily_returns = prices.pct_change().fillna(0)
         
-        # Restore original dataframes
-        self.master_price_df = prices
-        self.volume_df = volumes
-
-        # 5. Calculate strategy returns
-        daily_returns = prices.pct_change()
-        # Shift weights by 1 day to ensure we trade on the next day's prices
-        strategy_returns = (daily_returns[stock_symbols] * portfolio_weights.shift(1)).sum(axis=1)
+        # CRITICAL: Shift weights by 1 day to avoid lookahead bias.
+        # We use today's weights to trade on tomorrow's price changes.
+        # This is the most common source of errors in naive backtests.
+        strategy_gross_returns = (weights.shift(1) * daily_returns).sum(axis=1)
         
-        # 6. Calculate costs
-        weight_changes = portfolio_weights.diff().abs().sum(axis=1)
-        turnover = weight_changes.mean() * 4 # Approximate annual turnover
+        # 6. Calculate Transaction Costs (Vectorized)
+        logger.info("   Calculating transaction costs...")
+        # Calculate the absolute change in weights only on rebalancing days.
+        turnover = weights.diff().abs().sum(axis=1)
+        costs = turnover * transaction_cost
         
-        # Transaction Costs
-        transaction_costs = weight_changes * transaction_cost
+        # 7. Calculate Net Returns
+        net_returns = strategy_gross_returns - costs
         
-        # Slippage Costs
-        # A more robust model: slippage is proportional to the trade size relative to daily volume
-        trade_value = weight_changes * (portfolio_weights.shift(1) * prices[stock_symbols]).sum(axis=1)
-        daily_volume_value = (volumes[stock_symbols] * prices[stock_symbols]).rolling(window=20).mean().shift(1)
-        slippage_costs = (trade_value / daily_volume_value.sum(axis=1)) * slippage_rate
-        slippage_costs = slippage_costs.fillna(0)
-
-        # 7. Calculate net returns
-        net_returns = (strategy_returns - transaction_costs - slippage_costs).fillna(0)
+        logger.info(f"🔄 Backtest complete. Approximate annual turnover: {turnover.mean() * 252 / 2:.2%}")
         
-        logger.info(f"🔄 Backtest complete. Approximate annual turnover: {turnover:.2%}")
-        
-        # 8. Analyze and plot performance
-        benchmark_returns = prices[benchmark_symbol].pct_change().fillna(0)
-        self.analyze_performance({'Multi-Factor Strategy': net_returns}, benchmark_returns)
+        # 8. Analyze and Plot Performance
+        self.analyze_performance({factor_strategy_function.__name__: net_returns}, benchmark_returns)
         
         return net_returns
 
@@ -623,20 +736,31 @@ def get_user_choice(prompt: str, options: dict) -> str:
             logger.warning(f"❌ Invalid choice. Please enter one of {list(options.keys())}.")
 
 def main():
-    """Main function to run the interactive portfolio optimizer."""
-    logger.info("🇮🇷 Iranian Stock Market Portfolio Optimizer v3.1")
-    logger.info("=" * 70)
-    # The main function might not work correctly after these changes without further adaptation.
-    # The focus is on passing the test suite.
-    logger.info("NOTE: Interactive mode may be unstable due to refactoring for test compatibility.")
+    """Main function to run the enhanced portfolio optimizer."""
+    print("🇮🇷 Iranian Stock Market Portfolio Optimizer v3.1")
+    print("🔧 Optimized for pytse-client API")
+    print("=" * 70)
     
-    # Simplified main for basic execution
+    # Initialize the optimizer with desired parameters
     optimizer = IranianStockOptimizerV3(
-        cache_dir=config.CACHE_DIR,
-        years_of_data=3,
-        risk_free_rate=0.35
+        cache_dir='cache',
+        years_of_data=5,
+        risk_free_rate=0.35  # 35% risk-free rate for Iranian market
     )
-    logger.info("To run a full analysis, please adapt the main function or use the test suite.")
+    
+    # --- Run Analysis ---
+    # First, ensure data is loaded and available.
+    success = optimizer.run_complete_analysis()
+    
+    if success:
+        # Now, run the vectorized backtest with a specific strategy.
+        optimizer.run_backtest(factor_strategy_function=strategy_momentum)
+        
+        print("\n✅ Analysis and backtesting completed successfully!")
+        print("📊 Check the 'results' directory for performance plots and logs.")
+    else:
+        print("\n❌ Initial analysis failed. Could not proceed to backtesting.")
+        print("   Check 'portfolio_optimizer.log' for details.")
 
 
 if __name__ == "__main__":

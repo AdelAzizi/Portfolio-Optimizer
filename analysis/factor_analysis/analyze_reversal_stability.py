@@ -9,7 +9,7 @@ def analyze_reversal_stability():
     """
     # --- 1. Data Loading ---
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    data_path = os.path.join(script_dir, '..', '..', 'cache_v3', 'master_price_data.feather')
+    data_path = os.path.join(script_dir, '..', '..', 'cache', 'master_price_data.feather')
     try:
         df = pd.read_feather(data_path)
     except FileNotFoundError:

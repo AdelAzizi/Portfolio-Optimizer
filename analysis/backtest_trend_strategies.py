@@ -154,7 +154,7 @@ def main():
     print(f"   Output will be saved to '{output_dir}' directory.")
 
     # Load Data
-    price_data = load_benchmark_data(Path('cache_v3/master_price_data.feather'))
+    price_data = load_benchmark_data(Path('cache/master_price_data.feather'))
     if price_data is None:
         return
         

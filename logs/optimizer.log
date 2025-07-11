@@ -1,0 +1,438 @@
+2025-07-11 17:06:27,519 - INFO - ======================================================================
+2025-07-11 17:06:27,519 - INFO -           Initializing Portfolio Optimization Script
+2025-07-11 17:06:27,520 - INFO - ======================================================================
+2025-07-11 17:06:27,520 - INFO - 🚀 Portfolio Optimizer Initialized
+2025-07-11 17:06:27,521 - INFO -    Data Path: cache_v3\master_price_data.feather
+2025-07-11 17:06:27,521 - INFO -    Risk-Free Rate: 35.00%
+2025-07-11 17:06:27,521 - INFO - 🚀 Starting Full Analysis Pipeline...
+2025-07-11 17:06:27,521 - INFO - 📂 Loading preprocessed data from 'cache_v3\master_price_data.feather'...
+2025-07-11 17:06:27,670 - INFO - ✅ Data loaded successfully. Shape: (5849, 1319)
+2025-07-11 17:06:27,670 - INFO - 🎯 STAGE 1: Screening Stocks
+2025-07-11 17:06:28,576 - INFO -    ✅ 280 stocks passed the initial screening.
+2025-07-11 17:06:28,582 - INFO - 
+📈 Top 10 Candidates for Optimization:
+2025-07-11 17:06:28,592 - INFO -         Return  Volatility  Sharpe
+ساذری   0.4962      0.5910  0.2474
+کبافق   0.4942      0.7008  0.2058
+قمرو    0.4652      0.6105  0.1887
+شگل     0.4642      0.6168  0.1851
+قهکمت   0.4560      0.6116  0.1733
+دفرا    0.4331      0.4835  0.1719
+شکلر    0.4291      0.4752  0.1664
+ومعادن  0.4300      0.5183  0.1544
+غسالم   0.4543      0.7028  0.1484
+شیران   0.4245      0.5093  0.1463
+2025-07-11 17:06:28,594 - INFO - 🎯 STAGE 2: Optimizing Portfolio
+2025-07-11 17:06:29,124 - INFO - 
+--- Optimal Portfolio (Max Sharpe) ---
+2025-07-11 17:06:29,125 - INFO -    - ساذری: 30.00%
+2025-07-11 17:06:29,125 - INFO -    - کبافق: 30.00%
+2025-07-11 17:06:29,125 - INFO -    - دفرا: 19.41%
+2025-07-11 17:06:29,125 - INFO -    - شکلر: 19.28%
+2025-07-11 17:06:29,125 - INFO -    - ومعادن: 1.31%
+2025-07-11 17:06:29,126 - INFO - -----------------------------------------
+2025-07-11 17:06:29,675 - ERROR - ❌ Max Sharpe optimization failed: Adding constraints to an already solved problem might have unintended consequences. A new instance should be created for the new set of constraints.
+2025-07-11 17:40:33,838 - INFO - ======================================================================
+2025-07-11 17:40:33,838 - INFO -           Initializing Portfolio Optimization Script
+2025-07-11 17:40:33,839 - INFO - ======================================================================
+2025-07-11 17:40:33,839 - INFO - 🚀 Portfolio Optimizer Initialized
+2025-07-11 17:40:33,839 - INFO -    Data Path: cache_v3\master_price_data.feather
+2025-07-11 17:40:33,839 - INFO -    Risk-Free Rate: 35.00%
+2025-07-11 17:40:33,840 - INFO - 🚀 Starting Full Analysis Pipeline...
+2025-07-11 17:40:33,840 - INFO - 📂 Loading preprocessed data from 'cache_v3\master_price_data.feather'...
+2025-07-11 17:40:33,974 - INFO - ✅ Data loaded successfully. Shape: (5861, 1320)
+2025-07-11 17:40:33,974 - INFO - 🎯 STAGE 1: Screening Stocks
+2025-07-11 17:40:35,090 - INFO -    ✅ 279 stocks passed the initial screening.
+2025-07-11 17:40:35,095 - INFO - 
+📈 Top 10 Candidates for Optimization:
+2025-07-11 17:40:35,103 - INFO -         Return  Volatility  Sharpe
+ساذری   0.4952      0.5904  0.2459
+کبافق   0.4932      0.7000  0.2046
+قمرو    0.4642      0.6098  0.1873
+شگل     0.4632      0.6161  0.1838
+قهکمت   0.4551      0.6110  0.1720
+دفرا    0.4323      0.4830  0.1703
+شکلر    0.4282      0.4747  0.1647
+ومعادن  0.4292      0.5178  0.1529
+غسالم   0.4534      0.7020  0.1472
+شیران   0.4237      0.5087  0.1448
+2025-07-11 17:40:35,103 - INFO - 🎯 STAGE 2: Optimizing Portfolio
+2025-07-11 17:40:35,592 - INFO - 
+--- Optimal Portfolio (Max Sharpe) ---
+2025-07-11 17:40:35,592 - INFO -    - ساذری: 30.00%
+2025-07-11 17:40:35,592 - INFO -    - کبافق: 30.00%
+2025-07-11 17:40:35,592 - INFO -    - دفرا: 19.55%
+2025-07-11 17:40:35,592 - INFO -    - شکلر: 19.41%
+2025-07-11 17:40:35,593 - INFO -    - ومعادن: 1.04%
+2025-07-11 17:40:35,593 - INFO - -----------------------------------------
+2025-07-11 17:40:36,636 - INFO - ✅ Efficient frontier plot saved to 'C:\Portfolio-Optimizer\cache_v3\efficient_frontier_optimizer.png'
+2025-07-11 17:40:36,646 - INFO - ✅ Analysis completed successfully.
+2025-07-11 17:48:11,957 - INFO - ======================================================================
+2025-07-11 17:48:11,958 - INFO -           Initializing Portfolio Optimization Script
+2025-07-11 17:48:11,958 - INFO - ======================================================================
+2025-07-11 17:48:11,958 - INFO - 🚀 Portfolio Optimizer Initialized
+2025-07-11 17:48:11,959 - INFO -    Data Path: cache_v3\master_price_data.feather
+2025-07-11 17:48:11,959 - INFO -    Risk-Free Rate: 35.00%
+2025-07-11 17:48:11,960 - INFO - 🚀 Starting Full Analysis Pipeline...
+2025-07-11 17:48:11,960 - INFO - 📂 Loading preprocessed data from 'cache_v3\master_price_data.feather'...
+2025-07-11 17:48:12,091 - INFO - ✅ Data loaded successfully. Shape: (5861, 1320)
+2025-07-11 17:48:12,091 - INFO - 🎯 STAGE 1: Screening Stocks
+2025-07-11 17:48:13,269 - INFO -    ✅ 279 stocks passed the initial screening.
+2025-07-11 17:48:13,276 - INFO - 
+📈 Top 10 Candidates for Optimization:
+2025-07-11 17:48:13,287 - INFO -         Return  Volatility  Sharpe
+ساذری   0.4952      0.5904  0.2459
+کبافق   0.4932      0.7000  0.2046
+قمرو    0.4642      0.6098  0.1873
+شگل     0.4632      0.6161  0.1838
+قهکمت   0.4551      0.6110  0.1720
+دفرا    0.4323      0.4830  0.1703
+شکلر    0.4282      0.4747  0.1647
+ومعادن  0.4292      0.5178  0.1529
+غسالم   0.4534      0.7020  0.1472
+شیران   0.4237      0.5087  0.1448
+2025-07-11 17:48:13,288 - INFO - 🎯 STAGE 2: Optimizing Portfolio
+2025-07-11 17:48:13,291 - INFO - 📊 Analyzing and plotting correlation matrix...
+2025-07-11 17:48:14,396 - INFO - ✅ Correlation heatmap saved to 'C:\Portfolio-Optimizer\cache_v3\correlation_heatmap.png'
+2025-07-11 17:48:14,883 - INFO - 
+--- Optimal Portfolio (Max Sharpe) ---
+2025-07-11 17:48:14,883 - INFO -    - ساذری: 30.00%
+2025-07-11 17:48:14,883 - INFO -    - کبافق: 30.00%
+2025-07-11 17:48:14,883 - INFO -    - دفرا: 19.55%
+2025-07-11 17:48:14,883 - INFO -    - شکلر: 19.41%
+2025-07-11 17:48:14,884 - INFO -    - ومعادن: 1.04%
+2025-07-11 17:48:14,884 - INFO - -----------------------------------------
+2025-07-11 17:48:15,679 - INFO - ✅ Efficient frontier plot saved to 'C:\Portfolio-Optimizer\cache_v3\efficient_frontier_optimizer.png'
+2025-07-11 17:48:15,687 - INFO - ✅ Analysis completed successfully.
+2025-07-11 17:55:28,855 - INFO - ======================================================================
+2025-07-11 17:55:28,855 - INFO -           Initializing Portfolio Optimization Script
+2025-07-11 17:55:28,855 - INFO - ======================================================================
+2025-07-11 17:55:28,856 - INFO - 🚀 Portfolio Optimizer Initialized
+2025-07-11 17:55:28,856 - INFO -    Data Path: cache_v3\master_price_data.feather
+2025-07-11 17:55:28,856 - INFO -    Risk-Free Rate: 35.00%
+2025-07-11 17:55:28,856 - INFO - 🚀 Starting Full Analysis Pipeline...
+2025-07-11 17:55:28,857 - INFO - 📂 Loading preprocessed data from 'cache_v3\master_price_data.feather'...
+2025-07-11 17:55:28,981 - INFO - ✅ Data loaded successfully. Shape: (5861, 1320)
+2025-07-11 17:55:28,982 - INFO - 🎯 STAGE 1: Screening Stocks
+2025-07-11 17:55:29,957 - INFO -    ✅ 279 stocks passed the initial screening.
+2025-07-11 17:55:29,963 - INFO - 
+📈 Top 10 Candidates for Optimization:
+2025-07-11 17:55:29,969 - INFO -         Return  Volatility  Sharpe
+ساذری   0.4952      0.5904  0.2459
+کبافق   0.4932      0.7000  0.2046
+قمرو    0.4642      0.6098  0.1873
+شگل     0.4632      0.6161  0.1838
+قهکمت   0.4551      0.6110  0.1720
+دفرا    0.4323      0.4830  0.1703
+شکلر    0.4282      0.4747  0.1647
+ومعادن  0.4292      0.5178  0.1529
+غسالم   0.4534      0.7020  0.1472
+شیران   0.4237      0.5087  0.1448
+2025-07-11 17:55:29,969 - INFO - 🎯 STAGE 2: Optimizing Portfolio
+2025-07-11 17:55:29,973 - INFO - 📊 Analyzing and plotting correlation matrix...
+2025-07-11 17:55:30,974 - INFO - ✅ Correlation heatmap saved to 'C:\Portfolio-Optimizer\cache_v3\correlation_heatmap.png'
+2025-07-11 17:55:31,480 - INFO - 
+--- Optimal Portfolio (Max Sharpe) ---
+2025-07-11 17:55:31,480 - INFO -    - ساذری: 30.00%
+2025-07-11 17:55:31,481 - INFO -    - کبافق: 30.00%
+2025-07-11 17:55:31,481 - INFO -    - دفرا: 19.55%
+2025-07-11 17:55:31,481 - INFO -    - شکلر: 19.41%
+2025-07-11 17:55:31,481 - INFO -    - ومعادن: 1.04%
+2025-07-11 17:55:31,481 - INFO - -----------------------------------------
+2025-07-11 17:55:32,178 - INFO - ✅ Efficient frontier plot saved to 'C:\Portfolio-Optimizer\cache_v3\efficient_frontier_optimizer.png'
+2025-07-11 17:55:32,184 - INFO - 🎯 STAGE 3: Running Simple Backtest
+2025-07-11 17:55:32,917 - INFO - ✅ Backtest performance chart saved to 'C:\Portfolio-Optimizer\cache_v3\backtest_performance.png'
+2025-07-11 17:55:32,923 - INFO - 
+--- Backtest Results (1-Year) ---
+2025-07-11 17:55:32,924 - INFO -    Portfolio Total Return: 35.65%
+2025-07-11 17:55:32,924 - INFO -    Benchmark Total Return: 28.81%
+2025-07-11 17:55:32,924 - INFO - ------------------------------------
+2025-07-11 17:55:32,924 - INFO - ✅ Analysis completed successfully.
+2025-07-11 17:56:31,135 - INFO - ======================================================================
+2025-07-11 17:56:31,135 - INFO -           Initializing Portfolio Optimization Script
+2025-07-11 17:56:31,135 - INFO - ======================================================================
+2025-07-11 17:56:31,136 - INFO - 🚀 Portfolio Optimizer Initialized
+2025-07-11 17:56:31,136 - INFO -    Data Path: cache_v3\master_price_data.feather
+2025-07-11 17:56:31,136 - INFO -    Risk-Free Rate: 35.00%
+2025-07-11 17:56:31,136 - INFO - 🚀 Starting Full Analysis Pipeline...
+2025-07-11 17:56:31,136 - INFO - 📂 Loading preprocessed data from 'cache_v3\master_price_data.feather'...
+2025-07-11 17:56:31,237 - INFO - ✅ Data loaded successfully. Shape: (5861, 1320)
+2025-07-11 17:56:31,237 - INFO - 🎯 STAGE 1: Screening Stocks
+2025-07-11 17:56:31,997 - INFO -    ✅ 279 stocks passed the initial screening.
+2025-07-11 17:56:31,999 - INFO - 
+📈 Top 10 Candidates for Optimization:
+2025-07-11 17:56:32,003 - INFO -         Return  Volatility  Sharpe
+ساذری   0.4952      0.5904  0.2459
+کبافق   0.4932      0.7000  0.2046
+قمرو    0.4642      0.6098  0.1873
+شگل     0.4632      0.6161  0.1838
+قهکمت   0.4551      0.6110  0.1720
+دفرا    0.4323      0.4830  0.1703
+شکلر    0.4282      0.4747  0.1647
+ومعادن  0.4292      0.5178  0.1529
+غسالم   0.4534      0.7020  0.1472
+شیران   0.4237      0.5087  0.1448
+2025-07-11 17:56:32,004 - INFO - 🎯 STAGE 2: Optimizing Portfolio
+2025-07-11 17:56:32,006 - INFO - 📊 Analyzing and plotting correlation matrix...
+2025-07-11 17:56:32,723 - INFO - ✅ Correlation heatmap saved to 'C:\Portfolio-Optimizer\cache_v3\correlation_heatmap.png'
+2025-07-11 17:56:33,131 - INFO - 
+--- Optimal Portfolio (Max Sharpe) ---
+2025-07-11 17:56:33,131 - INFO -    - ساذری: 30.00%
+2025-07-11 17:56:33,131 - INFO -    - کبافق: 30.00%
+2025-07-11 17:56:33,131 - INFO -    - دفرا: 19.55%
+2025-07-11 17:56:33,132 - INFO -    - شکلر: 19.41%
+2025-07-11 17:56:33,132 - INFO -    - ومعادن: 1.04%
+2025-07-11 17:56:33,132 - INFO - -----------------------------------------
+2025-07-11 17:56:33,770 - INFO - ✅ Efficient frontier plot saved to 'C:\Portfolio-Optimizer\cache_v3\efficient_frontier_optimizer.png'
+2025-07-11 17:56:33,777 - INFO - 🎯 STAGE 3: Running Simple Backtest
+2025-07-11 17:56:34,267 - INFO - ✅ Backtest performance chart saved to 'C:\Portfolio-Optimizer\cache_v3\backtest_performance.png'
+2025-07-11 17:56:34,274 - INFO - 
+--- Backtest Results (1-Year) ---
+2025-07-11 17:56:34,274 - INFO -    Portfolio Total Return: 35.65%
+2025-07-11 17:56:34,274 - INFO -    Benchmark Total Return: 28.81%
+2025-07-11 17:56:34,274 - INFO - ------------------------------------
+2025-07-11 17:56:34,275 - INFO - ✅ Analysis completed successfully.
+2025-07-11 18:02:26,621 - INFO - ======================================================================
+2025-07-11 18:02:26,621 - INFO -           Initializing Portfolio Optimization Script
+2025-07-11 18:02:26,622 - INFO - ======================================================================
+2025-07-11 18:02:26,622 - INFO - 🚀 Portfolio Optimizer Initialized
+2025-07-11 18:02:26,623 - INFO -    Data Path: cache_v3\master_price_data.feather
+2025-07-11 18:02:26,623 - INFO -    Risk-Free Rate: 35.00%
+2025-07-11 18:02:26,623 - INFO - 🚀 Starting Full Analysis Pipeline...
+2025-07-11 18:02:26,623 - INFO - 📂 Loading preprocessed data from 'cache_v3\master_price_data.feather'...
+2025-07-11 18:02:26,772 - INFO - ✅ Data loaded successfully. Shape: (5861, 1320)
+2025-07-11 18:02:26,772 - INFO - 🎯 STAGE 1: Screening Stocks
+2025-07-11 18:02:28,103 - INFO -    ✅ 279 stocks passed the initial screening.
+2025-07-11 18:02:28,107 - INFO - 
+📈 Top 10 Candidates for Optimization:
+2025-07-11 18:02:28,113 - INFO -         Return  Volatility  Sharpe
+ساذری   0.4952      0.5904  0.2459
+کبافق   0.4932      0.7000  0.2046
+قمرو    0.4642      0.6098  0.1873
+شگل     0.4632      0.6161  0.1838
+قهکمت   0.4551      0.6110  0.1720
+دفرا    0.4323      0.4830  0.1703
+شکلر    0.4282      0.4747  0.1647
+ومعادن  0.4292      0.5178  0.1529
+غسالم   0.4534      0.7020  0.1472
+شیران   0.4237      0.5087  0.1448
+2025-07-11 18:02:28,114 - INFO - 🎯 STAGE 2: Optimizing Portfolio
+2025-07-11 18:02:28,117 - INFO - 📊 Analyzing and plotting correlation matrix...
+2025-07-11 18:02:30,283 - INFO - ✅ Correlation heatmap saved to 'C:\Portfolio-Optimizer\cache_v3\correlation_heatmap.png'
+2025-07-11 18:02:31,899 - INFO - 
+--- Optimal Portfolio (Max Sharpe) ---
+2025-07-11 18:02:31,900 - INFO -    - ساذری: 30.00%
+2025-07-11 18:02:31,901 - INFO -    - کبافق: 30.00%
+2025-07-11 18:02:31,901 - INFO -    - دفرا: 19.55%
+2025-07-11 18:02:31,901 - INFO -    - شکلر: 19.41%
+2025-07-11 18:02:31,902 - INFO -    - ومعادن: 1.04%
+2025-07-11 18:02:31,906 - INFO - -----------------------------------------
+2025-07-11 18:02:31,922 - INFO - 
+--- Optimal Portfolio (Minimum Volatility) ---
+2025-07-11 18:02:31,928 - INFO -    - ساذری: 10.00%
+2025-07-11 18:02:31,934 - INFO -    - کبافق: 10.00%
+2025-07-11 18:02:31,935 - INFO -    - قمرو: 10.00%
+2025-07-11 18:02:31,941 - INFO -    - شگل: 10.00%
+2025-07-11 18:02:31,978 - INFO -    - قهکمت: 10.00%
+2025-07-11 18:02:32,015 - INFO -    - دفرا: 10.00%
+2025-07-11 18:02:32,056 - INFO -    - شکلر: 10.00%
+2025-07-11 18:02:32,057 - INFO -    - ومعادن: 10.00%
+2025-07-11 18:02:32,058 - INFO -    - غسالم: 10.00%
+2025-07-11 18:02:32,088 - INFO -    - شیران: 10.00%
+2025-07-11 18:02:32,092 - INFO - -----------------------------------------
+2025-07-11 18:02:35,054 - INFO - ✅ Efficient frontier comparison plot saved to 'C:\Portfolio-Optimizer\cache_v3\efficient_frontier_comparison.png'
+2025-07-11 18:02:35,100 - INFO - 🎯 STAGE 3: Running Comparative Backtest
+2025-07-11 18:02:37,064 - INFO - ✅ Comparative backtest chart saved to 'C:\Portfolio-Optimizer\cache_v3\backtest_comparison.png'
+2025-07-11 18:02:37,085 - INFO - 
+--- Comparative Backtest Results (1-Year) ---
+2025-07-11 18:02:37,086 - INFO -    Max Sharpe Portfolio Return: 35.65%
+2025-07-11 18:02:37,087 - INFO -    Min Volatility Portfolio Return: 28.56%
+2025-07-11 18:02:37,093 - INFO -    Benchmark (شاخص کل) Return: 28.81%
+2025-07-11 18:02:37,093 - INFO - ---------------------------------------------
+2025-07-11 18:02:37,094 - INFO - ✅ Analysis completed successfully.
+2025-07-11 22:39:10,835 - __main__ - INFO - ======================================================================
+2025-07-11 22:39:10,835 - __main__ - INFO -       Initializing Multi-Factor Optimizer & Backtester
+2025-07-11 22:39:10,835 - __main__ - INFO - ======================================================================
+2025-07-11 22:39:10,835 - __main__ - INFO - 🚀 Multi-Factor Optimizer Initialized
+2025-07-11 22:39:10,835 - __main__ - INFO -    Analysis Data: C:\Portfolio-Optimizer\cache\analysis_ready_data.feather
+2025-07-11 22:39:10,835 - __main__ - INFO -    Risk-Free Rate: 35.00%
+2025-07-11 22:39:10,835 - __main__ - INFO - --- Stage 1: Loading Analysis-Ready Data ---
+2025-07-11 22:39:10,909 - __main__ - INFO - ✅ Loaded analysis data for 433 symbols.
+2025-07-11 22:39:10,909 - __main__ - INFO - --- Stage 2: Multi-Factor Screening ---
+2025-07-11 22:39:10,933 - __main__ - INFO - 
+📈 Top 15 Candidates based on Composite Score:
+2025-07-11 22:39:10,941 - __main__ - INFO -           P/E  Momentum_12M  Volatility  Composite_Score
+symbol                                                  
+وپاسار   2.89          1.22        0.24              8.6
+مبین     5.52          0.60        0.21              8.4
+ومدیر    3.22          0.47        0.12              8.2
+لوتوس    3.92          0.60        0.18              8.2
+وبهمن    3.57          0.97        0.34              8.2
+مدیریت   3.54          0.52        0.16              8.0
+فگستر    4.18          0.35        0.19              8.0
+آلومینا  6.88          0.96        0.05              8.0
+وپست     4.19          0.94        0.33              8.0
+سامان    3.66          1.03        0.39              8.0
+خموتور   4.15          1.29        0.43              8.0
+وبملت    2.22          0.82        0.35              7.8
+وخارزم   4.45          0.78        0.30              7.8
+سیمرغ    4.49          0.24        0.22              7.8
+حفاری    2.22          0.82        0.35              7.8
+2025-07-11 22:39:10,941 - __main__ - INFO - --- Stage 3: Portfolio Optimization ---
+2025-07-11 22:39:14,360 - __main__ - ERROR - An unexpected error occurred in the main pipeline: at least one of the assets must have an expected return exceeding the risk-free rate
+Traceback (most recent call last):
+  File "c:\Portfolio-Optimizer\src\optimizer.py", line 199, in run
+    weights_ms, weights_mv = self.optimize_portfolio(top_candidates)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Portfolio-Optimizer\src\optimizer.py", line 136, in optimize_portfolio
+    weights_ms = ef_ms.max_sharpe(risk_free_rate=self.risk_free_rate)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Portfolio-Optimizer\venv\Lib\site-packages\pypfopt\efficient_frontier\efficient_frontier.py", line 245, in max_sharpe
+    raise ValueError(
+ValueError: at least one of the assets must have an expected return exceeding the risk-free rate
+2025-07-11 22:41:08,357 - __main__ - INFO - ======================================================================
+2025-07-11 22:41:08,357 - __main__ - INFO -       Initializing Multi-Factor Optimizer & Backtester
+2025-07-11 22:41:08,357 - __main__ - INFO - ======================================================================
+2025-07-11 22:41:08,357 - __main__ - INFO - 🚀 Multi-Factor Optimizer Initialized
+2025-07-11 22:41:08,365 - __main__ - INFO -    Analysis Data: C:\Portfolio-Optimizer\cache\analysis_ready_data.feather
+2025-07-11 22:41:08,365 - __main__ - INFO -    Risk-Free Rate: 35.00%
+2025-07-11 22:41:08,365 - __main__ - INFO - --- Stage 1: Loading Analysis-Ready Data ---
+2025-07-11 22:41:08,421 - __main__ - INFO - ✅ Loaded analysis data for 433 symbols.
+2025-07-11 22:41:08,421 - __main__ - INFO - --- Stage 2: Multi-Factor Screening ---
+2025-07-11 22:41:08,445 - __main__ - INFO - 
+📈 Top 15 Candidates based on Composite Score:
+2025-07-11 22:41:08,451 - __main__ - INFO -           P/E  Momentum_12M  Volatility  Composite_Score
+symbol                                                  
+وپاسار   2.89          1.22        0.24              8.6
+مبین     5.52          0.60        0.21              8.4
+ومدیر    3.22          0.47        0.12              8.2
+لوتوس    3.92          0.60        0.18              8.2
+وبهمن    3.57          0.97        0.34              8.2
+مدیریت   3.54          0.52        0.16              8.0
+فگستر    4.18          0.35        0.19              8.0
+آلومینا  6.88          0.96        0.05              8.0
+وپست     4.19          0.94        0.33              8.0
+سامان    3.66          1.03        0.39              8.0
+خموتور   4.15          1.29        0.43              8.0
+وبملت    2.22          0.82        0.35              7.8
+وخارزم   4.45          0.78        0.30              7.8
+سیمرغ    4.49          0.24        0.22              7.8
+حفاری    2.22          0.82        0.35              7.8
+2025-07-11 22:41:08,451 - __main__ - INFO - --- Stage 3: Portfolio Optimization ---
+2025-07-11 22:41:09,160 - __main__ - WARNING - ⚠️ Max Sharpe optimization failed: at least one of the assets must have an expected return exceeding the risk-free rate
+2025-07-11 22:41:09,168 - __main__ - WARNING -    This typically means no assets had an expected return greater than the risk-free rate.
+2025-07-11 22:41:09,168 - __main__ - WARNING -    Skipping Max Sharpe portfolio, but continuing with other calculations.
+2025-07-11 22:41:09,201 - __main__ - INFO - 
+--- Optimal Portfolio (Minimum Volatility) ---
+2025-07-11 22:41:09,201 - __main__ - ERROR - Optimization failed, cannot run backtest.
+2025-07-11 22:41:09,201 - __main__ - INFO - ✅ Full optimization and backtesting pipeline completed successfully.
+2025-07-11 22:44:18,963 - __main__ - INFO - ======================================================================
+2025-07-11 22:44:18,963 - __main__ - INFO -       Initializing Multi-Factor Optimizer & Backtester
+2025-07-11 22:44:18,963 - __main__ - INFO - ======================================================================
+2025-07-11 22:44:18,963 - __main__ - INFO - 🚀 Multi-Factor Optimizer Initialized
+2025-07-11 22:44:18,963 - __main__ - INFO -    Analysis Data: C:\Portfolio-Optimizer\cache\analysis_ready_data.feather
+2025-07-11 22:44:18,963 - __main__ - INFO -    Risk-Free Rate: 35.00%
+2025-07-11 22:44:18,963 - __main__ - INFO - --- Stage 1: Loading Analysis-Ready Data ---
+2025-07-11 22:44:19,033 - __main__ - INFO - ✅ Loaded analysis data for 433 symbols.
+2025-07-11 22:44:19,033 - __main__ - INFO - --- Stage 2: Multi-Factor Screening ---
+2025-07-11 22:44:19,049 - __main__ - INFO - 
+📈 Top 15 Candidates based on Composite Score:
+2025-07-11 22:44:19,057 - __main__ - INFO -           P/E  Momentum_12M  Volatility  Composite_Score
+symbol                                                  
+وپاسار   2.89          1.22        0.24              8.6
+مبین     5.52          0.60        0.21              8.4
+ومدیر    3.22          0.47        0.12              8.2
+لوتوس    3.92          0.60        0.18              8.2
+وبهمن    3.57          0.97        0.34              8.2
+مدیریت   3.54          0.52        0.16              8.0
+فگستر    4.18          0.35        0.19              8.0
+آلومینا  6.88          0.96        0.05              8.0
+وپست     4.19          0.94        0.33              8.0
+سامان    3.66          1.03        0.39              8.0
+خموتور   4.15          1.29        0.43              8.0
+وبملت    2.22          0.82        0.35              7.8
+وخارزم   4.45          0.78        0.30              7.8
+سیمرغ    4.49          0.24        0.22              7.8
+حفاری    2.22          0.82        0.35              7.8
+2025-07-11 22:44:19,057 - __main__ - INFO - --- Stage 3: Portfolio Optimization ---
+2025-07-11 22:44:19,759 - __main__ - WARNING - ⚠️ All top candidates have expected returns below the risk-free rate.
+2025-07-11 22:44:19,759 - __main__ - WARNING -    Optimization for Max Sharpe is not meaningful. It is recommended to invest in the risk-free asset.
+2025-07-11 22:44:19,767 - __main__ - WARNING -    Skipping Max Sharpe portfolio and proceeding with Minimum Volatility.
+2025-07-11 22:44:19,791 - __main__ - INFO - 
+--- Optimal Portfolio (Minimum Volatility) ---
+2025-07-11 22:44:19,791 - __main__ - ERROR - Optimization failed, cannot run backtest.
+2025-07-11 22:44:19,791 - __main__ - INFO - ✅ Full optimization and backtesting pipeline completed successfully.
+2025-07-11 22:45:53,446 - __main__ - INFO - ======================================================================
+2025-07-11 22:45:53,446 - __main__ - INFO -       Initializing Multi-Factor Optimizer & Backtester
+2025-07-11 22:45:53,446 - __main__ - INFO - ======================================================================
+2025-07-11 22:45:53,454 - __main__ - INFO - 🚀 Multi-Factor Optimizer Initialized
+2025-07-11 22:45:53,454 - __main__ - INFO -    Analysis Data: C:\Portfolio-Optimizer\cache\analysis_ready_data.feather
+2025-07-11 22:45:53,454 - __main__ - INFO -    Risk-Free Rate: 35.00%
+2025-07-11 22:45:53,454 - __main__ - INFO - --- Stage 1: Loading Analysis-Ready Data ---
+2025-07-11 22:45:53,502 - __main__ - INFO - ✅ Loaded analysis data for 433 symbols.
+2025-07-11 22:45:53,502 - __main__ - INFO - --- Stage 2: Multi-Factor Screening ---
+2025-07-11 22:45:53,519 - __main__ - INFO - 
+📈 Top 15 Candidates based on Composite Score:
+2025-07-11 22:45:53,527 - __main__ - INFO -           P/E  Momentum_12M  Volatility  Composite_Score
+symbol                                                  
+وپاسار   2.89          1.22        0.24              8.6
+مبین     5.52          0.60        0.21              8.4
+ومدیر    3.22          0.47        0.12              8.2
+لوتوس    3.92          0.60        0.18              8.2
+وبهمن    3.57          0.97        0.34              8.2
+مدیریت   3.54          0.52        0.16              8.0
+فگستر    4.18          0.35        0.19              8.0
+آلومینا  6.88          0.96        0.05              8.0
+وپست     4.19          0.94        0.33              8.0
+سامان    3.66          1.03        0.39              8.0
+خموتور   4.15          1.29        0.43              8.0
+وبملت    2.22          0.82        0.35              7.8
+وخارزم   4.45          0.78        0.30              7.8
+سیمرغ    4.49          0.24        0.22              7.8
+حفاری    2.22          0.82        0.35              7.8
+2025-07-11 22:45:53,527 - __main__ - INFO - --- Stage 3: Portfolio Optimization ---
+2025-07-11 22:45:54,182 - __main__ - WARNING - ⚠️ All top candidates have expected returns below the risk-free rate.
+2025-07-11 22:45:54,182 - __main__ - WARNING -    Optimization for Max Sharpe is not meaningful. It is recommended to invest in the risk-free asset.
+2025-07-11 22:45:54,182 - __main__ - WARNING -    Skipping Max Sharpe portfolio and proceeding with Minimum Volatility.
+2025-07-11 22:45:54,214 - __main__ - INFO - 
+--- Optimal Portfolio (Minimum Volatility) ---
+2025-07-11 22:45:54,214 - __main__ - ERROR - Optimization failed, cannot run backtest.
+2025-07-11 22:45:54,214 - __main__ - INFO - ✅ Full optimization and backtesting pipeline completed successfully.
+2025-07-11 22:51:44,593 - __main__ - INFO - ======================================================================
+2025-07-11 22:51:44,593 - __main__ - INFO -       Initializing Multi-Factor Optimizer & Backtester
+2025-07-11 22:51:44,593 - __main__ - INFO - ======================================================================
+2025-07-11 22:51:44,593 - __main__ - INFO - 🚀 Multi-Factor Optimizer Initialized
+2025-07-11 22:51:44,593 - __main__ - INFO -    Analysis Data: C:\Portfolio-Optimizer\cache\analysis_ready_data.feather
+2025-07-11 22:51:44,593 - __main__ - INFO -    Risk-Free Rate: 35.00%
+2025-07-11 22:51:44,601 - __main__ - INFO - --- Stage 1: Loading Analysis-Ready Data ---
+2025-07-11 22:51:44,650 - __main__ - INFO - ✅ Loaded analysis data for 433 symbols.
+2025-07-11 22:51:44,650 - __main__ - INFO - --- Stage 2: Screening Stocks ---
+2025-07-11 22:51:44,650 - __main__ - WARNING - --- EXPERIMENT: Running PURE VALUE strategy ---
+2025-07-11 22:51:44,650 - __main__ - INFO - 
+📈 Top 15 Candidates based on Pure Value (Lowest P/E):
+2025-07-11 22:51:44,659 - __main__ - INFO -             P/E  Return  Volatility
+symbol                             
+پارسیان  2.2159  0.2253      0.3190
+پردیس    2.2159  0.3983      0.4398
+وبملت    2.2159  0.3699      0.3480
+وپارس    2.2159  0.2129      0.3591
+حفاری    2.2159  0.2806      0.3506
+وبوعلی   2.4373  0.3629      0.4890
+ثبهساز   2.5660  0.0382      0.2061
+وسبحان   2.5972  0.2118      0.2412
+وهامون   2.7092  0.0773      0.1599
+وصنعت    2.7925  0.3785      0.4849
+ونوین    2.7936  0.3207      0.4542
+سمگا     2.8372  0.3397      0.4032
+وپویا    2.8699  0.0676      0.2285
+وبصادر   2.8763  0.2339      0.3129
+وپاسار   2.8851  0.2063      0.2354
+2025-07-11 22:51:44,659 - __main__ - INFO - --- Stage 3: Portfolio Optimization ---
+2025-07-11 22:51:45,404 - __main__ - WARNING - ⚠️ All top candidates have expected returns below the risk-free rate.
+2025-07-11 22:51:45,404 - __main__ - WARNING -    Optimization for Max Sharpe is not meaningful. It is recommended to invest in the risk-free asset.
+2025-07-11 22:51:45,404 - __main__ - WARNING -    Skipping Max Sharpe portfolio and proceeding with Minimum Volatility.
+2025-07-11 22:51:45,437 - __main__ - INFO - 
+--- Optimal Portfolio (Minimum Volatility) ---
+2025-07-11 22:51:45,437 - __main__ - INFO - --- Stage 4: Comparative Backtesting ---
+2025-07-11 22:51:47,810 - __main__ - INFO - ✅ Backtest comparison chart saved to 'C:\Portfolio-Optimizer\results\backtest_comparison.png'
+2025-07-11 22:51:47,818 - __main__ - INFO - ✅ Full optimization and backtesting pipeline completed successfully.

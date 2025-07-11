@@ -46,7 +46,8 @@ def calculate_volatility(prices: pd.DataFrame, window: int = 252) -> pd.Series:
     Returns:
         pd.Series: A series containing the volatility value for each stock.
     """
-    daily_returns = prices.pct_change()
+    numeric_prices = prices.apply(pd.to_numeric, errors='coerce')
+    daily_returns = numeric_prices.pct_change()
     volatility = daily_returns.rolling(window=window).std() * np.sqrt(window)
     return volatility
 

@@ -39,7 +39,7 @@ MAX_POSITION_SIZE = 0.25 # Example: 25% maximum allocation to a single asset in 
 # Data Paths
 PREPROCESSED_DATA_FILE = "analysis_ready_data.feather"
 MASTER_PRICE_DATA_FILE = "master_price_data.feather"
-CACHE_DIR = "cache_v3"
+CACHE_DIR = "cache"
 """)`
 
 2.  **Integrate Configuration into `screener_v3_optimized.py`:**
