@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
 # ==============================================================================
-# Title: Multi-Factor Portfolio Optimizer
-# Description: A script that uses a pre-built analysis-ready dataset to perform
-#              multi-factor screening, portfolio optimization, and backtesting.
-# Author: Kilo Code, the AI Software Engineer
+# Title: Multi-Factor Portfolio Optimizer & Rolling Backtester
+# Description: A script that validates a portfolio strategy using a robust,
+#              rolling-window backtest over a multi-year period.
+# Author: Kilo Code, the AI Software 
 # ==============================================================================
 
 # --- Core Libraries ---
@@ -15,7 +15,7 @@ import warnings
 from pathlib import Path
 
 # --- Portfolio Optimization & Plotting ---
-from pypfopt import expected_returns, risk_models, EfficientFrontier, plotting
+from pypfopt import expected_returns, risk_models, EfficientFrontier, exceptions
 import matplotlib.pyplot as plt
 
 # --- Suppress warnings for cleaner output ---
@@ -42,187 +42,184 @@ logger = logging.getLogger(__name__)
 
 class MultiFactorOptimizer:
     """
-    Performs multi-factor screening, optimization, and backtesting.
+    Performs and validates a portfolio strategy using a rolling-window backtest.
     """
-    def __init__(self, analysis_data_path: Path, price_data_dir: Path, risk_free_rate: float, 
+    def __init__(self, fundamental_data_path: Path, price_data_dir: Path, 
                  max_position_size: float, top_n_candidates: int = 15):
-        self.analysis_data_path = analysis_data_path
+        self.fundamental_data_path = fundamental_data_path
         self.price_data_dir = price_data_dir
-        self.risk_free_rate = risk_free_rate
         self.max_position_size = max_position_size
         self.top_n_candidates = top_n_candidates
         
-        logger.info("🚀 Multi-Factor Optimizer Initialized")
-        logger.info(f"   Analysis Data: {self.analysis_data_path}")
-        logger.info(f"   Risk-Free Rate: {self.risk_free_rate:.2%}")
-
-    def _load_analysis_data(self) -> pd.DataFrame:
-        """Loads the analysis-ready data. This is the only data input for screening."""
-        logger.info("--- Stage 1: Loading Analysis-Ready Data ---")
-        if not self.analysis_data_path.exists():
-            logger.error(f"CRITICAL: Analysis data file not found at '{self.analysis_data_path}'.")
-            logger.error("Please run the preprocessor.py script first.")
-            raise FileNotFoundError("Analysis-ready data file is missing.")
+        self.fundamental_df = None
+        self.master_price_df = None
         
-        df = pd.read_feather(self.analysis_data_path).set_index('symbol')
-        logger.info(f"✅ Loaded analysis data for {len(df)} symbols.")
-        return df
+        logger.info("🚀 Rolling Backtester Initialized")
 
-    def screen_stocks(self, analysis_df: pd.DataFrame) -> pd.DataFrame:
-        """Selects stocks based on a pure momentum (highest 12M return) strategy."""
-        logger.info("--- Stage 2: Screening Stocks ---")
-        logger.warning("--- EXPERIMENT: Running PURE MOMENTUM strategy ---")
-
-        # 1. Filter for stocks with positive 12-month momentum
-        positive_momentum_stocks = analysis_df[analysis_df['Momentum_12M'] > 0].copy()
-        if positive_momentum_stocks.empty:
-            logger.error("❌ No stocks with positive 12-month momentum found.")
-            return pd.DataFrame()
-            
-        # 2. Sort by highest momentum
-        momentum_ranked_stocks = positive_momentum_stocks.sort_values(by='Momentum_12M', ascending=False)
+    def _load_data(self):
+        """Loads all necessary fundamental and price data into memory."""
+        logger.info("--- Loading All Required Data for Backtest ---")
+        if not self.fundamental_data_path.exists():
+            raise FileNotFoundError(f"Fundamental data not found at {self.fundamental_data_path}")
         
-        # 3. Select the top N candidates
-        top_candidates = momentum_ranked_stocks.head(self.top_n_candidates)
+        self.fundamental_df = pd.read_feather(self.fundamental_data_path).set_index('symbol')
         
-        logger.info(f"\n📈 Top {self.top_n_candidates} Candidates based on Pure Momentum (Highest 12M Return):")
-        logger.info(top_candidates[['Momentum_12M', 'Return', 'Volatility']].round(4).to_string())
-        return top_candidates
-
-    def _get_prices_for_candidates(self, candidates: list) -> pd.DataFrame:
-        """Fetches price history for the top candidate stocks."""
+        all_symbols = self.fundamental_df.index.tolist() + ['شاخص کل']
         price_data = {}
-        for symbol in candidates:
+        for symbol in all_symbols:
             file_path = self.price_data_dir / f"{symbol}.csv"
             if file_path.exists():
                 price_data[symbol] = pd.read_csv(file_path, index_col='date', parse_dates=True)['close']
         
-        price_df = pd.DataFrame(price_data)
-        price_df.ffill(inplace=True)
-        price_df.bfill(inplace=True)
-        return price_df
+        self.master_price_df = pd.DataFrame(price_data).sort_index()
+        self.master_price_df.ffill(inplace=True)
+        self.master_price_df.bfill(inplace=True)
+        
+        logger.info(f"✅ Loaded fundamental data for {len(self.fundamental_df)} symbols.")
+        logger.info(f"✅ Loaded price data for {self.master_price_df.shape[1]} symbols.")
 
-    def optimize_portfolio(self, candidates_df: pd.DataFrame):
-        """Runs optimization for Max Sharpe and Min Volatility portfolios."""
-        logger.info("--- Stage 3: Portfolio Optimization ---")
-        candidate_symbols = candidates_df.index.tolist()
-        price_df = self._get_prices_for_candidates(candidate_symbols)
+    def _calculate_metrics_for_period(self, price_df_slice: pd.DataFrame) -> pd.DataFrame:
+        """Calculates point-in-time metrics to avoid lookahead bias."""
+        returns = price_df_slice.pct_change()
+        annualized_return = returns.mean() * 252
+        annualized_volatility = returns.std() * np.sqrt(252)
+        
+        metrics_df = pd.DataFrame({
+            'Return': annualized_return,
+            'Volatility': annualized_volatility,
+        })
+        return metrics_df.dropna()
 
+    def _get_portfolio_for_date(self, historical_prices: pd.DataFrame) -> dict:
+        """Runs the screening and optimization for a single point in time."""
+        # 1. Calculate point-in-time metrics
+        metrics_df = self._calculate_metrics_for_period(historical_prices)
+        
+        # 2. Merge with fundamental data
+        # Drop pre-calculated metrics from the loaded fundamental data to avoid column overlap.
+        # We must use the point-in-time metrics calculated for the specific historical period.
+        fundamental_data_only = self.fundamental_df.drop(
+            columns=['Return', 'Volatility', 'Momentum_6M', 'Momentum_12M'],
+            errors='ignore'
+        )
+        analysis_df = fundamental_data_only.join(metrics_df, how='inner')
+        
+        # 3. Screen for top candidates (Low Volatility / Quality strategy)
+        positive_return_stocks = analysis_df[analysis_df['Return'] > 0]
+        if positive_return_stocks.empty:
+            return None # No valid stocks for this period
+        
+        stable_stocks = positive_return_stocks.sort_values(by='Volatility', ascending=True)
+        top_candidates = stable_stocks.head(self.top_n_candidates)
+        candidate_symbols = top_candidates.index.tolist()
+        
+        # 4. Optimize for Minimum Volatility portfolio
         try:
-            mu = expected_returns.mean_historical_return(price_df)
-            S = risk_models.CovarianceShrinkage(price_df).ledoit_wolf()
-        except Exception as e:
-            logger.error(f"❌ Error calculating returns/covariance: {e}")
-            return None, None
-
-        # --- Pre-Optimization Check for Max Sharpe ---
-        cleaned_weights_ms = None
-        if (mu < self.risk_free_rate).all():
-            logger.warning("⚠️ All top candidates have expected returns below the risk-free rate.")
-            logger.warning("   Optimization for Max Sharpe is not meaningful. It is recommended to invest in the risk-free asset.")
-            logger.warning("   Skipping Max Sharpe portfolio and proceeding with Minimum Volatility.")
-        else:
-            # Max Sharpe Optimization
-            ef_ms = EfficientFrontier(mu, S)
-            ef_ms.add_constraint(lambda w: w <= self.max_position_size)
-            weights_ms = ef_ms.max_sharpe(risk_free_rate=self.risk_free_rate)
-            cleaned_weights_ms = ef_ms.clean_weights()
+            prices_for_opt = historical_prices[candidate_symbols]
+            mu = expected_returns.mean_historical_return(prices_for_opt)
+            S = risk_models.CovarianceShrinkage(prices_for_opt).ledoit_wolf()
             
-            logger.info("\n--- Optimal Portfolio (Max Sharpe) ---")
-            ef_ms.portfolio_performance(verbose=True, risk_free_rate=self.risk_free_rate)
+            ef = EfficientFrontier(mu, S)
+            ef.add_constraint(lambda w: w <= self.max_position_size)
+            weights = ef.min_volatility()
+            return ef.clean_weights()
+        except Exception:
+            return None # Optimization failed for this period
 
-        # Min Volatility Optimization
-        ef_mv = EfficientFrontier(mu, S)
-        ef_mv.add_constraint(lambda w: w <= self.max_position_size)
-        weights_mv = ef_mv.min_volatility()
-        cleaned_weights_mv = ef_mv.clean_weights()
+    def run_rolling_backtest(self, years: int = 3, rebalance_freq_days: int = 90):
+        """
+        Runs a rolling window backtest for the defined strategy.
+        """
+        self._load_data()
         
-        logger.info("\n--- Optimal Portfolio (Minimum Volatility) ---")
-        ef_mv.portfolio_performance(verbose=True, risk_free_rate=self.risk_free_rate)
+        logger.info(f"--- Starting {years}-Year Rolling Backtest (Rebalance every {rebalance_freq_days} days) ---")
         
-        return cleaned_weights_ms, cleaned_weights_mv
-
-    def run_comparative_backtest(self, weights_ms: dict, weights_mv: dict):
-        """Runs a 1-year backtest comparing the available portfolios against the benchmark."""
-        logger.info("--- Stage 4: Comparative Backtesting ---")
+        end_date = self.master_price_df.index.max()
+        start_date = end_date - pd.DateOffset(days=years * 365)
         
-        all_symbols = ['شاخص کل']
-        if weights_ms:
-            all_symbols.extend(weights_ms.keys())
-        if weights_mv:
-            all_symbols.extend(weights_mv.keys())
-
-        price_data = self._get_prices_for_candidates(list(set(all_symbols)))
-        price_data_oneyear = price_data.iloc[-252:]
-
-        def calculate_portfolio_value(weights: dict):
+        rebalance_dates = pd.date_range(start=start_date, end=end_date, freq=f'{rebalance_freq_days}D')
+        
+        all_portfolio_returns = []
+        
+        for i in range(len(rebalance_dates) - 1):
+            current_date = rebalance_dates[i]
+            next_rebalance_date = rebalance_dates[i+1]
+            
+            logger.info(f"Rebalancing for period starting: {current_date.date()}")
+            
+            # Data available at the time of rebalancing
+            historical_prices = self.master_price_df.loc[:current_date]
+            
+            # Get the optimal portfolio for this period
+            weights = self._get_portfolio_for_date(historical_prices)
+            
             if not weights:
-                return None
-            returns = price_data_oneyear[list(weights.keys())].pct_change().dropna()
-            portfolio_return = (returns * pd.Series(weights)).sum(axis=1)
-            return 100 * (1 + portfolio_return).cumprod()
+                logger.warning("   -> Could not form a portfolio for this period. Skipping.")
+                continue
+            
+            # Simulate holding this portfolio for the next period
+            forward_prices = self.master_price_df.loc[current_date:next_rebalance_date]
+            forward_returns = forward_prices[list(weights.keys())].pct_change().dropna()
+            
+            period_returns = (forward_returns * pd.Series(weights)).sum(axis=1)
+            all_portfolio_returns.append(period_returns)
 
-        value_ms = calculate_portfolio_value(weights_ms)
-        value_mv = calculate_portfolio_value(weights_mv)
+        if not all_portfolio_returns:
+            logger.error("❌ Backtest failed. No returns were generated.")
+            return
+
+        # --- Analyze and Plot Results ---
+        logger.info("--- Analyzing and Plotting Backtest Results ---")
+        portfolio_returns = pd.concat(all_portfolio_returns)
         
-        # Benchmark
-        benchmark_prices = price_data_oneyear['شاخص کل']
-        benchmark_value = 100 * (benchmark_prices / benchmark_prices.iloc[0])
-        
+        # Strategy Performance
+        strategy_cumulative = 100 * (1 + portfolio_returns).cumprod()
+        strategy_total_return = (strategy_cumulative.iloc[-1] / strategy_cumulative.iloc[0] - 1) * 100
+        strategy_volatility = portfolio_returns.std() * np.sqrt(252) * 100
+
+        # Benchmark Performance
+        benchmark_prices = self.master_price_df['شاخص کل'].loc[strategy_cumulative.index]
+        benchmark_cumulative = 100 * (benchmark_prices / benchmark_prices.iloc[0])
+        benchmark_returns = benchmark_prices.pct_change().dropna()
+        benchmark_total_return = (benchmark_cumulative.iloc[-1] / benchmark_cumulative.iloc[0] - 1) * 100
+        benchmark_volatility = benchmark_returns.std() * np.sqrt(252) * 100
+
         # Plotting
-        plt.figure(figsize=(14, 8))
-        if value_ms is not None:
-            plt.plot(value_ms, label="Max Sharpe Portfolio", color='blue', linewidth=2)
-        if value_mv is not None:
-            plt.plot(value_mv, label="Min Volatility Portfolio", color='green', linestyle='--')
-        
-        plt.plot(benchmark_value, label="Benchmark (شاخص کل)", color='red', linestyle=':')
-        plt.title("1-Year Comparative Backtest")
+        plt.figure(figsize=(15, 8))
+        plt.plot(strategy_cumulative.index, strategy_cumulative, label="Rolling Low-Volatility Strategy", color='blue', linewidth=2)
+        plt.plot(benchmark_cumulative.index, benchmark_cumulative, label="Benchmark (شاخص کل)", color='red', linestyle='--')
+        plt.title(f"{years}-Year Rolling Backtest vs. Benchmark")
         plt.ylabel("Portfolio Value (Initial Value = 100)")
         plt.legend()
         plt.grid(True)
         
-        save_path = RESULTS_DIR / 'backtest_comparison.png'
+        save_path = RESULTS_DIR / 'rolling_backtest_result.png'
         save_path.parent.mkdir(exist_ok=True)
         plt.savefig(save_path, dpi=300)
-        logger.info(f"✅ Backtest comparison chart saved to '{save_path}'")
+        logger.info(f"✅ Rolling backtest chart saved to '{save_path}'")
         plt.close()
 
-    def run(self):
-        """Orchestrates the entire optimization pipeline."""
-        try:
-            analysis_df = self._load_analysis_data()
-            top_candidates = self.screen_stocks(analysis_df)
-            
-            if top_candidates.empty:
-                logger.warning("No stocks passed the screening. Halting.")
-                return
-
-            weights_ms, weights_mv = self.optimize_portfolio(top_candidates)
-            
-            if weights_ms or weights_mv:
-                self.run_comparative_backtest(weights_ms, weights_mv)
-            else:
-                logger.error("Optimization failed completely, cannot run backtest.")
-
-            logger.info("✅ Full optimization and backtesting pipeline completed successfully.")
-
-        except Exception as e:
-            logger.error(f"An unexpected error occurred in the main pipeline: {e}", exc_info=True)
+        # Final Stats
+        logger.info("\n--- ROLLING BACKTEST FINAL STATS ---")
+        logger.info(f"Strategy Total Return: {strategy_total_return:.2f}%")
+        logger.info(f"Strategy Annualized Volatility: {strategy_volatility:.2f}%")
+        logger.info("-" * 20)
+        logger.info(f"Benchmark Total Return: {benchmark_total_return:.2f}%")
+        logger.info(f"Benchmark Annualized Volatility: {benchmark_volatility:.2f}%")
+        logger.info("=" * 40)
 
 def main():
     logger.info("="*70)
-    logger.info("      Initializing Multi-Factor Optimizer & Backtester")
+    logger.info("      Initializing Rolling Window Backtester")
     logger.info("="*70)
 
     optimizer = MultiFactorOptimizer(
-        analysis_data_path=CACHE_DIR / 'analysis_ready_data.feather',
+        fundamental_data_path=CACHE_DIR / 'analysis_ready_data.feather',
         price_data_dir=DATA_DIR / 'tickers_data',
-        risk_free_rate=0.35,
         max_position_size=0.30,
         top_n_candidates=15
     )
-    optimizer.run()
+    optimizer.run_rolling_backtest()
 
 if __name__ == "__main__":
     main()

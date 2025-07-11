@@ -436,3 +436,170 @@ symbol
 2025-07-11 22:51:45,437 - __main__ - INFO - --- Stage 4: Comparative Backtesting ---
 2025-07-11 22:51:47,810 - __main__ - INFO - ✅ Backtest comparison chart saved to 'C:\Portfolio-Optimizer\results\backtest_comparison.png'
 2025-07-11 22:51:47,818 - __main__ - INFO - ✅ Full optimization and backtesting pipeline completed successfully.
+2025-07-11 23:00:11,910 - __main__ - INFO - ======================================================================
+2025-07-11 23:00:11,910 - __main__ - INFO -       Initializing Multi-Factor Optimizer & Backtester
+2025-07-11 23:00:11,910 - __main__ - INFO - ======================================================================
+2025-07-11 23:00:11,910 - __main__ - INFO - 🚀 Multi-Factor Optimizer Initialized
+2025-07-11 23:00:11,910 - __main__ - INFO -    Analysis Data: C:\Portfolio-Optimizer\cache\analysis_ready_data.feather
+2025-07-11 23:00:11,910 - __main__ - INFO -    Risk-Free Rate: 35.00%
+2025-07-11 23:00:11,910 - __main__ - INFO - --- Stage 1: Loading Analysis-Ready Data ---
+2025-07-11 23:00:11,959 - __main__ - INFO - ✅ Loaded analysis data for 433 symbols.
+2025-07-11 23:00:11,959 - __main__ - INFO - --- Stage 2: Screening Stocks ---
+2025-07-11 23:00:11,959 - __main__ - WARNING - --- EXPERIMENT: Running PURE MOMENTUM strategy ---
+2025-07-11 23:00:11,959 - __main__ - INFO - 
+📈 Top 15 Candidates based on Pure Momentum (Highest 12M Return):
+2025-07-11 23:00:11,967 - __main__ - INFO -         Momentum_12M  Return  Volatility
+symbol                                  
+سصوفی         3.1694  0.4135      0.4985
+ساربیل        2.0312  0.4240      0.5783
+سغرب          2.0100  0.4528      0.4696
+سخزر          2.0022  0.3922      0.5618
+سآبیک         1.8502  0.0969      0.1213
+ساروم         1.8486  0.4322      0.4481
+کاسپین        1.8074  0.2582      0.2675
+سهگمت         1.6466  0.3562      0.4299
+سبجنو         1.5501  0.2799      0.4387
+سهرمز         1.5241  0.3662      0.3240
+سفارس         1.5049  0.3286      0.4307
+سخاش          1.3721  0.4131      0.4497
+وبانک         1.3613  0.4649      0.4491
+سشرق          1.3421  0.3509      0.4493
+خموتور        1.2893  0.3085      0.4348
+2025-07-11 23:00:11,975 - __main__ - INFO - --- Stage 3: Portfolio Optimization ---
+2025-07-11 23:00:12,861 - __main__ - WARNING - ⚠️ All top candidates have expected returns below the risk-free rate.
+2025-07-11 23:00:12,861 - __main__ - WARNING -    Optimization for Max Sharpe is not meaningful. It is recommended to invest in the risk-free asset.
+2025-07-11 23:00:12,861 - __main__ - WARNING -    Skipping Max Sharpe portfolio and proceeding with Minimum Volatility.
+2025-07-11 23:00:12,893 - __main__ - INFO - 
+--- Optimal Portfolio (Minimum Volatility) ---
+2025-07-11 23:00:12,893 - __main__ - INFO - --- Stage 4: Comparative Backtesting ---
+2025-07-11 23:00:14,166 - __main__ - INFO - ✅ Backtest comparison chart saved to 'C:\Portfolio-Optimizer\results\backtest_comparison.png'
+2025-07-11 23:00:14,182 - __main__ - INFO - ✅ Full optimization and backtesting pipeline completed successfully.
+2025-07-11 23:06:49,662 - __main__ - INFO - ======================================================================
+2025-07-11 23:06:49,662 - __main__ - INFO -       Initializing Multi-Factor Optimizer & Backtester
+2025-07-11 23:06:49,662 - __main__ - INFO - ======================================================================
+2025-07-11 23:06:49,662 - __main__ - INFO - 🚀 Multi-Factor Optimizer Initialized
+2025-07-11 23:06:49,662 - __main__ - INFO -    Analysis Data: C:\Portfolio-Optimizer\cache\analysis_ready_data.feather
+2025-07-11 23:06:49,662 - __main__ - INFO -    Risk-Free Rate: 35.00%
+2025-07-11 23:06:49,662 - __main__ - INFO - --- Stage 1: Loading Analysis-Ready Data ---
+2025-07-11 23:06:49,728 - __main__ - INFO - ✅ Loaded analysis data for 433 symbols.
+2025-07-11 23:06:49,728 - __main__ - INFO - --- Stage 2: Screening Stocks ---
+2025-07-11 23:06:49,728 - __main__ - WARNING - --- EXPERIMENT: Running LOW VOLATILITY / QUALITY strategy ---
+2025-07-11 23:06:49,728 - __main__ - INFO - 
+📈 Top 15 Candidates based on Low Volatility / Quality:
+2025-07-11 23:06:49,736 - __main__ - INFO -          Return  Volatility      P/E
+symbol                              
+آلومینا  0.0305      0.0450   6.8785
+تکاردان  0.0044      0.0755   6.3355
+بیوتیک   0.0235      0.0818   5.9902
+وکغدیر   0.0204      0.0836  37.5146
+داتام    0.0224      0.0880   5.8933
+شهر      0.0151      0.0933   4.2391
+عالیس    0.0336      0.1023  21.5670
+غمایه    0.0363      0.1035  13.2168
+اردستان  0.0903      0.1060   7.1936
+ناما     0.0202      0.1076   6.0609
+اپال     0.0132      0.1101   5.8684
+نیان     0.0553      0.1117  10.2831
+انتخاب   0.0254      0.1153   3.8467
+فسبزوار  0.0395      0.1167   3.2542
+زفجر     0.0335      0.1182   5.9562
+2025-07-11 23:06:49,736 - __main__ - INFO - --- Stage 3: Portfolio Optimization ---
+2025-07-11 23:06:50,552 - __main__ - ERROR - An unexpected error occurred in the main pipeline: ('Please check your objectives/constraints or use a different solver.', 'Solver status: infeasible')
+Traceback (most recent call last):
+  File "c:\Portfolio-Optimizer\src\optimizer.py", line 201, in run
+    weights_ms, weights_mv = self.optimize_portfolio(top_candidates)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Portfolio-Optimizer\src\optimizer.py", line 128, in optimize_portfolio
+    weights_ms = ef_ms.max_sharpe(risk_free_rate=self.risk_free_rate)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Portfolio-Optimizer\venv\Lib\site-packages\pypfopt\efficient_frontier\efficient_frontier.py", line 290, in max_sharpe
+    self._solve_cvxpy_opt_problem()
+  File "C:\Portfolio-Optimizer\venv\Lib\site-packages\pypfopt\base_optimizer.py", line 315, in _solve_cvxpy_opt_problem
+    raise exceptions.OptimizationError(
+pypfopt.exceptions.OptimizationError: ('Please check your objectives/constraints or use a different solver.', 'Solver status: infeasible')
+2025-07-11 23:08:29,520 - __main__ - INFO - ======================================================================
+2025-07-11 23:08:29,529 - __main__ - INFO -       Initializing Multi-Factor Optimizer & Backtester
+2025-07-11 23:08:29,529 - __main__ - INFO - ======================================================================
+2025-07-11 23:08:29,529 - __main__ - INFO - 🚀 Multi-Factor Optimizer Initialized
+2025-07-11 23:08:29,529 - __main__ - INFO -    Analysis Data: C:\Portfolio-Optimizer\cache\analysis_ready_data.feather
+2025-07-11 23:08:29,529 - __main__ - INFO -    Risk-Free Rate: 35.00%
+2025-07-11 23:08:29,529 - __main__ - INFO - --- Stage 1: Loading Analysis-Ready Data ---
+2025-07-11 23:08:29,601 - __main__ - INFO - ✅ Loaded analysis data for 433 symbols.
+2025-07-11 23:08:29,601 - __main__ - INFO - --- Stage 2: Screening Stocks ---
+2025-07-11 23:08:29,601 - __main__ - WARNING - --- EXPERIMENT: Running LOW VOLATILITY / QUALITY strategy ---
+2025-07-11 23:08:29,610 - __main__ - INFO - 
+📈 Top 15 Candidates based on Low Volatility / Quality:
+2025-07-11 23:08:29,618 - __main__ - INFO -          Return  Volatility      P/E
+symbol                              
+آلومینا  0.0305      0.0450   6.8785
+تکاردان  0.0044      0.0755   6.3355
+بیوتیک   0.0235      0.0818   5.9902
+وکغدیر   0.0204      0.0836  37.5146
+داتام    0.0224      0.0880   5.8933
+شهر      0.0151      0.0933   4.2391
+عالیس    0.0336      0.1023  21.5670
+غمایه    0.0363      0.1035  13.2168
+اردستان  0.0903      0.1060   7.1936
+ناما     0.0202      0.1076   6.0609
+اپال     0.0132      0.1101   5.8684
+نیان     0.0553      0.1117  10.2831
+انتخاب   0.0254      0.1153   3.8467
+فسبزوار  0.0395      0.1167   3.2542
+زفجر     0.0335      0.1182   5.9562
+2025-07-11 23:08:29,626 - __main__ - INFO - --- Stage 3: Portfolio Optimization ---
+2025-07-11 23:08:30,471 - __main__ - WARNING - ⚠️ Max Sharpe optimization failed: ('Please check your objectives/constraints or use a different solver.', 'Solver status: infeasible')
+2025-07-11 23:08:30,471 - __main__ - WARNING -    This can happen if returns are too low or constraints are too tight.
+2025-07-11 23:08:30,471 - __main__ - WARNING -    Skipping Max Sharpe portfolio, but continuing with other calculations.
+2025-07-11 23:08:30,495 - __main__ - INFO - 
+--- Optimal Portfolio (Minimum Volatility) ---
+2025-07-11 23:08:30,495 - __main__ - INFO - --- Stage 4: Comparative Backtesting ---
+2025-07-11 23:08:32,034 - __main__ - INFO - ✅ Backtest comparison chart saved to 'C:\Portfolio-Optimizer\results\backtest_comparison.png'
+2025-07-11 23:08:32,042 - __main__ - INFO - ✅ Full optimization and backtesting pipeline completed successfully.
+2025-07-11 23:19:42,397 - __main__ - INFO - ======================================================================
+2025-07-11 23:19:42,397 - __main__ - INFO -       Initializing Rolling Window Backtester
+2025-07-11 23:19:42,397 - __main__ - INFO - ======================================================================
+2025-07-11 23:19:42,397 - __main__ - INFO - 🚀 Rolling Backtester Initialized
+2025-07-11 23:19:42,397 - __main__ - INFO - --- Loading All Required Data for Backtest ---
+2025-07-11 23:19:48,217 - __main__ - INFO - ✅ Loaded fundamental data for 433 symbols.
+2025-07-11 23:19:48,217 - __main__ - INFO - ✅ Loaded price data for 434 symbols.
+2025-07-11 23:19:48,241 - __main__ - INFO - --- Starting 3-Year Rolling Backtest (Rebalance every 90 days) ---
+2025-07-11 23:19:48,249 - __main__ - INFO - Rebalancing for period starting: 2022-07-10
+2025-07-11 23:20:10,291 - __main__ - INFO - ======================================================================
+2025-07-11 23:20:10,291 - __main__ - INFO -       Initializing Rolling Window Backtester
+2025-07-11 23:20:10,291 - __main__ - INFO - ======================================================================
+2025-07-11 23:20:10,291 - __main__ - INFO - 🚀 Rolling Backtester Initialized
+2025-07-11 23:20:10,291 - __main__ - INFO - --- Loading All Required Data for Backtest ---
+2025-07-11 23:20:15,424 - __main__ - INFO - ✅ Loaded fundamental data for 433 symbols.
+2025-07-11 23:20:15,424 - __main__ - INFO - ✅ Loaded price data for 434 symbols.
+2025-07-11 23:20:15,441 - __main__ - INFO - --- Starting 3-Year Rolling Backtest (Rebalance every 90 days) ---
+2025-07-11 23:20:15,449 - __main__ - INFO - Rebalancing for period starting: 2022-07-10
+2025-07-11 23:21:18,842 - __main__ - INFO - ======================================================================
+2025-07-11 23:21:18,842 - __main__ - INFO -       Initializing Rolling Window Backtester
+2025-07-11 23:21:18,842 - __main__ - INFO - ======================================================================
+2025-07-11 23:21:18,842 - __main__ - INFO - 🚀 Rolling Backtester Initialized
+2025-07-11 23:21:18,850 - __main__ - INFO - --- Loading All Required Data for Backtest ---
+2025-07-11 23:21:24,361 - __main__ - INFO - ✅ Loaded fundamental data for 433 symbols.
+2025-07-11 23:21:24,361 - __main__ - INFO - ✅ Loaded price data for 434 symbols.
+2025-07-11 23:21:24,377 - __main__ - INFO - --- Starting 3-Year Rolling Backtest (Rebalance every 90 days) ---
+2025-07-11 23:21:24,422 - __main__ - INFO - Rebalancing for period starting: 2022-07-10
+2025-07-11 23:21:25,394 - __main__ - INFO - Rebalancing for period starting: 2022-10-08
+2025-07-11 23:21:25,661 - __main__ - INFO - Rebalancing for period starting: 2023-01-06
+2025-07-11 23:21:25,931 - __main__ - INFO - Rebalancing for period starting: 2023-04-06
+2025-07-11 23:21:26,203 - __main__ - INFO - Rebalancing for period starting: 2023-07-05
+2025-07-11 23:21:26,491 - __main__ - INFO - Rebalancing for period starting: 2023-10-03
+2025-07-11 23:21:26,767 - __main__ - INFO - Rebalancing for period starting: 2024-01-01
+2025-07-11 23:21:27,176 - __main__ - INFO - Rebalancing for period starting: 2024-03-31
+2025-07-11 23:21:27,459 - __main__ - INFO - Rebalancing for period starting: 2024-06-29
+2025-07-11 23:21:27,748 - __main__ - INFO - Rebalancing for period starting: 2024-09-27
+2025-07-11 23:21:28,033 - __main__ - INFO - Rebalancing for period starting: 2024-12-26
+2025-07-11 23:21:28,330 - __main__ - INFO - Rebalancing for period starting: 2025-03-26
+2025-07-11 23:21:28,630 - __main__ - INFO - --- Analyzing and Plotting Backtest Results ---
+2025-07-11 23:21:29,617 - __main__ - INFO - ✅ Rolling backtest chart saved to 'C:\Portfolio-Optimizer\results\rolling_backtest_result.png'
+2025-07-11 23:21:29,649 - __main__ - INFO - 
+--- ROLLING BACKTEST FINAL STATS ---
+2025-07-11 23:21:29,649 - __main__ - INFO - Strategy Total Return: 88.85%
+2025-07-11 23:21:29,649 - __main__ - INFO - Strategy Annualized Volatility: 22.03%
+2025-07-11 23:21:29,649 - __main__ - INFO - --------------------
+2025-07-11 23:21:29,649 - __main__ - INFO - Benchmark Total Return: 101.18%
+2025-07-11 23:21:29,649 - __main__ - INFO - Benchmark Annualized Volatility: 18.35%
+2025-07-11 23:21:29,649 - __main__ - INFO - ========================================
