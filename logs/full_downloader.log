@@ -1,0 +1,1642 @@
+2025-07-11 23:36:59,864 - __main__ - INFO - Full Market Data directory set to: C:\Portfolio-Optimizer\data\full_market_data_csvs
+2025-07-11 23:36:59,864 - __main__ - INFO - Cache directory set to: C:\Portfolio-Optimizer\cache
+2025-07-11 23:36:59,864 - __main__ - INFO - 🚀 Starting Full Market Downloader...
+2025-07-11 23:36:59,864 - __main__ - INFO - --- Stage 1: Defining Full Market Universe ---
+2025-07-11 23:36:59,865 - __main__ - INFO - 📊 Fetching all symbols from TSE...
+2025-07-11 23:36:59,865 - __main__ - INFO - ✅ Using valid cache symbols_data_v3.json (99.1 hours old)
+2025-07-11 23:36:59,869 - __main__ - INFO -    Loaded 1394 symbols from cache
+2025-07-11 23:36:59,869 - __main__ - INFO - 🔍 Starting basic filtering for the full market...
+2025-07-11 23:36:59,873 - __main__ - INFO -    Initial symbols from master list: 1394
+2025-07-11 23:36:59,878 - __main__ - INFO -    1394 → 1394 (After market type filter)
+2025-07-11 23:36:59,883 - __main__ - INFO -    1394 → 1392 (After instrument type filter)
+2025-07-11 23:36:59,884 - __main__ - INFO - ✅ Basic filtering complete. Final universe size: 1392 stocks.
+2025-07-11 23:36:59,884 - __main__ - INFO - ✅ 'شاخص کل' added to the download queue as the benchmark.
+2025-07-11 23:36:59,884 - __main__ - INFO - 
+--- Stage 2: Updating Price Data for 1393 Selected Symbols ---
+2025-07-11 23:37:02,904 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثمسکنح.
+2025-07-11 23:37:05,244 - __main__ - INFO - 💾 Successfully downloaded and updated price for قستون.
+2025-07-11 23:37:06,419 - __main__ - INFO - 💾 Successfully downloaded and updated price for درازکح.
+2025-07-11 23:37:07,468 - __main__ - INFO - 💾 Successfully downloaded and updated price for صبا.
+2025-07-11 23:37:10,310 - __main__ - INFO - 💾 Successfully downloaded and updated price for ستران.
+2025-07-11 23:37:11,666 - __main__ - INFO - 💾 Successfully downloaded and updated price for کسعدیح.
+2025-07-11 23:37:13,674 - __main__ - INFO - 💾 Successfully downloaded and updated price for داسوه.
+2025-07-11 23:37:15,345 - __main__ - INFO - 💾 Successfully downloaded and updated price for دفارا.
+2025-07-11 23:37:16,598 - __main__ - INFO - 💾 Successfully downloaded and updated price for اسیاتک.
+2025-07-11 23:37:17,986 - __main__ - INFO - 💾 Successfully downloaded and updated price for میدکو.
+2025-07-11 23:37:19,638 - __main__ - INFO - 💾 Successfully downloaded and updated price for بالاس.
+2025-07-11 23:37:21,282 - __main__ - INFO - 💾 Successfully downloaded and updated price for ولغدر.
+2025-07-11 23:37:23,612 - __main__ - INFO - 💾 Successfully downloaded and updated price for وثوق.
+2025-07-11 23:37:25,881 - __main__ - INFO - 💾 Successfully downloaded and updated price for وصنا.
+2025-07-11 23:37:27,942 - __main__ - INFO - 💾 Successfully downloaded and updated price for سهرمزح.
+2025-07-11 23:37:29,069 - __main__ - INFO - 💾 Successfully downloaded and updated price for افق ملت.
+2025-07-11 23:37:30,169 - __main__ - INFO - 💾 Successfully downloaded and updated price for افقح.
+2025-07-11 23:37:31,278 - __main__ - INFO - 💾 Successfully downloaded and updated price for وبشهرح.
+2025-07-11 23:37:32,630 - __main__ - INFO - 💾 Successfully downloaded and updated price for غمینو.
+2025-07-11 23:37:40,051 - __main__ - INFO - 💾 Successfully downloaded and updated price for 18719101.
+2025-07-11 23:37:41,063 - __main__ - INFO - 💾 Successfully downloaded and updated price for ختوقاح.
+2025-07-11 23:37:42,082 - __main__ - INFO - 💾 Successfully downloaded and updated price for سپیدما.
+2025-07-11 23:37:43,148 - __main__ - INFO - 💾 Successfully downloaded and updated price for سکرماح.
+2025-07-11 23:37:44,121 - __main__ - INFO - 💾 Successfully downloaded and updated price for وتوسکاح.
+2025-07-11 23:37:46,166 - __main__ - INFO - 💾 Successfully downloaded and updated price for آپ.
+2025-07-11 23:37:47,200 - __main__ - INFO - 💾 Successfully downloaded and updated price for فرآورح.
+2025-07-11 23:37:48,234 - __main__ - INFO - 💾 Successfully downloaded and updated price for پکرمانح.
+2025-07-11 23:37:49,448 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثالوند.
+2025-07-11 23:37:50,350 - __main__ - INFO - 💾 Successfully downloaded and updated price for پرتو.
+2025-07-11 23:37:51,517 - __main__ - INFO - 💾 Successfully downloaded and updated price for غیوان.
+2025-07-11 23:37:52,800 - __main__ - INFO - 💾 Successfully downloaded and updated price for شپلی.
+2025-07-11 23:37:55,456 - __main__ - INFO - 💾 Successfully downloaded and updated price for کفرا.
+2025-07-11 23:37:57,062 - __main__ - WARNING - 🟡 Skipping قشهدح: No historical data available from the source.
+2025-07-11 23:37:58,042 - __main__ - INFO - 💾 Successfully downloaded and updated price for چبسپاح.
+2025-07-11 23:38:00,145 - __main__ - INFO - 💾 Successfully downloaded and updated price for خصدرا.
+2025-07-11 23:38:01,210 - __main__ - INFO - 💾 Successfully downloaded and updated price for خگسترح.
+2025-07-11 23:38:02,315 - __main__ - INFO - 💾 Successfully downloaded and updated price for آتیمس.
+2025-07-11 23:38:03,407 - __main__ - INFO - 💾 Successfully downloaded and updated price for لوتوسح.
+2025-07-11 23:38:04,541 - __main__ - INFO - 💾 Successfully downloaded and updated price for تبرک.
+2025-07-11 23:38:05,703 - __main__ - INFO - 💾 Successfully downloaded and updated price for کچادح.
+2025-07-11 23:38:06,722 - __main__ - INFO - 💾 Successfully downloaded and updated price for وپخشح.
+2025-07-11 23:38:07,882 - __main__ - INFO - 💾 Successfully downloaded and updated price for خموتورح.
+2025-07-11 23:38:08,913 - __main__ - INFO - 💾 Successfully downloaded and updated price for کاذرح.
+2025-07-11 23:38:09,901 - __main__ - INFO - 💾 Successfully downloaded and updated price for کساوهح.
+2025-07-11 23:38:11,790 - __main__ - INFO - 💾 Successfully downloaded and updated price for کیسون.
+2025-07-11 23:38:12,461 - __main__ - WARNING - 🟡 Skipping خمحورح: No historical data available from the source.
+2025-07-11 23:38:14,253 - __main__ - INFO - 💾 Successfully downloaded and updated price for قستان.
+2025-07-11 23:38:15,959 - __main__ - INFO - 💾 Successfully downloaded and updated price for پاسا.
+2025-07-11 23:38:17,315 - __main__ - INFO - 💾 Successfully downloaded and updated price for کیمیاتک.
+2025-07-11 23:38:18,298 - __main__ - INFO - 💾 Successfully downloaded and updated price for فکمند.
+2025-07-11 23:38:19,418 - __main__ - INFO - 💾 Successfully downloaded and updated price for قرن.
+2025-07-11 23:38:20,344 - __main__ - INFO - 💾 Successfully downloaded and updated price for صنهال.
+2025-07-11 23:38:21,253 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثجنوب.
+2025-07-11 23:38:22,780 - __main__ - INFO - 💾 Successfully downloaded and updated price for غاذر.
+2025-07-11 23:38:23,779 - __main__ - INFO - 💾 Successfully downloaded and updated price for پتروصبا.
+2025-07-11 23:38:25,402 - __main__ - INFO - 💾 Successfully downloaded and updated price for خمحور.
+2025-07-11 23:38:26,365 - __main__ - INFO - 💾 Successfully downloaded and updated price for هامرز.
+2025-07-11 23:38:28,175 - __main__ - INFO - 💾 Successfully downloaded and updated price for وپست.
+2025-07-11 23:38:30,363 - __main__ - INFO - 💾 Successfully downloaded and updated price for نوین.
+2025-07-11 23:38:31,626 - __main__ - INFO - 💾 Successfully downloaded and updated price for شصدف.
+2025-07-11 23:38:32,969 - __main__ - INFO - 💾 Successfully downloaded and updated price for تفارس.
+2025-07-11 23:38:34,568 - __main__ - INFO - 💾 Successfully downloaded and updated price for غالبر.
+2025-07-11 23:38:35,875 - __main__ - INFO - 💾 Successfully downloaded and updated price for دسبحاح.
+2025-07-11 23:38:37,261 - __main__ - INFO - 💾 Successfully downloaded and updated price for گپارس.
+2025-07-11 23:38:38,246 - __main__ - INFO - 💾 Successfully downloaded and updated price for فن افزار.
+2025-07-11 23:38:39,374 - __main__ - INFO - 💾 Successfully downloaded and updated price for کساپاح.
+2025-07-11 23:38:40,438 - __main__ - INFO - 💾 Successfully downloaded and updated price for سقاینح.
+2025-07-11 23:38:42,253 - __main__ - INFO - 💾 Successfully downloaded and updated price for کازرو.
+2025-07-11 23:38:43,121 - __main__ - INFO - 💾 Successfully downloaded and updated price for هامون.
+2025-07-11 23:38:45,076 - __main__ - INFO - 💾 Successfully downloaded and updated price for خکمک.
+2025-07-11 23:38:46,314 - __main__ - INFO - 💾 Successfully downloaded and updated price for پردیسح.
+2025-07-11 23:38:47,351 - __main__ - INFO - 💾 Successfully downloaded and updated price for داریوش.
+2025-07-11 23:38:48,468 - __main__ - INFO - 💾 Successfully downloaded and updated price for زملارد.
+2025-07-11 23:38:50,505 - __main__ - INFO - 💾 Successfully downloaded and updated price for کاصفاح.
+2025-07-11 23:38:51,594 - __main__ - INFO - 💾 Successfully downloaded and updated price for ولغدرح.
+2025-07-11 23:38:52,555 - __main__ - INFO - 💾 Successfully downloaded and updated price for خودران.
+2025-07-11 23:38:54,365 - __main__ - INFO - 💾 Successfully downloaded and updated price for فاما.
+2025-07-11 23:38:55,776 - __main__ - INFO - 💾 Successfully downloaded and updated price for لبهمن.
+2025-07-11 23:38:56,861 - __main__ - INFO - 💾 Successfully downloaded and updated price for عالیس.
+2025-07-11 23:38:58,165 - __main__ - INFO - 💾 Successfully downloaded and updated price for قجام.
+2025-07-11 23:38:59,616 - __main__ - INFO - 💾 Successfully downloaded and updated price for ولبهمن.
+2025-07-11 23:39:00,878 - __main__ - INFO - 💾 Successfully downloaded and updated price for وتوسح.
+2025-07-11 23:39:02,397 - __main__ - INFO - 💾 Successfully downloaded and updated price for مروارید.
+2025-07-11 23:39:05,448 - __main__ - INFO - 💾 Successfully downloaded and updated price for فنرژی.
+2025-07-11 23:39:06,886 - __main__ - INFO - 💾 Successfully downloaded and updated price for ولقمان.
+2025-07-11 23:39:07,973 - __main__ - INFO - 💾 Successfully downloaded and updated price for بزاگرس.
+2025-07-11 23:39:10,471 - __main__ - INFO - 💾 Successfully downloaded and updated price for کبورس.
+2025-07-11 23:39:11,649 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسین.
+2025-07-11 23:39:13,607 - __main__ - INFO - 💾 Successfully downloaded and updated price for خزامیا.
+2025-07-11 23:39:15,881 - __main__ - INFO - 💾 Successfully downloaded and updated price for شوش.
+2025-07-11 23:39:17,039 - __main__ - INFO - 💾 Successfully downloaded and updated price for بالبرح.
+2025-07-11 23:39:18,509 - __main__ - INFO - 💾 Successfully downloaded and updated price for وملت.
+2025-07-11 23:39:19,810 - __main__ - INFO - 💾 Successfully downloaded and updated price for فسپاح.
+2025-07-11 23:39:20,921 - __main__ - INFO - 💾 Successfully downloaded and updated price for شفاراح.
+2025-07-11 23:39:22,620 - __main__ - INFO - 💾 Successfully downloaded and updated price for وپارس.
+2025-07-11 23:39:23,312 - __main__ - WARNING - 🟡 Skipping وتوشهح: No historical data available from the source.
+2025-07-11 23:39:24,369 - __main__ - INFO - 💾 Successfully downloaded and updated price for خمهرح.
+2025-07-11 23:39:25,276 - __main__ - INFO - 💾 Successfully downloaded and updated price for نخل.
+2025-07-11 23:39:27,593 - __main__ - INFO - 💾 Successfully downloaded and updated price for نکالا.
+2025-07-11 23:39:29,062 - __main__ - INFO - 💾 Successfully downloaded and updated price for چفیبر.
+2025-07-11 23:39:30,018 - __main__ - INFO - 💾 Successfully downloaded and updated price for سلام.
+2025-07-11 23:39:33,111 - __main__ - INFO - 💾 Successfully downloaded and updated price for وآفری.
+2025-07-11 23:39:34,719 - __main__ - INFO - 💾 Successfully downloaded and updated price for بنیرو.
+2025-07-11 23:39:38,912 - __main__ - INFO - 💾 Successfully downloaded and updated price for دسینا.
+2025-07-11 23:39:40,061 - __main__ - INFO - 💾 Successfully downloaded and updated price for دتوزیع.
+2025-07-11 23:39:41,703 - __main__ - INFO - 💾 Successfully downloaded and updated price for قشرین.
+2025-07-11 23:39:43,936 - __main__ - INFO - 💾 Successfully downloaded and updated price for کچاد.
+2025-07-11 23:39:45,848 - __main__ - INFO - 💾 Successfully downloaded and updated price for البرز.
+2025-07-11 23:39:47,774 - __main__ - INFO - 💾 Successfully downloaded and updated price for وکار.
+2025-07-11 23:39:48,687 - __main__ - INFO - 💾 Successfully downloaded and updated price for پتروآبان.
+2025-07-11 23:39:50,002 - __main__ - INFO - 💾 Successfully downloaded and updated price for شبصیر.
+2025-07-11 23:39:51,073 - __main__ - INFO - 💾 Successfully downloaded and updated price for دامینح.
+2025-07-11 23:39:52,128 - __main__ - INFO - 💾 Successfully downloaded and updated price for اکسیژن.
+2025-07-11 23:39:53,224 - __main__ - INFO - 💾 Successfully downloaded and updated price for وامیر.
+2025-07-11 23:39:54,718 - __main__ - INFO - 💾 Successfully downloaded and updated price for نبورس.
+2025-07-11 23:39:56,440 - __main__ - INFO - 💾 Successfully downloaded and updated price for دروز.
+2025-07-11 23:39:58,473 - __main__ - INFO - 💾 Successfully downloaded and updated price for دجابر.
+2025-07-11 23:39:59,629 - __main__ - INFO - 💾 Successfully downloaded and updated price for سهام یار.
+2025-07-11 23:40:00,713 - __main__ - INFO - 💾 Successfully downloaded and updated price for رشد.
+2025-07-11 23:40:01,414 - __main__ - WARNING - 🟡 Skipping تفیروح: No historical data available from the source.
+2025-07-11 23:40:02,827 - __main__ - INFO - 💾 Successfully downloaded and updated price for شجم.
+2025-07-11 23:40:04,107 - __main__ - INFO - 💾 Successfully downloaded and updated price for غویتا.
+2025-07-11 23:40:05,231 - __main__ - INFO - 💾 Successfully downloaded and updated price for وخاورح.
+2025-07-11 23:40:06,277 - __main__ - INFO - 💾 Successfully downloaded and updated price for پتروآگاه.
+2025-07-11 23:40:08,174 - __main__ - INFO - 💾 Successfully downloaded and updated price for وبیمه.
+2025-07-11 23:40:10,329 - __main__ - INFO - 💾 Successfully downloaded and updated price for دالبر.
+2025-07-11 23:40:11,339 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسگلستا.
+2025-07-11 23:40:12,889 - __main__ - INFO - 💾 Successfully downloaded and updated price for وهور.
+2025-07-11 23:40:15,311 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسیناح.
+2025-07-11 23:40:17,511 - __main__ - INFO - 💾 Successfully downloaded and updated price for کحافظ.
+2025-07-11 23:40:18,912 - __main__ - INFO - 💾 Successfully downloaded and updated price for ساروج.
+2025-07-11 23:40:21,021 - __main__ - INFO - 💾 Successfully downloaded and updated price for ولصنمح.
+2025-07-11 23:40:22,210 - __main__ - INFO - 💾 Successfully downloaded and updated price for ومدیر.
+2025-07-11 23:40:23,310 - __main__ - INFO - 💾 Successfully downloaded and updated price for قپارسح.
+2025-07-11 23:40:24,616 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثنام.
+2025-07-11 23:40:25,690 - __main__ - INFO - 💾 Successfully downloaded and updated price for سبجنوح.
+2025-07-11 23:40:27,962 - __main__ - INFO - 💾 Successfully downloaded and updated price for شخارک.
+2025-07-11 23:40:29,501 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسکاب.
+2025-07-11 23:40:31,457 - __main__ - INFO - 💾 Successfully downloaded and updated price for ممسنی.
+2025-07-11 23:40:33,363 - __main__ - INFO - 💾 Successfully downloaded and updated price for وثنو.
+2025-07-11 23:40:35,416 - __main__ - INFO - 💾 Successfully downloaded and updated price for داراب.
+2025-07-11 23:40:36,505 - __main__ - INFO - 💾 Successfully downloaded and updated price for حپتروح.
+2025-07-11 23:40:37,647 - __main__ - INFO - 💾 Successfully downloaded and updated price for کسرامح.
+2025-07-11 23:40:38,569 - __main__ - INFO - 💾 Successfully downloaded and updated price for صدف.
+2025-07-11 23:40:39,250 - __main__ - WARNING - 🟡 Skipping شیرانح: No historical data available from the source.
+2025-07-11 23:40:40,431 - __main__ - INFO - 💾 Successfully downloaded and updated price for نتوس.
+2025-07-11 23:40:41,492 - __main__ - INFO - 💾 Successfully downloaded and updated price for تاصیکوح.
+2025-07-11 23:40:43,066 - __main__ - INFO - 💾 Successfully downloaded and updated price for آرمان.
+2025-07-11 23:40:44,120 - __main__ - INFO - 💾 Successfully downloaded and updated price for وآردلح.
+2025-07-11 23:40:45,165 - __main__ - INFO - 💾 Successfully downloaded and updated price for فباهنرح.
+2025-07-11 23:40:46,210 - __main__ - INFO - 💾 Successfully downloaded and updated price for ومشان.
+2025-07-11 23:40:47,501 - __main__ - INFO - 💾 Successfully downloaded and updated price for غدیس.
+2025-07-11 23:40:48,614 - __main__ - INFO - 💾 Successfully downloaded and updated price for دپارسح.
+2025-07-11 23:40:50,118 - __main__ - INFO - 💾 Successfully downloaded and updated price for حخزر.
+2025-07-11 23:40:51,982 - __main__ - INFO - 💾 Successfully downloaded and updated price for وبانک.
+2025-07-11 23:40:54,476 - __main__ - INFO - 💾 Successfully downloaded and updated price for ملت.
+2025-07-11 23:40:55,795 - __main__ - INFO - 💾 Successfully downloaded and updated price for فسلیر.
+2025-07-11 23:40:56,865 - __main__ - INFO - 💾 Successfully downloaded and updated price for نخریس.
+2025-07-11 23:40:58,469 - __main__ - INFO - 💾 Successfully downloaded and updated price for شرنگی.
+2025-07-11 23:40:59,611 - __main__ - INFO - 💾 Successfully downloaded and updated price for سشرقح.
+2025-07-11 23:41:00,433 - __main__ - INFO - 💾 Successfully downloaded and updated price for ولنوین.
+2025-07-11 23:41:02,359 - __main__ - INFO - 💾 Successfully downloaded and updated price for بموتو.
+2025-07-11 23:41:03,521 - __main__ - INFO - 💾 Successfully downloaded and updated price for پکویرح.
+2025-07-11 23:41:07,000 - __main__ - INFO - 💾 Successfully downloaded and updated price for کساپا.
+2025-07-11 23:41:09,179 - __main__ - INFO - 💾 Successfully downloaded and updated price for خدیزل.
+2025-07-11 23:41:11,472 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسیزد.
+2025-07-11 23:41:12,927 - __main__ - INFO - 💾 Successfully downloaded and updated price for زاگرس.
+2025-07-11 23:41:15,165 - __main__ - INFO - 💾 Successfully downloaded and updated price for سنیر.
+2025-07-11 23:41:16,276 - __main__ - INFO - 💾 Successfully downloaded and updated price for ددانا.
+2025-07-11 23:41:17,402 - __main__ - INFO - 💾 Successfully downloaded and updated price for سیتاح.
+2025-07-11 23:41:18,379 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثبات.
+2025-07-11 23:41:19,837 - __main__ - INFO - 💾 Successfully downloaded and updated price for دفرا.
+2025-07-11 23:41:20,478 - __main__ - WARNING - 🟡 Skipping پرشیا: No historical data available from the source.
+2025-07-11 23:41:22,400 - __main__ - INFO - 💾 Successfully downloaded and updated price for شتولی.
+2025-07-11 23:41:23,905 - __main__ - INFO - 💾 Successfully downloaded and updated price for خلنت.
+2025-07-11 23:41:25,228 - __main__ - INFO - 💾 Successfully downloaded and updated price for وجامی.
+2025-07-11 23:41:26,629 - __main__ - INFO - 💾 Successfully downloaded and updated price for دی.
+2025-07-11 23:41:28,059 - __main__ - INFO - 💾 Successfully downloaded and updated price for کپارس.
+2025-07-11 23:41:29,053 - __main__ - INFO - 💾 Successfully downloaded and updated price for ودانا.
+2025-07-11 23:41:30,549 - __main__ - INFO - 💾 Successfully downloaded and updated price for وهنر.
+2025-07-11 23:41:32,041 - __main__ - INFO - 💾 Successfully downloaded and updated price for شیراز.
+2025-07-11 23:41:34,671 - __main__ - INFO - 💾 Successfully downloaded and updated price for حپترو.
+2025-07-11 23:41:35,544 - __main__ - INFO - 💾 Successfully downloaded and updated price for نارین.
+2025-07-11 23:41:37,280 - __main__ - INFO - 💾 Successfully downloaded and updated price for غشاذرح.
+2025-07-11 23:41:38,372 - __main__ - INFO - 💾 Successfully downloaded and updated price for قجامح.
+2025-07-11 23:41:39,401 - __main__ - INFO - 💾 Successfully downloaded and updated price for چنوپا.
+2025-07-11 23:41:40,422 - __main__ - INFO - 💾 Successfully downloaded and updated price for مدیریت.
+2025-07-11 23:41:41,522 - __main__ - INFO - 💾 Successfully downloaded and updated price for بجهرم.
+2025-07-11 23:41:42,509 - __main__ - INFO - 💾 Successfully downloaded and updated price for غیوانح.
+2025-07-11 23:41:43,168 - __main__ - WARNING - 🟡 Skipping مدار: No historical data available from the source.
+2025-07-11 23:41:44,322 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسپهر.
+2025-07-11 23:41:46,397 - __main__ - INFO - 💾 Successfully downloaded and updated price for فایراح.
+2025-07-11 23:41:47,578 - __main__ - INFO - 💾 Successfully downloaded and updated price for تاپکیش.
+2025-07-11 23:41:48,747 - __main__ - INFO - 💾 Successfully downloaded and updated price for حآسا.
+2025-07-11 23:41:49,898 - __main__ - INFO - 💾 Successfully downloaded and updated price for اتکامح.
+2025-07-11 23:41:51,135 - __main__ - INFO - 💾 Successfully downloaded and updated price for شسپا.
+2025-07-11 23:41:52,173 - __main__ - INFO - 💾 Successfully downloaded and updated price for قیستو.
+2025-07-11 23:41:53,704 - __main__ - INFO - 💾 Successfully downloaded and updated price for ولصنم.
+2025-07-11 23:41:54,446 - __main__ - WARNING - 🟡 Skipping کقزویح: No historical data available from the source.
+2025-07-11 23:41:55,921 - __main__ - INFO - 💾 Successfully downloaded and updated price for فایرا.
+2025-07-11 23:41:57,161 - __main__ - INFO - 💾 Successfully downloaded and updated price for زر.
+2025-07-11 23:41:58,363 - __main__ - INFO - 💾 Successfully downloaded and updated price for سامان.
+2025-07-11 23:41:59,853 - __main__ - INFO - 💾 Successfully downloaded and updated price for ودی.
+2025-07-11 23:42:01,730 - __main__ - INFO - 💾 Successfully downloaded and updated price for تایرا.
+2025-07-11 23:42:03,091 - __main__ - INFO - 💾 Successfully downloaded and updated price for سخوز.
+2025-07-11 23:42:04,121 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسیلام.
+2025-07-11 23:42:05,771 - __main__ - INFO - 💾 Successfully downloaded and updated price for چکارن.
+2025-07-11 23:42:06,826 - __main__ - INFO - 💾 Successfully downloaded and updated price for قشرینح.
+2025-07-11 23:42:08,117 - __main__ - INFO - 💾 Successfully downloaded and updated price for تپکو.
+2025-07-11 23:42:09,236 - __main__ - INFO - 💾 Successfully downloaded and updated price for کمنگنزح.
+2025-07-11 23:42:10,265 - __main__ - INFO - 💾 Successfully downloaded and updated price for خعمرا.
+2025-07-11 23:42:11,527 - __main__ - INFO - 💾 Successfully downloaded and updated price for فصبا.
+2025-07-11 23:42:12,795 - __main__ - INFO - 💾 Successfully downloaded and updated price for صایند.
+2025-07-11 23:42:13,962 - __main__ - INFO - 💾 Successfully downloaded and updated price for مادیرا.
+2025-07-11 23:42:14,965 - __main__ - INFO - 💾 Successfully downloaded and updated price for اوج.
+2025-07-11 23:42:16,216 - __main__ - INFO - 💾 Successfully downloaded and updated price for شفا.
+2025-07-11 23:42:17,043 - __main__ - WARNING - 🟡 Skipping دیسشپ: No historical data available from the source.
+2025-07-11 23:42:18,733 - __main__ - WARNING - 🟡 Skipping ثملی: No historical data available from the source.
+2025-07-11 23:42:19,889 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسرمد.
+2025-07-11 23:42:20,941 - __main__ - INFO - 💾 Successfully downloaded and updated price for وملیح.
+2025-07-11 23:42:22,270 - __main__ - INFO - 💾 Successfully downloaded and updated price for هرمز.
+2025-07-11 23:42:23,216 - __main__ - INFO - 💾 Successfully downloaded and updated price for بکابل.
+2025-07-11 23:42:24,996 - __main__ - INFO - 💾 Successfully downloaded and updated price for وتوصا.
+2025-07-11 23:42:25,991 - __main__ - INFO - 💾 Successfully downloaded and updated price for وبوعلیح.
+2025-07-11 23:42:27,962 - __main__ - INFO - 💾 Successfully downloaded and updated price for کنور.
+2025-07-11 23:42:29,659 - __main__ - WARNING - 🟡 Skipping باخترح: No historical data available from the source.
+2025-07-11 23:42:30,690 - __main__ - INFO - 💾 Successfully downloaded and updated price for کیا.
+2025-07-11 23:42:31,850 - __main__ - INFO - 💾 Successfully downloaded and updated price for دسیناح.
+2025-07-11 23:42:32,976 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسمرکز.
+2025-07-11 23:42:34,148 - __main__ - INFO - 💾 Successfully downloaded and updated price for داسوهح.
+2025-07-11 23:42:35,986 - __main__ - INFO - 💾 Successfully downloaded and updated price for سرود.
+2025-07-11 23:42:37,496 - __main__ - INFO - 💾 Successfully downloaded and updated price for قمرو.
+2025-07-11 23:42:38,907 - __main__ - INFO - 💾 Successfully downloaded and updated price for توسن.
+2025-07-11 23:42:40,080 - __main__ - INFO - 💾 Successfully downloaded and updated price for بموتوح.
+2025-07-11 23:42:41,084 - __main__ - INFO - 💾 Successfully downloaded and updated price for تیپیکوح.
+2025-07-11 23:42:42,246 - __main__ - INFO - 💾 Successfully downloaded and updated price for قنقشح.
+2025-07-11 23:42:43,829 - __main__ - INFO - 💾 Successfully downloaded and updated price for پسهند.
+2025-07-11 23:42:44,960 - __main__ - INFO - 💾 Successfully downloaded and updated price for زبینا.
+2025-07-11 23:42:46,263 - __main__ - INFO - 💾 Successfully downloaded and updated price for وخاور.
+2025-07-11 23:42:47,030 - __main__ - WARNING - 🟡 Skipping پدرخشح: No historical data available from the source.
+2025-07-11 23:42:48,060 - __main__ - INFO - 💾 Successfully downloaded and updated price for کامیاب.
+2025-07-11 23:42:50,050 - __main__ - INFO - 💾 Successfully downloaded and updated price for کچینی.
+2025-07-11 23:42:51,353 - __main__ - INFO - 💾 Successfully downloaded and updated price for غدشت.
+2025-07-11 23:42:52,361 - __main__ - INFO - 💾 Successfully downloaded and updated price for دیوان.
+2025-07-11 23:42:53,445 - __main__ - INFO - 💾 Successfully downloaded and updated price for خاتم.
+2025-07-11 23:42:54,419 - __main__ - INFO - 💾 Successfully downloaded and updated price for توان.
+2025-07-11 23:42:55,137 - __main__ - WARNING - 🟡 Skipping فساز: No historical data available from the source.
+2025-07-11 23:43:00,942 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=5, read=4, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='service.tsetmc.com', port=80): Read timed out. (read timeout=5)")': /tsev2/data/TseClient2.aspx?t=LastPossibleDeven
+2025-07-11 23:43:04,529 - __main__ - INFO - 💾 Successfully downloaded and updated price for مرقامح.
+2025-07-11 23:43:05,461 - __main__ - INFO - 💾 Successfully downloaded and updated price for زفجر.
+2025-07-11 23:43:07,063 - __main__ - INFO - 💾 Successfully downloaded and updated price for تکمبا.
+2025-07-11 23:43:08,148 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثهام.
+2025-07-11 23:43:09,164 - __main__ - INFO - 💾 Successfully downloaded and updated price for لبخند.
+2025-07-11 23:43:10,199 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسبوشهر.
+2025-07-11 23:43:11,066 - __main__ - INFO - 💾 Successfully downloaded and updated price for شگستر.
+2025-07-11 23:43:12,718 - __main__ - INFO - 💾 Successfully downloaded and updated price for زگلدشت.
+2025-07-11 23:43:15,622 - __main__ - INFO - 💾 Successfully downloaded and updated price for بکام.
+2025-07-11 23:43:16,662 - __main__ - INFO - 💾 Successfully downloaded and updated price for افران.
+2025-07-11 23:43:17,676 - __main__ - INFO - 💾 Successfully downloaded and updated price for عقیق.
+2025-07-11 23:43:18,814 - __main__ - INFO - 💾 Successfully downloaded and updated price for تفیرو.
+2025-07-11 23:43:20,814 - __main__ - INFO - 💾 Successfully downloaded and updated price for پتروما.
+2025-07-11 23:43:21,902 - __main__ - INFO - 💾 Successfully downloaded and updated price for درین.
+2025-07-11 23:43:23,379 - __main__ - INFO - 💾 Successfully downloaded and updated price for پلولهح.
+2025-07-11 23:43:24,471 - __main__ - INFO - 💾 Successfully downloaded and updated price for فراز.
+2025-07-11 23:43:25,744 - __main__ - INFO - 💾 Successfully downloaded and updated price for داناح.
+2025-07-11 23:43:26,894 - __main__ - INFO - 💾 Successfully downloaded and updated price for کگازح.
+2025-07-11 23:43:28,645 - __main__ - INFO - 💾 Successfully downloaded and updated price for لخانه.
+2025-07-11 23:43:29,754 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسزنجان.
+2025-07-11 23:43:30,936 - __main__ - INFO - 💾 Successfully downloaded and updated price for سپاهاح.
+2025-07-11 23:43:31,866 - __main__ - INFO - 💾 Successfully downloaded and updated price for تیام.
+2025-07-11 23:43:32,986 - __main__ - INFO - 💾 Successfully downloaded and updated price for وفردا.
+2025-07-11 23:43:34,585 - __main__ - INFO - 💾 Successfully downloaded and updated price for حکشتی.
+2025-07-11 23:43:35,618 - __main__ - INFO - 💾 Successfully downloaded and updated price for ویستا.
+2025-07-11 23:43:36,602 - __main__ - INFO - 💾 Successfully downloaded and updated price for وبیمهح.
+2025-07-11 23:43:37,512 - __main__ - INFO - 💾 Successfully downloaded and updated price for فرود.
+2025-07-11 23:43:38,475 - __main__ - INFO - 💾 Successfully downloaded and updated price for نیلی.
+2025-07-11 23:43:39,607 - __main__ - INFO - 💾 Successfully downloaded and updated price for تکنوح.
+2025-07-11 23:43:41,188 - __main__ - INFO - 💾 Successfully downloaded and updated price for فملی.
+2025-07-11 23:43:42,707 - __main__ - INFO - 💾 Successfully downloaded and updated price for وشمال.
+2025-07-11 23:43:44,294 - __main__ - INFO - 💾 Successfully downloaded and updated price for ولساپا.
+2025-07-11 23:43:46,152 - __main__ - INFO - 💾 Successfully downloaded and updated price for جهرم.
+2025-07-11 23:43:47,957 - __main__ - INFO - 💾 Successfully downloaded and updated price for غبشهر.
+2025-07-11 23:43:49,451 - __main__ - INFO - 💾 Successfully downloaded and updated price for کرمان.
+2025-07-11 23:43:50,741 - __main__ - INFO - 💾 Successfully downloaded and updated price for خکاوهح.
+2025-07-11 23:43:51,798 - __main__ - INFO - 💾 Successfully downloaded and updated price for غبشهرح.
+2025-07-11 23:43:52,841 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسلرستا.
+2025-07-11 23:43:54,057 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثمین.
+2025-07-11 23:43:55,397 - __main__ - INFO - 💾 Successfully downloaded and updated price for کرویح.
+2025-07-11 23:43:56,707 - __main__ - INFO - 💾 Successfully downloaded and updated price for کسراح.
+2025-07-11 23:43:57,790 - __main__ - INFO - 💾 Successfully downloaded and updated price for غسالمح.
+2025-07-11 23:43:58,855 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسدیدح.
+2025-07-11 23:44:00,147 - __main__ - INFO - 💾 Successfully downloaded and updated price for فسلیرح.
+2025-07-11 23:44:01,569 - __main__ - INFO - 💾 Successfully downloaded and updated price for شتران.
+2025-07-11 23:44:02,920 - __main__ - INFO - 💾 Successfully downloaded and updated price for شپنا.
+2025-07-11 23:44:04,474 - __main__ - INFO - 💾 Successfully downloaded and updated price for وصنعت.
+2025-07-11 23:44:06,143 - __main__ - INFO - 💾 Successfully downloaded and updated price for حرهشا.
+2025-07-11 23:44:07,362 - __main__ - INFO - 💾 Successfully downloaded and updated price for سیتا.
+2025-07-11 23:44:08,477 - __main__ - INFO - 💾 Successfully downloaded and updated price for کپارسح.
+2025-07-11 23:44:10,068 - __main__ - INFO - 💾 Successfully downloaded and updated price for حفارس.
+2025-07-11 23:44:10,786 - __main__ - WARNING - 🟡 Skipping شجی: No historical data available from the source.
+2025-07-11 23:44:11,477 - __main__ - WARNING - 🟡 Skipping برانسفو: No historical data available from the source.
+2025-07-11 23:44:12,681 - __main__ - INFO - 💾 Successfully downloaded and updated price for وحکمت.
+2025-07-11 23:44:14,198 - __main__ - INFO - 💾 Successfully downloaded and updated price for شپمچا.
+2025-07-11 23:44:15,305 - __main__ - INFO - 💾 Successfully downloaded and updated price for دسانکوح.
+2025-07-11 23:44:16,445 - __main__ - INFO - 💾 Successfully downloaded and updated price for ولشرق.
+2025-07-11 23:44:18,385 - __main__ - INFO - 💾 Successfully downloaded and updated price for وکغدیر.
+2025-07-11 23:44:20,011 - __main__ - INFO - 💾 Successfully downloaded and updated price for وتوسم.
+2025-07-11 23:44:21,639 - __main__ - INFO - 💾 Successfully downloaded and updated price for قشکر.
+2025-07-11 23:44:22,349 - __main__ - WARNING - 🟡 Skipping تدبیر: No historical data available from the source.
+2025-07-11 23:44:23,888 - __main__ - INFO - 💾 Successfully downloaded and updated price for تکیمیا.
+2025-07-11 23:44:24,930 - __main__ - INFO - 💾 Successfully downloaded and updated price for وساختح.
+2025-07-11 23:44:26,002 - __main__ - INFO - 💾 Successfully downloaded and updated price for ارزش مسکن.
+2025-07-11 23:44:27,427 - __main__ - INFO - 💾 Successfully downloaded and updated price for غشاذر.
+2025-07-11 23:44:28,368 - __main__ - INFO - 💾 Successfully downloaded and updated price for دیبا.
+2025-07-11 23:44:30,776 - __main__ - INFO - 💾 Successfully downloaded and updated price for کشرق.
+2025-07-11 23:44:31,903 - __main__ - INFO - 💾 Successfully downloaded and updated price for وملتح.
+2025-07-11 23:44:33,468 - __main__ - INFO - 💾 Successfully downloaded and updated price for حفاری.
+2025-07-11 23:44:34,483 - __main__ - INFO - 💾 Successfully downloaded and updated price for پالایش.
+2025-07-11 23:44:35,443 - __main__ - INFO - 💾 Successfully downloaded and updated price for حآفرین.
+2025-07-11 23:44:36,664 - __main__ - INFO - 💾 Successfully downloaded and updated price for پارس.
+2025-07-11 23:44:38,144 - __main__ - INFO - 💾 Successfully downloaded and updated price for کلوند.
+2025-07-11 23:44:39,263 - __main__ - INFO - 💾 Successfully downloaded and updated price for شخارکح.
+2025-07-11 23:44:43,947 - __main__ - INFO - 💾 Successfully downloaded and updated price for لمخابر.
+2025-07-11 23:44:45,231 - __main__ - INFO - 💾 Successfully downloaded and updated price for سیدکو.
+2025-07-11 23:44:46,821 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثعتما.
+2025-07-11 23:44:48,023 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسکرد.
+2025-07-11 23:44:49,141 - __main__ - INFO - 💾 Successfully downloaded and updated price for پادا.
+2025-07-11 23:44:50,691 - __main__ - INFO - 💾 Successfully downloaded and updated price for کپشیر.
+2025-07-11 23:44:51,749 - __main__ - INFO - 💾 Successfully downloaded and updated price for فاهوازح.
+2025-07-11 23:44:57,257 - __main__ - INFO - 💾 Successfully downloaded and updated price for فروم.
+2025-07-11 23:44:58,267 - __main__ - INFO - 💾 Successfully downloaded and updated price for زیتون.
+2025-07-11 23:44:59,592 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثباغ.
+2025-07-11 23:45:01,139 - __main__ - INFO - 💾 Successfully downloaded and updated price for دحاوی.
+2025-07-11 23:45:02,410 - __main__ - INFO - 💾 Successfully downloaded and updated price for پشاهن.
+2025-07-11 23:45:03,498 - __main__ - INFO - 💾 Successfully downloaded and updated price for سیدکوح.
+2025-07-11 23:45:04,702 - __main__ - INFO - 💾 Successfully downloaded and updated price for گوهران.
+2025-07-11 23:45:05,742 - __main__ - INFO - 💾 Successfully downloaded and updated price for کفپارسح.
+2025-07-11 23:45:06,798 - __main__ - INFO - 💾 Successfully downloaded and updated price for سدشتح.
+2025-07-11 23:45:08,343 - __main__ - INFO - 💾 Successfully downloaded and updated price for سشرق.
+2025-07-11 23:45:09,588 - __main__ - INFO - 💾 Successfully downloaded and updated price for شزنگ.
+2025-07-11 23:45:10,793 - __main__ - INFO - 💾 Successfully downloaded and updated price for دتمادح.
+2025-07-11 23:45:11,896 - __main__ - INFO - 💾 Successfully downloaded and updated price for ساذریح.
+2025-07-11 23:45:13,128 - __main__ - INFO - 💾 Successfully downloaded and updated price for پترولح.
+2025-07-11 23:45:14,575 - __main__ - INFO - 💾 Successfully downloaded and updated price for پارتا.
+2025-07-11 23:45:15,926 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثنوساح.
+2025-07-11 23:45:18,263 - __main__ - INFO - 💾 Successfully downloaded and updated price for سمازن.
+2025-07-11 23:45:19,340 - __main__ - INFO - 💾 Successfully downloaded and updated price for ولپارس.
+2025-07-11 23:45:20,439 - __main__ - INFO - 💾 Successfully downloaded and updated price for کمند.
+2025-07-11 23:45:21,397 - __main__ - INFO - 💾 Successfully downloaded and updated price for ساحل.
+2025-07-11 23:45:22,800 - __main__ - INFO - 💾 Successfully downloaded and updated price for سکرد.
+2025-07-11 23:45:24,382 - __main__ - INFO - 💾 Successfully downloaded and updated price for تابا.
+2025-07-11 23:45:25,446 - __main__ - INFO - 💾 Successfully downloaded and updated price for زفکا.
+2025-07-11 23:45:26,737 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثتران.
+2025-07-11 23:45:27,801 - __main__ - INFO - 💾 Successfully downloaded and updated price for غناب.
+2025-07-11 23:45:29,138 - __main__ - INFO - 💾 Successfully downloaded and updated price for زنجان.
+2025-07-11 23:45:30,193 - __main__ - INFO - 💾 Successfully downloaded and updated price for خکرمان.
+2025-07-11 23:45:30,879 - __main__ - WARNING - 🟡 Skipping سایراح: No historical data available from the source.
+2025-07-11 23:45:32,006 - __main__ - INFO - 💾 Successfully downloaded and updated price for فملیح.
+2025-07-11 23:45:36,959 - __main__ - INFO - 💾 Successfully downloaded and updated price for غساسا.
+2025-07-11 23:45:38,491 - __main__ - INFO - 💾 Successfully downloaded and updated price for غگرجی.
+2025-07-11 23:45:39,729 - __main__ - INFO - 💾 Successfully downloaded and updated price for آسام.
+2025-07-11 23:45:40,883 - __main__ - INFO - 💾 Successfully downloaded and updated price for وپارسح.
+2025-07-11 23:45:41,819 - __main__ - INFO - 💾 Successfully downloaded and updated price for برلیان.
+2025-07-11 23:45:43,903 - __main__ - INFO - 💾 Successfully downloaded and updated price for فنورد.
+2025-07-11 23:45:45,052 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسنا.
+2025-07-11 23:45:45,985 - __main__ - INFO - 💾 Successfully downloaded and updated price for هوشیار.
+2025-07-11 23:45:46,901 - __main__ - INFO - 💾 Successfully downloaded and updated price for ضمان.
+2025-07-11 23:45:47,792 - __main__ - INFO - 💾 Successfully downloaded and updated price for بازرگام.
+2025-07-11 23:45:50,000 - __main__ - INFO - 💾 Successfully downloaded and updated price for ولتجار.
+2025-07-11 23:45:51,187 - __main__ - INFO - 💾 Successfully downloaded and updated price for لمخابرح.
+2025-07-11 23:45:53,370 - __main__ - INFO - 💾 Successfully downloaded and updated price for کخاکح.
+2025-07-11 23:45:54,679 - __main__ - INFO - 💾 Successfully downloaded and updated price for اتکای.
+2025-07-11 23:45:55,715 - __main__ - INFO - 💾 Successfully downloaded and updated price for تپمپیح.
+2025-07-11 23:45:57,139 - __main__ - INFO - 💾 Successfully downloaded and updated price for غچین.
+2025-07-11 23:45:58,823 - __main__ - INFO - 💾 Successfully downloaded and updated price for سفاسی.
+2025-07-11 23:46:00,153 - __main__ - INFO - 💾 Successfully downloaded and updated price for کسعدی.
+2025-07-11 23:46:00,834 - __main__ - WARNING - 🟡 Skipping غبهپاکح: No historical data available from the source.
+2025-07-11 23:46:02,371 - __main__ - INFO - 💾 Successfully downloaded and updated price for پاکشو.
+2025-07-11 23:46:03,989 - __main__ - INFO - 💾 Successfully downloaded and updated price for فولاد.
+2025-07-11 23:46:05,148 - __main__ - INFO - 💾 Successfully downloaded and updated price for حامی1401.
+2025-07-11 23:46:06,638 - __main__ - INFO - 💾 Successfully downloaded and updated price for قلرست.
+2025-07-11 23:46:09,164 - __main__ - INFO - 💾 Successfully downloaded and updated price for آباد.
+2025-07-11 23:46:10,828 - __main__ - INFO - 💾 Successfully downloaded and updated price for ونیکی.
+2025-07-11 23:46:11,894 - __main__ - INFO - 💾 Successfully downloaded and updated price for پاداش.
+2025-07-11 23:46:13,985 - __main__ - INFO - 💾 Successfully downloaded and updated price for شپارسح.
+2025-07-11 23:46:15,704 - __main__ - INFO - 💾 Successfully downloaded and updated price for فسدید.
+2025-07-11 23:46:16,803 - __main__ - INFO - 💾 Successfully downloaded and updated price for دشیمیح.
+2025-07-11 23:46:17,989 - __main__ - INFO - 💾 Successfully downloaded and updated price for سفارسح.
+2025-07-11 23:46:19,710 - __main__ - INFO - 💾 Successfully downloaded and updated price for والبر.
+2025-07-11 23:46:20,800 - __main__ - INFO - 💾 Successfully downloaded and updated price for سدورح.
+2025-07-11 23:46:24,090 - __main__ - INFO - 💾 Successfully downloaded and updated price for دامین.
+2025-07-11 23:46:25,114 - __main__ - INFO - 💾 Successfully downloaded and updated price for ختورح.
+2025-07-11 23:46:26,050 - __main__ - INFO - 💾 Successfully downloaded and updated price for فزر.
+2025-07-11 23:46:27,192 - __main__ - INFO - 💾 Successfully downloaded and updated price for وپسا.
+2025-07-11 23:46:28,425 - __main__ - INFO - 💾 Successfully downloaded and updated price for آگاس.
+2025-07-11 23:46:29,508 - __main__ - INFO - 💾 Successfully downloaded and updated price for وکبهمن.
+2025-07-11 23:46:30,591 - __main__ - INFO - 💾 Successfully downloaded and updated price for شاروم.
+2025-07-11 23:46:31,886 - __main__ - INFO - 💾 Successfully downloaded and updated price for اوان.
+2025-07-11 23:46:33,014 - __main__ - INFO - 💾 Successfully downloaded and updated price for جمح.
+2025-07-11 23:46:34,078 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسخراج.
+2025-07-11 23:46:35,226 - __main__ - INFO - 💾 Successfully downloaded and updated price for فولاژح.
+2025-07-11 23:46:35,956 - pytse - ERROR - Cannot read daily trade records for symbol: دقاضی
+2025-07-11 23:46:36,372 - __main__ - INFO - 💾 Successfully downloaded and updated price for دقاضی.
+2025-07-11 23:46:37,772 - __main__ - INFO - 💾 Successfully downloaded and updated price for فوکاح.
+2025-07-11 23:46:38,709 - __main__ - INFO - 💾 Successfully downloaded and updated price for آردینه.
+2025-07-11 23:46:40,298 - __main__ - INFO - 💾 Successfully downloaded and updated price for دابورح.
+2025-07-11 23:46:41,717 - __main__ - INFO - 💾 Successfully downloaded and updated price for کهرام.
+2025-07-11 23:46:43,836 - __main__ - INFO - 💾 Successfully downloaded and updated price for وآیند.
+2025-07-11 23:46:44,575 - __main__ - WARNING - 🟡 Skipping وسقزوین: No historical data available from the source.
+2025-07-11 23:46:46,106 - __main__ - INFO - 💾 Successfully downloaded and updated price for وآذر.
+2025-07-11 23:46:47,232 - __main__ - INFO - 💾 Successfully downloaded and updated price for سمایه.
+2025-07-11 23:46:48,388 - __main__ - INFO - 💾 Successfully downloaded and updated price for داروح.
+2025-07-11 23:46:49,815 - __main__ - INFO - 💾 Successfully downloaded and updated price for واتی.
+2025-07-11 23:46:50,843 - __main__ - INFO - 💾 Successfully downloaded and updated price for گنجین.
+2025-07-11 23:46:52,138 - __main__ - INFO - 💾 Successfully downloaded and updated price for پخش.
+2025-07-11 23:46:53,225 - __main__ - INFO - 💾 Successfully downloaded and updated price for مدارانح.
+2025-07-11 23:46:54,305 - __main__ - INFO - 💾 Successfully downloaded and updated price for حفاریح.
+2025-07-11 23:46:56,009 - __main__ - INFO - 💾 Successfully downloaded and updated price for وتوشه.
+2025-07-11 23:46:58,037 - __main__ - INFO - 💾 Successfully downloaded and updated price for فبستم.
+2025-07-11 23:46:59,242 - __main__ - INFO - 💾 Successfully downloaded and updated price for بهپاک.
+2025-07-11 23:47:01,646 - __main__ - INFO - 💾 Successfully downloaded and updated price for آکورد.
+2025-07-11 23:47:02,886 - __main__ - INFO - 💾 Successfully downloaded and updated price for دیرانح.
+2025-07-11 23:47:04,206 - __main__ - INFO - 💾 Successfully downloaded and updated price for کاسپین.
+2025-07-11 23:47:05,096 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثابت اکسیژن.
+2025-07-11 23:47:06,234 - __main__ - INFO - 💾 Successfully downloaded and updated price for لوتوس.
+2025-07-11 23:47:07,302 - __main__ - INFO - 💾 Successfully downloaded and updated price for چفیبرح.
+2025-07-11 23:47:08,416 - __main__ - INFO - 💾 Successfully downloaded and updated price for خپویشح.
+2025-07-11 23:47:09,567 - __main__ - INFO - 💾 Successfully downloaded and updated price for واتیح.
+2025-07-11 23:47:10,597 - __main__ - INFO - 💾 Successfully downloaded and updated price for وآفر.
+2025-07-11 23:47:12,121 - __main__ - INFO - 💾 Successfully downloaded and updated price for وزمین.
+2025-07-11 23:47:13,225 - __main__ - INFO - 💾 Successfully downloaded and updated price for لپیامح.
+2025-07-11 23:47:14,597 - __main__ - INFO - 💾 Successfully downloaded and updated price for آ س پ.
+2025-07-11 23:47:15,930 - __main__ - INFO - 💾 Successfully downloaded and updated price for شپاس.
+2025-07-11 23:47:18,204 - __main__ - INFO - 💾 Successfully downloaded and updated price for سفانوح.
+2025-07-11 23:47:20,023 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثاخت.
+2025-07-11 23:47:21,051 - __main__ - INFO - 💾 Successfully downloaded and updated price for اونیکس.
+2025-07-11 23:47:22,483 - __main__ - INFO - 💾 Successfully downloaded and updated price for سمگا.
+2025-07-11 23:47:23,187 - __main__ - WARNING - 🟡 Skipping قثابتح: No historical data available from the source.
+2025-07-11 23:47:24,699 - __main__ - INFO - 💾 Successfully downloaded and updated price for دابور.
+2025-07-11 23:47:25,843 - __main__ - INFO - 💾 Successfully downloaded and updated price for رافزا.
+2025-07-11 23:47:27,384 - __main__ - INFO - 💾 Successfully downloaded and updated price for کترام.
+2025-07-11 23:47:28,701 - __main__ - INFO - 💾 Successfully downloaded and updated price for دالبرح.
+2025-07-11 23:47:30,202 - __main__ - INFO - 💾 Successfully downloaded and updated price for پتایر.
+2025-07-11 23:47:31,305 - __main__ - INFO - 💾 Successfully downloaded and updated price for قستانح.
+2025-07-11 23:47:32,444 - __main__ - INFO - 💾 Successfully downloaded and updated price for فمتالح.
+2025-07-11 23:47:34,046 - __main__ - INFO - 💾 Successfully downloaded and updated price for شکربن.
+2025-07-11 23:47:35,574 - __main__ - INFO - 💾 Successfully downloaded and updated price for شکلر.
+2025-07-11 23:47:36,277 - __main__ - WARNING - 🟡 Skipping فروسح: No historical data available from the source.
+2025-07-11 23:47:37,452 - __main__ - INFO - 💾 Successfully downloaded and updated price for خلیج.
+2025-07-11 23:47:38,503 - __main__ - INFO - 💾 Successfully downloaded and updated price for کحافظح.
+2025-07-11 23:47:39,733 - __main__ - INFO - 💾 Successfully downloaded and updated price for بکابح.
+2025-07-11 23:47:41,251 - __main__ - INFO - 💾 Successfully downloaded and updated price for وساپا.
+2025-07-11 23:47:42,971 - __main__ - INFO - 💾 Successfully downloaded and updated price for وشهر.
+2025-07-11 23:47:44,363 - __main__ - INFO - 💾 Successfully downloaded and updated price for کرازی.
+2025-07-11 23:47:45,296 - __main__ - INFO - 💾 Successfully downloaded and updated price for دانیک.
+2025-07-11 23:47:46,935 - __main__ - INFO - 💾 Successfully downloaded and updated price for لخزر.
+2025-07-11 23:47:48,086 - __main__ - INFO - 💾 Successfully downloaded and updated price for خزرح.
+2025-07-11 23:47:49,207 - __main__ - INFO - 💾 Successfully downloaded and updated price for عشادگان.
+2025-07-11 23:47:50,758 - __main__ - INFO - 💾 Successfully downloaded and updated price for خکار.
+2025-07-11 23:47:52,236 - __main__ - INFO - 💾 Successfully downloaded and updated price for سخزر.
+2025-07-11 23:47:53,661 - __main__ - INFO - 💾 Successfully downloaded and updated price for شلیا.
+2025-07-11 23:47:54,861 - __main__ - INFO - 💾 Successfully downloaded and updated price for کیان.
+2025-07-11 23:47:57,030 - __main__ - INFO - 💾 Successfully downloaded and updated price for ختراکح.
+2025-07-11 23:47:58,601 - __main__ - INFO - 💾 Successfully downloaded and updated price for وحافظ.
+2025-07-11 23:47:59,928 - __main__ - INFO - 💾 Successfully downloaded and updated price for ما.
+2025-07-11 23:48:01,017 - __main__ - INFO - 💾 Successfully downloaded and updated price for غاذرح.
+2025-07-11 23:48:02,149 - __main__ - INFO - 💾 Successfully downloaded and updated price for شزنگح.
+2025-07-11 23:48:04,178 - __main__ - INFO - 💾 Successfully downloaded and updated price for حتایدح.
+2025-07-11 23:48:05,310 - __main__ - INFO - 💾 Successfully downloaded and updated price for پشاهنح.
+2025-07-11 23:48:06,612 - __main__ - INFO - 💾 Successfully downloaded and updated price for کویرح.
+2025-07-11 23:48:07,277 - __main__ - WARNING - 🟡 Skipping رانفورح: No historical data available from the source.
+2025-07-11 23:48:08,415 - __main__ - INFO - 💾 Successfully downloaded and updated price for زکوثر.
+2025-07-11 23:48:09,527 - __main__ - INFO - 💾 Successfully downloaded and updated price for زپارس.
+2025-07-11 23:48:10,641 - __main__ - INFO - 💾 Successfully downloaded and updated price for کالا.
+2025-07-11 23:48:12,225 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثجوان.
+2025-07-11 23:48:12,924 - __main__ - WARNING - 🟡 Skipping قلرستح: No historical data available from the source.
+2025-07-11 23:48:14,118 - __main__ - INFO - 💾 Successfully downloaded and updated price for ساذری.
+2025-07-11 23:48:15,511 - __main__ - INFO - 💾 Successfully downloaded and updated price for صنوین.
+2025-07-11 23:48:18,666 - __main__ - INFO - 💾 Successfully downloaded and updated price for غدامح.
+2025-07-11 23:48:19,819 - __main__ - INFO - 💾 Successfully downloaded and updated price for سپ.
+2025-07-11 23:48:20,829 - __main__ - INFO - 💾 Successfully downloaded and updated price for قتربت.
+2025-07-11 23:48:21,870 - __main__ - INFO - 💾 Successfully downloaded and updated price for وآوا.
+2025-07-11 23:48:23,201 - __main__ - INFO - 💾 Successfully downloaded and updated price for فولای.
+2025-07-11 23:48:24,337 - __main__ - INFO - 💾 Successfully downloaded and updated price for وتوسمح.
+2025-07-11 23:48:25,376 - __main__ - INFO - 💾 Successfully downloaded and updated price for لطیف.
+2025-07-11 23:48:27,329 - __main__ - INFO - 💾 Successfully downloaded and updated price for سصفها.
+2025-07-11 23:48:29,997 - __main__ - INFO - 💾 Successfully downloaded and updated price for دلقما.
+2025-07-11 23:48:30,993 - __main__ - INFO - 💾 Successfully downloaded and updated price for انار.
+2025-07-11 23:48:31,845 - __main__ - INFO - 💾 Successfully downloaded and updated price for آلومینا.
+2025-07-11 23:48:32,541 - __main__ - WARNING - 🟡 Skipping پخش اول: No historical data available from the source.
+2025-07-11 23:48:34,487 - __main__ - INFO - 💾 Successfully downloaded and updated price for وامین.
+2025-07-11 23:48:36,554 - __main__ - INFO - 💾 Successfully downloaded and updated price for شفارسح.
+2025-07-11 23:48:37,939 - __main__ - INFO - 💾 Successfully downloaded and updated price for غگل.
+2025-07-11 23:48:39,069 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثاختح.
+2025-07-11 23:48:40,234 - __main__ - INFO - 💾 Successfully downloaded and updated price for حتوکاح.
+2025-07-11 23:48:41,403 - __main__ - INFO - 💾 Successfully downloaded and updated price for آسامید.
+2025-07-11 23:48:43,143 - __main__ - INFO - 💾 Successfully downloaded and updated price for سفارس.
+2025-07-11 23:48:44,251 - __main__ - INFO - 💾 Successfully downloaded and updated price for عبهمن.
+2025-07-11 23:48:45,719 - __main__ - INFO - 💾 Successfully downloaded and updated price for فنوال.
+2025-07-11 23:48:47,731 - __main__ - INFO - 💾 Successfully downloaded and updated price for وانصارح.
+2025-07-11 23:48:48,974 - __main__ - INFO - 💾 Successfully downloaded and updated price for وایران.
+2025-07-11 23:48:50,369 - __main__ - INFO - 💾 Successfully downloaded and updated price for فولاژ.
+2025-07-11 23:48:51,449 - __main__ - INFO - 💾 Successfully downloaded and updated price for تکشاح.
+2025-07-11 23:48:52,558 - __main__ - INFO - 💾 Successfully downloaded and updated price for شکفح.
+2025-07-11 23:48:54,185 - __main__ - INFO - 💾 Successfully downloaded and updated price for بکهنوج.
+2025-07-11 23:48:55,194 - __main__ - INFO - 💾 Successfully downloaded and updated price for نهال.
+2025-07-11 23:48:56,090 - __main__ - INFO - 💾 Successfully downloaded and updated price for اعتبار.
+2025-07-11 23:48:57,850 - __main__ - INFO - 💾 Successfully downloaded and updated price for ومعادن.
+2025-07-11 23:48:59,007 - __main__ - INFO - 💾 Successfully downloaded and updated price for گکوثر.
+2025-07-11 23:49:00,736 - __main__ - INFO - 💾 Successfully downloaded and updated price for شاراک.
+2025-07-11 23:49:01,907 - __main__ - INFO - 💾 Successfully downloaded and updated price for ارمغان.
+2025-07-11 23:49:02,574 - __main__ - WARNING - 🟡 Skipping شسیناح: No historical data available from the source.
+2025-07-11 23:49:03,689 - __main__ - INFO - 💾 Successfully downloaded and updated price for اپال.
+2025-07-11 23:49:06,229 - __main__ - INFO - 💾 Successfully downloaded and updated price for کایتا.
+2025-07-11 23:49:07,744 - __main__ - INFO - 💾 Successfully downloaded and updated price for نمرینو.
+2025-07-11 23:49:09,321 - __main__ - INFO - 💾 Successfully downloaded and updated price for تپمپی.
+2025-07-11 23:49:10,986 - __main__ - INFO - 💾 Successfully downloaded and updated price for فلامی.
+2025-07-11 23:49:12,069 - __main__ - INFO - 💾 Successfully downloaded and updated price for فسربح.
+2025-07-11 23:49:13,065 - __main__ - INFO - 💾 Successfully downloaded and updated price for اتکاسا.
+2025-07-11 23:49:14,387 - __main__ - INFO - 💾 Successfully downloaded and updated price for قنقش.
+2025-07-11 23:49:15,505 - __main__ - INFO - 💾 Successfully downloaded and updated price for گدنا.
+2025-07-11 23:49:16,554 - __main__ - INFO - 💾 Successfully downloaded and updated price for پلاسکح.
+2025-07-11 23:49:17,532 - __main__ - INFO - 💾 Successfully downloaded and updated price for ناما.
+2025-07-11 23:49:18,529 - __main__ - INFO - 💾 Successfully downloaded and updated price for فجهان.
+2025-07-11 23:49:20,037 - __main__ - INFO - 💾 Successfully downloaded and updated price for تکنو.
+2025-07-11 23:49:21,202 - __main__ - INFO - 💾 Successfully downloaded and updated price for پلاستح.
+2025-07-11 23:49:22,226 - __main__ - INFO - 💾 Successfully downloaded and updated price for کاماح.
+2025-07-11 23:49:25,205 - __main__ - INFO - 💾 Successfully downloaded and updated price for فپارس.
+2025-07-11 23:49:26,707 - __main__ - INFO - 💾 Successfully downloaded and updated price for شپارس.
+2025-07-11 23:49:27,789 - __main__ - INFO - 💾 Successfully downloaded and updated price for تاپیکوح.
+2025-07-11 23:49:29,365 - __main__ - INFO - 💾 Successfully downloaded and updated price for سغرب.
+2025-07-11 23:49:30,847 - __main__ - INFO - 💾 Successfully downloaded and updated price for وبملت.
+2025-07-11 23:49:32,204 - __main__ - INFO - 💾 Successfully downloaded and updated price for ذوب.
+2025-07-11 23:49:33,969 - __main__ - WARNING - 🟡 Skipping سصفهاح: No historical data available from the source.
+2025-07-11 23:49:35,472 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثشاهدح.
+2025-07-11 23:49:36,631 - __main__ - INFO - 💾 Successfully downloaded and updated price for ولیزح.
+2025-07-11 23:49:37,645 - __main__ - INFO - 💾 Successfully downloaded and updated price for گارانتی.
+2025-07-11 23:49:38,647 - __main__ - INFO - 💾 Successfully downloaded and updated price for یارا.
+2025-07-11 23:49:40,898 - __main__ - INFO - 💾 Successfully downloaded and updated price for ساربیل.
+2025-07-11 23:49:41,629 - __main__ - WARNING - 🟡 Skipping شوشح: No historical data available from the source.
+2025-07-11 23:49:43,129 - __main__ - INFO - 💾 Successfully downloaded and updated price for کنیلو.
+2025-07-11 23:49:45,363 - __main__ - INFO - 💾 Successfully downloaded and updated price for وآردل.
+2025-07-11 23:49:47,272 - __main__ - INFO - 💾 Successfully downloaded and updated price for وآرین.
+2025-07-11 23:49:49,301 - __main__ - INFO - 💾 Successfully downloaded and updated price for حتوکا.
+2025-07-11 23:49:50,818 - __main__ - INFO - 💾 Successfully downloaded and updated price for ونیرو.
+2025-07-11 23:49:51,814 - __main__ - INFO - 💾 Successfully downloaded and updated price for رابین.
+2025-07-11 23:49:54,249 - __main__ - INFO - 💾 Successfully downloaded and updated price for تپکوح.
+2025-07-11 23:49:55,290 - __main__ - INFO - 💾 Successfully downloaded and updated price for آرام.
+2025-07-11 23:49:56,678 - __main__ - INFO - 💾 Successfully downloaded and updated price for بشهابح.
+2025-07-11 23:49:57,820 - __main__ - INFO - 💾 Successfully downloaded and updated price for شپمچاح.
+2025-07-11 23:49:59,684 - __main__ - INFO - 💾 Successfully downloaded and updated price for فسا.
+2025-07-11 23:50:01,054 - __main__ - INFO - 💾 Successfully downloaded and updated price for غمهراح.
+2025-07-11 23:50:02,557 - __main__ - INFO - 💾 Successfully downloaded and updated price for سبهان.
+2025-07-11 23:50:03,626 - __main__ - INFO - 💾 Successfully downloaded and updated price for سپیدار.
+2025-07-11 23:50:15,609 - __main__ - INFO - 💾 Successfully downloaded and updated price for وانصار.
+2025-07-11 23:50:17,000 - __main__ - INFO - 💾 Successfully downloaded and updated price for قچار.
+2025-07-11 23:50:17,686 - __main__ - WARNING - 🟡 Skipping زرنام: No historical data available from the source.
+2025-07-11 23:50:18,859 - __main__ - INFO - 💾 Successfully downloaded and updated price for رمپناح.
+2025-07-11 23:50:19,970 - __main__ - INFO - 💾 Successfully downloaded and updated price for تنوینح.
+2025-07-11 23:50:21,066 - __main__ - INFO - 💾 Successfully downloaded and updated price for دکیمیح.
+2025-07-11 23:50:22,180 - __main__ - INFO - 💾 Successfully downloaded and updated price for ونیروح.
+2025-07-11 23:50:23,245 - __main__ - INFO - 💾 Successfully downloaded and updated price for سترانح.
+2025-07-11 23:50:24,354 - __main__ - INFO - 💾 Successfully downloaded and updated price for فسازانح.
+2025-07-11 23:50:25,992 - __main__ - INFO - 💾 Successfully downloaded and updated price for دلر.
+2025-07-11 23:50:27,045 - __main__ - INFO - 💾 Successfully downloaded and updated price for وتوصاح.
+2025-07-11 23:50:31,586 - __main__ - INFO - 💾 Successfully downloaded and updated price for قپارس.
+2025-07-11 23:50:32,825 - __main__ - INFO - 💾 Successfully downloaded and updated price for بفجر.
+2025-07-11 23:50:33,501 - __main__ - WARNING - 🟡 Skipping شموادح: No historical data available from the source.
+2025-07-11 23:50:35,661 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسدید.
+2025-07-11 23:50:37,255 - __main__ - INFO - 💾 Successfully downloaded and updated price for وساخت.
+2025-07-11 23:50:39,531 - __main__ - INFO - 💾 Successfully downloaded and updated price for کزغال.
+2025-07-11 23:50:41,327 - __main__ - INFO - 💾 Successfully downloaded and updated price for تکنار.
+2025-07-11 23:50:42,056 - __main__ - WARNING - 🟡 Skipping چافستح: No historical data available from the source.
+2025-07-11 23:50:42,731 - __main__ - WARNING - 🟡 Skipping وسمحال: No historical data available from the source.
+2025-07-11 23:50:43,901 - __main__ - INFO - 💾 Successfully downloaded and updated price for شمواد.
+2025-07-11 23:50:45,760 - __main__ - INFO - 💾 Successfully downloaded and updated price for فاسمین.
+2025-07-11 23:50:46,956 - __main__ - INFO - 💾 Successfully downloaded and updated price for پسهندح.
+2025-07-11 23:50:48,039 - __main__ - INFO - 💾 Successfully downloaded and updated price for هم وزن.
+2025-07-11 23:50:49,187 - __main__ - INFO - 💾 Successfully downloaded and updated price for آکنتورح.
+2025-07-11 23:50:50,710 - __main__ - INFO - 💾 Successfully downloaded and updated price for سپهر.
+2025-07-11 23:50:52,268 - __main__ - INFO - 💾 Successfully downloaded and updated price for خفنر.
+2025-07-11 23:50:54,543 - __main__ - INFO - 💾 Successfully downloaded and updated price for فجام.
+2025-07-11 23:50:55,626 - __main__ - INFO - 💾 Successfully downloaded and updated price for کایتاح.
+2025-07-11 23:50:56,709 - __main__ - INFO - 💾 Successfully downloaded and updated price for کرماشاح.
+2025-07-11 23:50:57,735 - __main__ - INFO - 💾 Successfully downloaded and updated price for غکورش.
+2025-07-11 23:50:58,942 - __main__ - INFO - 💾 Successfully downloaded and updated price for پرداخت.
+2025-07-11 23:51:00,134 - __main__ - INFO - 💾 Successfully downloaded and updated price for داوه.
+2025-07-11 23:51:02,809 - __main__ - INFO - 💾 Successfully downloaded and updated price for ساروم.
+2025-07-11 23:51:03,962 - __main__ - INFO - 💾 Successfully downloaded and updated price for رتکوح.
+2025-07-11 23:51:05,241 - __main__ - INFO - 💾 Successfully downloaded and updated price for مبین.
+2025-07-11 23:51:06,207 - __main__ - INFO - 💾 Successfully downloaded and updated price for ماهور.
+2025-07-11 23:51:07,738 - __main__ - INFO - 💾 Successfully downloaded and updated price for تاپیکو.
+2025-07-11 23:51:08,871 - __main__ - INFO - 💾 Successfully downloaded and updated price for فاسمینح.
+2025-07-11 23:51:10,508 - __main__ - INFO - 💾 Successfully downloaded and updated price for دپارس.
+2025-07-11 23:51:11,948 - __main__ - INFO - 💾 Successfully downloaded and updated price for ومعلم.
+2025-07-11 23:51:13,059 - __main__ - INFO - 💾 Successfully downloaded and updated price for شپدیسح.
+2025-07-11 23:51:14,277 - __main__ - INFO - 💾 Successfully downloaded and updated price for برکت.
+2025-07-11 23:51:15,409 - __main__ - INFO - 💾 Successfully downloaded and updated price for بنو.
+2025-07-11 23:51:16,567 - __main__ - INFO - 💾 Successfully downloaded and updated price for بایکاح.
+2025-07-11 23:51:17,744 - __main__ - INFO - 💾 Successfully downloaded and updated price for شپاکساح.
+2025-07-11 23:51:19,466 - __main__ - WARNING - 🟡 Skipping تمدن: No historical data available from the source.
+2025-07-11 23:51:20,531 - __main__ - INFO - 💾 Successfully downloaded and updated price for غنیلی.
+2025-07-11 23:51:21,408 - __main__ - INFO - 💾 Successfully downloaded and updated price for سیسکو.
+2025-07-11 23:51:22,902 - __main__ - INFO - 💾 Successfully downloaded and updated price for دانا.
+2025-07-11 23:51:24,003 - __main__ - INFO - 💾 Successfully downloaded and updated price for آفاق.
+2025-07-11 23:51:25,753 - __main__ - INFO - 💾 Successfully downloaded and updated price for وبرق.
+2025-07-11 23:51:26,941 - __main__ - INFO - 💾 Successfully downloaded and updated price for تملت.
+2025-07-11 23:51:29,294 - __main__ - INFO - 💾 Successfully downloaded and updated price for پلوله.
+2025-07-11 23:51:30,364 - __main__ - INFO - 💾 Successfully downloaded and updated price for شساختح.
+2025-07-11 23:51:31,426 - __main__ - INFO - 💾 Successfully downloaded and updated price for بپیوند.
+2025-07-11 23:51:32,939 - __main__ - INFO - 💾 Successfully downloaded and updated price for خگستر.
+2025-07-11 23:51:34,025 - __main__ - INFO - 💾 Successfully downloaded and updated price for سپید.
+2025-07-11 23:51:35,290 - __main__ - INFO - 💾 Successfully downloaded and updated price for غصینو.
+2025-07-11 23:51:36,590 - __main__ - INFO - 💾 Successfully downloaded and updated price for کگلح.
+2025-07-11 23:51:37,690 - __main__ - INFO - 💾 Successfully downloaded and updated price for وآذرح.
+2025-07-11 23:51:39,189 - __main__ - INFO - 💾 Successfully downloaded and updated price for واعتبار.
+2025-07-11 23:51:40,559 - __main__ - INFO - 💾 Successfully downloaded and updated price for واحصا.
+2025-07-11 23:51:41,563 - __main__ - INFO - 💾 Successfully downloaded and updated price for آلا.
+2025-07-11 23:51:43,137 - __main__ - INFO - 💾 Successfully downloaded and updated price for سهگمت.
+2025-07-11 23:51:44,511 - __main__ - INFO - 💾 Successfully downloaded and updated price for والبرح.
+2025-07-11 23:51:45,589 - __main__ - INFO - 💾 Successfully downloaded and updated price for بگیلان.
+2025-07-11 23:51:48,671 - __main__ - INFO - 💾 Successfully downloaded and updated price for کسرام.
+2025-07-11 23:51:50,429 - __main__ - INFO - 💾 Successfully downloaded and updated price for فلات.
+2025-07-11 23:51:51,410 - __main__ - INFO - 💾 Successfully downloaded and updated price for پیروز.
+2025-07-11 23:51:52,736 - __main__ - INFO - 💾 Successfully downloaded and updated price for غنوش.
+2025-07-11 23:51:54,024 - __main__ - INFO - 💾 Successfully downloaded and updated price for تپسی.
+2025-07-11 23:51:55,167 - __main__ - INFO - 💾 Successfully downloaded and updated price for خزامیاح.
+2025-07-11 23:51:56,717 - __main__ - INFO - 💾 Successfully downloaded and updated price for رانفور.
+2025-07-11 23:51:57,841 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسگیلا.
+2025-07-11 23:51:59,509 - __main__ - INFO - 💾 Successfully downloaded and updated price for لسرما.
+2025-07-11 23:52:01,704 - __main__ - INFO - 💾 Successfully downloaded and updated price for سیلامح.
+2025-07-11 23:52:03,234 - __main__ - INFO - 💾 Successfully downloaded and updated price for غمهرا.
+2025-07-11 23:52:04,216 - __main__ - INFO - 💾 Successfully downloaded and updated price for نفیس.
+2025-07-11 23:52:05,620 - __main__ - INFO - 💾 Successfully downloaded and updated price for فن آوا.
+2025-07-11 23:52:06,728 - __main__ - INFO - 💾 Successfully downloaded and updated price for مبینح.
+2025-07-11 23:52:07,689 - __main__ - INFO - 💾 Successfully downloaded and updated price for متال.
+2025-07-11 23:52:08,679 - __main__ - INFO - 💾 Successfully downloaded and updated price for ترمه.
+2025-07-11 23:52:09,725 - __main__ - INFO - 💾 Successfully downloaded and updated price for خکمکح.
+2025-07-11 23:52:11,183 - __main__ - INFO - 💾 Successfully downloaded and updated price for آسیا.
+2025-07-11 23:52:12,265 - __main__ - INFO - 💾 Successfully downloaded and updated price for کنیلوح.
+2025-07-11 23:52:14,713 - __main__ - INFO - 💾 Successfully downloaded and updated price for کصدف.
+2025-07-11 23:52:15,791 - __main__ - INFO - 💾 Successfully downloaded and updated price for فلامیح.
+2025-07-11 23:52:17,127 - __main__ - INFO - 💾 Successfully downloaded and updated price for لپویاح.
+2025-07-11 23:52:18,235 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثامید.
+2025-07-11 23:52:19,411 - __main__ - INFO - 💾 Successfully downloaded and updated price for کفرآور.
+2025-07-11 23:52:20,573 - __main__ - INFO - 💾 Successfully downloaded and updated price for چکاوهح.
+2025-07-11 23:52:21,826 - __main__ - INFO - 💾 Successfully downloaded and updated price for زدشت.
+2025-07-11 23:52:22,962 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثروتم.
+2025-07-11 23:52:24,127 - __main__ - INFO - 💾 Successfully downloaded and updated price for نوری.
+2025-07-11 23:52:25,567 - __main__ - INFO - 💾 Successfully downloaded and updated price for خمهر.
+2025-07-11 23:52:26,749 - __main__ - INFO - 💾 Successfully downloaded and updated price for شگویا.
+2025-07-11 23:52:27,817 - __main__ - INFO - 💾 Successfully downloaded and updated price for امین.
+2025-07-11 23:52:28,952 - __main__ - INFO - 💾 Successfully downloaded and updated price for پارسانح.
+2025-07-11 23:52:30,593 - __main__ - INFO - 💾 Successfully downloaded and updated price for شاوان.
+2025-07-11 23:52:31,819 - __main__ - INFO - 💾 Successfully downloaded and updated price for کیمیا.
+2025-07-11 23:52:32,920 - __main__ - INFO - 💾 Successfully downloaded and updated price for وامیدح.
+2025-07-11 23:52:34,012 - __main__ - INFO - 💾 Successfully downloaded and updated price for وتعاون.
+2025-07-11 23:52:35,147 - __main__ - INFO - 💾 Successfully downloaded and updated price for آبین.
+2025-07-11 23:52:36,156 - __main__ - INFO - 💾 Successfully downloaded and updated price for فروسیل.
+2025-07-11 23:52:38,131 - __main__ - INFO - 💾 Successfully downloaded and updated price for بمیلا.
+2025-07-11 23:52:39,204 - __main__ - INFO - 💾 Successfully downloaded and updated price for دکوثرح.
+2025-07-11 23:52:40,275 - __main__ - INFO - 💾 Successfully downloaded and updated price for سهگمتح.
+2025-07-11 23:52:41,586 - __main__ - INFO - 💾 Successfully downloaded and updated price for ومعادنح.
+2025-07-11 23:52:42,637 - __main__ - INFO - 💾 Successfully downloaded and updated price for مانی.
+2025-07-11 23:52:44,098 - __main__ - INFO - 💾 Successfully downloaded and updated price for خچرخش.
+2025-07-11 23:52:45,193 - __main__ - INFO - 💾 Successfully downloaded and updated price for شبریزح.
+2025-07-11 23:52:46,281 - __main__ - INFO - 💾 Successfully downloaded and updated price for شپتروح.
+2025-07-11 23:52:48,374 - __main__ - INFO - 💾 Successfully downloaded and updated price for کرماشا.
+2025-07-11 23:52:49,884 - __main__ - INFO - 💾 Successfully downloaded and updated price for فخوز.
+2025-07-11 23:52:51,467 - __main__ - INFO - 💾 Successfully downloaded and updated price for قشهد.
+2025-07-11 23:52:54,143 - __main__ - INFO - 💾 Successfully downloaded and updated price for قصفها.
+2025-07-11 23:52:55,736 - __main__ - INFO - 💾 Successfully downloaded and updated price for ختراک.
+2025-07-11 23:52:58,081 - __main__ - INFO - 💾 Successfully downloaded and updated price for خریختح.
+2025-07-11 23:52:59,209 - __main__ - INFO - 💾 Successfully downloaded and updated price for سپر.
+2025-07-11 23:53:00,488 - __main__ - INFO - 💾 Successfully downloaded and updated price for پارسان.
+2025-07-11 23:53:01,696 - __main__ - INFO - 💾 Successfully downloaded and updated price for تداوم.
+2025-07-11 23:53:02,428 - __main__ - WARNING - 🟡 Skipping نماد: No historical data available from the source.
+2025-07-11 23:53:03,512 - __main__ - INFO - 💾 Successfully downloaded and updated price for کماسهح.
+2025-07-11 23:53:04,461 - __main__ - INFO - 💾 Successfully downloaded and updated price for فاخر.
+2025-07-11 23:53:05,529 - __main__ - INFO - 💾 Successfully downloaded and updated price for قشکرح.
+2025-07-11 23:53:06,846 - __main__ - INFO - 💾 Successfully downloaded and updated price for کمرجان.
+2025-07-11 23:53:08,019 - __main__ - INFO - 💾 Successfully downloaded and updated price for شنفتح.
+2025-07-11 23:53:09,527 - __main__ - INFO - 💾 Successfully downloaded and updated price for غبهار.
+2025-07-11 23:53:10,674 - __main__ - INFO - 💾 Successfully downloaded and updated price for فسدیدح.
+2025-07-11 23:53:11,814 - __main__ - INFO - 💾 Successfully downloaded and updated price for زرین.
+2025-07-11 23:53:12,945 - __main__ - INFO - 💾 Successfully downloaded and updated price for سارومح.
+2025-07-11 23:53:14,069 - __main__ - INFO - 💾 Successfully downloaded and updated price for بورس.
+2025-07-11 23:53:15,134 - __main__ - INFO - 💾 Successfully downloaded and updated price for غپاکح.
+2025-07-11 23:53:16,389 - __main__ - INFO - 💾 Successfully downloaded and updated price for دسانکو.
+2025-07-11 23:53:17,673 - __main__ - INFO - 💾 Successfully downloaded and updated price for آساس.
+2025-07-11 23:53:19,104 - __main__ - INFO - 💾 Successfully downloaded and updated price for وگستر.
+2025-07-11 23:53:20,201 - __main__ - INFO - 💾 Successfully downloaded and updated price for جوین.
+2025-07-11 23:53:20,875 - __main__ - WARNING - 🟡 Skipping اکتیو: No historical data available from the source.
+2025-07-11 23:53:22,111 - __main__ - INFO - 💾 Successfully downloaded and updated price for انرژی2.
+2025-07-11 23:53:23,519 - __main__ - INFO - 💾 Successfully downloaded and updated price for شبندر.
+2025-07-11 23:53:24,767 - __main__ - INFO - 💾 Successfully downloaded and updated price for حسیر.
+2025-07-11 23:53:25,862 - __main__ - INFO - 💾 Successfully downloaded and updated price for کاوهح.
+2025-07-11 23:53:27,015 - __main__ - INFO - 💾 Successfully downloaded and updated price for ساوه.
+2025-07-11 23:53:28,239 - __main__ - INFO - 💾 Successfully downloaded and updated price for زکشت.
+2025-07-11 23:53:29,771 - __main__ - INFO - 💾 Successfully downloaded and updated price for بالبر.
+2025-07-11 23:53:31,016 - __main__ - INFO - 💾 Successfully downloaded and updated price for شوینده.
+2025-07-11 23:53:31,682 - __main__ - WARNING - 🟡 Skipping لبهمنح: No historical data available from the source.
+2025-07-11 23:53:32,784 - __main__ - INFO - 💾 Successfully downloaded and updated price for دعبیدح.
+2025-07-11 23:53:34,073 - __main__ - INFO - 💾 Successfully downloaded and updated price for سخند.
+2025-07-11 23:53:35,230 - __main__ - INFO - 💾 Successfully downloaded and updated price for دکپسول.
+2025-07-11 23:53:36,272 - __main__ - INFO - 💾 Successfully downloaded and updated price for دریا.
+2025-07-11 23:53:37,455 - __main__ - INFO - 💾 Successfully downloaded and updated price for زقیام.
+2025-07-11 23:53:38,913 - __main__ - INFO - 💾 Successfully downloaded and updated price for ساراب.
+2025-07-11 23:53:40,363 - __main__ - INFO - 💾 Successfully downloaded and updated price for قهکمت.
+2025-07-11 23:53:41,544 - __main__ - INFO - 💾 Successfully downloaded and updated price for همای.
+2025-07-11 23:53:43,203 - __main__ - INFO - 💾 Successfully downloaded and updated price for مداران.
+2025-07-11 23:53:44,475 - __main__ - INFO - 💾 Successfully downloaded and updated price for آریان.
+2025-07-11 23:53:45,837 - __main__ - INFO - 💾 Successfully downloaded and updated price for سیلام.
+2025-07-11 23:53:46,480 - __main__ - WARNING - 🟡 Skipping سینا: No historical data available from the source.
+2025-07-11 23:53:47,613 - __main__ - INFO - 💾 Successfully downloaded and updated price for وساپاح.
+2025-07-11 23:53:48,960 - __main__ - INFO - 💾 Successfully downloaded and updated price for اعتماد.
+2025-07-11 23:53:50,033 - __main__ - INFO - 💾 Successfully downloaded and updated price for سغدیر.
+2025-07-11 23:53:51,480 - __main__ - INFO - 💾 Successfully downloaded and updated price for لپارس.
+2025-07-11 23:53:53,089 - __main__ - INFO - 💾 Successfully downloaded and updated price for خاور.
+2025-07-11 23:53:54,189 - __main__ - INFO - 💾 Successfully downloaded and updated price for غدشتح.
+2025-07-11 23:53:55,619 - __main__ - INFO - 💾 Successfully downloaded and updated price for پترول.
+2025-07-11 23:53:56,610 - __main__ - INFO - 💾 Successfully downloaded and updated price for تاراز.
+2025-07-11 23:53:58,261 - __main__ - INFO - 💾 Successfully downloaded and updated price for خشرق.
+2025-07-11 23:53:59,729 - __main__ - INFO - 💾 Successfully downloaded and updated price for کهمداح.
+2025-07-11 23:54:00,753 - __main__ - INFO - 💾 Successfully downloaded and updated price for رماس.
+2025-07-11 23:54:01,727 - __main__ - INFO - 💾 Successfully downloaded and updated price for تکاردان.
+2025-07-11 23:54:02,676 - __main__ - INFO - 💾 Successfully downloaded and updated price for جواهر.
+2025-07-11 23:54:04,064 - __main__ - INFO - 💾 Successfully downloaded and updated price for امین یکم.
+2025-07-11 23:54:05,279 - __main__ - INFO - 💾 Successfully downloaded and updated price for خبهمنح.
+2025-07-11 23:54:07,235 - __main__ - INFO - 💾 Successfully downloaded and updated price for خراسان.
+2025-07-11 23:54:08,436 - __main__ - INFO - 💾 Successfully downloaded and updated price for تصمیم.
+2025-07-11 23:54:09,652 - __main__ - INFO - 💾 Successfully downloaded and updated price for سرو.
+2025-07-11 23:54:10,755 - __main__ - INFO - 💾 Successfully downloaded and updated price for فبیراح.
+2025-07-11 23:54:11,968 - __main__ - INFO - 💾 Successfully downloaded and updated price for مدیر.
+2025-07-11 23:54:12,878 - __main__ - INFO - 💾 Successfully downloaded and updated price for بتهران.
+2025-07-11 23:54:14,085 - __main__ - INFO - 💾 Successfully downloaded and updated price for خنصیرح.
+2025-07-11 23:54:15,565 - __main__ - INFO - 💾 Successfully downloaded and updated price for خموتور.
+2025-07-11 23:54:16,643 - __main__ - INFO - 💾 Successfully downloaded and updated price for جهش.
+2025-07-11 23:54:18,461 - __main__ - INFO - 💾 Successfully downloaded and updated price for حتاید.
+2025-07-11 23:54:19,917 - __main__ - INFO - 💾 Successfully downloaded and updated price for ونچر.
+2025-07-11 23:54:21,686 - __main__ - INFO - 💾 Successfully downloaded and updated price for وپترو.
+2025-07-11 23:54:22,880 - __main__ - INFO - 💾 Successfully downloaded and updated price for ولراز.
+2025-07-11 23:54:23,510 - __main__ - WARNING - 🟡 Skipping فردوس: No historical data available from the source.
+2025-07-11 23:54:25,126 - __main__ - INFO - 💾 Successfully downloaded and updated price for وتوکا.
+2025-07-11 23:54:26,245 - __main__ - INFO - 💾 Successfully downloaded and updated price for خبازرس.
+2025-07-11 23:54:28,090 - __main__ - INFO - 💾 Successfully downloaded and updated price for مارون.
+2025-07-11 23:54:29,487 - __main__ - INFO - 💾 Successfully downloaded and updated price for تلیسه.
+2025-07-11 23:54:30,608 - __main__ - INFO - 💾 Successfully downloaded and updated price for کایزد.
+2025-07-11 23:54:32,000 - __main__ - INFO - 💾 Successfully downloaded and updated price for وکادو.
+2025-07-11 23:54:33,325 - __main__ - INFO - 💾 Successfully downloaded and updated price for سدشت.
+2025-07-11 23:54:34,474 - __main__ - INFO - 💾 Successfully downloaded and updated price for فپارسح.
+2025-07-11 23:54:35,595 - __main__ - INFO - 💾 Successfully downloaded and updated price for خودروح.
+2025-07-11 23:54:36,831 - __main__ - INFO - 💾 Successfully downloaded and updated price for خاذینح.
+2025-07-11 23:54:37,548 - __main__ - WARNING - 🟡 Skipping فنرژیح: No historical data available from the source.
+2025-07-11 23:54:38,475 - __main__ - INFO - 💾 Successfully downloaded and updated price for داتام.
+2025-07-11 23:54:40,369 - __main__ - INFO - 💾 Successfully downloaded and updated price for حبندر.
+2025-07-11 23:54:41,518 - __main__ - INFO - 💾 Successfully downloaded and updated price for صباح.
+2025-07-11 23:54:43,834 - __main__ - INFO - 💾 Successfully downloaded and updated price for غالبرح.
+2025-07-11 23:54:45,003 - __main__ - INFO - 💾 Successfully downloaded and updated price for ویسا.
+2025-07-11 23:54:46,798 - __main__ - INFO - 💾 Successfully downloaded and updated price for شتولیح.
+2025-07-11 23:54:47,929 - __main__ - INFO - 💾 Successfully downloaded and updated price for خمحرکهح.
+2025-07-11 23:54:49,113 - __main__ - INFO - 💾 Successfully downloaded and updated price for پاکشوح.
+2025-07-11 23:54:50,679 - __main__ - INFO - 💾 Successfully downloaded and updated price for فاذر.
+2025-07-11 23:54:51,713 - __main__ - INFO - 💾 Successfully downloaded and updated price for هیوا.
+2025-07-11 23:54:52,859 - __main__ - INFO - 💾 Successfully downloaded and updated price for بذر.
+2025-07-11 23:54:53,545 - __main__ - WARNING - 🟡 Skipping قهکمتح: No historical data available from the source.
+2025-07-11 23:54:54,572 - __main__ - INFO - 💾 Successfully downloaded and updated price for اتوآگاه.
+2025-07-11 23:54:55,731 - __main__ - INFO - 💾 Successfully downloaded and updated price for سفارح.
+2025-07-11 23:54:57,305 - __main__ - INFO - 💾 Successfully downloaded and updated price for فروس.
+2025-07-11 23:54:57,994 - __main__ - WARNING - 🟡 Skipping شلوان: No historical data available from the source.
+2025-07-11 23:54:59,651 - __main__ - INFO - 💾 Successfully downloaded and updated price for کبافق.
+2025-07-11 23:55:01,583 - __main__ - INFO - 💾 Successfully downloaded and updated price for دارو.
+2025-07-11 23:55:02,690 - __main__ - INFO - 💾 Successfully downloaded and updated price for فاماح.
+2025-07-11 23:55:04,524 - __main__ - INFO - 💾 Successfully downloaded and updated price for فبیرا.
+2025-07-11 23:55:06,186 - __main__ - INFO - 💾 Successfully downloaded and updated price for وتجارت.
+2025-07-11 23:55:07,725 - __main__ - INFO - 💾 Successfully downloaded and updated price for شلرد.
+2025-07-11 23:55:13,341 - __main__ - INFO - 💾 Successfully downloaded and updated price for سفاسیت.
+2025-07-11 23:55:14,522 - __main__ - INFO - 💾 Successfully downloaded and updated price for شیرازح.
+2025-07-11 23:55:15,547 - __main__ - INFO - 💾 Successfully downloaded and updated price for وپویا.
+2025-07-11 23:55:17,057 - __main__ - INFO - 💾 Successfully downloaded and updated price for غشان.
+2025-07-11 23:55:19,201 - __main__ - INFO - 💾 Successfully downloaded and updated price for دهدشت.
+2025-07-11 23:55:20,398 - __main__ - INFO - 💾 Successfully downloaded and updated price for غچینح.
+2025-07-11 23:55:21,831 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثرود.
+2025-07-11 23:55:23,164 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثغرب.
+2025-07-11 23:55:24,335 - __main__ - INFO - 💾 Successfully downloaded and updated price for وصناح.
+2025-07-11 23:55:25,728 - __main__ - INFO - 💾 Successfully downloaded and updated price for رتاپ.
+2025-07-11 23:55:26,863 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسخوز.
+2025-07-11 23:55:28,276 - __main__ - INFO - 💾 Successfully downloaded and updated price for کفپارس.
+2025-07-11 23:55:29,429 - __main__ - INFO - 💾 Successfully downloaded and updated price for مهریران.
+2025-07-11 23:55:30,911 - __main__ - INFO - 💾 Successfully downloaded and updated price for مفاخر.
+2025-07-11 23:55:31,907 - __main__ - INFO - 💾 Successfully downloaded and updated price for کارام.
+2025-07-11 23:55:33,044 - __main__ - INFO - 💾 Successfully downloaded and updated price for معیارح.
+2025-07-11 23:55:34,540 - __main__ - INFO - 💾 Successfully downloaded and updated price for دزهراوی.
+2025-07-11 23:55:35,715 - __main__ - INFO - 💾 Successfully downloaded and updated price for فخاسح.
+2025-07-11 23:55:37,003 - __main__ - INFO - 💾 Successfully downloaded and updated price for کپرور.
+2025-07-11 23:55:38,716 - __main__ - INFO - 💾 Successfully downloaded and updated price for وآتوس.
+2025-07-11 23:55:39,881 - __main__ - INFO - 💾 Successfully downloaded and updated price for سخزرح.
+2025-07-11 23:55:41,126 - __main__ - INFO - 💾 Successfully downloaded and updated price for دماوند.
+2025-07-11 23:55:42,349 - __main__ - INFO - 💾 Successfully downloaded and updated price for نبروج.
+2025-07-11 23:55:43,662 - __main__ - INFO - 💾 Successfully downloaded and updated price for کی بی سی.
+2025-07-11 23:55:44,885 - __main__ - INFO - 💾 Successfully downloaded and updated price for کاریس.
+2025-07-11 23:55:46,094 - __main__ - INFO - 💾 Successfully downloaded and updated price for نمرینوح.
+2025-07-11 23:55:47,784 - __main__ - INFO - 💾 Successfully downloaded and updated price for دتماد.
+2025-07-11 23:55:49,492 - __main__ - INFO - 💾 Successfully downloaded and updated price for رکیش.
+2025-07-11 23:55:50,509 - __main__ - INFO - 💾 Successfully downloaded and updated price for تاتمس.
+2025-07-11 23:55:51,853 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثاصفاح.
+2025-07-11 23:55:52,962 - __main__ - INFO - 💾 Successfully downloaded and updated price for ماح.
+2025-07-11 23:55:55,268 - __main__ - INFO - 💾 Successfully downloaded and updated price for پکرمان.
+2025-07-11 23:55:56,931 - __main__ - INFO - 💾 Successfully downloaded and updated price for نگین.
+2025-07-11 23:55:58,120 - __main__ - INFO - 💾 Successfully downloaded and updated price for چبسپا.
+2025-07-11 23:55:59,258 - __main__ - INFO - 💾 Successfully downloaded and updated price for کلوندح.
+2025-07-11 23:56:00,259 - __main__ - INFO - 💾 Successfully downloaded and updated price for پی پاد.
+2025-07-11 23:56:00,950 - __main__ - WARNING - 🟡 Skipping چکارمح: No historical data available from the source.
+2025-07-11 23:56:02,136 - __main__ - INFO - 💾 Successfully downloaded and updated price for فنوالح.
+2025-07-11 23:56:03,255 - __main__ - INFO - 💾 Successfully downloaded and updated price for ولملتح.
+2025-07-11 23:56:04,829 - __main__ - INFO - 💾 Successfully downloaded and updated price for کباده.
+2025-07-11 23:56:06,637 - __main__ - INFO - 💾 Successfully downloaded and updated price for ولکار.
+2025-07-11 23:56:07,577 - __main__ - INFO - 💾 Successfully downloaded and updated price for بیوتیک.
+2025-07-11 23:56:08,707 - __main__ - INFO - 💾 Successfully downloaded and updated price for نبروجح.
+2025-07-11 23:56:09,807 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسکهبو.
+2025-07-11 23:56:10,898 - __main__ - INFO - 💾 Successfully downloaded and updated price for اخابرح.
+2025-07-11 23:56:12,430 - __main__ - INFO - 💾 Successfully downloaded and updated price for وتوس.
+2025-07-11 23:56:13,769 - __main__ - INFO - 💾 Successfully downloaded and updated price for پارند.
+2025-07-11 23:56:14,999 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثنور.
+2025-07-11 23:56:16,221 - __main__ - INFO - 💾 Successfully downloaded and updated price for غپآذر.
+2025-07-11 23:56:17,384 - __main__ - INFO - 💾 Successfully downloaded and updated price for آبادح.
+2025-07-11 23:56:18,465 - __main__ - INFO - 💾 Successfully downloaded and updated price for قزوینح.
+2025-07-11 23:56:19,933 - __main__ - INFO - 💾 Successfully downloaded and updated price for کورز.
+2025-07-11 23:56:20,887 - __main__ - INFO - 💾 Successfully downloaded and updated price for نیان.
+2025-07-11 23:56:22,409 - __main__ - INFO - 💾 Successfully downloaded and updated price for دشیمی.
+2025-07-11 23:56:23,151 - __main__ - WARNING - 🟡 Skipping تمحرکهح: No historical data available from the source.
+2025-07-11 23:56:25,708 - __main__ - INFO - 💾 Successfully downloaded and updated price for شکلرح.
+2025-07-11 23:56:27,714 - __main__ - INFO - 💾 Successfully downloaded and updated price for تمشک.
+2025-07-11 23:56:29,004 - __main__ - INFO - 💾 Successfully downloaded and updated price for غشهدح.
+2025-07-11 23:56:30,601 - __main__ - INFO - 💾 Successfully downloaded and updated price for شنفت.
+2025-07-11 23:56:31,702 - __main__ - INFO - 💾 Successfully downloaded and updated price for یاقوت.
+2025-07-11 23:56:32,742 - __main__ - INFO - 💾 Successfully downloaded and updated price for فردا.
+2025-07-11 23:56:34,081 - __main__ - INFO - 💾 Successfully downloaded and updated price for حسینا.
+2025-07-11 23:56:35,219 - __main__ - INFO - 💾 Successfully downloaded and updated price for پدناح.
+2025-07-11 23:56:37,653 - __main__ - INFO - 💾 Successfully downloaded and updated price for خاورح.
+2025-07-11 23:56:39,001 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسبحان.
+2025-07-11 23:56:40,519 - __main__ - INFO - 💾 Successfully downloaded and updated price for لبوتان.
+2025-07-11 23:56:41,234 - __main__ - WARNING - 🟡 Skipping قپیراح: No historical data available from the source.
+2025-07-11 23:56:42,851 - __main__ - INFO - 💾 Successfully downloaded and updated price for بترانس.
+2025-07-11 23:56:45,117 - __main__ - INFO - 💾 Successfully downloaded and updated price for ولرازح.
+2025-07-11 23:56:47,403 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثفارسح.
+2025-07-11 23:56:48,838 - __main__ - INFO - 💾 Successfully downloaded and updated price for شبریز.
+2025-07-11 23:56:49,522 - __main__ - WARNING - 🟡 Skipping لابساح: No historical data available from the source.
+2025-07-11 23:56:50,916 - __main__ - INFO - 💾 Successfully downloaded and updated price for واحیا.
+2025-07-11 23:56:52,065 - __main__ - INFO - 💾 Successfully downloaded and updated price for فجوشح.
+2025-07-11 23:56:54,117 - __main__ - INFO - 💾 Successfully downloaded and updated price for فاهواز.
+2025-07-11 23:56:55,502 - __main__ - INFO - 💾 Successfully downloaded and updated price for طلا.
+2025-07-11 23:56:57,102 - __main__ - INFO - 💾 Successfully downloaded and updated price for افق.
+2025-07-11 23:56:58,338 - __main__ - INFO - 💾 Successfully downloaded and updated price for پلاست.
+2025-07-11 23:56:59,928 - __main__ - INFO - 💾 Successfully downloaded and updated price for وخارزم.
+2025-07-11 23:57:01,451 - __main__ - INFO - 💾 Successfully downloaded and updated price for سفارودح.
+2025-07-11 23:57:03,075 - __main__ - INFO - 💾 Successfully downloaded and updated price for کمنگنز.
+2025-07-11 23:57:04,199 - __main__ - INFO - 💾 Successfully downloaded and updated price for نطرین.
+2025-07-11 23:57:06,603 - __main__ - INFO - 💾 Successfully downloaded and updated price for سفانو.
+2025-07-11 23:57:07,753 - __main__ - INFO - 💾 Successfully downloaded and updated price for کترامح.
+2025-07-11 23:57:08,941 - __main__ - INFO - 💾 Successfully downloaded and updated price for درهآور.
+2025-07-11 23:57:09,994 - __main__ - INFO - 💾 Successfully downloaded and updated price for وطوبی.
+2025-07-11 23:57:11,137 - __main__ - INFO - 💾 Successfully downloaded and updated price for خچرخشح.
+2025-07-11 23:57:11,843 - __main__ - WARNING - 🟡 Skipping غنوشح: No historical data available from the source.
+2025-07-11 23:57:13,870 - __main__ - INFO - 💾 Successfully downloaded and updated price for پایا.
+2025-07-11 23:57:15,204 - __main__ - INFO - 💾 Successfully downloaded and updated price for تراکح.
+2025-07-11 23:57:16,864 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثنوسا.
+2025-07-11 23:57:18,405 - __main__ - INFO - 💾 Successfully downloaded and updated price for پارسیان.
+2025-07-11 23:57:20,138 - __main__ - INFO - 💾 Successfully downloaded and updated price for کهمدا.
+2025-07-11 23:57:21,402 - __main__ - INFO - 💾 Successfully downloaded and updated price for کمینا.
+2025-07-11 23:57:22,894 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثامان.
+2025-07-11 23:57:25,506 - __main__ - INFO - 💾 Successfully downloaded and updated price for شپدیس.
+2025-07-11 23:57:28,139 - __main__ - INFO - 💾 Successfully downloaded and updated price for فرآور.
+2025-07-11 23:57:29,161 - __main__ - INFO - 💾 Successfully downloaded and updated price for غدانه.
+2025-07-11 23:57:30,279 - __main__ - INFO - 💾 Successfully downloaded and updated price for آوا.
+2025-07-11 23:57:35,441 - __main__ - INFO - 💾 Successfully downloaded and updated price for کایگچ.
+2025-07-11 23:57:36,371 - __main__ - INFO - 💾 Successfully downloaded and updated price for امین شهر.
+2025-07-11 23:57:37,485 - __main__ - INFO - 💾 Successfully downloaded and updated price for وفتخار.
+2025-07-11 23:57:38,916 - __main__ - INFO - 💾 Successfully downloaded and updated price for خلیبل.
+2025-07-11 23:57:39,824 - __main__ - INFO - 💾 Successfully downloaded and updated price for پتروداریوش.
+2025-07-11 23:57:41,357 - __main__ - INFO - 💾 Successfully downloaded and updated price for ختوقا.
+2025-07-11 23:57:42,524 - __main__ - INFO - 💾 Successfully downloaded and updated price for ملتح.
+2025-07-11 23:57:43,658 - __main__ - INFO - 💾 Successfully downloaded and updated price for پویا.
+2025-07-11 23:57:45,134 - __main__ - INFO - 💾 Successfully downloaded and updated price for جم.
+2025-07-11 23:57:46,590 - __main__ - INFO - 💾 Successfully downloaded and updated price for ولیز.
+2025-07-11 23:57:47,681 - __main__ - INFO - 💾 Successfully downloaded and updated price for ولکارح.
+2025-07-11 23:57:49,151 - __main__ - INFO - 💾 Successfully downloaded and updated price for بشهاب.
+2025-07-11 23:57:51,008 - __main__ - INFO - 💾 Successfully downloaded and updated price for شکف.
+2025-07-11 23:57:52,193 - __main__ - INFO - 💾 Successfully downloaded and updated price for کابگن.
+2025-07-11 23:57:53,411 - __main__ - INFO - 💾 Successfully downloaded and updated price for وهامون.
+2025-07-11 23:57:55,754 - __main__ - INFO - 💾 Successfully downloaded and updated price for ورنا.
+2025-07-11 23:57:57,295 - __main__ - INFO - 💾 Successfully downloaded and updated price for فپنتا.
+2025-07-11 23:57:58,862 - __main__ - INFO - 💾 Successfully downloaded and updated price for کگاز.
+2025-07-11 23:57:59,962 - __main__ - INFO - 💾 Successfully downloaded and updated price for وغدیرح.
+2025-07-11 23:58:01,177 - __main__ - INFO - 💾 Successfully downloaded and updated price for فوکا.
+2025-07-11 23:58:02,439 - __main__ - INFO - 💾 Successfully downloaded and updated price for لازما.
+2025-07-11 23:58:03,932 - __main__ - INFO - 💾 Successfully downloaded and updated price for قزوین.
+2025-07-11 23:58:04,640 - __main__ - WARNING - 🟡 Skipping نشار: No historical data available from the source.
+2025-07-11 23:58:05,783 - __main__ - INFO - 💾 Successfully downloaded and updated price for گنجینه.
+2025-07-11 23:58:07,595 - __main__ - INFO - 💾 Successfully downloaded and updated price for دکیمی.
+2025-07-11 23:58:08,311 - __main__ - WARNING - 🟡 Skipping وسمنان: No historical data available from the source.
+2025-07-11 23:58:09,483 - __main__ - INFO - 💾 Successfully downloaded and updated price for پارسیانح.
+2025-07-11 23:58:10,584 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسمازن.
+2025-07-11 23:58:12,085 - __main__ - INFO - 💾 Successfully downloaded and updated price for سپرمی.
+2025-07-11 23:58:13,287 - __main__ - INFO - 💾 Successfully downloaded and updated price for فروی.
+2025-07-11 23:58:14,710 - __main__ - INFO - 💾 Successfully downloaded and updated price for سخاش.
+2025-07-11 23:58:15,967 - __main__ - INFO - 💾 Successfully downloaded and updated price for شسم.
+2025-07-11 23:58:16,976 - __main__ - INFO - 💾 Successfully downloaded and updated price for بازده.
+2025-07-11 23:58:18,133 - __main__ - INFO - 💾 Successfully downloaded and updated price for شبهرنح.
+2025-07-11 23:58:19,377 - __main__ - INFO - 💾 Successfully downloaded and updated price for چدن.
+2025-07-11 23:58:20,913 - __main__ - INFO - 💾 Successfully downloaded and updated price for شاملا.
+2025-07-11 23:58:24,969 - __main__ - INFO - 💾 Successfully downloaded and updated price for پدنا.
+2025-07-11 23:58:25,701 - __main__ - WARNING - 🟡 Skipping فرومح: No historical data available from the source.
+2025-07-11 23:58:26,868 - __main__ - INFO - 💾 Successfully downloaded and updated price for وصنعتح.
+2025-07-11 23:58:28,019 - __main__ - INFO - 💾 Successfully downloaded and updated price for وخارزمح.
+2025-07-11 23:58:30,137 - __main__ - INFO - 💾 Successfully downloaded and updated price for امیدح.
+2025-07-11 23:58:31,156 - __main__ - INFO - 💾 Successfully downloaded and updated price for حگهر.
+2025-07-11 23:58:46,252 - __main__ - INFO - 💾 Successfully downloaded and updated price for آکنتور.
+2025-07-11 23:58:47,324 - __main__ - INFO - 💾 Successfully downloaded and updated price for شهر.
+2025-07-11 23:58:48,364 - __main__ - INFO - 💾 Successfully downloaded and updated price for فارما کیان.
+2025-07-11 23:58:49,076 - __main__ - WARNING - 🟡 Skipping کورزح: No historical data available from the source.
+2025-07-11 23:58:50,863 - __main__ - INFO - 💾 Successfully downloaded and updated price for خپارسح.
+2025-07-11 23:58:53,632 - __main__ - INFO - 💾 Successfully downloaded and updated price for فلوله.
+2025-07-11 23:58:55,718 - __main__ - INFO - 💾 Successfully downloaded and updated price for وغدیر.
+2025-07-11 23:58:56,798 - __main__ - INFO - 💾 Successfully downloaded and updated price for انرژی.
+2025-07-11 23:58:58,557 - __main__ - INFO - 💾 Successfully downloaded and updated price for گکیش.
+2025-07-11 23:59:00,764 - __main__ - INFO - 💾 Successfully downloaded and updated price for سیناد.
+2025-07-11 23:59:01,932 - __main__ - INFO - 💾 Successfully downloaded and updated price for غبهنوشح.
+2025-07-11 23:59:03,326 - __main__ - INFO - 💾 Successfully downloaded and updated price for کسرا.
+2025-07-11 23:59:04,459 - __main__ - INFO - 💾 Successfully downloaded and updated price for وساغربی.
+2025-07-11 23:59:05,425 - __main__ - INFO - 💾 Successfully downloaded and updated price for پرسپولیس.
+2025-07-11 23:59:06,841 - __main__ - INFO - 💾 Successfully downloaded and updated price for غشصفا.
+2025-07-11 23:59:08,992 - __main__ - INFO - 💾 Successfully downloaded and updated price for لجام.
+2025-07-11 23:59:10,252 - __main__ - INFO - 💾 Successfully downloaded and updated price for استقلال.
+2025-07-11 23:59:11,783 - __main__ - INFO - 💾 Successfully downloaded and updated price for غشهد.
+2025-07-11 23:59:12,937 - __main__ - INFO - 💾 Successfully downloaded and updated price for البرزح.
+2025-07-11 23:59:15,114 - __main__ - INFO - 💾 Successfully downloaded and updated price for لپارسح.
+2025-07-11 23:59:16,174 - __main__ - INFO - 💾 Successfully downloaded and updated price for آوند.
+2025-07-11 23:59:17,408 - __main__ - INFO - 💾 Successfully downloaded and updated price for غپونه.
+2025-07-11 23:59:18,417 - __main__ - INFO - 💾 Successfully downloaded and updated price for درسا.
+2025-07-11 23:59:19,524 - __main__ - INFO - 💾 Successfully downloaded and updated price for خاهنح.
+2025-07-11 23:59:20,994 - __main__ - INFO - 💾 Successfully downloaded and updated price for شدوص.
+2025-07-11 23:59:22,606 - __main__ - INFO - 💾 Successfully downloaded and updated price for شپاکسا.
+2025-07-11 23:59:23,756 - __main__ - INFO - 💾 Successfully downloaded and updated price for کبافقح.
+2025-07-11 23:59:24,921 - __main__ - INFO - 💾 Successfully downloaded and updated price for کاوه.
+2025-07-11 23:59:27,373 - __main__ - INFO - 💾 Successfully downloaded and updated price for بتک.
+2025-07-11 23:59:28,429 - __main__ - INFO - 💾 Successfully downloaded and updated price for فجرح.
+2025-07-11 23:59:29,557 - __main__ - INFO - 💾 Successfully downloaded and updated price for شستا.
+2025-07-11 23:59:32,577 - __main__ - INFO - 💾 Successfully downloaded and updated price for خودرو.
+2025-07-11 23:59:33,781 - __main__ - INFO - 💾 Successfully downloaded and updated price for سمان.
+2025-07-11 23:59:34,754 - __main__ - INFO - 💾 Successfully downloaded and updated price for فسوژ.
+2025-07-11 23:59:35,425 - __main__ - WARNING - 🟡 Skipping فپنتاح: No historical data available from the source.
+2025-07-11 23:59:36,786 - __main__ - INFO - 💾 Successfully downloaded and updated price for برکتح.
+2025-07-11 23:59:38,559 - __main__ - INFO - 💾 Successfully downloaded and updated price for فباهنر.
+2025-07-11 23:59:39,813 - __main__ - INFO - 💾 Successfully downloaded and updated price for حریل.
+2025-07-11 23:59:40,536 - __main__ - WARNING - 🟡 Skipping کچینیح: No historical data available from the source.
+2025-07-11 23:59:41,275 - __main__ - WARNING - 🟡 Skipping شتهرانح: No historical data available from the source.
+2025-07-11 23:59:42,768 - __main__ - INFO - 💾 Successfully downloaded and updated price for قپیرا.
+2025-07-11 23:59:44,369 - __main__ - INFO - 💾 Successfully downloaded and updated price for غپاک.
+2025-07-11 23:59:45,670 - __main__ - INFO - 💾 Successfully downloaded and updated price for فیروزه.
+2025-07-11 23:59:47,436 - __main__ - INFO - 💾 Successfully downloaded and updated price for سکارون.
+2025-07-11 23:59:48,984 - __main__ - INFO - 💾 Successfully downloaded and updated price for سصوفی.
+2025-07-11 23:59:50,550 - __main__ - INFO - 💾 Successfully downloaded and updated price for قاسم.
+2025-07-11 23:59:51,884 - __main__ - INFO - 💾 Successfully downloaded and updated price for وارس.
+2025-07-11 23:59:53,190 - __main__ - INFO - 💾 Successfully downloaded and updated price for کتوکا.
+2025-07-11 23:59:55,304 - __main__ - INFO - 💾 Successfully downloaded and updated price for لکما.
+2025-07-11 23:59:56,791 - __main__ - INFO - 💾 Successfully downloaded and updated price for بمپنا.
+2025-07-11 23:59:57,966 - __main__ - INFO - 💾 Successfully downloaded and updated price for وساشرقی.
+2025-07-11 23:59:59,119 - __main__ - INFO - 💾 Successfully downloaded and updated price for لجامح.
+2025-07-12 00:00:00,634 - __main__ - INFO - 💾 Successfully downloaded and updated price for سکرما.
+2025-07-12 00:00:01,866 - __main__ - INFO - 💾 Successfully downloaded and updated price for فیروزا.
+2025-07-12 00:00:04,995 - __main__ - INFO - 💾 Successfully downloaded and updated price for معیار.
+2025-07-12 00:00:06,218 - __main__ - INFO - 💾 Successfully downloaded and updated price for کارین.
+2025-07-12 00:00:07,412 - __main__ - INFO - 💾 Successfully downloaded and updated price for بنیروح.
+2025-07-12 00:00:08,764 - __main__ - INFO - 💾 Successfully downloaded and updated price for غسالم.
+2025-07-12 00:00:10,904 - __main__ - INFO - 💾 Successfully downloaded and updated price for دسبحانح.
+2025-07-12 00:00:12,168 - __main__ - INFO - 💾 Successfully downloaded and updated price for کقزوی.
+2025-07-12 00:00:13,525 - __main__ - INFO - 💾 Successfully downloaded and updated price for کابگنح.
+2025-07-12 00:00:14,537 - __main__ - INFO - 💾 Successfully downloaded and updated price for فجوش.
+2025-07-12 00:00:15,730 - __main__ - INFO - 💾 Successfully downloaded and updated price for کلر.
+2025-07-12 00:00:17,387 - __main__ - INFO - 💾 Successfully downloaded and updated price for کاذر.
+2025-07-12 00:00:18,092 - __main__ - WARNING - 🟡 Skipping قصفهاح: No historical data available from the source.
+2025-07-12 00:00:19,079 - __main__ - INFO - 💾 Successfully downloaded and updated price for کرومیت.
+2025-07-12 00:00:20,228 - __main__ - INFO - 💾 Successfully downloaded and updated price for امینح.
+2025-07-12 00:00:21,889 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثشاهد.
+2025-07-12 00:00:23,094 - __main__ - INFO - 💾 Successfully downloaded and updated price for تشتاد.
+2025-07-12 00:00:24,800 - __main__ - INFO - 💾 Successfully downloaded and updated price for دکوثر.
+2025-07-12 00:00:26,314 - __main__ - INFO - 💾 Successfully downloaded and updated price for انرژی1.
+2025-07-12 00:00:27,402 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثبهساز.
+2025-07-12 00:00:28,886 - __main__ - INFO - 💾 Successfully downloaded and updated price for خاهن.
+2025-07-12 00:00:30,488 - __main__ - INFO - 💾 Successfully downloaded and updated price for های وب.
+2025-07-12 00:00:31,934 - __main__ - INFO - 💾 Successfully downloaded and updated price for جاودان.
+2025-07-12 00:00:33,107 - __main__ - INFO - 💾 Successfully downloaded and updated price for فالومح.
+2025-07-12 00:00:35,642 - __main__ - INFO - 💾 Successfully downloaded and updated price for شیران.
+2025-07-12 00:00:37,837 - __main__ - INFO - 💾 Successfully downloaded and updated price for شپلیح.
+2025-07-12 00:00:40,604 - __main__ - INFO - 💾 Successfully downloaded and updated price for خفناور.
+2025-07-12 00:00:42,853 - __main__ - INFO - 💾 Successfully downloaded and updated price for لخانهح.
+2025-07-12 00:00:43,775 - __main__ - INFO - 💾 Successfully downloaded and updated price for آذرین.
+2025-07-12 00:00:44,690 - __main__ - INFO - 💾 Successfully downloaded and updated price for بمان.
+2025-07-12 00:00:45,767 - __main__ - INFO - 💾 Successfully downloaded and updated price for وبملتح.
+2025-07-12 00:00:46,962 - __main__ - INFO - 💾 Successfully downloaded and updated price for زشگزا.
+2025-07-12 00:00:48,429 - __main__ - INFO - 💾 Successfully downloaded and updated price for کخاک.
+2025-07-12 00:00:49,138 - __main__ - WARNING - 🟡 Skipping شسمح: No historical data available from the source.
+2025-07-12 00:00:51,258 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثاصفا.
+2025-07-12 00:00:52,879 - __main__ - INFO - 💾 Successfully downloaded and updated price for امید.
+2025-07-12 00:00:54,297 - __main__ - INFO - 💾 Successfully downloaded and updated price for اوصتا.
+2025-07-12 00:00:55,383 - __main__ - INFO - 💾 Successfully downloaded and updated price for رافزاح.
+2025-07-12 00:00:56,504 - __main__ - INFO - 💾 Successfully downloaded and updated price for مثقال.
+2025-07-12 00:00:57,649 - __main__ - INFO - 💾 Successfully downloaded and updated price for وتوکاح.
+2025-07-12 00:00:58,335 - __main__ - WARNING - 🟡 Skipping شپناح: No historical data available from the source.
+2025-07-12 00:00:59,911 - __main__ - INFO - 💾 Successfully downloaded and updated price for حاریا.
+2025-07-12 00:01:01,381 - __main__ - INFO - 💾 Successfully downloaded and updated price for فسپا.
+2025-07-12 00:01:02,742 - __main__ - INFO - 💾 Successfully downloaded and updated price for قشیر.
+2025-07-12 00:01:03,925 - __main__ - INFO - 💾 Successfully downloaded and updated price for فولادح.
+2025-07-12 00:01:04,938 - __main__ - INFO - 💾 Successfully downloaded and updated price for کاج.
+2025-07-12 00:01:06,172 - __main__ - INFO - 💾 Successfully downloaded and updated price for کاریز.
+2025-07-12 00:01:07,352 - __main__ - INFO - 💾 Successfully downloaded and updated price for دشیری.
+2025-07-12 00:01:08,341 - __main__ - INFO - 💾 Successfully downloaded and updated price for کتوسعه.
+2025-07-12 00:01:10,019 - __main__ - WARNING - 🟡 Skipping وستهران: No historical data available from the source.
+2025-07-12 00:01:11,565 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثفارس.
+2025-07-12 00:01:13,036 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسینا.
+2025-07-12 00:01:14,043 - __main__ - INFO - 💾 Successfully downloaded and updated price for طلوع.
+2025-07-12 00:01:15,533 - __main__ - INFO - 💾 Successfully downloaded and updated price for بایکا.
+2025-07-12 00:01:17,694 - __main__ - INFO - 💾 Successfully downloaded and updated price for قرنح.
+2025-07-12 00:01:19,432 - __main__ - INFO - 💾 Successfully downloaded and updated price for کگهر.
+2025-07-12 00:01:20,716 - __main__ - INFO - 💾 Successfully downloaded and updated price for سجام.
+2025-07-12 00:01:21,408 - __main__ - WARNING - 🟡 Skipping فمرادح: No historical data available from the source.
+2025-07-12 00:01:22,524 - __main__ - INFO - 💾 Successfully downloaded and updated price for وبانکح.
+2025-07-12 00:01:24,227 - __main__ - INFO - 💾 Successfully downloaded and updated price for لابسا.
+2025-07-12 00:01:25,300 - __main__ - INFO - 💾 Successfully downloaded and updated price for وبازار.
+2025-07-12 00:01:27,831 - __main__ - INFO - 💾 Successfully downloaded and updated price for سیستم.
+2025-07-12 00:01:30,087 - __main__ - INFO - 💾 Successfully downloaded and updated price for شراز.
+2025-07-12 00:01:31,569 - __main__ - INFO - 💾 Successfully downloaded and updated price for سدور.
+2025-07-12 00:01:32,988 - __main__ - INFO - 💾 Successfully downloaded and updated price for وبصادر.
+2025-07-12 00:01:33,710 - __main__ - WARNING - 🟡 Skipping کهرامح: No historical data available from the source.
+2025-07-12 00:01:34,914 - __main__ - INFO - 💾 Successfully downloaded and updated price for فاراکح.
+2025-07-12 00:01:36,160 - __main__ - INFO - 💾 Successfully downloaded and updated price for بکامح.
+2025-07-12 00:01:37,772 - __main__ - INFO - 💾 Successfully downloaded and updated price for قنیشاح.
+2025-07-12 00:01:39,012 - __main__ - INFO - 💾 Successfully downloaded and updated price for وتجارتح.
+2025-07-12 00:01:39,793 - __main__ - WARNING - 🟡 Skipping ومعین: No historical data available from the source.
+2025-07-12 00:01:40,827 - __main__ - INFO - 💾 Successfully downloaded and updated price for خوسازح.
+2025-07-12 00:01:42,530 - __main__ - INFO - 💾 Successfully downloaded and updated price for وبوعلی.
+2025-07-12 00:01:43,673 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسیستا.
+2025-07-12 00:01:45,280 - __main__ - INFO - 💾 Successfully downloaded and updated price for خوساز.
+2025-07-12 00:01:46,625 - __main__ - INFO - 💾 Successfully downloaded and updated price for فاذرح.
+2025-07-12 00:01:48,220 - __main__ - INFO - 💾 Successfully downloaded and updated price for خرینگ.
+2025-07-12 00:01:48,906 - __main__ - WARNING - 🟡 Skipping غنابح: No historical data available from the source.
+2025-07-12 00:01:50,108 - __main__ - INFO - 💾 Successfully downloaded and updated price for خرینگح.
+2025-07-12 00:01:51,083 - __main__ - INFO - 💾 Successfully downloaded and updated price for بهین رو.
+2025-07-12 00:01:52,539 - __main__ - INFO - 💾 Successfully downloaded and updated price for تکشا.
+2025-07-12 00:01:53,777 - __main__ - INFO - 💾 Successfully downloaded and updated price for میدکوح.
+2025-07-12 00:01:55,495 - __main__ - INFO - 💾 Successfully downloaded and updated price for زنگان.
+2025-07-12 00:01:56,835 - __main__ - INFO - 💾 Successfully downloaded and updated price for دلقماح.
+2025-07-12 00:01:58,285 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثعمرا.
+2025-07-12 00:01:59,496 - __main__ - INFO - 💾 Successfully downloaded and updated price for استیل.
+2025-07-12 00:02:00,906 - __main__ - INFO - 💾 Successfully downloaded and updated price for فماک.
+2025-07-12 00:02:01,824 - __main__ - INFO - 💾 Successfully downloaded and updated price for بپردیس.
+2025-07-12 00:02:03,421 - __main__ - INFO - 💾 Successfully downloaded and updated price for بکاب.
+2025-07-12 00:02:04,698 - __main__ - INFO - 💾 Successfully downloaded and updated price for خلنتح.
+2025-07-12 00:02:06,195 - __main__ - INFO - 💾 Successfully downloaded and updated price for دبالک.
+2025-07-12 00:02:07,909 - __main__ - INFO - 💾 Successfully downloaded and updated price for وملی.
+2025-07-12 00:02:09,229 - __main__ - INFO - 💾 Successfully downloaded and updated price for فسازان.
+2025-07-12 00:02:10,665 - __main__ - INFO - 💾 Successfully downloaded and updated price for دتولید.
+2025-07-12 00:02:11,905 - __main__ - INFO - 💾 Successfully downloaded and updated price for عیار.
+2025-07-12 00:02:13,741 - __main__ - INFO - 💾 Successfully downloaded and updated price for شفارا.
+2025-07-12 00:02:14,959 - __main__ - INFO - 💾 Successfully downloaded and updated price for پلاسک.
+2025-07-12 00:02:16,026 - __main__ - INFO - 💾 Successfully downloaded and updated price for گشان.
+2025-07-12 00:02:17,586 - __main__ - INFO - 💾 Successfully downloaded and updated price for کوثر.
+2025-07-12 00:02:19,006 - __main__ - INFO - 💾 Successfully downloaded and updated price for غشانح.
+2025-07-12 00:02:20,711 - __main__ - INFO - 💾 Successfully downloaded and updated price for ختور.
+2025-07-12 00:02:22,184 - __main__ - INFO - 💾 Successfully downloaded and updated price for چکارم.
+2025-07-12 00:02:23,327 - __main__ - INFO - 💾 Successfully downloaded and updated price for شغدیر.
+2025-07-12 00:02:24,403 - __main__ - INFO - 💾 Successfully downloaded and updated price for پتایرح.
+2025-07-12 00:02:25,643 - __main__ - INFO - 💾 Successfully downloaded and updated price for سبزوا.
+2025-07-12 00:02:27,738 - __main__ - INFO - 💾 Successfully downloaded and updated price for زماهان.
+2025-07-12 00:02:29,311 - __main__ - INFO - 💾 Successfully downloaded and updated price for چافست.
+2025-07-12 00:02:30,497 - __main__ - INFO - 💾 Successfully downloaded and updated price for خفولا.
+2025-07-12 00:02:32,046 - __main__ - INFO - 💾 Successfully downloaded and updated price for وامید.
+2025-07-12 00:02:33,493 - __main__ - INFO - 💾 Successfully downloaded and updated price for تکالا.
+2025-07-12 00:02:35,208 - __main__ - INFO - 💾 Successfully downloaded and updated price for شگل.
+2025-07-12 00:02:36,383 - __main__ - INFO - 💾 Successfully downloaded and updated price for دارا یکم.
+2025-07-12 00:02:37,512 - __main__ - INFO - 💾 Successfully downloaded and updated price for داریک.
+2025-07-12 00:02:38,611 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسالت.
+2025-07-12 00:02:39,731 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسهرمز.
+2025-07-12 00:02:41,334 - __main__ - INFO - 💾 Successfully downloaded and updated price for وپخش.
+2025-07-12 00:02:44,820 - __main__ - INFO - 💾 Successfully downloaded and updated price for باختر.
+2025-07-12 00:02:45,534 - __main__ - WARNING - 🟡 Skipping بتکح: No historical data available from the source.
+2025-07-12 00:02:46,591 - __main__ - INFO - 💾 Successfully downloaded and updated price for غزر.
+2025-07-12 00:02:47,707 - __main__ - INFO - 💾 Successfully downloaded and updated price for لبوتانح.
+2025-07-12 00:02:48,416 - __main__ - WARNING - 🟡 Skipping دتهرانح: No historical data available from the source.
+2025-07-12 00:02:49,478 - __main__ - INFO - 💾 Successfully downloaded and updated price for بهیر.
+2025-07-12 00:02:50,167 - __main__ - WARNING - 🟡 Skipping اروند: No historical data available from the source.
+2025-07-12 00:02:51,210 - __main__ - INFO - 💾 Successfully downloaded and updated price for فنفت.
+2025-07-12 00:02:52,336 - __main__ - INFO - 💾 Successfully downloaded and updated price for چکارنح.
+2025-07-12 00:02:53,019 - __main__ - WARNING - 🟡 Skipping وکغدیرح: No historical data available from the source.
+2025-07-12 00:02:54,465 - __main__ - INFO - 💾 Successfully downloaded and updated price for فمراد.
+2025-07-12 00:02:55,449 - __main__ - INFO - 💾 Successfully downloaded and updated price for درازی.
+2025-07-12 00:02:56,521 - __main__ - INFO - 💾 Successfully downloaded and updated price for بوعلی.
+2025-07-12 00:02:57,636 - __main__ - INFO - 💾 Successfully downloaded and updated price for خفنرح.
+2025-07-12 00:02:59,389 - __main__ - INFO - 💾 Successfully downloaded and updated price for پدرخش.
+2025-07-12 00:03:00,426 - __main__ - INFO - 💾 Successfully downloaded and updated price for فگستر.
+2025-07-12 00:03:01,863 - __main__ - INFO - 💾 Successfully downloaded and updated price for زشریف.
+2025-07-12 00:03:02,977 - __main__ - INFO - 💾 Successfully downloaded and updated price for غپینوح.
+2025-07-12 00:03:05,089 - __main__ - INFO - 💾 Successfully downloaded and updated price for همراهح.
+2025-07-12 00:03:06,181 - __main__ - INFO - 💾 Successfully downloaded and updated price for آبادا.
+2025-07-12 00:03:07,634 - __main__ - INFO - 💾 Successfully downloaded and updated price for غگلستا.
+2025-07-12 00:03:09,714 - __main__ - INFO - 💾 Successfully downloaded and updated price for ددامح.
+2025-07-12 00:03:10,847 - __main__ - INFO - 💾 Successfully downloaded and updated price for شاملاح.
+2025-07-12 00:03:11,809 - __main__ - INFO - 💾 Successfully downloaded and updated price for شملی.
+2025-07-12 00:03:12,966 - __main__ - INFO - 💾 Successfully downloaded and updated price for سام.
+2025-07-12 00:03:14,565 - __main__ - INFO - 💾 Successfully downloaded and updated price for وایرا.
+2025-07-12 00:03:15,545 - __main__ - INFO - 💾 Successfully downloaded and updated price for زرفام.
+2025-07-12 00:03:16,610 - __main__ - INFO - 💾 Successfully downloaded and updated price for شدوصح.
+2025-07-12 00:03:19,357 - __main__ - INFO - 💾 Successfully downloaded and updated price for رتکو.
+2025-07-12 00:03:20,523 - __main__ - INFO - 💾 Successfully downloaded and updated price for غشصفاح.
+2025-07-12 00:03:22,191 - __main__ - INFO - 💾 Successfully downloaded and updated price for تپولا.
+2025-07-12 00:03:23,405 - __main__ - INFO - 💾 Successfully downloaded and updated price for سخاشح.
+2025-07-12 00:03:24,428 - __main__ - INFO - 💾 Successfully downloaded and updated price for رایکا.
+2025-07-12 00:03:25,515 - __main__ - INFO - 💾 Successfully downloaded and updated price for بترانسح.
+2025-07-12 00:03:26,764 - __main__ - INFO - 💾 Successfully downloaded and updated price for میهن.
+2025-07-12 00:03:27,906 - __main__ - INFO - 💾 Successfully downloaded and updated price for جم پیلن.
+2025-07-12 00:03:29,050 - __main__ - INFO - 💾 Successfully downloaded and updated price for رنیک.
+2025-07-12 00:03:30,869 - __main__ - INFO - 💾 Successfully downloaded and updated price for سایرا.
+2025-07-12 00:03:31,966 - __main__ - INFO - 💾 Successfully downloaded and updated price for شصفهاح.
+2025-07-12 00:03:32,967 - __main__ - INFO - 💾 Successfully downloaded and updated price for آفرین.
+2025-07-12 00:03:34,150 - __main__ - INFO - 💾 Successfully downloaded and updated price for کپشیرح.
+2025-07-12 00:03:35,242 - __main__ - INFO - 💾 Successfully downloaded and updated price for شاراکح.
+2025-07-12 00:03:36,957 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسپه.
+2025-07-12 00:03:38,605 - __main__ - INFO - 💾 Successfully downloaded and updated price for فالوم.
+2025-07-12 00:03:41,474 - __main__ - INFO - 💾 Successfully downloaded and updated price for خودکفا.
+2025-07-12 00:03:42,718 - __main__ - INFO - 💾 Successfully downloaded and updated price for شتوکا.
+2025-07-12 00:03:43,885 - __main__ - INFO - 💾 Successfully downloaded and updated price for شگلح.
+2025-07-12 00:03:45,598 - __main__ - INFO - 💾 Successfully downloaded and updated price for کروی.
+2025-07-12 00:03:47,255 - __main__ - INFO - 💾 Successfully downloaded and updated price for شلعاب.
+2025-07-12 00:03:48,849 - __main__ - INFO - 💾 Successfully downloaded and updated price for هجرت.
+2025-07-12 00:03:49,882 - __main__ - INFO - 💾 Successfully downloaded and updated price for صنم.
+2025-07-12 00:03:51,670 - __main__ - INFO - 💾 Successfully downloaded and updated price for وبشهر.
+2025-07-12 00:03:52,870 - __main__ - INFO - 💾 Successfully downloaded and updated price for دزهراویح.
+2025-07-12 00:03:54,443 - __main__ - INFO - 💾 Successfully downloaded and updated price for خنصیر.
+2025-07-12 00:03:55,486 - __main__ - INFO - 💾 Successfully downloaded and updated price for انتخاب.
+2025-07-12 00:03:56,621 - __main__ - INFO - 💾 Successfully downloaded and updated price for شستان.
+2025-07-12 00:03:57,560 - __main__ - INFO - 💾 Successfully downloaded and updated price for توسکا.
+2025-07-12 00:03:59,571 - __main__ - INFO - 💾 Successfully downloaded and updated price for خکاوه.
+2025-07-12 00:04:00,585 - __main__ - INFO - 💾 Successfully downloaded and updated price for تابش.
+2025-07-12 00:04:02,027 - __main__ - INFO - 💾 Successfully downloaded and updated price for خزر.
+2025-07-12 00:04:03,233 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثاژنح.
+2025-07-12 00:04:04,987 - __main__ - INFO - 💾 Successfully downloaded and updated price for درازک.
+2025-07-12 00:04:05,835 - __main__ - WARNING - 🟡 Skipping فبستمح: No historical data available from the source.
+2025-07-12 00:04:07,185 - __main__ - INFO - 💾 Successfully downloaded and updated price for شکبیر.
+2025-07-12 00:04:07,904 - __main__ - WARNING - 🟡 Skipping کایگچح: No historical data available from the source.
+2025-07-12 00:04:09,171 - __main__ - INFO - 💾 Successfully downloaded and updated price for ولملت.
+2025-07-12 00:04:10,227 - __main__ - INFO - 💾 Successfully downloaded and updated price for چخزر.
+2025-07-12 00:04:11,458 - __main__ - INFO - 💾 Successfully downloaded and updated price for حپرتو.
+2025-07-12 00:04:12,712 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثشرقح.
+2025-07-12 00:04:13,998 - __main__ - INFO - 💾 Successfully downloaded and updated price for گوهر.
+2025-07-12 00:04:15,953 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثقزوی.
+2025-07-12 00:04:17,947 - __main__ - INFO - 💾 Successfully downloaded and updated price for آکام.
+2025-07-12 00:04:20,320 - __main__ - INFO - 💾 Successfully downloaded and updated price for تاصیکو.
+2025-07-12 00:04:21,543 - __main__ - INFO - 💾 Successfully downloaded and updated price for وثخوز.
+2025-07-12 00:04:22,978 - __main__ - INFO - 💾 Successfully downloaded and updated price for همراه.
+2025-07-12 00:04:24,135 - __main__ - INFO - 💾 Successfully downloaded and updated price for آریا.
+2025-07-12 00:04:26,416 - __main__ - INFO - 💾 Successfully downloaded and updated price for شلعابح.
+2025-07-12 00:04:27,701 - __main__ - INFO - 💾 Successfully downloaded and updated price for وبهمنح.
+2025-07-12 00:04:28,887 - __main__ - INFO - 💾 Successfully downloaded and updated price for تنوین.
+2025-07-12 00:04:31,336 - __main__ - INFO - 💾 Successfully downloaded and updated price for غمارگ.
+2025-07-12 00:04:33,364 - __main__ - INFO - 💾 Successfully downloaded and updated price for خبهمن.
+2025-07-12 00:04:34,474 - __main__ - INFO - 💾 Successfully downloaded and updated price for لسرماح.
+2025-07-12 00:04:35,662 - __main__ - INFO - 💾 Successfully downloaded and updated price for کویر.
+2025-07-12 00:04:37,469 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثتوسا.
+2025-07-12 00:04:38,649 - __main__ - INFO - 💾 Successfully downloaded and updated price for تایراح.
+2025-07-12 00:04:40,063 - __main__ - INFO - 💾 Successfully downloaded and updated price for غدام.
+2025-07-12 00:04:41,422 - __main__ - INFO - 💾 Successfully downloaded and updated price for فلزفارابی.
+2025-07-12 00:04:42,533 - __main__ - INFO - 💾 Successfully downloaded and updated price for فافق.
+2025-07-12 00:04:44,270 - __main__ - INFO - 💾 Successfully downloaded and updated price for فاراک.
+2025-07-12 00:04:45,409 - __main__ - INFO - 💾 Successfully downloaded and updated price for غمارگح.
+2025-07-12 00:04:46,991 - __main__ - INFO - 💾 Successfully downloaded and updated price for شفارس.
+2025-07-12 00:04:49,185 - __main__ - INFO - 💾 Successfully downloaded and updated price for سفاسیتح.
+2025-07-12 00:04:51,331 - __main__ - INFO - 💾 Successfully downloaded and updated price for شفنح.
+2025-07-12 00:04:52,580 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسکرشا.
+2025-07-12 00:04:54,004 - __main__ - INFO - 💾 Successfully downloaded and updated price for پردیس.
+2025-07-12 00:04:55,823 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثاژن.
+2025-07-12 00:04:57,047 - __main__ - INFO - 💾 Successfully downloaded and updated price for کفراح.
+2025-07-12 00:04:58,719 - __main__ - INFO - 💾 Successfully downloaded and updated price for دسبحا.
+2025-07-12 00:04:59,842 - __main__ - INFO - 💾 Successfully downloaded and updated price for کهربا.
+2025-07-12 00:05:01,443 - __main__ - INFO - 💾 Successfully downloaded and updated price for ددام.
+2025-07-12 00:05:02,456 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثنا.
+2025-07-12 00:05:04,021 - __main__ - INFO - 💾 Successfully downloaded and updated price for تراک.
+2025-07-12 00:05:05,247 - __main__ - INFO - 💾 Successfully downloaded and updated price for سمتاز.
+2025-07-12 00:05:07,329 - __main__ - INFO - 💾 Successfully downloaded and updated price for تماوند.
+2025-07-12 00:05:08,500 - __main__ - INFO - 💾 Successfully downloaded and updated price for تکمباح.
+2025-07-12 00:05:10,550 - __main__ - INFO - 💾 Successfully downloaded and updated price for فزرین.
+2025-07-12 00:05:11,766 - __main__ - INFO - 💾 Successfully downloaded and updated price for دسبحان.
+2025-07-12 00:05:13,141 - __main__ - INFO - 💾 Successfully downloaded and updated price for شسینا.
+2025-07-12 00:05:14,667 - __main__ - INFO - 💾 Successfully downloaded and updated price for ونوین.
+2025-07-12 00:05:15,956 - __main__ - INFO - 💾 Successfully downloaded and updated price for کارا.
+2025-07-12 00:05:17,196 - __main__ - INFO - 💾 Successfully downloaded and updated price for فرابورس.
+2025-07-12 00:05:18,385 - __main__ - INFO - 💾 Successfully downloaded and updated price for رکیشح.
+2025-07-12 00:05:20,529 - __main__ - INFO - 💾 Successfully downloaded and updated price for خساپا.
+2025-07-12 00:05:21,524 - __main__ - INFO - 💾 Successfully downloaded and updated price for گلدیرا.
+2025-07-12 00:05:23,020 - __main__ - INFO - 💾 Successfully downloaded and updated price for تجلی.
+2025-07-12 00:05:24,409 - __main__ - INFO - 💾 Successfully downloaded and updated price for خکارح.
+2025-07-12 00:05:25,535 - __main__ - INFO - 💾 Successfully downloaded and updated price for پرداختح.
+2025-07-12 00:05:26,737 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسپهح.
+2025-07-12 00:05:28,130 - __main__ - INFO - 💾 Successfully downloaded and updated price for زمگسا.
+2025-07-12 00:05:29,585 - __main__ - INFO - 💾 Successfully downloaded and updated price for وتوسکا.
+2025-07-12 00:05:30,984 - __main__ - INFO - 💾 Successfully downloaded and updated price for فجر.
+2025-07-12 00:05:33,620 - __main__ - INFO - 💾 Successfully downloaded and updated price for قنیشا.
+2025-07-12 00:05:34,634 - __main__ - INFO - 💾 Successfully downloaded and updated price for شکام.
+2025-07-12 00:05:37,595 - __main__ - INFO - 💾 Successfully downloaded and updated price for شپترو.
+2025-07-12 00:05:39,207 - __main__ - INFO - 💾 Successfully downloaded and updated price for سهرمز.
+2025-07-12 00:05:40,463 - __main__ - INFO - 💾 Successfully downloaded and updated price for غفارس.
+2025-07-12 00:05:41,844 - __main__ - INFO - 💾 Successfully downloaded and updated price for کنورح.
+2025-07-12 00:05:43,445 - __main__ - INFO - 💾 Successfully downloaded and updated price for سپاها.
+2025-07-12 00:05:44,648 - __main__ - INFO - 💾 Successfully downloaded and updated price for فغدیر.
+2025-07-12 00:05:45,921 - __main__ - INFO - 💾 Successfully downloaded and updated price for وکارح.
+2025-07-12 00:05:47,022 - __main__ - INFO - 💾 Successfully downloaded and updated price for ارزش.
+2025-07-12 00:05:48,429 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسهمدا.
+2025-07-12 00:05:50,314 - __main__ - INFO - 💾 Successfully downloaded and updated price for شبهرن.
+2025-07-12 00:05:52,311 - __main__ - INFO - 💾 Successfully downloaded and updated price for سباقر.
+2025-07-12 00:05:53,469 - __main__ - INFO - 💾 Successfully downloaded and updated price for سنیرح.
+2025-07-12 00:05:55,161 - __main__ - INFO - 💾 Successfully downloaded and updated price for افرا.
+2025-07-12 00:05:56,356 - __main__ - INFO - 💾 Successfully downloaded and updated price for غمایه.
+2025-07-12 00:05:57,950 - __main__ - INFO - 💾 Successfully downloaded and updated price for چکاوه.
+2025-07-12 00:05:59,404 - __main__ - INFO - 💾 Successfully downloaded and updated price for نیرو.
+2025-07-12 00:06:00,421 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسصفا.
+2025-07-12 00:06:01,432 - __main__ - INFO - 💾 Successfully downloaded and updated price for آلتون.
+2025-07-12 00:06:02,449 - __main__ - INFO - 💾 Successfully downloaded and updated price for ناب.
+2025-07-12 00:06:03,890 - __main__ - INFO - 💾 Successfully downloaded and updated price for شصفها.
+2025-07-12 00:06:05,292 - __main__ - INFO - 💾 Successfully downloaded and updated price for توریل.
+2025-07-12 00:06:07,444 - __main__ - INFO - 💾 Successfully downloaded and updated price for ورناح.
+2025-07-12 00:06:08,387 - __main__ - INFO - 💾 Successfully downloaded and updated price for موج.
+2025-07-12 00:06:09,600 - __main__ - INFO - 💾 Successfully downloaded and updated price for الماس.
+2025-07-12 00:06:10,681 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسقم.
+2025-07-12 00:06:12,093 - __main__ - INFO - 💾 Successfully downloaded and updated price for سکردح.
+2025-07-12 00:06:13,337 - __main__ - INFO - 💾 Successfully downloaded and updated price for دجابرح.
+2025-07-12 00:06:15,786 - __main__ - INFO - 💾 Successfully downloaded and updated price for اخابر.
+2025-07-12 00:06:16,931 - __main__ - INFO - 💾 Successfully downloaded and updated price for غگلح.
+2025-07-12 00:06:17,950 - __main__ - INFO - 💾 Successfully downloaded and updated price for سآبیک.
+2025-07-12 00:06:20,217 - __main__ - INFO - 💾 Successfully downloaded and updated price for تمحرکه.
+2025-07-12 00:06:21,335 - __main__ - INFO - 💾 Successfully downloaded and updated price for سصوفیح.
+2025-07-12 00:06:22,419 - __main__ - INFO - 💾 Successfully downloaded and updated price for خساپاح.
+2025-07-12 00:06:23,601 - __main__ - INFO - 💾 Successfully downloaded and updated price for غگلپا.
+2025-07-12 00:06:24,694 - __main__ - INFO - 💾 Successfully downloaded and updated price for دفراح.
+2025-07-12 00:06:26,794 - __main__ - INFO - 💾 Successfully downloaded and updated price for ساربیلح.
+2025-07-12 00:06:27,496 - __main__ - WARNING - 🟡 Skipping لکماح: No historical data available from the source.
+2025-07-12 00:06:28,629 - __main__ - INFO - 💾 Successfully downloaded and updated price for ورازی.
+2025-07-12 00:06:30,180 - __main__ - INFO - 💾 Successfully downloaded and updated price for کطبس.
+2025-07-12 00:06:30,884 - __main__ - WARNING - 🟡 Skipping قستونح: No historical data available from the source.
+2025-07-12 00:06:32,383 - __main__ - INFO - 💾 Successfully downloaded and updated price for قثابت.
+2025-07-12 00:06:33,517 - __main__ - INFO - 💾 Successfully downloaded and updated price for دروزح.
+2025-07-12 00:06:34,979 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثشرق.
+2025-07-12 00:06:37,065 - __main__ - INFO - 💾 Successfully downloaded and updated price for سخوزح.
+2025-07-12 00:06:38,224 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثامانح.
+2025-07-12 00:06:39,367 - __main__ - INFO - 💾 Successfully downloaded and updated price for رتاپح.
+2025-07-12 00:06:41,136 - __main__ - INFO - 💾 Successfully downloaded and updated price for غشوکو.
+2025-07-12 00:06:42,360 - __main__ - INFO - 💾 Successfully downloaded and updated price for دتهران.
+2025-07-12 00:06:43,503 - __main__ - INFO - 💾 Successfully downloaded and updated price for فجهانح.
+2025-07-12 00:06:44,654 - __main__ - INFO - 💾 Successfully downloaded and updated price for سرودح.
+2025-07-12 00:06:45,787 - __main__ - INFO - 💾 Successfully downloaded and updated price for سشمالح.
+2025-07-12 00:06:46,521 - __main__ - WARNING - 🟡 Skipping قمروح: No historical data available from the source.
+2025-07-12 00:06:47,570 - __main__ - INFO - 💾 Successfully downloaded and updated price for سحرخیز.
+2025-07-12 00:06:48,717 - __main__ - INFO - 💾 Successfully downloaded and updated price for ونیکیح.
+2025-07-12 00:06:49,784 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسفارس.
+2025-07-12 00:06:50,933 - __main__ - INFO - 💾 Successfully downloaded and updated price for سبهانح.
+2025-07-12 00:06:53,797 - __main__ - INFO - 💾 Successfully downloaded and updated price for کاما.
+2025-07-12 00:06:55,816 - __main__ - WARNING - 🟡 Skipping شرنگیح: No historical data available from the source.
+2025-07-12 00:06:56,873 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسخراش.
+2025-07-12 00:06:58,108 - __main__ - INFO - 💾 Successfully downloaded and updated price for اتکام.
+2025-07-12 00:06:59,697 - __main__ - INFO - 💾 Successfully downloaded and updated price for فمتال.
+2025-07-12 00:07:00,995 - __main__ - INFO - 💾 Successfully downloaded and updated price for سخواف.
+2025-07-12 00:07:02,338 - __main__ - INFO - 💾 Successfully downloaded and updated price for فنر.
+2025-07-12 00:07:03,605 - __main__ - INFO - 💾 Successfully downloaded and updated price for سفار.
+2025-07-12 00:07:04,955 - __main__ - INFO - 💾 Successfully downloaded and updated price for لپیام.
+2025-07-12 00:07:06,501 - __main__ - INFO - 💾 Successfully downloaded and updated price for فارس.
+2025-07-12 00:07:07,605 - __main__ - INFO - 💾 Successfully downloaded and updated price for پاساح.
+2025-07-12 00:07:08,720 - __main__ - INFO - 💾 Successfully downloaded and updated price for دلرح.
+2025-07-12 00:07:09,699 - __main__ - INFO - 💾 Successfully downloaded and updated price for دامون.
+2025-07-12 00:07:11,746 - __main__ - INFO - 💾 Successfully downloaded and updated price for رویین.
+2025-07-12 00:07:12,819 - __main__ - INFO - 💾 Successfully downloaded and updated price for بمولد.
+2025-07-12 00:07:14,327 - __main__ - INFO - 💾 Successfully downloaded and updated price for دعبید.
+2025-07-12 00:07:15,399 - __main__ - INFO - 💾 Successfully downloaded and updated price for فخوزح.
+2025-07-12 00:07:17,117 - __main__ - INFO - 💾 Successfully downloaded and updated price for خمحرکه.
+2025-07-12 00:07:19,759 - __main__ - INFO - 💾 Successfully downloaded and updated price for ونفت.
+2025-07-12 00:07:21,812 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسرضوی.
+2025-07-12 00:07:22,958 - __main__ - INFO - 💾 Successfully downloaded and updated price for پیزد.
+2025-07-12 00:07:24,186 - __main__ - INFO - 💾 Successfully downloaded and updated price for بفجرح.
+2025-07-12 00:07:26,467 - __main__ - INFO - 💾 Successfully downloaded and updated price for فخاس.
+2025-07-12 00:07:27,909 - __main__ - INFO - 💾 Successfully downloaded and updated price for غبهنوش.
+2025-07-12 00:07:29,226 - __main__ - INFO - 💾 Successfully downloaded and updated price for وپاسار.
+2025-07-12 00:07:30,288 - __main__ - INFO - 💾 Successfully downloaded and updated price for سارابح.
+2025-07-12 00:07:31,793 - __main__ - INFO - 💾 Successfully downloaded and updated price for غپینو.
+2025-07-12 00:07:32,981 - __main__ - INFO - 💾 Successfully downloaded and updated price for پارتاح.
+2025-07-12 00:07:34,368 - __main__ - INFO - 💾 Successfully downloaded and updated price for ومهان.
+2025-07-12 00:07:35,037 - __main__ - WARNING - 🟡 Skipping فبیستون: No historical data available from the source.
+2025-07-12 00:07:36,336 - __main__ - INFO - 💾 Successfully downloaded and updated price for ساینا.
+2025-07-12 00:07:37,806 - __main__ - INFO - 💾 Successfully downloaded and updated price for فسرب.
+2025-07-12 00:07:38,795 - __main__ - INFO - 💾 Successfully downloaded and updated price for اردستان.
+2025-07-12 00:07:39,905 - __main__ - INFO - 💾 Successfully downloaded and updated price for غساساح.
+2025-07-12 00:07:41,479 - __main__ - INFO - 💾 Successfully downloaded and updated price for کساوه.
+2025-07-12 00:07:42,670 - __main__ - INFO - 💾 Successfully downloaded and updated price for سیمرغ.
+2025-07-12 00:07:43,743 - __main__ - INFO - 💾 Successfully downloaded and updated price for کرازیح.
+2025-07-12 00:07:44,444 - __main__ - WARNING - 🟡 Skipping نتوسح: No historical data available from the source.
+2025-07-12 00:07:46,696 - __main__ - INFO - 💾 Successfully downloaded and updated price for بسویچ.
+2025-07-12 00:07:48,330 - __main__ - INFO - 💾 Successfully downloaded and updated price for خشرقح.
+2025-07-12 00:07:49,656 - __main__ - INFO - 💾 Successfully downloaded and updated price for تیپیکو.
+2025-07-12 00:07:50,972 - __main__ - INFO - 💾 Successfully downloaded and updated price for اطلس.
+2025-07-12 00:07:52,076 - __main__ - INFO - 💾 Successfully downloaded and updated price for ولساپاح.
+2025-07-12 00:07:53,290 - __main__ - INFO - 💾 Successfully downloaded and updated price for ریشمک.
+2025-07-12 00:07:53,934 - __main__ - WARNING - 🟡 Skipping اجداد: No historical data available from the source.
+2025-07-12 00:07:55,187 - __main__ - INFO - 💾 Successfully downloaded and updated price for اپرداز.
+2025-07-12 00:07:55,879 - __main__ - WARNING - 🟡 Skipping سکارونح: No historical data available from the source.
+2025-07-12 00:07:56,933 - __main__ - INFO - 💾 Successfully downloaded and updated price for خبنیان.
+2025-07-12 00:07:57,988 - __main__ - INFO - 💾 Successfully downloaded and updated price for فسبزوار.
+2025-07-12 00:07:59,085 - __main__ - INFO - 💾 Successfully downloaded and updated price for فلولهح.
+2025-07-12 00:08:01,172 - __main__ - INFO - 💾 Successfully downloaded and updated price for خریخت.
+2025-07-12 00:08:03,148 - __main__ - INFO - 💾 Successfully downloaded and updated price for خورشید.
+2025-07-12 00:08:04,234 - __main__ - INFO - 💾 Successfully downloaded and updated price for شکربنح.
+2025-07-12 00:08:04,939 - __main__ - WARNING - 🟡 Skipping حفجر: No historical data available from the source.
+2025-07-12 00:08:06,081 - __main__ - INFO - 💾 Successfully downloaded and updated price for کطبسح.
+2025-07-12 00:08:07,532 - __main__ - INFO - 💾 Successfully downloaded and updated price for اکالا.
+2025-07-12 00:08:09,108 - __main__ - INFO - 💾 Successfully downloaded and updated price for اعتلا.
+2025-07-12 00:08:10,386 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثپردیس.
+2025-07-12 00:08:12,794 - __main__ - INFO - 💾 Successfully downloaded and updated price for پکویر.
+2025-07-12 00:08:14,213 - __main__ - INFO - 💾 Successfully downloaded and updated price for کدما.
+2025-07-12 00:08:15,349 - __main__ - INFO - 💾 Successfully downloaded and updated price for فجامح.
+2025-07-12 00:08:16,412 - __main__ - INFO - 💾 Successfully downloaded and updated price for وپتروح.
+2025-07-12 00:08:17,890 - __main__ - INFO - 💾 Successfully downloaded and updated price for حشکوه.
+2025-07-12 00:08:19,037 - __main__ - INFO - 💾 Successfully downloaded and updated price for واعتبارح.
+2025-07-12 00:08:21,019 - __main__ - INFO - 💾 Successfully downloaded and updated price for سشمال.
+2025-07-12 00:08:22,069 - __main__ - INFO - 💾 Successfully downloaded and updated price for بسویچح.
+2025-07-12 00:08:23,567 - __main__ - INFO - 💾 Successfully downloaded and updated price for وبهمن.
+2025-07-12 00:08:24,779 - __main__ - INFO - 💾 Successfully downloaded and updated price for فافزا.
+2025-07-12 00:08:25,950 - __main__ - INFO - 💾 Successfully downloaded and updated price for دفاراح.
+2025-07-12 00:08:28,170 - __main__ - INFO - 💾 Successfully downloaded and updated price for ونفتح.
+2025-07-12 00:08:29,259 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسکابح.
+2025-07-12 00:08:30,542 - __main__ - INFO - 💾 Successfully downloaded and updated price for شرانل.
+2025-07-12 00:08:31,596 - __main__ - INFO - 💾 Successfully downloaded and updated price for شساخت.
+2025-07-12 00:08:32,706 - __main__ - INFO - 💾 Successfully downloaded and updated price for کاردان.
+2025-07-12 00:08:33,853 - __main__ - INFO - 💾 Successfully downloaded and updated price for حکشتیح.
+2025-07-12 00:08:34,961 - __main__ - INFO - 💾 Successfully downloaded and updated price for قشیرح.
+2025-07-12 00:08:35,965 - __main__ - INFO - 💾 Successfully downloaded and updated price for شتاب.
+2025-07-12 00:08:37,127 - __main__ - INFO - 💾 Successfully downloaded and updated price for ونوینح.
+2025-07-12 00:08:40,546 - __main__ - INFO - 💾 Successfully downloaded and updated price for غبهپاک.
+2025-07-12 00:08:41,649 - __main__ - INFO - 💾 Successfully downloaded and updated price for چکاپا.
+2025-07-12 00:08:42,787 - __main__ - INFO - 💾 Successfully downloaded and updated price for وساربیل.
+2025-07-12 00:08:43,838 - __main__ - INFO - 💾 Successfully downloaded and updated price for کدماح.
+2025-07-12 00:08:45,240 - __main__ - INFO - 💾 Successfully downloaded and updated price for خپارس.
+2025-07-12 00:08:46,763 - __main__ - INFO - 💾 Successfully downloaded and updated price for شفن.
+2025-07-12 00:08:47,764 - __main__ - INFO - 💾 Successfully downloaded and updated price for نشان.
+2025-07-12 00:08:49,086 - __main__ - INFO - 💾 Successfully downloaded and updated price for سدبیر.
+2025-07-12 00:08:51,281 - __main__ - INFO - 💾 Successfully downloaded and updated price for غگرجیح.
+2025-07-12 00:08:52,511 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسکرمان.
+2025-07-12 00:08:53,567 - __main__ - INFO - 💾 Successfully downloaded and updated price for تملتح.
+2025-07-12 00:08:54,987 - __main__ - INFO - 💾 Successfully downloaded and updated price for گنگین.
+2025-07-12 00:08:56,377 - __main__ - INFO - 💾 Successfully downloaded and updated price for ارفع.
+2025-07-12 00:08:57,409 - __main__ - INFO - 💾 Successfully downloaded and updated price for سپح.
+2025-07-12 00:08:58,479 - __main__ - INFO - 💾 Successfully downloaded and updated price for زمگساح.
+2025-07-12 00:08:59,854 - __main__ - INFO - 💾 Successfully downloaded and updated price for سغربح.
+2025-07-12 00:09:00,896 - __main__ - INFO - 💾 Successfully downloaded and updated price for گنج.
+2025-07-12 00:09:01,599 - __main__ - WARNING - 🟡 Skipping لخزرح: No historical data available from the source.
+2025-07-12 00:09:03,064 - __main__ - INFO - 💾 Successfully downloaded and updated price for بپاس.
+2025-07-12 00:09:04,520 - __main__ - INFO - 💾 Successfully downloaded and updated price for شتهران.
+2025-07-12 00:09:05,657 - __main__ - INFO - 💾 Successfully downloaded and updated price for دارا.
+2025-07-12 00:09:06,695 - __main__ - INFO - 💾 Successfully downloaded and updated price for سمازنح.
+2025-07-12 00:09:08,028 - __main__ - INFO - 💾 Successfully downloaded and updated price for خپویش.
+2025-07-12 00:09:08,676 - __main__ - WARNING - 🟡 Skipping وشستان: No historical data available from the source.
+2025-07-12 00:09:10,764 - __main__ - INFO - 💾 Successfully downloaded and updated price for سفارود.
+2025-07-12 00:09:11,879 - __main__ - INFO - 💾 Successfully downloaded and updated price for فتوسا.
+2025-07-12 00:09:12,828 - __main__ - INFO - 💾 Successfully downloaded and updated price for والماس.
+2025-07-12 00:09:14,341 - __main__ - INFO - 💾 Successfully downloaded and updated price for وگردش.
+2025-07-12 00:09:15,197 - __main__ - INFO - 💾 Successfully downloaded and updated price for کیانا.
+2025-07-12 00:09:17,336 - __main__ - INFO - 💾 Successfully downloaded and updated price for پکیانح.
+2025-07-12 00:09:19,950 - __main__ - INFO - 💾 Successfully downloaded and updated price for لپویا.
+2025-07-12 00:09:21,336 - __main__ - INFO - 💾 Successfully downloaded and updated price for سقاین.
+2025-07-12 00:09:22,414 - __main__ - INFO - 💾 Successfully downloaded and updated price for غگیلا.
+2025-07-12 00:09:24,075 - __main__ - INFO - 💾 Successfully downloaded and updated price for خاذین.
+2025-07-12 00:09:26,446 - __main__ - INFO - 💾 Successfully downloaded and updated price for رمپنا.
+2025-07-12 00:09:27,575 - __main__ - INFO - 💾 Successfully downloaded and updated price for فنوردح.
+2025-07-12 00:09:28,999 - __main__ - INFO - 💾 Successfully downloaded and updated price for کماسه.
+2025-07-12 00:09:30,087 - __main__ - INFO - 💾 Successfully downloaded and updated price for لازماح.
+2025-07-12 00:09:31,096 - __main__ - INFO - 💾 Successfully downloaded and updated price for قاروم.
+2025-07-12 00:09:32,326 - __main__ - INFO - 💾 Successfully downloaded and updated price for اهرم.
+2025-07-12 00:09:34,412 - __main__ - INFO - 💾 Successfully downloaded and updated price for چنوپاح.
+2025-07-12 00:09:35,540 - __main__ - INFO - 💾 Successfully downloaded and updated price for بخاور.
+2025-07-12 00:09:37,925 - __main__ - INFO - 💾 Successfully downloaded and updated price for مرقام.
+2025-07-12 00:09:39,408 - __main__ - INFO - 💾 Successfully downloaded and updated price for کگل.
+2025-07-12 00:09:40,992 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثمسکن.
+2025-07-12 00:09:42,513 - __main__ - INFO - 💾 Successfully downloaded and updated price for دیران.
+2025-07-12 00:09:44,142 - __main__ - INFO - 💾 Successfully downloaded and updated price for کاصفا.
+2025-07-12 00:09:45,530 - __main__ - INFO - 💾 Successfully downloaded and updated price for بساما.
+2025-07-12 00:09:47,033 - __main__ - INFO - 💾 Successfully downloaded and updated price for سبجنو.
+2025-07-12 00:09:48,757 - __main__ - INFO - 💾 Successfully downloaded and updated price for پکیان.
+2025-07-12 00:09:49,916 - __main__ - INFO - 💾 Successfully downloaded and updated price for وپاسارح.
+2025-07-12 00:09:51,191 - __main__ - INFO - 💾 Successfully downloaded and updated price for غشهداب.
+2025-07-12 00:09:52,810 - __main__ - INFO - 💾 Successfully downloaded and updated price for شاخص کل.
+2025-07-12 00:09:52,811 - __main__ - INFO - ==================================================
+2025-07-12 00:09:52,811 - __main__ - INFO - 📊 FULL MARKET DOWNLOAD SUMMARY
+2025-07-12 00:09:52,811 - __main__ - INFO - ==================================================
+2025-07-12 00:09:52,811 - __main__ - INFO - - Total symbols processed: 1393
+2025-07-12 00:09:52,812 - __main__ - INFO - - ✅ Successful downloads/updates: 1316
+2025-07-12 00:09:52,812 - __main__ - INFO - - ❌ Failed downloads: 77
+2025-07-12 00:09:52,812 - __main__ - INFO - - ⏭️ Skipped (up-to-date): 0
+2025-07-12 00:09:52,812 - __main__ - INFO - ✅ Full Market Downloader finished its run.
+2025-07-12 00:29:05,521 - __main__ - INFO - Full Market Data directory set to: C:\Portfolio-Optimizer\data\full_market_data_csvs
+2025-07-12 00:29:05,522 - __main__ - INFO - Cache directory set to: C:\Portfolio-Optimizer\cache
+2025-07-12 00:29:05,522 - __main__ - INFO - 🚀 Starting Full Market Downloader...
+2025-07-12 00:29:05,522 - __main__ - INFO - --- Stage 1: Defining Full Market Universe ---
+2025-07-12 00:29:05,522 - __main__ - INFO - 📊 Fetching all symbols from TSE...
+2025-07-12 00:29:05,522 - __main__ - INFO - ✅ Using valid cache symbols_data_v3.json (100.0 hours old)
+2025-07-12 00:29:05,538 - __main__ - INFO -    Loaded 1394 symbols from cache
+2025-07-12 00:29:05,538 - __main__ - INFO - 🔍 Starting basic filtering for the full market...
+2025-07-12 00:29:05,542 - __main__ - INFO -    Initial symbols from master list: 1394
+2025-07-12 00:29:05,550 - __main__ - INFO -    1394 → 1394 (After market type filter)
+2025-07-12 00:29:05,556 - __main__ - INFO -    1394 → 1392 (After instrument type filter)
+2025-07-12 00:29:05,557 - __main__ - INFO - ✅ Basic filtering complete. Final universe size: 1392 stocks.
+2025-07-12 00:29:05,558 - __main__ - INFO - ✅ 'شاخص کل' added to the download queue as the benchmark.
+2025-07-12 00:29:05,558 - __main__ - INFO - 
+--- Stage 2: Updating Price Data for 1393 Selected Symbols ---
+2025-07-12 00:29:06,515 - __main__ - WARNING - 🟡 Skipping قشهدح: No historical data available from the source.
+2025-07-12 00:29:07,220 - __main__ - WARNING - 🟡 Skipping خمحورح: No historical data available from the source.
+2025-07-12 00:29:07,936 - __main__ - WARNING - 🟡 Skipping وتوشهح: No historical data available from the source.
+2025-07-12 00:29:08,692 - __main__ - WARNING - 🟡 Skipping تفیروح: No historical data available from the source.
+2025-07-12 00:29:09,392 - __main__ - WARNING - 🟡 Skipping شیرانح: No historical data available from the source.
+2025-07-12 00:29:10,055 - __main__ - WARNING - 🟡 Skipping پرشیا: No historical data available from the source.
+2025-07-12 00:29:10,703 - __main__ - WARNING - 🟡 Skipping مدار: No historical data available from the source.
+2025-07-12 00:29:11,420 - __main__ - WARNING - 🟡 Skipping کقزویح: No historical data available from the source.
+2025-07-12 00:29:12,124 - __main__ - WARNING - 🟡 Skipping دیسشپ: No historical data available from the source.
+2025-07-12 00:29:12,809 - __main__ - WARNING - 🟡 Skipping ثملی: No historical data available from the source.
+2025-07-12 00:29:13,540 - __main__ - WARNING - 🟡 Skipping باخترح: No historical data available from the source.
+2025-07-12 00:29:14,225 - __main__ - WARNING - 🟡 Skipping پدرخشح: No historical data available from the source.
+2025-07-12 00:29:14,926 - __main__ - WARNING - 🟡 Skipping فساز: No historical data available from the source.
+2025-07-12 00:29:15,690 - __main__ - WARNING - 🟡 Skipping شجی: No historical data available from the source.
+2025-07-12 00:29:16,390 - __main__ - WARNING - 🟡 Skipping برانسفو: No historical data available from the source.
+2025-07-12 00:29:17,051 - __main__ - WARNING - 🟡 Skipping تدبیر: No historical data available from the source.
+2025-07-12 00:29:17,730 - __main__ - WARNING - 🟡 Skipping سایراح: No historical data available from the source.
+2025-07-12 00:29:18,432 - __main__ - WARNING - 🟡 Skipping غبهپاکح: No historical data available from the source.
+2025-07-12 00:29:19,116 - __main__ - WARNING - 🟡 Skipping وسقزوین: No historical data available from the source.
+2025-07-12 00:29:19,798 - __main__ - WARNING - 🟡 Skipping قثابتح: No historical data available from the source.
+2025-07-12 00:29:20,496 - __main__ - WARNING - 🟡 Skipping فروسح: No historical data available from the source.
+2025-07-12 00:29:21,231 - __main__ - WARNING - 🟡 Skipping رانفورح: No historical data available from the source.
+2025-07-12 00:29:21,903 - __main__ - WARNING - 🟡 Skipping قلرستح: No historical data available from the source.
+2025-07-12 00:29:22,584 - __main__ - WARNING - 🟡 Skipping پخش اول: No historical data available from the source.
+2025-07-12 00:29:23,247 - __main__ - WARNING - 🟡 Skipping شسیناح: No historical data available from the source.
+2025-07-12 00:29:23,926 - __main__ - WARNING - 🟡 Skipping سصفهاح: No historical data available from the source.
+2025-07-12 00:29:24,640 - __main__ - WARNING - 🟡 Skipping شوشح: No historical data available from the source.
+2025-07-12 00:29:25,309 - __main__ - WARNING - 🟡 Skipping زرنام: No historical data available from the source.
+2025-07-12 00:29:26,033 - __main__ - WARNING - 🟡 Skipping شموادح: No historical data available from the source.
+2025-07-12 00:29:26,696 - __main__ - WARNING - 🟡 Skipping چافستح: No historical data available from the source.
+2025-07-12 00:29:27,356 - __main__ - WARNING - 🟡 Skipping وسمحال: No historical data available from the source.
+2025-07-12 00:29:28,075 - __main__ - WARNING - 🟡 Skipping تمدن: No historical data available from the source.
+2025-07-12 00:29:28,793 - __main__ - WARNING - 🟡 Skipping نماد: No historical data available from the source.
+2025-07-12 00:29:29,480 - __main__ - WARNING - 🟡 Skipping اکتیو: No historical data available from the source.
+2025-07-12 00:29:30,176 - __main__ - WARNING - 🟡 Skipping لبهمنح: No historical data available from the source.
+2025-07-12 00:29:30,861 - __main__ - WARNING - 🟡 Skipping سینا: No historical data available from the source.
+2025-07-12 00:29:31,570 - __main__ - WARNING - 🟡 Skipping فردوس: No historical data available from the source.
+2025-07-12 00:29:32,260 - __main__ - WARNING - 🟡 Skipping فنرژیح: No historical data available from the source.
+2025-07-12 00:29:32,970 - __main__ - WARNING - 🟡 Skipping قهکمتح: No historical data available from the source.
+2025-07-12 00:29:33,639 - __main__ - WARNING - 🟡 Skipping شلوان: No historical data available from the source.
+2025-07-12 00:29:34,458 - __main__ - WARNING - 🟡 Skipping چکارمح: No historical data available from the source.
+2025-07-12 00:29:35,159 - __main__ - WARNING - 🟡 Skipping تمحرکهح: No historical data available from the source.
+2025-07-12 00:29:35,853 - __main__ - WARNING - 🟡 Skipping قپیراح: No historical data available from the source.
+2025-07-12 00:29:36,611 - __main__ - WARNING - 🟡 Skipping لابساح: No historical data available from the source.
+2025-07-12 00:29:37,304 - __main__ - WARNING - 🟡 Skipping غنوشح: No historical data available from the source.
+2025-07-12 00:29:37,995 - __main__ - WARNING - 🟡 Skipping نشار: No historical data available from the source.
+2025-07-12 00:29:38,636 - __main__ - WARNING - 🟡 Skipping وسمنان: No historical data available from the source.
+2025-07-12 00:29:39,330 - __main__ - WARNING - 🟡 Skipping فرومح: No historical data available from the source.
+2025-07-12 00:29:40,040 - __main__ - WARNING - 🟡 Skipping کورزح: No historical data available from the source.
+2025-07-12 00:29:42,018 - __main__ - WARNING - 🟡 Skipping فپنتاح: No historical data available from the source.
+2025-07-12 00:29:42,730 - __main__ - WARNING - 🟡 Skipping کچینیح: No historical data available from the source.
+2025-07-12 00:29:43,432 - __main__ - WARNING - 🟡 Skipping شتهرانح: No historical data available from the source.
+2025-07-12 00:29:44,124 - __main__ - WARNING - 🟡 Skipping قصفهاح: No historical data available from the source.
+2025-07-12 00:29:44,841 - __main__ - WARNING - 🟡 Skipping شسمح: No historical data available from the source.
+2025-07-12 00:29:45,605 - __main__ - WARNING - 🟡 Skipping شپناح: No historical data available from the source.
+2025-07-12 00:29:46,312 - __main__ - WARNING - 🟡 Skipping وستهران: No historical data available from the source.
+2025-07-12 00:29:46,979 - __main__ - WARNING - 🟡 Skipping فمرادح: No historical data available from the source.
+2025-07-12 00:29:47,719 - __main__ - WARNING - 🟡 Skipping کهرامح: No historical data available from the source.
+2025-07-12 00:29:48,395 - __main__ - WARNING - 🟡 Skipping ومعین: No historical data available from the source.
+2025-07-12 00:29:49,090 - __main__ - WARNING - 🟡 Skipping غنابح: No historical data available from the source.
+2025-07-12 00:29:50,834 - __main__ - WARNING - 🟡 Skipping بتکح: No historical data available from the source.
+2025-07-12 00:29:51,525 - __main__ - WARNING - 🟡 Skipping دتهرانح: No historical data available from the source.
+2025-07-12 00:29:52,175 - __main__ - WARNING - 🟡 Skipping اروند: No historical data available from the source.
+2025-07-12 00:29:52,850 - __main__ - WARNING - 🟡 Skipping وکغدیرح: No historical data available from the source.
+2025-07-12 00:29:54,544 - __main__ - WARNING - 🟡 Skipping فبستمح: No historical data available from the source.
+2025-07-12 00:29:55,255 - __main__ - WARNING - 🟡 Skipping کایگچح: No historical data available from the source.
+2025-07-12 00:29:55,970 - __main__ - WARNING - 🟡 Skipping لکماح: No historical data available from the source.
+2025-07-12 00:29:56,631 - __main__ - WARNING - 🟡 Skipping قستونح: No historical data available from the source.
+2025-07-12 00:29:57,339 - __main__ - WARNING - 🟡 Skipping قمروح: No historical data available from the source.
+2025-07-12 00:29:58,061 - __main__ - WARNING - 🟡 Skipping شرنگیح: No historical data available from the source.
+2025-07-12 00:29:58,724 - __main__ - WARNING - 🟡 Skipping فبیستون: No historical data available from the source.
+2025-07-12 00:29:59,491 - __main__ - WARNING - 🟡 Skipping نتوسح: No historical data available from the source.
+2025-07-12 00:30:01,223 - __main__ - WARNING - 🟡 Skipping اجداد: No historical data available from the source.
+2025-07-12 00:30:02,166 - __main__ - WARNING - 🟡 Skipping سکارونح: No historical data available from the source.
+2025-07-12 00:30:03,842 - __main__ - WARNING - 🟡 Skipping حفجر: No historical data available from the source.
+2025-07-12 00:30:04,653 - __main__ - WARNING - 🟡 Skipping لخزرح: No historical data available from the source.
+2025-07-12 00:30:05,377 - __main__ - WARNING - 🟡 Skipping وشستان: No historical data available from the source.
+2025-07-12 00:30:05,384 - __main__ - INFO - ==================================================
+2025-07-12 00:30:05,384 - __main__ - INFO - 📊 FULL MARKET DOWNLOAD SUMMARY
+2025-07-12 00:30:05,384 - __main__ - INFO - ==================================================
+2025-07-12 00:30:05,385 - __main__ - INFO - - Total symbols processed: 1393
+2025-07-12 00:30:05,385 - __main__ - INFO - - ✅ Successful downloads/updates: 0
+2025-07-12 00:30:05,385 - __main__ - INFO - - ❌ Failed downloads: 77
+2025-07-12 00:30:05,385 - __main__ - INFO - - ⏭️ Skipped (up-to-date): 1316
+2025-07-12 00:30:05,386 - __main__ - INFO - ✅ Full Market Downloader finished its run.
+2025-07-12 00:31:32,776 - __main__ - INFO - Full Market Data directory set to: C:\Portfolio-Optimizer\data\full_market_data_csvs
+2025-07-12 00:31:32,778 - __main__ - INFO - Cache directory set to: C:\Portfolio-Optimizer\cache
+2025-07-12 00:31:32,778 - __main__ - INFO - 🚀 Starting Full Market Downloader...
+2025-07-12 00:31:32,778 - __main__ - INFO - --- Stage 1: Defining Full Market Universe ---
+2025-07-12 00:31:32,778 - __main__ - INFO - 📊 Fetching all symbols from TSE...
+2025-07-12 00:31:32,778 - __main__ - INFO - ✅ Using valid cache symbols_data_v3.json (100.1 hours old)
+2025-07-12 00:31:32,782 - __main__ - INFO -    Loaded 1394 symbols from cache
+2025-07-12 00:31:32,782 - __main__ - INFO - 🔍 Starting basic filtering for the full market...
+2025-07-12 00:31:32,785 - __main__ - INFO -    Initial symbols from master list: 1394
+2025-07-12 00:31:32,792 - __main__ - INFO -    1394 → 1394 (After market type filter)
+2025-07-12 00:31:32,797 - __main__ - INFO -    1394 → 1392 (After instrument type filter)
+2025-07-12 00:31:32,799 - __main__ - INFO - ✅ Basic filtering complete. Final universe size: 1392 stocks.
+2025-07-12 00:31:32,801 - __main__ - INFO - ✅ Saved filtered universe of 1392 symbols to C:\Portfolio-Optimizer\cache\full_universe.json
+2025-07-12 00:31:32,801 - __main__ - INFO - ✅ 'شاخص کل' added to the download queue as the benchmark.
+2025-07-12 00:31:32,801 - __main__ - INFO - 
+--- Stage 2: Updating Price Data for 1393 Selected Symbols ---
+2025-07-12 00:31:33,773 - __main__ - WARNING - 🟡 Skipping قشهدح: No historical data available from the source.
+2025-07-12 00:31:34,432 - __main__ - WARNING - 🟡 Skipping خمحورح: No historical data available from the source.
+2025-07-12 00:31:35,091 - __main__ - WARNING - 🟡 Skipping وتوشهح: No historical data available from the source.
+2025-07-12 00:31:35,815 - __main__ - WARNING - 🟡 Skipping تفیروح: No historical data available from the source.
+2025-07-12 00:31:36,491 - __main__ - WARNING - 🟡 Skipping شیرانح: No historical data available from the source.
+2025-07-12 00:31:37,152 - __main__ - WARNING - 🟡 Skipping پرشیا: No historical data available from the source.
+2025-07-12 00:31:37,832 - __main__ - WARNING - 🟡 Skipping مدار: No historical data available from the source.
+2025-07-12 00:31:38,631 - __main__ - WARNING - 🟡 Skipping کقزویح: No historical data available from the source.
+2025-07-12 00:31:39,335 - __main__ - WARNING - 🟡 Skipping دیسشپ: No historical data available from the source.
+2025-07-12 00:31:40,161 - __main__ - WARNING - 🟡 Skipping ثملی: No historical data available from the source.
+2025-07-12 00:31:40,839 - __main__ - WARNING - 🟡 Skipping باخترح: No historical data available from the source.
+2025-07-12 00:31:41,505 - __main__ - WARNING - 🟡 Skipping پدرخشح: No historical data available from the source.
+2025-07-12 00:31:42,195 - __main__ - WARNING - 🟡 Skipping فساز: No historical data available from the source.
+2025-07-12 00:31:42,909 - __main__ - WARNING - 🟡 Skipping شجی: No historical data available from the source.
+2025-07-12 00:31:43,563 - __main__ - WARNING - 🟡 Skipping برانسفو: No historical data available from the source.
+2025-07-12 00:31:44,206 - __main__ - WARNING - 🟡 Skipping تدبیر: No historical data available from the source.
+2025-07-12 00:31:44,913 - __main__ - WARNING - 🟡 Skipping سایراح: No historical data available from the source.
+2025-07-12 00:31:45,615 - __main__ - WARNING - 🟡 Skipping غبهپاکح: No historical data available from the source.
+2025-07-12 00:31:46,271 - __main__ - WARNING - 🟡 Skipping وسقزوین: No historical data available from the source.
+2025-07-12 00:31:46,946 - __main__ - WARNING - 🟡 Skipping قثابتح: No historical data available from the source.
+2025-07-12 00:31:47,632 - __main__ - WARNING - 🟡 Skipping فروسح: No historical data available from the source.
+2025-07-12 00:31:49,358 - __main__ - WARNING - 🟡 Skipping رانفورح: No historical data available from the source.
+2025-07-12 00:31:50,031 - __main__ - WARNING - 🟡 Skipping قلرستح: No historical data available from the source.
+2025-07-12 00:31:50,736 - __main__ - WARNING - 🟡 Skipping پخش اول: No historical data available from the source.
+2025-07-12 00:31:51,430 - __main__ - WARNING - 🟡 Skipping شسیناح: No historical data available from the source.
+2025-07-12 00:31:52,115 - __main__ - WARNING - 🟡 Skipping سصفهاح: No historical data available from the source.
+2025-07-12 00:31:52,847 - __main__ - WARNING - 🟡 Skipping شوشح: No historical data available from the source.
+2025-07-12 00:31:53,499 - __main__ - WARNING - 🟡 Skipping زرنام: No historical data available from the source.
+2025-07-12 00:31:54,189 - __main__ - WARNING - 🟡 Skipping شموادح: No historical data available from the source.
+2025-07-12 00:31:54,850 - __main__ - WARNING - 🟡 Skipping چافستح: No historical data available from the source.
+2025-07-12 00:31:55,523 - __main__ - WARNING - 🟡 Skipping وسمحال: No historical data available from the source.
+2025-07-12 00:31:56,243 - __main__ - WARNING - 🟡 Skipping تمدن: No historical data available from the source.
+2025-07-12 00:31:56,936 - __main__ - WARNING - 🟡 Skipping نماد: No historical data available from the source.
+2025-07-12 00:31:57,623 - __main__ - WARNING - 🟡 Skipping اکتیو: No historical data available from the source.
+2025-07-12 00:31:58,278 - __main__ - WARNING - 🟡 Skipping لبهمنح: No historical data available from the source.
+2025-07-12 00:31:58,942 - __main__ - WARNING - 🟡 Skipping سینا: No historical data available from the source.
+2025-07-12 00:31:59,633 - __main__ - WARNING - 🟡 Skipping فردوس: No historical data available from the source.
+2025-07-12 00:32:00,324 - __main__ - WARNING - 🟡 Skipping فنرژیح: No historical data available from the source.
+2025-07-12 00:32:01,015 - __main__ - WARNING - 🟡 Skipping قهکمتح: No historical data available from the source.
+2025-07-12 00:32:01,693 - __main__ - WARNING - 🟡 Skipping شلوان: No historical data available from the source.
+2025-07-12 00:32:02,385 - __main__ - WARNING - 🟡 Skipping چکارمح: No historical data available from the source.
+2025-07-12 00:32:03,102 - __main__ - WARNING - 🟡 Skipping تمحرکهح: No historical data available from the source.
+2025-07-12 00:32:03,769 - __main__ - WARNING - 🟡 Skipping قپیراح: No historical data available from the source.
+2025-07-12 00:32:04,472 - __main__ - WARNING - 🟡 Skipping لابساح: No historical data available from the source.
+2025-07-12 00:32:05,157 - __main__ - WARNING - 🟡 Skipping غنوشح: No historical data available from the source.
+2025-07-12 00:32:05,865 - __main__ - WARNING - 🟡 Skipping نشار: No historical data available from the source.
+2025-07-12 00:32:06,567 - __main__ - WARNING - 🟡 Skipping وسمنان: No historical data available from the source.
+2025-07-12 00:32:07,227 - __main__ - WARNING - 🟡 Skipping فرومح: No historical data available from the source.
+2025-07-12 00:32:07,877 - __main__ - WARNING - 🟡 Skipping کورزح: No historical data available from the source.
+2025-07-12 00:32:08,572 - __main__ - WARNING - 🟡 Skipping فپنتاح: No historical data available from the source.
+2025-07-12 00:32:09,283 - __main__ - WARNING - 🟡 Skipping کچینیح: No historical data available from the source.
+2025-07-12 00:32:10,039 - __main__ - WARNING - 🟡 Skipping شتهرانح: No historical data available from the source.
+2025-07-12 00:32:10,698 - __main__ - WARNING - 🟡 Skipping قصفهاح: No historical data available from the source.
+2025-07-12 00:32:11,399 - __main__ - WARNING - 🟡 Skipping شسمح: No historical data available from the source.
+2025-07-12 00:32:12,084 - __main__ - WARNING - 🟡 Skipping شپناح: No historical data available from the source.
+2025-07-12 00:32:12,831 - __main__ - WARNING - 🟡 Skipping وستهران: No historical data available from the source.
+2025-07-12 00:32:13,543 - __main__ - WARNING - 🟡 Skipping فمرادح: No historical data available from the source.
+2025-07-12 00:32:14,256 - __main__ - WARNING - 🟡 Skipping کهرامح: No historical data available from the source.
+2025-07-12 00:32:14,909 - __main__ - WARNING - 🟡 Skipping ومعین: No historical data available from the source.
+2025-07-12 00:32:15,604 - __main__ - WARNING - 🟡 Skipping غنابح: No historical data available from the source.
+2025-07-12 00:32:16,289 - __main__ - WARNING - 🟡 Skipping بتکح: No historical data available from the source.
+2025-07-12 00:32:16,953 - __main__ - WARNING - 🟡 Skipping دتهرانح: No historical data available from the source.
+2025-07-12 00:32:17,635 - __main__ - WARNING - 🟡 Skipping اروند: No historical data available from the source.
+2025-07-12 00:32:18,275 - __main__ - WARNING - 🟡 Skipping وکغدیرح: No historical data available from the source.
+2025-07-12 00:32:19,532 - __main__ - WARNING - 🟡 Skipping فبستمح: No historical data available from the source.
+2025-07-12 00:32:20,385 - __main__ - WARNING - 🟡 Skipping کایگچح: No historical data available from the source.
+2025-07-12 00:32:21,117 - __main__ - WARNING - 🟡 Skipping لکماح: No historical data available from the source.
+2025-07-12 00:32:21,792 - __main__ - WARNING - 🟡 Skipping قستونح: No historical data available from the source.
+2025-07-12 00:32:22,484 - __main__ - WARNING - 🟡 Skipping قمروح: No historical data available from the source.
+2025-07-12 00:32:23,162 - __main__ - WARNING - 🟡 Skipping شرنگیح: No historical data available from the source.
+2025-07-12 00:32:23,824 - __main__ - WARNING - 🟡 Skipping فبیستون: No historical data available from the source.
+2025-07-12 00:32:24,513 - __main__ - WARNING - 🟡 Skipping نتوسح: No historical data available from the source.
+2025-07-12 00:32:25,203 - __main__ - WARNING - 🟡 Skipping اجداد: No historical data available from the source.
+2025-07-12 00:32:25,904 - __main__ - WARNING - 🟡 Skipping سکارونح: No historical data available from the source.
+2025-07-12 00:32:26,595 - __main__ - WARNING - 🟡 Skipping حفجر: No historical data available from the source.
+2025-07-12 00:32:27,272 - __main__ - WARNING - 🟡 Skipping لخزرح: No historical data available from the source.
+2025-07-12 00:32:27,957 - __main__ - WARNING - 🟡 Skipping وشستان: No historical data available from the source.
+2025-07-12 00:32:27,961 - __main__ - INFO - ==================================================
+2025-07-12 00:32:27,962 - __main__ - INFO - 📊 FULL MARKET DOWNLOAD SUMMARY
+2025-07-12 00:32:27,962 - __main__ - INFO - ==================================================
+2025-07-12 00:32:27,962 - __main__ - INFO - - Total symbols processed: 1393
+2025-07-12 00:32:27,962 - __main__ - INFO - - ✅ Successful downloads/updates: 0
+2025-07-12 00:32:27,963 - __main__ - INFO - - ❌ Failed downloads: 77
+2025-07-12 00:32:27,963 - __main__ - INFO - - ⏭️ Skipped (up-to-date): 1316
+2025-07-12 00:32:27,963 - __main__ - INFO - ✅ Full Market Downloader finished its run.
+2025-07-12 00:33:04,819 - __main__ - INFO - Full Market Data directory set to: C:\Portfolio-Optimizer\data\full_market_data_csvs
+2025-07-12 00:33:04,819 - __main__ - INFO - Cache directory set to: C:\Portfolio-Optimizer\cache
+2025-07-12 00:33:04,819 - __main__ - INFO - 🚀 Starting Full Market Downloader...
+2025-07-12 00:33:04,820 - __main__ - INFO - --- Stage 1: Defining Full Market Universe ---
+2025-07-12 00:33:04,820 - __main__ - INFO - 📊 Fetching all symbols from TSE...
+2025-07-12 00:33:04,820 - __main__ - INFO - ✅ Using valid cache symbols_data_v3.json (100.1 hours old)
+2025-07-12 00:33:04,824 - __main__ - INFO -    Loaded 1394 symbols from cache
+2025-07-12 00:33:04,824 - __main__ - INFO - 🔍 Starting basic filtering for the full market...
+2025-07-12 00:33:04,826 - __main__ - INFO -    Initial symbols from master list: 1394
+2025-07-12 00:33:04,827 - __main__ - INFO -    1394 → 1394 (After market type filter)
+2025-07-12 00:33:04,830 - __main__ - INFO -    1394 → 1392 (After instrument type filter)
+2025-07-12 00:33:04,831 - __main__ - INFO - ✅ Basic filtering complete. Final universe size: 1392 stocks.
+2025-07-12 00:33:04,833 - __main__ - INFO - ✅ Saved filtered universe of 1392 symbols to C:\Portfolio-Optimizer\cache\full_universe.json
+2025-07-12 00:33:04,834 - __main__ - INFO - ✅ 'شاخص کل' added to the download queue as the benchmark.
+2025-07-12 00:33:04,835 - __main__ - INFO - 
+--- Stage 2: Updating Price Data for 1393 Selected Symbols ---
+2025-07-12 00:33:05,553 - __main__ - WARNING - 🟡 Skipping قشهدح: No historical data available from the source.
+2025-07-12 00:33:06,216 - __main__ - WARNING - 🟡 Skipping خمحورح: No historical data available from the source.
+2025-07-12 00:33:06,911 - __main__ - WARNING - 🟡 Skipping وتوشهح: No historical data available from the source.
+2025-07-12 00:33:08,606 - __main__ - WARNING - 🟡 Skipping تفیروح: No historical data available from the source.
+2025-07-12 00:33:09,336 - __main__ - WARNING - 🟡 Skipping شیرانح: No historical data available from the source.
+2025-07-12 00:33:10,267 - __main__ - WARNING - 🟡 Skipping پرشیا: No historical data available from the source.
+2025-07-12 00:33:11,074 - __main__ - WARNING - 🟡 Skipping مدار: No historical data available from the source.

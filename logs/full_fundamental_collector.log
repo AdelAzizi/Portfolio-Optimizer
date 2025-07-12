@@ -1,0 +1,1247 @@
+2025-07-12 00:28:25,167 - __main__ - INFO - Full universe file path: C:\Portfolio-Optimizer\cache\full_universe.json
+2025-07-12 00:28:25,168 - __main__ - INFO - Initial cache file path: C:\Portfolio-Optimizer\data\fundamental_data.feather
+2025-07-12 00:28:25,168 - __main__ - INFO - Final output data path: C:\Portfolio-Optimizer\data\full_fundamental_data.feather
+2025-07-12 00:28:25,168 - __main__ - INFO - 🚀 Starting Full Market Fundamental Data Collector...
+2025-07-12 00:28:25,169 - __main__ - INFO - --- Stage 1: Loading Full Market Universe ---
+2025-07-12 00:28:25,169 - __main__ - ERROR - CRITICAL: Full universe file not found at 'C:\Portfolio-Optimizer\cache\full_universe.json'.
+2025-07-12 00:28:25,169 - __main__ - ERROR - Please run the `full_market_downloader.py` script first.
+2025-07-12 00:28:40,925 - __main__ - INFO - Full universe file path: C:\Portfolio-Optimizer\cache\full_universe.json
+2025-07-12 00:28:40,925 - __main__ - INFO - Initial cache file path: C:\Portfolio-Optimizer\data\fundamental_data.feather
+2025-07-12 00:28:40,925 - __main__ - INFO - Final output data path: C:\Portfolio-Optimizer\data\full_fundamental_data.feather
+2025-07-12 00:28:40,926 - __main__ - INFO - 🚀 Starting Full Market Fundamental Data Collector...
+2025-07-12 00:28:40,926 - __main__ - INFO - --- Stage 1: Loading Full Market Universe ---
+2025-07-12 00:28:40,926 - __main__ - ERROR - CRITICAL: Full universe file not found at 'C:\Portfolio-Optimizer\cache\full_universe.json'.
+2025-07-12 00:28:40,926 - __main__ - ERROR - Please run the `full_market_downloader.py` script first.
+2025-07-12 00:30:20,187 - __main__ - INFO - Full universe file path: C:\Portfolio-Optimizer\cache\full_universe.json
+2025-07-12 00:30:20,188 - __main__ - INFO - Initial cache file path: C:\Portfolio-Optimizer\data\fundamental_data.feather
+2025-07-12 00:30:20,188 - __main__ - INFO - Final output data path: C:\Portfolio-Optimizer\data\full_fundamental_data.feather
+2025-07-12 00:30:20,188 - __main__ - INFO - 🚀 Starting Full Market Fundamental Data Collector...
+2025-07-12 00:30:20,188 - __main__ - INFO - --- Stage 1: Loading Full Market Universe ---
+2025-07-12 00:30:20,188 - __main__ - ERROR - CRITICAL: Full universe file not found at 'C:\Portfolio-Optimizer\cache\full_universe.json'.
+2025-07-12 00:30:20,189 - __main__ - ERROR - Please run the `full_market_downloader.py` script first.
+2025-07-12 00:30:25,527 - __main__ - INFO - Full universe file path: C:\Portfolio-Optimizer\cache\full_universe.json
+2025-07-12 00:30:25,528 - __main__ - INFO - Initial cache file path: C:\Portfolio-Optimizer\data\fundamental_data.feather
+2025-07-12 00:30:25,528 - __main__ - INFO - Final output data path: C:\Portfolio-Optimizer\data\full_fundamental_data.feather
+2025-07-12 00:30:25,528 - __main__ - INFO - 🚀 Starting Full Market Fundamental Data Collector...
+2025-07-12 00:30:25,528 - __main__ - INFO - --- Stage 1: Loading Full Market Universe ---
+2025-07-12 00:30:25,528 - __main__ - ERROR - CRITICAL: Full universe file not found at 'C:\Portfolio-Optimizer\cache\full_universe.json'.
+2025-07-12 00:30:25,528 - __main__ - ERROR - Please run the `full_market_downloader.py` script first.
+2025-07-12 00:32:37,880 - __main__ - INFO - Full universe file path: C:\Portfolio-Optimizer\cache\full_universe.json
+2025-07-12 00:32:37,880 - __main__ - INFO - Initial cache file path: C:\Portfolio-Optimizer\data\fundamental_data.feather
+2025-07-12 00:32:37,881 - __main__ - INFO - Final output data path: C:\Portfolio-Optimizer\data\full_fundamental_data.feather
+2025-07-12 00:32:37,881 - __main__ - INFO - 🚀 Starting Full Market Fundamental Data Collector...
+2025-07-12 00:32:37,881 - __main__ - INFO - --- Stage 1: Loading Full Market Universe ---
+2025-07-12 00:32:37,898 - __main__ - INFO - ✅ Loaded 1392 symbols from full_universe.json.
+2025-07-12 00:32:37,898 - __main__ - INFO - --- Stage 2: Determining Symbols to Process ---
+2025-07-12 00:32:37,899 - __main__ - INFO - Found initial cache at C:\Portfolio-Optimizer\data\fundamental_data.feather. Loading to accelerate process.
+2025-07-12 00:32:38,358 - __main__ - INFO - Found 437 symbols in the initial cache.
+2025-07-12 00:32:38,360 - __main__ - INFO - Identified 956 new symbols to process.
+2025-07-12 00:32:43,930 - __main__ - WARNING -    - Discarding ثمسکنح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:32:45,572 - __main__ - ERROR -   - ❌ Could not fetch data for قستون: Cannot get realtime data from inactive ticker قستون
+2025-07-12 00:32:47,941 - __main__ - WARNING -    - Discarding درازکح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:32:50,312 - __main__ - WARNING -    - Discarding کسعدیح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:33:16,322 - __main__ - INFO - Full universe file path: C:\Portfolio-Optimizer\cache\full_universe.json
+2025-07-12 00:33:16,323 - __main__ - INFO - Initial cache file path: C:\Portfolio-Optimizer\data\fundamental_data.feather
+2025-07-12 00:33:16,323 - __main__ - INFO - Final output data path: C:\Portfolio-Optimizer\data\full_fundamental_data.feather
+2025-07-12 00:33:16,323 - __main__ - INFO - 🚀 Starting Full Market Fundamental Data Collector...
+2025-07-12 00:33:16,324 - __main__ - INFO - --- Stage 1: Loading Full Market Universe ---
+2025-07-12 00:33:16,332 - __main__ - INFO - ✅ Loaded 1392 symbols from full_universe.json.
+2025-07-12 00:33:16,332 - __main__ - INFO - --- Stage 2: Determining Symbols to Process ---
+2025-07-12 00:33:16,332 - __main__ - INFO - Found initial cache at C:\Portfolio-Optimizer\data\fundamental_data.feather. Loading to accelerate process.
+2025-07-12 00:33:16,368 - __main__ - INFO - Found 437 symbols in the initial cache.
+2025-07-12 00:33:16,369 - __main__ - INFO - Identified 956 new symbols to process.
+2025-07-12 00:33:17,728 - __main__ - WARNING -    - Discarding ثمسکنح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:33:18,341 - __main__ - ERROR -   - ❌ Could not fetch data for قستون: Cannot get realtime data from inactive ticker قستون
+2025-07-12 00:33:20,693 - __main__ - WARNING -    - Discarding درازکح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:33:22,009 - __main__ - WARNING -    - Discarding کسعدیح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:33:26,120 - __main__ - INFO -   (5/956) Fetched for داسوه
+2025-07-12 00:33:28,793 - __main__ - WARNING -    - Discarding اسیاتک: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:33:31,690 - __main__ - WARNING -    - Discarding ولغدر: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:33:34,520 - __main__ - WARNING -    - Discarding وثوق: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:33:37,207 - __main__ - WARNING -    - Discarding سهرمزح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:33:39,941 - __main__ - WARNING -    - Discarding افق ملت: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:33:43,143 - __main__ - WARNING -    - Discarding افقح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:33:46,511 - __main__ - WARNING -    - Discarding وبشهرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:33:48,203 - __main__ - ERROR -   - ❌ Could not fetch data for 18719101: Cannot get realtime data from inactive ticker 18719101
+2025-07-12 00:33:50,392 - __main__ - WARNING -    - Discarding ختوقاح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:33:52,937 - __main__ - WARNING -    - Discarding سپیدما: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:33:55,457 - __main__ - WARNING -    - Discarding سکرماح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:33:57,588 - __main__ - WARNING -    - Discarding وتوسکاح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:34:00,868 - __main__ - INFO -   (18/956) Fetched for آپ
+2025-07-12 00:34:01,204 - __main__ - INFO - Full universe file path: C:\Portfolio-Optimizer\cache\full_universe.json
+2025-07-12 00:34:01,205 - __main__ - INFO - Initial cache file path: C:\Portfolio-Optimizer\data\fundamental_data.feather
+2025-07-12 00:34:01,205 - __main__ - INFO - Final output data path: C:\Portfolio-Optimizer\data\full_fundamental_data.feather
+2025-07-12 00:34:01,205 - __main__ - INFO - 🚀 Starting Full Market Fundamental Data Collector...
+2025-07-12 00:34:01,205 - __main__ - INFO - --- Stage 1: Loading Full Market Universe ---
+2025-07-12 00:34:01,207 - __main__ - INFO - ✅ Loaded 1392 symbols from full_universe.json.
+2025-07-12 00:34:01,207 - __main__ - INFO - --- Stage 2: Determining Symbols to Process ---
+2025-07-12 00:34:01,207 - __main__ - INFO - Found initial cache at C:\Portfolio-Optimizer\data\fundamental_data.feather. Loading to accelerate process.
+2025-07-12 00:34:01,226 - __main__ - INFO - Found 437 symbols in the initial cache.
+2025-07-12 00:34:01,230 - __main__ - INFO - Identified 956 new symbols to process.
+2025-07-12 00:34:01,432 - __main__ - ERROR -   - ❌ An unexpected error occurred for ثمسکنح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:01,633 - __main__ - ERROR -   - ❌ An unexpected error occurred for قستون: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:01,834 - __main__ - ERROR -   - ❌ An unexpected error occurred for درازکح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:02,035 - __main__ - ERROR -   - ❌ An unexpected error occurred for کسعدیح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:02,236 - __main__ - ERROR -   - ❌ An unexpected error occurred for داسوه: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:02,437 - __main__ - ERROR -   - ❌ An unexpected error occurred for اسیاتک: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:02,649 - __main__ - ERROR -   - ❌ An unexpected error occurred for ولغدر: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:02,886 - __main__ - ERROR -   - ❌ An unexpected error occurred for وثوق: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:03,087 - __main__ - ERROR -   - ❌ An unexpected error occurred for سهرمزح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:03,288 - __main__ - ERROR -   - ❌ An unexpected error occurred for افق ملت: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:03,334 - __main__ - WARNING -    - Discarding فرآورح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:34:03,489 - __main__ - ERROR -   - ❌ An unexpected error occurred for افقح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:03,689 - __main__ - ERROR -   - ❌ An unexpected error occurred for وبشهرح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:03,891 - __main__ - ERROR -   - ❌ An unexpected error occurred for 18719101: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:04,091 - __main__ - ERROR -   - ❌ An unexpected error occurred for ختوقاح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:04,292 - __main__ - ERROR -   - ❌ An unexpected error occurred for سپیدما: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:04,493 - __main__ - ERROR -   - ❌ An unexpected error occurred for سکرماح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:04,694 - __main__ - ERROR -   - ❌ An unexpected error occurred for وتوسکاح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:04,899 - __main__ - ERROR -   - ❌ An unexpected error occurred for آپ: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:05,100 - __main__ - ERROR -   - ❌ An unexpected error occurred for فرآورح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:05,302 - __main__ - ERROR -   - ❌ An unexpected error occurred for پکرمانح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:05,504 - __main__ - ERROR -   - ❌ An unexpected error occurred for پرتو: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:05,705 - __main__ - ERROR -   - ❌ An unexpected error occurred for غیوان: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:05,906 - __main__ - ERROR -   - ❌ An unexpected error occurred for شپلی: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:06,107 - __main__ - ERROR -   - ❌ An unexpected error occurred for کفرا: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:06,309 - __main__ - ERROR -   - ❌ An unexpected error occurred for قشهدح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:06,510 - __main__ - ERROR -   - ❌ An unexpected error occurred for چبسپاح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:06,711 - __main__ - ERROR -   - ❌ An unexpected error occurred for خصدرا: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:06,913 - __main__ - ERROR -   - ❌ An unexpected error occurred for خگسترح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:07,114 - __main__ - ERROR -   - ❌ An unexpected error occurred for آتیمس: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:07,315 - __main__ - ERROR -   - ❌ An unexpected error occurred for لوتوسح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:07,516 - __main__ - ERROR -   - ❌ An unexpected error occurred for کچادح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:07,717 - __main__ - ERROR -   - ❌ An unexpected error occurred for وپخشح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:07,918 - __main__ - ERROR -   - ❌ An unexpected error occurred for خموتورح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:08,119 - __main__ - ERROR -   - ❌ An unexpected error occurred for کاذرح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:08,320 - __main__ - ERROR -   - ❌ An unexpected error occurred for کساوهح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:08,521 - __main__ - ERROR -   - ❌ An unexpected error occurred for کیسون: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:08,722 - __main__ - ERROR -   - ❌ An unexpected error occurred for خمحورح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:13,490 - __main__ - INFO - Full universe file path: C:\Portfolio-Optimizer\cache\full_universe.json
+2025-07-12 00:34:13,490 - __main__ - INFO - Initial cache file path: C:\Portfolio-Optimizer\data\fundamental_data.feather
+2025-07-12 00:34:13,490 - __main__ - INFO - Final output data path: C:\Portfolio-Optimizer\data\full_fundamental_data.feather
+2025-07-12 00:34:13,490 - __main__ - INFO - 🚀 Starting Full Market Fundamental Data Collector...
+2025-07-12 00:34:13,491 - __main__ - INFO - --- Stage 1: Loading Full Market Universe ---
+2025-07-12 00:34:13,492 - __main__ - INFO - ✅ Loaded 1392 symbols from full_universe.json.
+2025-07-12 00:34:13,492 - __main__ - INFO - --- Stage 2: Determining Symbols to Process ---
+2025-07-12 00:34:13,492 - __main__ - INFO - Found initial cache at C:\Portfolio-Optimizer\data\fundamental_data.feather. Loading to accelerate process.
+2025-07-12 00:34:13,509 - __main__ - INFO - Found 437 symbols in the initial cache.
+2025-07-12 00:34:13,511 - __main__ - INFO - Identified 956 new symbols to process.
+2025-07-12 00:34:13,713 - __main__ - ERROR -   - ❌ An unexpected error occurred for ثمسکنح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:13,914 - __main__ - ERROR -   - ❌ An unexpected error occurred for قستون: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:14,115 - __main__ - ERROR -   - ❌ An unexpected error occurred for درازکح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:14,316 - __main__ - ERROR -   - ❌ An unexpected error occurred for کسعدیح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:14,517 - __main__ - ERROR -   - ❌ An unexpected error occurred for داسوه: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:14,718 - __main__ - ERROR -   - ❌ An unexpected error occurred for اسیاتک: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:14,919 - __main__ - ERROR -   - ❌ An unexpected error occurred for ولغدر: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:15,120 - __main__ - ERROR -   - ❌ An unexpected error occurred for وثوق: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:15,322 - __main__ - ERROR -   - ❌ An unexpected error occurred for سهرمزح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:15,523 - __main__ - ERROR -   - ❌ An unexpected error occurred for افق ملت: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:15,724 - __main__ - ERROR -   - ❌ An unexpected error occurred for افقح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:15,925 - __main__ - ERROR -   - ❌ An unexpected error occurred for وبشهرح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:16,126 - __main__ - ERROR -   - ❌ An unexpected error occurred for 18719101: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:16,327 - __main__ - ERROR -   - ❌ An unexpected error occurred for ختوقاح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:16,529 - __main__ - ERROR -   - ❌ An unexpected error occurred for سپیدما: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:16,729 - __main__ - ERROR -   - ❌ An unexpected error occurred for سکرماح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:16,930 - __main__ - ERROR -   - ❌ An unexpected error occurred for وتوسکاح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:17,131 - __main__ - ERROR -   - ❌ An unexpected error occurred for آپ: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:17,331 - __main__ - ERROR -   - ❌ An unexpected error occurred for فرآورح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:17,533 - __main__ - ERROR -   - ❌ An unexpected error occurred for پکرمانح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:17,734 - __main__ - ERROR -   - ❌ An unexpected error occurred for پرتو: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:17,935 - __main__ - ERROR -   - ❌ An unexpected error occurred for غیوان: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:18,136 - __main__ - ERROR -   - ❌ An unexpected error occurred for شپلی: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:18,338 - __main__ - ERROR -   - ❌ An unexpected error occurred for کفرا: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:18,539 - __main__ - ERROR -   - ❌ An unexpected error occurred for قشهدح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:18,739 - __main__ - ERROR -   - ❌ An unexpected error occurred for چبسپاح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:18,940 - __main__ - ERROR -   - ❌ An unexpected error occurred for خصدرا: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:19,141 - __main__ - ERROR -   - ❌ An unexpected error occurred for خگسترح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:19,342 - __main__ - ERROR -   - ❌ An unexpected error occurred for آتیمس: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:19,543 - __main__ - ERROR -   - ❌ An unexpected error occurred for لوتوسح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:19,744 - __main__ - ERROR -   - ❌ An unexpected error occurred for کچادح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:19,945 - __main__ - ERROR -   - ❌ An unexpected error occurred for وپخشح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:20,146 - __main__ - ERROR -   - ❌ An unexpected error occurred for خموتورح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:20,347 - __main__ - ERROR -   - ❌ An unexpected error occurred for کاذرح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:20,548 - __main__ - ERROR -   - ❌ An unexpected error occurred for کساوهح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:20,749 - __main__ - ERROR -   - ❌ An unexpected error occurred for کیسون: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:20,951 - __main__ - ERROR -   - ❌ An unexpected error occurred for خمحورح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:21,152 - __main__ - ERROR -   - ❌ An unexpected error occurred for قستان: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:21,355 - __main__ - ERROR -   - ❌ An unexpected error occurred for پاسا: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:21,556 - __main__ - ERROR -   - ❌ An unexpected error occurred for کیمیاتک: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:21,757 - __main__ - ERROR -   - ❌ An unexpected error occurred for فکمند: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:21,958 - __main__ - ERROR -   - ❌ An unexpected error occurred for صنهال: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:22,159 - __main__ - ERROR -   - ❌ An unexpected error occurred for ثجنوب: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:22,360 - __main__ - ERROR -   - ❌ An unexpected error occurred for پتروصبا: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:22,561 - __main__ - ERROR -   - ❌ An unexpected error occurred for خمحور: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:22,762 - __main__ - ERROR -   - ❌ An unexpected error occurred for هامرز: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:22,963 - __main__ - ERROR -   - ❌ An unexpected error occurred for تفارس: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:23,164 - __main__ - ERROR -   - ❌ An unexpected error occurred for دسبحاح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:23,365 - __main__ - ERROR -   - ❌ An unexpected error occurred for گپارس: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:23,566 - __main__ - ERROR -   - ❌ An unexpected error occurred for کساپاح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:23,768 - __main__ - ERROR -   - ❌ An unexpected error occurred for سقاینح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:23,969 - __main__ - ERROR -   - ❌ An unexpected error occurred for کازرو: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:24,170 - __main__ - ERROR -   - ❌ An unexpected error occurred for هامون: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:24,371 - __main__ - ERROR -   - ❌ An unexpected error occurred for پردیسح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:24,572 - __main__ - ERROR -   - ❌ An unexpected error occurred for داریوش: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:24,772 - __main__ - ERROR -   - ❌ An unexpected error occurred for کاصفاح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:24,973 - __main__ - ERROR -   - ❌ An unexpected error occurred for ولغدرح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:25,174 - __main__ - ERROR -   - ❌ An unexpected error occurred for خودران: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:25,376 - __main__ - ERROR -   - ❌ An unexpected error occurred for لبهمن: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:25,577 - __main__ - ERROR -   - ❌ An unexpected error occurred for قجام: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:25,778 - __main__ - ERROR -   - ❌ An unexpected error occurred for ولبهمن: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:25,979 - __main__ - ERROR -   - ❌ An unexpected error occurred for وتوسح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:26,180 - __main__ - ERROR -   - ❌ An unexpected error occurred for مروارید: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:26,381 - __main__ - ERROR -   - ❌ An unexpected error occurred for فنرژی: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:26,582 - __main__ - ERROR -   - ❌ An unexpected error occurred for ولقمان: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:26,783 - __main__ - ERROR -   - ❌ An unexpected error occurred for کبورس: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:26,984 - __main__ - ERROR -   - ❌ An unexpected error occurred for وسین: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:27,185 - __main__ - ERROR -   - ❌ An unexpected error occurred for شوش: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:27,387 - __main__ - ERROR -   - ❌ An unexpected error occurred for بالبرح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:27,588 - __main__ - ERROR -   - ❌ An unexpected error occurred for وملت: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:27,789 - __main__ - ERROR -   - ❌ An unexpected error occurred for فسپاح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:27,989 - __main__ - ERROR -   - ❌ An unexpected error occurred for شفاراح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:28,190 - __main__ - ERROR -   - ❌ An unexpected error occurred for وتوشهح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:28,391 - __main__ - ERROR -   - ❌ An unexpected error occurred for خمهرح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:28,592 - __main__ - ERROR -   - ❌ An unexpected error occurred for نخل: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:28,793 - __main__ - ERROR -   - ❌ An unexpected error occurred for نکالا: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:28,995 - __main__ - ERROR -   - ❌ An unexpected error occurred for چفیبر: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:29,196 - __main__ - ERROR -   - ❌ An unexpected error occurred for سلام: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:29,396 - __main__ - ERROR -   - ❌ An unexpected error occurred for وآفری: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:29,598 - __main__ - ERROR -   - ❌ An unexpected error occurred for دسینا: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:29,799 - __main__ - ERROR -   - ❌ An unexpected error occurred for قشرین: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:29,999 - __main__ - ERROR -   - ❌ An unexpected error occurred for پتروآبان: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:30,200 - __main__ - ERROR -   - ❌ An unexpected error occurred for دامینح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:30,401 - __main__ - ERROR -   - ❌ An unexpected error occurred for اکسیژن: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:30,602 - __main__ - ERROR -   - ❌ An unexpected error occurred for وامیر: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:30,804 - __main__ - ERROR -   - ❌ An unexpected error occurred for نبورس: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:31,005 - __main__ - ERROR -   - ❌ An unexpected error occurred for سهام یار: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:31,206 - __main__ - ERROR -   - ❌ An unexpected error occurred for رشد: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:31,407 - __main__ - ERROR -   - ❌ An unexpected error occurred for تفیروح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:31,608 - __main__ - ERROR -   - ❌ An unexpected error occurred for وخاورح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:31,809 - __main__ - ERROR -   - ❌ An unexpected error occurred for پتروآگاه: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:32,010 - __main__ - ERROR -   - ❌ An unexpected error occurred for وسگلستا: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:32,211 - __main__ - ERROR -   - ❌ An unexpected error occurred for وسیناح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:32,412 - __main__ - ERROR -   - ❌ An unexpected error occurred for کحافظ: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:32,614 - __main__ - ERROR -   - ❌ An unexpected error occurred for ولصنمح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:32,815 - __main__ - ERROR -   - ❌ An unexpected error occurred for قپارسح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:33,017 - __main__ - ERROR -   - ❌ An unexpected error occurred for ثنام: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:33,218 - __main__ - ERROR -   - ❌ An unexpected error occurred for سبجنوح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:33,419 - __main__ - ERROR -   - ❌ An unexpected error occurred for ممسنی: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:33,620 - __main__ - ERROR -   - ❌ An unexpected error occurred for وثنو: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:33,820 - __main__ - ERROR -   - ❌ An unexpected error occurred for داراب: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:34,022 - __main__ - ERROR -   - ❌ An unexpected error occurred for حپتروح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:34,222 - __main__ - ERROR -   - ❌ An unexpected error occurred for کسرامح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:34,423 - __main__ - ERROR -   - ❌ An unexpected error occurred for صدف: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:34,624 - __main__ - ERROR -   - ❌ An unexpected error occurred for شیرانح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:34,825 - __main__ - ERROR -   - ❌ An unexpected error occurred for نتوس: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:35,026 - __main__ - ERROR -   - ❌ An unexpected error occurred for تاصیکوح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:35,227 - __main__ - ERROR -   - ❌ An unexpected error occurred for آرمان: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:35,428 - __main__ - ERROR -   - ❌ An unexpected error occurred for وآردلح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:35,630 - __main__ - ERROR -   - ❌ An unexpected error occurred for فباهنرح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:35,831 - __main__ - ERROR -   - ❌ An unexpected error occurred for ومشان: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:36,031 - __main__ - ERROR -   - ❌ An unexpected error occurred for دپارسح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:36,232 - __main__ - ERROR -   - ❌ An unexpected error occurred for حخزر: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:36,433 - __main__ - ERROR -   - ❌ An unexpected error occurred for فسلیر: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:36,634 - __main__ - ERROR -   - ❌ An unexpected error occurred for نخریس: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:36,835 - __main__ - ERROR -   - ❌ An unexpected error occurred for شرنگی: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:37,036 - __main__ - ERROR -   - ❌ An unexpected error occurred for سشرقح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:37,237 - __main__ - ERROR -   - ❌ An unexpected error occurred for ولنوین: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:37,438 - __main__ - ERROR -   - ❌ An unexpected error occurred for پکویرح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:37,639 - __main__ - ERROR -   - ❌ An unexpected error occurred for کساپا: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:37,840 - __main__ - ERROR -   - ❌ An unexpected error occurred for خدیزل: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:38,041 - __main__ - ERROR -   - ❌ An unexpected error occurred for وسیزد: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:38,242 - __main__ - ERROR -   - ❌ An unexpected error occurred for سیتاح: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:38,443 - __main__ - ERROR -   - ❌ An unexpected error occurred for ثبات: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:34:38,644 - __main__ - ERROR -   - ❌ An unexpected error occurred for پرشیا: Ticker.__init__() got an unexpected keyword argument 'timeout'
+2025-07-12 00:35:11,564 - __main__ - INFO - Full universe file path: C:\Portfolio-Optimizer\cache\full_universe.json
+2025-07-12 00:35:11,565 - __main__ - INFO - Initial cache file path: C:\Portfolio-Optimizer\data\fundamental_data.feather
+2025-07-12 00:35:11,565 - __main__ - INFO - Final output data path: C:\Portfolio-Optimizer\data\full_fundamental_data.feather
+2025-07-12 00:35:11,565 - __main__ - INFO - 🚀 Starting Full Market Fundamental Data Collector...
+2025-07-12 00:35:11,565 - __main__ - INFO - --- Stage 1: Loading Full Market Universe ---
+2025-07-12 00:35:11,566 - __main__ - INFO - ✅ Loaded 1392 symbols from full_universe.json.
+2025-07-12 00:35:11,566 - __main__ - INFO - --- Stage 2: Determining Symbols to Process ---
+2025-07-12 00:35:11,567 - __main__ - INFO - Found initial cache at C:\Portfolio-Optimizer\data\fundamental_data.feather. Loading to accelerate process.
+2025-07-12 00:35:11,606 - __main__ - INFO - Found 437 symbols in the initial cache.
+2025-07-12 00:35:11,607 - __main__ - INFO - Identified 956 new symbols to process.
+2025-07-12 00:35:14,285 - __main__ - WARNING -    - Discarding ثمسکنح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:35:15,982 - __main__ - ERROR -   - ❌ An unexpected error occurred for قستون: Cannot get realtime data from inactive ticker قستون
+2025-07-12 00:35:18,570 - __main__ - WARNING -    - Discarding درازکح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:35:20,864 - __main__ - WARNING -    - Discarding کسعدیح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:35:25,224 - __main__ - INFO -   (5/956) Fetched for داسوه
+2025-07-12 00:35:27,733 - __main__ - WARNING -    - Discarding اسیاتک: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:35:30,675 - __main__ - WARNING -    - Discarding ولغدر: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:35:34,457 - __main__ - WARNING -    - Discarding وثوق: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:35:36,767 - __main__ - WARNING -    - Discarding سهرمزح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:35:40,974 - __main__ - WARNING -    - Discarding افق ملت: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:35:43,539 - __main__ - WARNING -    - Discarding افقح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:35:46,051 - __main__ - WARNING -    - Discarding وبشهرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:35:46,775 - __main__ - ERROR -   - ❌ An unexpected error occurred for 18719101: Cannot get realtime data from inactive ticker 18719101
+2025-07-12 00:35:49,174 - __main__ - WARNING -    - Discarding ختوقاح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:35:51,991 - __main__ - WARNING -    - Discarding سپیدما: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:35:55,811 - __main__ - WARNING -    - Discarding سکرماح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:35:58,494 - __main__ - WARNING -    - Discarding وتوسکاح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:36:03,298 - __main__ - INFO -   (18/956) Fetched for آپ
+2025-07-12 00:36:05,845 - __main__ - WARNING -    - Discarding فرآورح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:36:08,493 - __main__ - WARNING -    - Discarding پکرمانح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:36:11,287 - __main__ - WARNING -    - Discarding پرتو: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:36:15,145 - __main__ - WARNING -    - Discarding غیوان: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:36:19,137 - __main__ - INFO -   (23/956) Fetched for شپلی
+2025-07-12 00:36:23,376 - __main__ - INFO -   (24/956) Fetched for کفرا
+2025-07-12 00:36:23,836 - __main__ - ERROR -   - ❌ An unexpected error occurred for قشهدح: single positional indexer is out-of-bounds
+2025-07-12 00:36:26,250 - __main__ - WARNING -    - Discarding چبسپاح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:36:30,118 - __main__ - INFO -   (27/956) Fetched for خصدرا
+2025-07-12 00:36:33,818 - __main__ - WARNING -    - Discarding خگسترح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:36:36,709 - __main__ - WARNING -    - Discarding آتیمس: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:36:39,213 - __main__ - WARNING -    - Discarding لوتوسح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:36:42,977 - __main__ - WARNING -    - Discarding کچادح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:36:45,484 - __main__ - WARNING -    - Discarding وپخشح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:36:48,083 - __main__ - WARNING -    - Discarding خموتورح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:36:52,568 - __main__ - WARNING -    - Discarding کاذرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:36:54,963 - __main__ - WARNING -    - Discarding کساوهح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:36:57,876 - __main__ - ERROR -   - ❌ An unexpected error occurred for کیسون: unsupported operand type(s) for *: 'NoneType' and 'float'
+2025-07-12 00:36:58,333 - __main__ - ERROR -   - ❌ An unexpected error occurred for خمحورح: single positional indexer is out-of-bounds
+2025-07-12 00:37:00,015 - __main__ - ERROR -   - ❌ An unexpected error occurred for قستان: Cannot get realtime data from inactive ticker قستان
+2025-07-12 00:37:04,294 - __main__ - INFO -   (39/956) Fetched for پاسا
+2025-07-12 00:37:07,956 - __main__ - INFO -   (40/956) Fetched for کیمیاتک
+2025-07-12 00:37:11,018 - __main__ - WARNING -    - Discarding فکمند: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:37:14,053 - __main__ - WARNING -    - Discarding صنهال: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:37:18,193 - __main__ - INFO -   (43/956) Fetched for ثجنوب
+2025-07-12 00:37:20,529 - __main__ - WARNING -    - Discarding پتروصبا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:37:24,728 - __main__ - INFO -   (45/956) Fetched for خمحور
+2025-07-12 00:37:27,221 - __main__ - WARNING -    - Discarding هامرز: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:37:29,575 - __main__ - ERROR -   - ❌ An unexpected error occurred for تفارس: unsupported operand type(s) for *: 'NoneType' and 'float'
+2025-07-12 00:37:32,342 - __main__ - WARNING -    - Discarding دسبحاح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:37:35,858 - __main__ - WARNING -    - Discarding گپارس: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:37:38,337 - __main__ - WARNING -    - Discarding کساپاح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:37:40,899 - __main__ - WARNING -    - Discarding سقاینح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:37:44,334 - __main__ - WARNING -    - Discarding کازرو: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:37:46,848 - __main__ - WARNING -    - Discarding هامون: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:37:49,386 - __main__ - WARNING -    - Discarding پردیسح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:37:52,315 - __main__ - WARNING -    - Discarding داریوش: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:37:54,782 - __main__ - WARNING -    - Discarding کاصفاح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:37:58,449 - __main__ - WARNING -    - Discarding ولغدرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:38:02,046 - __main__ - WARNING -    - Discarding خودران: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:38:03,750 - __main__ - ERROR -   - ❌ An unexpected error occurred for لبهمن: Cannot get realtime data from inactive ticker لبهمن
+2025-07-12 00:38:09,313 - __main__ - INFO -   (60/956) Fetched for قجام
+2025-07-12 00:38:12,647 - __main__ - WARNING -    - Discarding ولبهمن: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:38:15,684 - __main__ - WARNING -    - Discarding وتوسح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:38:18,386 - __main__ - WARNING -    - Discarding مروارید: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:38:26,038 - __main__ - WARNING -    - Discarding فنرژی: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:38:30,522 - __main__ - INFO -   (65/956) Fetched for ولقمان
+2025-07-12 00:38:31,270 - __main__ - ERROR -   - ❌ An unexpected error occurred for کبورس: Cannot get realtime data from inactive ticker کبورس
+2025-07-12 00:38:34,485 - __main__ - INFO -   (67/956) Fetched for وسین
+2025-07-12 00:38:35,184 - __main__ - ERROR -   - ❌ An unexpected error occurred for شوش: Cannot get realtime data from inactive ticker شوش
+2025-07-12 00:38:37,735 - __main__ - WARNING -    - Discarding بالبرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:38:42,231 - __main__ - INFO -   (70/956) Fetched for وملت
+2025-07-12 00:38:44,863 - __main__ - WARNING -    - Discarding فسپاح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:38:47,411 - __main__ - WARNING -    - Discarding شفاراح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:38:47,817 - __main__ - ERROR -   - ❌ An unexpected error occurred for وتوشهح: single positional indexer is out-of-bounds
+2025-07-12 00:38:50,574 - __main__ - WARNING -    - Discarding خمهرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:38:53,193 - __main__ - WARNING -    - Discarding نخل: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:38:53,840 - __main__ - ERROR -   - ❌ An unexpected error occurred for نکالا: Cannot get realtime data from inactive ticker نکالا
+2025-07-12 00:38:59,029 - __main__ - INFO -   (77/956) Fetched for چفیبر
+2025-07-12 00:39:01,603 - __main__ - WARNING -    - Discarding سلام: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:39:04,862 - __main__ - INFO -   (79/956) Fetched for وآفری
+2025-07-12 00:39:09,499 - __main__ - INFO -   (80/956) Fetched for دسینا
+2025-07-12 00:39:14,218 - __main__ - INFO -   (81/956) Fetched for قشرین
+2025-07-12 00:39:17,106 - __main__ - WARNING -    - Discarding پتروآبان: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:39:20,141 - __main__ - WARNING -    - Discarding دامینح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:39:24,270 - __main__ - WARNING -    - Discarding اکسیژن: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:39:27,549 - __main__ - INFO -   (85/956) Fetched for وامیر
+2025-07-12 00:39:28,207 - __main__ - ERROR -   - ❌ An unexpected error occurred for نبورس: Cannot get realtime data from inactive ticker نبورس
+2025-07-12 00:39:28,842 - __main__ - ERROR -   - ❌ An unexpected error occurred for سهام یار: Cannot get realtime data from inactive ticker سهام یار
+2025-07-12 00:39:31,348 - __main__ - WARNING -    - Discarding رشد: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:39:31,828 - __main__ - ERROR -   - ❌ An unexpected error occurred for تفیروح: single positional indexer is out-of-bounds
+2025-07-12 00:39:34,335 - __main__ - WARNING -    - Discarding وخاورح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:39:36,825 - __main__ - WARNING -    - Discarding پتروآگاه: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:39:39,977 - __main__ - INFO -   (92/956) Fetched for وسگلستا
+2025-07-12 00:39:42,465 - __main__ - WARNING -    - Discarding وسیناح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:39:46,298 - __main__ - INFO -   (94/956) Fetched for کحافظ
+2025-07-12 00:39:48,790 - __main__ - WARNING -    - Discarding ولصنمح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:39:49,451 - __main__ - ERROR -   - ❌ An unexpected error occurred for قپارسح: Cannot get realtime data from inactive ticker قپارسح
+2025-07-12 00:39:52,594 - __main__ - INFO -   (97/956) Fetched for ثنام
+2025-07-12 00:39:55,059 - __main__ - WARNING -    - Discarding سبجنوح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:39:58,410 - __main__ - WARNING -    - Discarding ممسنی: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:40:00,959 - __main__ - ERROR -   - ❌ An unexpected error occurred for وثنو: unsupported operand type(s) for *: 'NoneType' and 'float'
+2025-07-12 00:40:04,062 - __main__ - INFO -   (101/956) Fetched for داراب
+2025-07-12 00:40:06,419 - __main__ - WARNING -    - Discarding حپتروح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:40:08,788 - __main__ - WARNING -    - Discarding کسرامح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:40:11,158 - __main__ - WARNING -    - Discarding صدف: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:40:11,703 - __main__ - ERROR -   - ❌ An unexpected error occurred for شیرانح: single positional indexer is out-of-bounds
+2025-07-12 00:40:16,046 - __main__ - INFO -   (106/956) Fetched for نتوس
+2025-07-12 00:40:19,197 - __main__ - WARNING -    - Discarding تاصیکوح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:40:22,549 - __main__ - INFO -   (108/956) Fetched for آرمان
+2025-07-12 00:40:23,598 - __main__ - ERROR -   - ❌ An unexpected error occurred for وآردلح: Cannot get realtime data from inactive ticker وآردلح
+2025-07-12 00:40:26,081 - __main__ - WARNING -    - Discarding فباهنرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:40:29,180 - __main__ - INFO -   (111/956) Fetched for ومشان
+2025-07-12 00:40:32,974 - __main__ - WARNING -    - Discarding دپارسح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:40:35,885 - __main__ - WARNING -    - Discarding حخزر: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:40:38,779 - __main__ - WARNING -    - Discarding فسلیر: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:40:42,511 - __main__ - INFO -   (115/956) Fetched for نخریس
+2025-07-12 00:40:45,060 - __main__ - ERROR -   - ❌ An unexpected error occurred for شرنگی: unsupported operand type(s) for *: 'NoneType' and 'float'
+2025-07-12 00:40:47,882 - __main__ - WARNING -    - Discarding سشرقح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:40:50,271 - __main__ - WARNING -    - Discarding ولنوین: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:40:52,817 - __main__ - WARNING -    - Discarding پکویرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:40:56,866 - __main__ - INFO -   (120/956) Fetched for کساپا
+2025-07-12 00:41:01,461 - __main__ - INFO -   (121/956) Fetched for خدیزل
+2025-07-12 00:41:05,472 - __main__ - INFO -   (122/956) Fetched for وسیزد
+2025-07-12 00:41:07,903 - __main__ - WARNING -    - Discarding سیتاح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:41:10,485 - __main__ - WARNING -    - Discarding ثبات: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:41:10,869 - __main__ - ERROR -   - ❌ An unexpected error occurred for پرشیا: single positional indexer is out-of-bounds
+2025-07-12 00:41:13,915 - __main__ - WARNING -    - Discarding شتولی: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:41:17,106 - __main__ - INFO -   (127/956) Fetched for وجامی
+2025-07-12 00:41:20,244 - __main__ - WARNING -    - Discarding دی: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:41:23,779 - __main__ - INFO -   (129/956) Fetched for ودانا
+2025-07-12 00:41:27,268 - __main__ - INFO -   (130/956) Fetched for وهنر
+2025-07-12 00:41:32,164 - __main__ - INFO -   (131/956) Fetched for حپترو
+2025-07-12 00:41:34,787 - __main__ - WARNING -    - Discarding نارین: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:41:37,189 - __main__ - WARNING -    - Discarding غشاذرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:41:40,617 - __main__ - WARNING -    - Discarding قجامح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:41:43,733 - __main__ - INFO -   (135/956) Fetched for چنوپا
+2025-07-12 00:41:46,185 - __main__ - WARNING -    - Discarding غیوانح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:41:46,781 - __main__ - ERROR -   - ❌ An unexpected error occurred for مدار: single positional indexer is out-of-bounds
+2025-07-12 00:41:49,116 - __main__ - WARNING -    - Discarding فایراح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:41:53,659 - __main__ - WARNING -    - Discarding اتکامح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:41:56,828 - __main__ - INFO -   (140/956) Fetched for قیستو
+2025-07-12 00:41:59,740 - __main__ - WARNING -    - Discarding ولصنم: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:42:00,282 - __main__ - ERROR -   - ❌ An unexpected error occurred for کقزویح: single positional indexer is out-of-bounds
+2025-07-12 00:42:03,099 - __main__ - WARNING -    - Discarding زر: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:42:05,677 - __main__ - WARNING -    - Discarding وسیلام: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:42:08,138 - __main__ - WARNING -    - Discarding قشرینح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:42:12,139 - __main__ - INFO -   (146/956) Fetched for تپکو
+2025-07-12 00:42:14,459 - __main__ - WARNING -    - Discarding کمنگنزح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:42:18,383 - __main__ - INFO -   (148/956) Fetched for خعمرا
+2025-07-12 00:42:21,246 - __main__ - WARNING -    - Discarding صایند: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:42:24,189 - __main__ - WARNING -    - Discarding مادیرا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:42:26,827 - __main__ - WARNING -    - Discarding اوج: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:42:30,384 - __main__ - INFO -   (152/956) Fetched for شفا
+2025-07-12 00:42:30,883 - __main__ - ERROR -   - ❌ An unexpected error occurred for دیسشپ: single positional indexer is out-of-bounds
+2025-07-12 00:42:31,375 - __main__ - ERROR -   - ❌ An unexpected error occurred for ثملی: single positional indexer is out-of-bounds
+2025-07-12 00:42:34,719 - __main__ - INFO -   (155/956) Fetched for وسرمد
+2025-07-12 00:42:37,177 - __main__ - WARNING -    - Discarding وملیح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:42:40,791 - __main__ - WARNING -    - Discarding وبوعلیح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:42:44,726 - __main__ - INFO -   (158/956) Fetched for کنور
+2025-07-12 00:42:45,115 - __main__ - ERROR -   - ❌ An unexpected error occurred for باخترح: single positional indexer is out-of-bounds
+2025-07-12 00:42:48,948 - __main__ - INFO -   (160/956) Fetched for کیا
+2025-07-12 00:42:51,400 - __main__ - WARNING -    - Discarding دسیناح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:42:54,656 - __main__ - INFO -   (162/956) Fetched for وسمرکز
+2025-07-12 00:42:57,106 - __main__ - WARNING -    - Discarding داسوهح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:42:59,347 - __main__ - WARNING -    - Discarding بموتوح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:43:01,853 - __main__ - WARNING -    - Discarding تیپیکوح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:43:04,462 - __main__ - WARNING -    - Discarding قنقشح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:43:04,989 - __main__ - ERROR -   - ❌ An unexpected error occurred for پدرخشح: single positional indexer is out-of-bounds
+2025-07-12 00:43:07,723 - __main__ - WARNING -    - Discarding کامیاب: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:43:11,003 - __main__ - INFO -   (169/956) Fetched for کچینی
+2025-07-12 00:43:13,563 - __main__ - WARNING -    - Discarding دیوان: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:43:16,378 - __main__ - WARNING -    - Discarding خاتم: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:43:19,285 - __main__ - WARNING -    - Discarding توان: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:43:19,664 - __main__ - ERROR -   - ❌ An unexpected error occurred for فساز: single positional indexer is out-of-bounds
+2025-07-12 00:43:22,393 - __main__ - WARNING -    - Discarding مرقامح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:43:25,100 - __main__ - WARNING -    - Discarding ثهام: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:43:27,622 - __main__ - WARNING -    - Discarding لبخند: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:43:31,000 - __main__ - INFO -   (177/956) Fetched for وسبوشهر
+2025-07-12 00:43:35,036 - __main__ - INFO -   (178/956) Fetched for زگلدشت
+2025-07-12 00:43:39,553 - __main__ - INFO -   (179/956) Fetched for بکام
+2025-07-12 00:43:42,490 - __main__ - WARNING -    - Discarding افران: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:43:45,102 - __main__ - WARNING -    - Discarding عقیق: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:43:48,120 - __main__ - INFO -   (182/956) Fetched for تفیرو
+2025-07-12 00:43:51,483 - __main__ - WARNING -    - Discarding پتروما: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:43:54,684 - __main__ - WARNING -    - Discarding درین: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:44:00,001 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=5, read=4, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='service.tsetmc.com', port=80): Read timed out. (read timeout=5)")': /tsev2/data/TseClient2.aspx?t=LastPossibleDeven
+2025-07-12 00:44:00,498 - __main__ - ERROR -   - ❌ An unexpected error occurred for پلولهح: Cannot get realtime data from inactive ticker پلولهح
+2025-07-12 00:44:03,194 - __main__ - WARNING -    - Discarding فراز: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:44:06,503 - __main__ - WARNING -    - Discarding داناح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:44:08,996 - __main__ - WARNING -    - Discarding کگازح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:44:11,984 - __main__ - WARNING -    - Discarding لخانه: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:44:15,060 - __main__ - INFO -   (190/956) Fetched for وسزنجان
+2025-07-12 00:44:17,802 - __main__ - WARNING -    - Discarding سپاهاح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:44:21,464 - __main__ - WARNING -    - Discarding تیام: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:44:24,753 - __main__ - INFO -   (193/956) Fetched for وفردا
+2025-07-12 00:44:27,371 - __main__ - WARNING -    - Discarding ویستا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:44:29,983 - __main__ - WARNING -    - Discarding وبیمهح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:44:32,823 - __main__ - WARNING -    - Discarding نیلی: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:44:35,291 - __main__ - WARNING -    - Discarding تکنوح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:44:38,796 - __main__ - WARNING -    - Discarding وشمال: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:44:42,497 - __main__ - WARNING -    - Discarding ولساپا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:44:45,930 - __main__ - INFO -   (200/956) Fetched for جهرم
+2025-07-12 00:44:48,348 - __main__ - WARNING -    - Discarding خکاوهح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:44:50,726 - __main__ - WARNING -    - Discarding غبشهرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:44:53,241 - __main__ - WARNING -    - Discarding وسلرستا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:44:56,045 - __main__ - WARNING -    - Discarding ثمین: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:44:58,903 - __main__ - WARNING -    - Discarding کرویح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:45:01,646 - __main__ - WARNING -    - Discarding کسراح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:45:05,363 - __main__ - WARNING -    - Discarding غسالمح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:45:06,035 - __main__ - ERROR -   - ❌ An unexpected error occurred for وسدیدح: Cannot get realtime data from inactive ticker وسدیدح
+2025-07-12 00:45:08,524 - __main__ - WARNING -    - Discarding فسلیرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:45:11,863 - __main__ - INFO -   (210/956) Fetched for حرهشا
+2025-07-12 00:45:14,383 - __main__ - WARNING -    - Discarding کپارسح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:45:14,756 - __main__ - ERROR -   - ❌ An unexpected error occurred for شجی: single positional indexer is out-of-bounds
+2025-07-12 00:45:15,194 - __main__ - ERROR -   - ❌ An unexpected error occurred for برانسفو: single positional indexer is out-of-bounds
+2025-07-12 00:45:18,389 - __main__ - INFO -   (214/956) Fetched for وحکمت
+2025-07-12 00:45:21,236 - __main__ - WARNING -    - Discarding شپمچا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:45:24,826 - __main__ - WARNING -    - Discarding دسانکوح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:45:27,755 - __main__ - WARNING -    - Discarding ولشرق: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:45:28,412 - __main__ - ERROR -   - ❌ An unexpected error occurred for تدبیر: single positional indexer is out-of-bounds
+2025-07-12 00:45:30,721 - __main__ - ERROR -   - ❌ An unexpected error occurred for تکیمیا: unsupported operand type(s) for *: 'NoneType' and 'float'
+2025-07-12 00:45:33,190 - __main__ - WARNING -    - Discarding وساختح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:45:35,875 - __main__ - WARNING -    - Discarding ارزش مسکن: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:45:38,437 - __main__ - WARNING -    - Discarding دیبا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:45:42,119 - __main__ - INFO -   (223/956) Fetched for کشرق
+2025-07-12 00:45:44,642 - __main__ - WARNING -    - Discarding وملتح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:45:48,045 - __main__ - WARNING -    - Discarding پالایش: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:45:51,362 - __main__ - WARNING -    - Discarding شخارکح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:45:52,138 - __main__ - ERROR -   - ❌ An unexpected error occurred for لمخابر: Cannot get realtime data from inactive ticker لمخابر
+2025-07-12 00:45:55,396 - __main__ - INFO -   (228/956) Fetched for ثعتما
+2025-07-12 00:45:58,271 - __main__ - INFO -   (229/956) Fetched for وسکرد
+2025-07-12 00:46:00,003 - __main__ - WARNING -    - Discarding پادا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:46:04,226 - __main__ - INFO -   (231/956) Fetched for کپشیر
+2025-07-12 00:46:06,789 - __main__ - WARNING -    - Discarding فاهوازح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:46:07,642 - __main__ - ERROR -   - ❌ An unexpected error occurred for فروم: Cannot get realtime data from inactive ticker فروم
+2025-07-12 00:46:11,361 - __main__ - WARNING -    - Discarding زیتون: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:46:14,941 - __main__ - INFO -   (235/956) Fetched for دحاوی
+2025-07-12 00:46:19,001 - __main__ - INFO -   (236/956) Fetched for پشاهن
+2025-07-12 00:46:21,766 - __main__ - WARNING -    - Discarding سیدکوح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:46:24,164 - __main__ - WARNING -    - Discarding کفپارسح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:46:27,064 - __main__ - WARNING -    - Discarding سدشتح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:46:31,708 - __main__ - INFO -   (240/956) Fetched for شزنگ
+2025-07-12 00:46:35,681 - __main__ - WARNING -    - Discarding دتمادح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:46:38,293 - __main__ - WARNING -    - Discarding ساذریح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:46:41,899 - __main__ - WARNING -    - Discarding پترولح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:46:46,093 - __main__ - INFO -   (244/956) Fetched for پارتا
+2025-07-12 00:46:49,445 - __main__ - WARNING -    - Discarding ثنوساح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:46:52,368 - __main__ - WARNING -    - Discarding ولپارس: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:46:55,210 - __main__ - WARNING -    - Discarding کمند: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:46:57,859 - __main__ - WARNING -    - Discarding ساحل: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:47:03,019 - __main__ - INFO -   (249/956) Fetched for تابا
+2025-07-12 00:47:05,179 - __main__ - WARNING -    - Discarding ثتران: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:47:08,591 - __main__ - INFO -   (251/956) Fetched for غناب
+2025-07-12 00:47:11,899 - __main__ - WARNING -    - Discarding زنجان: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:47:12,333 - __main__ - ERROR -   - ❌ An unexpected error occurred for سایراح: single positional indexer is out-of-bounds
+2025-07-12 00:47:16,130 - __main__ - WARNING -    - Discarding فملیح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:47:17,147 - __main__ - ERROR -   - ❌ An unexpected error occurred for غساسا: Cannot get realtime data from inactive ticker غساسا
+2025-07-12 00:47:20,951 - __main__ - WARNING -    - Discarding آسام: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:47:23,562 - __main__ - WARNING -    - Discarding وپارسح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:47:27,273 - __main__ - WARNING -    - Discarding برلیان: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:47:30,536 - __main__ - WARNING -    - Discarding وسنا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:47:34,018 - __main__ - WARNING -    - Discarding هوشیار: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:47:37,234 - __main__ - WARNING -    - Discarding ضمان: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:47:40,061 - __main__ - INFO -   (262/956) Fetched for بازرگام
+2025-07-12 00:47:43,534 - __main__ - WARNING -    - Discarding ولتجار: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:47:45,194 - __main__ - ERROR -   - ❌ An unexpected error occurred for لمخابرح: Cannot get realtime data from inactive ticker لمخابرح
+2025-07-12 00:47:47,705 - __main__ - WARNING -    - Discarding کخاکح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:47:50,906 - __main__ - WARNING -    - Discarding تپمپیح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:47:54,007 - __main__ - WARNING -    - Discarding سفاسی: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:47:59,639 - __main__ - INFO -   (268/956) Fetched for کسعدی
+2025-07-12 00:48:00,065 - __main__ - ERROR -   - ❌ An unexpected error occurred for غبهپاکح: single positional indexer is out-of-bounds
+2025-07-12 00:48:00,702 - __main__ - ERROR -   - ❌ An unexpected error occurred for حامی1401: Cannot get realtime data from inactive ticker حامی1401
+2025-07-12 00:48:04,645 - __main__ - INFO -   (271/956) Fetched for آباد
+2025-07-12 00:48:07,147 - __main__ - WARNING -    - Discarding پاداش: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:48:09,898 - __main__ - WARNING -    - Discarding شپارسح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:48:13,019 - __main__ - WARNING -    - Discarding فسدید: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:48:15,473 - __main__ - WARNING -    - Discarding دشیمیح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:48:18,020 - __main__ - WARNING -    - Discarding سفارسح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:48:20,567 - __main__ - WARNING -    - Discarding سدورح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:48:25,116 - __main__ - INFO -   (278/956) Fetched for دامین
+2025-07-12 00:48:28,900 - __main__ - WARNING -    - Discarding ختورح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:48:32,323 - __main__ - INFO -   (280/956) Fetched for وپسا
+2025-07-12 00:48:35,061 - __main__ - WARNING -    - Discarding آگاس: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:48:38,087 - __main__ - WARNING -    - Discarding اوان: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:48:40,574 - __main__ - WARNING -    - Discarding جمح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:48:43,579 - __main__ - INFO -   (284/956) Fetched for وسخراج
+2025-07-12 00:48:46,761 - __main__ - WARNING -    - Discarding فولاژح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:48:47,388 - __main__ - ERROR -   - ❌ An unexpected error occurred for فوکاح: Cannot get realtime data from inactive ticker فوکاح
+2025-07-12 00:48:51,069 - __main__ - INFO -   (287/956) Fetched for آردینه
+2025-07-12 00:48:53,483 - __main__ - WARNING -    - Discarding دابورح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:48:58,312 - __main__ - INFO -   (289/956) Fetched for کهرام
+2025-07-12 00:49:01,189 - __main__ - WARNING -    - Discarding وآیند: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:49:01,846 - __main__ - ERROR -   - ❌ An unexpected error occurred for وسقزوین: single positional indexer is out-of-bounds
+2025-07-12 00:49:06,219 - __main__ - WARNING -    - Discarding وآذر: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:49:08,988 - __main__ - WARNING -    - Discarding سمایه: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:49:12,382 - __main__ - WARNING -    - Discarding داروح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:49:15,105 - __main__ - WARNING -    - Discarding گنجین: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:49:17,469 - __main__ - WARNING -    - Discarding مدارانح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:49:19,948 - __main__ - WARNING -    - Discarding حفاریح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:49:23,913 - __main__ - INFO -   (298/956) Fetched for فبستم
+2025-07-12 00:49:27,838 - __main__ - WARNING -    - Discarding آکورد: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:49:30,521 - __main__ - WARNING -    - Discarding دیرانح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:49:33,106 - __main__ - WARNING -    - Discarding ثابت اکسیژن: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:49:35,528 - __main__ - WARNING -    - Discarding چفیبرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:49:37,898 - __main__ - WARNING -    - Discarding خپویشح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:49:40,550 - __main__ - WARNING -    - Discarding واتیح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:49:45,060 - __main__ - INFO -   (305/956) Fetched for وآفر
+2025-07-12 00:49:48,318 - __main__ - WARNING -    - Discarding وزمین: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:49:50,944 - __main__ - WARNING -    - Discarding لپیامح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:49:54,320 - __main__ - INFO -   (308/956) Fetched for آ س پ
+2025-07-12 00:49:56,829 - __main__ - WARNING -    - Discarding سفانوح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:49:59,429 - __main__ - WARNING -    - Discarding اونیکس: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:49:59,931 - __main__ - ERROR -   - ❌ An unexpected error occurred for قثابتح: single positional indexer is out-of-bounds
+2025-07-12 00:50:03,088 - __main__ - WARNING -    - Discarding دالبرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:50:03,705 - __main__ - ERROR -   - ❌ An unexpected error occurred for قستانح: Cannot get realtime data from inactive ticker قستانح
+2025-07-12 00:50:04,336 - __main__ - ERROR -   - ❌ An unexpected error occurred for فمتالح: Cannot get realtime data from inactive ticker فمتالح
+2025-07-12 00:50:05,775 - __main__ - ERROR -   - ❌ An unexpected error occurred for فروسح: single positional indexer is out-of-bounds
+2025-07-12 00:50:08,270 - __main__ - WARNING -    - Discarding خلیج: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:50:11,838 - __main__ - WARNING -    - Discarding کحافظح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:50:14,439 - __main__ - WARNING -    - Discarding بکابح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:50:19,083 - __main__ - INFO -   (319/956) Fetched for وشهر
+2025-07-12 00:50:21,462 - __main__ - WARNING -    - Discarding دانیک: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:50:25,374 - __main__ - INFO -   (321/956) Fetched for لخزر
+2025-07-12 00:50:28,064 - __main__ - WARNING -    - Discarding خزرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:50:30,553 - __main__ - WARNING -    - Discarding عشادگان: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:50:34,033 - __main__ - INFO -   (324/956) Fetched for شلیا
+2025-07-12 00:50:37,246 - __main__ - WARNING -    - Discarding کیان: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:50:40,033 - __main__ - WARNING -    - Discarding ختراکح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:50:43,774 - __main__ - INFO -   (327/956) Fetched for وحافظ
+2025-07-12 00:50:46,416 - __main__ - WARNING -    - Discarding غاذرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:50:48,813 - __main__ - WARNING -    - Discarding شزنگح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:50:51,819 - __main__ - WARNING -    - Discarding حتایدح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:50:56,276 - __main__ - WARNING -    - Discarding پشاهنح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:50:59,029 - __main__ - WARNING -    - Discarding کویرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:50:59,615 - __main__ - ERROR -   - ❌ An unexpected error occurred for رانفورح: single positional indexer is out-of-bounds
+2025-07-12 00:51:02,308 - __main__ - WARNING -    - Discarding کالا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:51:06,105 - __main__ - INFO -   (335/956) Fetched for ثجوان
+2025-07-12 00:51:06,543 - __main__ - ERROR -   - ❌ An unexpected error occurred for قلرستح: single positional indexer is out-of-bounds
+2025-07-12 00:51:09,459 - __main__ - WARNING -    - Discarding ساذری: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:51:12,242 - __main__ - WARNING -    - Discarding صنوین: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:51:16,384 - __main__ - WARNING -    - Discarding غدامح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:51:20,810 - __main__ - INFO -   (340/956) Fetched for سپ
+2025-07-12 00:51:24,140 - __main__ - INFO -   (341/956) Fetched for قتربت
+2025-07-12 00:51:28,203 - __main__ - INFO -   (342/956) Fetched for وآوا
+2025-07-12 00:51:30,780 - __main__ - WARNING -    - Discarding وتوسمح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:51:34,568 - __main__ - INFO -   (344/956) Fetched for سصفها
+2025-07-12 00:51:38,871 - __main__ - WARNING -    - Discarding انار: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:51:39,346 - __main__ - ERROR -   - ❌ An unexpected error occurred for پخش اول: single positional indexer is out-of-bounds
+2025-07-12 00:51:42,866 - __main__ - INFO -   (347/956) Fetched for وامین
+2025-07-12 00:51:45,424 - __main__ - WARNING -    - Discarding شفارسح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:51:47,954 - __main__ - WARNING -    - Discarding ثاختح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:51:50,914 - __main__ - WARNING -    - Discarding حتوکاح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:51:54,663 - __main__ - WARNING -    - Discarding آسامید: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:51:57,887 - __main__ - WARNING -    - Discarding عبهمن: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:51:58,532 - __main__ - ERROR -   - ❌ An unexpected error occurred for وانصارح: Cannot get realtime data from inactive ticker وانصارح
+2025-07-12 00:52:01,738 - __main__ - WARNING -    - Discarding وایران: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:52:04,123 - __main__ - WARNING -    - Discarding تکشاح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:52:07,228 - __main__ - WARNING -    - Discarding شکفح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:52:13,805 - __main__ - INFO -   (357/956) Fetched for بکهنوج
+2025-07-12 00:52:16,705 - __main__ - WARNING -    - Discarding نهال: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:52:20,260 - __main__ - WARNING -    - Discarding اعتبار: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:52:22,862 - __main__ - WARNING -    - Discarding ارمغان: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:52:23,303 - __main__ - ERROR -   - ❌ An unexpected error occurred for شسیناح: single positional indexer is out-of-bounds
+2025-07-12 00:52:26,923 - __main__ - INFO -   (362/956) Fetched for کایتا
+2025-07-12 00:52:30,922 - __main__ - INFO -   (363/956) Fetched for فلامی
+2025-07-12 00:52:33,580 - __main__ - WARNING -    - Discarding فسربح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:52:36,316 - __main__ - INFO -   (365/956) Fetched for اتکاسا
+2025-07-12 00:52:41,154 - __main__ - INFO -   (366/956) Fetched for قنقش
+2025-07-12 00:52:44,509 - __main__ - WARNING -    - Discarding پلاسکح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:52:47,829 - __main__ - WARNING -    - Discarding پلاستح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:52:50,224 - __main__ - WARNING -    - Discarding کاماح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:52:50,967 - __main__ - ERROR -   - ❌ An unexpected error occurred for فپارس: Cannot get realtime data from inactive ticker فپارس
+2025-07-12 00:52:53,198 - __main__ - WARNING -    - Discarding تاپیکوح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:52:53,634 - __main__ - ERROR -   - ❌ An unexpected error occurred for سصفهاح: single positional indexer is out-of-bounds
+2025-07-12 00:52:57,348 - __main__ - WARNING -    - Discarding ثشاهدح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:52:59,599 - __main__ - WARNING -    - Discarding ولیزح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:53:02,775 - __main__ - WARNING -    - Discarding گارانتی: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:53:05,447 - __main__ - WARNING -    - Discarding یارا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:53:05,872 - __main__ - ERROR -   - ❌ An unexpected error occurred for شوشح: single positional indexer is out-of-bounds
+2025-07-12 00:53:08,303 - __main__ - WARNING -    - Discarding کنیلو: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:53:09,104 - __main__ - ERROR -   - ❌ An unexpected error occurred for وآردل: Cannot get realtime data from inactive ticker وآردل
+2025-07-12 00:53:12,928 - __main__ - INFO -   (380/956) Fetched for وآرین
+2025-07-12 00:53:15,612 - __main__ - WARNING -    - Discarding رابین: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:53:17,837 - __main__ - ERROR -   - ❌ An unexpected error occurred for تپکوح: Cannot get realtime data from inactive ticker تپکوح
+2025-07-12 00:53:20,275 - __main__ - WARNING -    - Discarding آرام: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:53:22,750 - __main__ - WARNING -    - Discarding بشهابح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:53:25,564 - __main__ - ERROR -   - ❌ An unexpected error occurred for شپمچاح: Cannot get realtime data from inactive ticker شپمچاح
+2025-07-12 00:53:30,331 - __main__ - INFO -   (386/956) Fetched for فسا
+2025-07-12 00:53:33,090 - __main__ - WARNING -    - Discarding غمهراح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:53:34,144 - __main__ - ERROR -   - ❌ An unexpected error occurred for وانصار: Cannot get realtime data from inactive ticker وانصار
+2025-07-12 00:53:34,826 - __main__ - ERROR -   - ❌ An unexpected error occurred for زرنام: single positional indexer is out-of-bounds
+2025-07-12 00:53:37,234 - __main__ - WARNING -    - Discarding رمپناح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:53:39,899 - __main__ - WARNING -    - Discarding تنوینح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:53:42,581 - __main__ - WARNING -    - Discarding دکیمیح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:53:45,116 - __main__ - WARNING -    - Discarding ونیروح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:53:47,562 - __main__ - WARNING -    - Discarding سترانح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:53:49,856 - __main__ - WARNING -    - Discarding فسازانح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:53:53,129 - __main__ - WARNING -    - Discarding وتوصاح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:53:53,817 - __main__ - ERROR -   - ❌ An unexpected error occurred for قپارس: Cannot get realtime data from inactive ticker قپارس
+2025-07-12 00:53:55,309 - __main__ - ERROR -   - ❌ An unexpected error occurred for شموادح: single positional indexer is out-of-bounds
+2025-07-12 00:53:58,900 - __main__ - INFO -   (399/956) Fetched for وسدید
+2025-07-12 00:54:03,659 - __main__ - WARNING -    - Discarding تکنار: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:54:04,092 - __main__ - ERROR -   - ❌ An unexpected error occurred for چافستح: single positional indexer is out-of-bounds
+2025-07-12 00:54:04,464 - __main__ - ERROR -   - ❌ An unexpected error occurred for وسمحال: single positional indexer is out-of-bounds
+2025-07-12 00:54:09,775 - __main__ - INFO -   (403/956) Fetched for شمواد
+2025-07-12 00:54:13,393 - __main__ - WARNING -    - Discarding پسهندح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:54:15,989 - __main__ - WARNING -    - Discarding هم وزن: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:54:16,655 - __main__ - ERROR -   - ❌ An unexpected error occurred for آکنتورح: Cannot get realtime data from inactive ticker آکنتورح
+2025-07-12 00:54:20,551 - __main__ - WARNING -    - Discarding سپهر: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:54:23,239 - __main__ - WARNING -    - Discarding کایتاح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:54:25,755 - __main__ - WARNING -    - Discarding کرماشاح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:54:29,667 - __main__ - WARNING -    - Discarding رتکوح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:54:32,523 - __main__ - WARNING -    - Discarding ماهور: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:54:36,179 - __main__ - WARNING -    - Discarding فاسمینح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:54:39,929 - __main__ - WARNING -    - Discarding شپدیسح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:54:42,890 - __main__ - WARNING -    - Discarding بنو: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:54:45,669 - __main__ - WARNING -    - Discarding بایکاح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:54:48,464 - __main__ - WARNING -    - Discarding شپاکساح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:54:48,893 - __main__ - ERROR -   - ❌ An unexpected error occurred for تمدن: single positional indexer is out-of-bounds
+2025-07-12 00:54:53,393 - __main__ - INFO -   (418/956) Fetched for غنیلی
+2025-07-12 00:54:56,512 - __main__ - WARNING -    - Discarding آفاق: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:55:02,527 - __main__ - WARNING -    - Discarding وبرق: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:55:10,612 - __main__ - INFO -   (421/956) Fetched for پلوله
+2025-07-12 00:55:13,448 - __main__ - WARNING -    - Discarding شساختح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:55:20,329 - __main__ - WARNING -    - Discarding کگلح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:55:22,934 - __main__ - WARNING -    - Discarding وآذرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:55:26,330 - __main__ - INFO -   (425/956) Fetched for واحصا
+2025-07-12 00:55:29,131 - __main__ - WARNING -    - Discarding آلا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:55:32,122 - __main__ - WARNING -    - Discarding والبرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:55:37,123 - __main__ - INFO -   (428/956) Fetched for بگیلان
+2025-07-12 00:55:41,875 - __main__ - INFO -   (429/956) Fetched for کسرام
+2025-07-12 00:55:45,652 - __main__ - WARNING -    - Discarding فلات: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:55:48,096 - __main__ - WARNING -    - Discarding پیروز: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:55:52,114 - __main__ - INFO -   (432/956) Fetched for تپسی
+2025-07-12 00:55:54,684 - __main__ - WARNING -    - Discarding خزامیاح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:55:58,215 - __main__ - INFO -   (434/956) Fetched for وسگیلا
+2025-07-12 00:56:03,537 - __main__ - INFO -   (435/956) Fetched for لسرما
+2025-07-12 00:56:06,212 - __main__ - WARNING -    - Discarding سیلامح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:56:08,571 - __main__ - WARNING -    - Discarding نفیس: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:56:11,960 - __main__ - INFO -   (438/956) Fetched for فن آوا
+2025-07-12 00:56:14,561 - __main__ - WARNING -    - Discarding مبینح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:56:18,009 - __main__ - WARNING -    - Discarding متال: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:56:20,633 - __main__ - WARNING -    - Discarding ترمه: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:56:23,437 - __main__ - WARNING -    - Discarding خکمکح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:56:26,445 - __main__ - WARNING -    - Discarding کنیلوح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:56:30,177 - __main__ - INFO -   (444/956) Fetched for کصدف
+2025-07-12 00:56:33,058 - __main__ - WARNING -    - Discarding فلامیح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:56:34,049 - __main__ - ERROR -   - ❌ An unexpected error occurred for لپویاح: Cannot get realtime data from inactive ticker لپویاح
+2025-07-12 00:56:39,480 - __main__ - INFO -   (447/956) Fetched for کفرآور
+2025-07-12 00:56:42,636 - __main__ - WARNING -    - Discarding چکاوهح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:56:46,531 - __main__ - WARNING -    - Discarding ثروتم: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:56:49,299 - __main__ - WARNING -    - Discarding پارسانح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:56:54,009 - __main__ - INFO -   (451/956) Fetched for کیمیا
+2025-07-12 00:56:56,858 - __main__ - WARNING -    - Discarding وامیدح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:57:00,652 - __main__ - INFO -   (453/956) Fetched for آبین
+2025-07-12 00:57:05,985 - __main__ - INFO -   (454/956) Fetched for بمیلا
+2025-07-12 00:57:08,625 - __main__ - WARNING -    - Discarding دکوثرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:57:12,524 - __main__ - WARNING -    - Discarding سهگمتح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:57:15,149 - __main__ - WARNING -    - Discarding ومعادنح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:57:17,836 - __main__ - WARNING -    - Discarding مانی: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:57:20,563 - __main__ - WARNING -    - Discarding شبریزح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:57:23,478 - __main__ - WARNING -    - Discarding شپتروح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:57:28,329 - __main__ - INFO -   (461/956) Fetched for کرماشا
+2025-07-12 00:57:33,802 - __main__ - INFO -   (462/956) Fetched for قشهد
+2025-07-12 00:57:36,534 - __main__ - WARNING -    - Discarding خریختح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:57:39,255 - __main__ - WARNING -    - Discarding سپر: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:57:42,249 - __main__ - WARNING -    - Discarding تداوم: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:57:42,647 - __main__ - ERROR -   - ❌ An unexpected error occurred for نماد: single positional indexer is out-of-bounds
+2025-07-12 00:57:45,290 - __main__ - WARNING -    - Discarding کماسهح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:57:47,720 - __main__ - WARNING -    - Discarding فاخر: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:57:51,311 - __main__ - WARNING -    - Discarding قشکرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:57:54,028 - __main__ - WARNING -    - Discarding شنفتح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:57:58,028 - __main__ - INFO -   (471/956) Fetched for غبهار
+2025-07-12 00:58:00,842 - __main__ - WARNING -    - Discarding فسدیدح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:58:03,688 - __main__ - WARNING -    - Discarding زرین: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:58:06,568 - __main__ - WARNING -    - Discarding سارومح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:58:09,461 - __main__ - WARNING -    - Discarding غپاکح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:58:12,743 - __main__ - WARNING -    - Discarding آساس: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:58:17,862 - __main__ - WARNING -    - Discarding وگستر: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:58:20,321 - __main__ - INFO -   (478/956) Fetched for جوین
+2025-07-12 00:58:20,760 - __main__ - ERROR -   - ❌ An unexpected error occurred for اکتیو: single positional indexer is out-of-bounds
+2025-07-12 00:58:21,746 - __main__ - ERROR -   - ❌ An unexpected error occurred for انرژی2: Cannot get realtime data from inactive ticker انرژی2
+2025-07-12 00:58:24,601 - __main__ - WARNING -    - Discarding کاوهح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:58:29,866 - __main__ - INFO -   (482/956) Fetched for بالبر
+2025-07-12 00:58:33,406 - __main__ - INFO -   (483/956) Fetched for شوینده
+2025-07-12 00:58:33,870 - __main__ - ERROR -   - ❌ An unexpected error occurred for لبهمنح: single positional indexer is out-of-bounds
+2025-07-12 00:58:36,991 - __main__ - WARNING -    - Discarding دعبیدح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:58:40,906 - __main__ - INFO -   (486/956) Fetched for سخند
+2025-07-12 00:58:43,462 - __main__ - WARNING -    - Discarding دریا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:58:48,818 - __main__ - INFO -   (488/956) Fetched for قهکمت
+2025-07-12 00:58:51,547 - __main__ - WARNING -    - Discarding همای: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:58:54,865 - __main__ - WARNING -    - Discarding مداران: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:58:55,239 - __main__ - ERROR -   - ❌ An unexpected error occurred for سینا: single positional indexer is out-of-bounds
+2025-07-12 00:58:59,137 - __main__ - WARNING -    - Discarding وساپاح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:59:01,726 - __main__ - WARNING -    - Discarding اعتماد: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:59:05,461 - __main__ - WARNING -    - Discarding غدشتح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:59:08,251 - __main__ - WARNING -    - Discarding تاراز: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:59:12,252 - __main__ - WARNING -    - Discarding کهمداح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:59:15,531 - __main__ - WARNING -    - Discarding رماس: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:59:18,147 - __main__ - WARNING -    - Discarding جواهر: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:59:21,150 - __main__ - WARNING -    - Discarding امین یکم: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:59:23,955 - __main__ - WARNING -    - Discarding خبهمنح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:59:29,473 - __main__ - INFO -   (501/956) Fetched for خراسان
+2025-07-12 00:59:32,082 - __main__ - WARNING -    - Discarding تصمیم: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:59:34,904 - __main__ - WARNING -    - Discarding سرو: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:59:39,982 - __main__ - WARNING -    - Discarding فبیراح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:59:42,661 - __main__ - WARNING -    - Discarding مدیر: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:59:45,752 - __main__ - INFO -   (506/956) Fetched for بتهران
+2025-07-12 00:59:48,362 - __main__ - WARNING -    - Discarding خنصیرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:59:50,796 - __main__ - WARNING -    - Discarding جهش: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:59:53,752 - __main__ - WARNING -    - Discarding حتاید: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:59:56,543 - __main__ - WARNING -    - Discarding ونچر: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:59:59,381 - __main__ - WARNING -    - Discarding ولراز: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 00:59:59,760 - __main__ - ERROR -   - ❌ An unexpected error occurred for فردوس: single positional indexer is out-of-bounds
+2025-07-12 01:00:03,168 - __main__ - INFO -   (513/956) Fetched for خبازرس
+2025-07-12 01:00:06,594 - __main__ - INFO -   (514/956) Fetched for وکادو
+2025-07-12 01:00:10,530 - __main__ - INFO -   (515/956) Fetched for سدشت
+2025-07-12 01:00:12,465 - __main__ - ERROR -   - ❌ An unexpected error occurred for فپارسح: Cannot get realtime data from inactive ticker فپارسح
+2025-07-12 01:00:16,059 - __main__ - WARNING -    - Discarding خودروح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:00:18,648 - __main__ - WARNING -    - Discarding خاذینح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:00:19,446 - __main__ - ERROR -   - ❌ An unexpected error occurred for فنرژیح: single positional indexer is out-of-bounds
+2025-07-12 01:00:23,340 - __main__ - INFO -   (520/956) Fetched for حبندر
+2025-07-12 01:00:26,392 - __main__ - WARNING -    - Discarding صباح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:00:28,933 - __main__ - WARNING -    - Discarding غالبرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:00:32,215 - __main__ - INFO -   (523/956) Fetched for ویسا
+2025-07-12 01:00:33,593 - __main__ - ERROR -   - ❌ An unexpected error occurred for شتولیح: Cannot get realtime data from inactive ticker شتولیح
+2025-07-12 01:00:36,242 - __main__ - WARNING -    - Discarding خمحرکهح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:00:38,779 - __main__ - WARNING -    - Discarding پاکشوح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:00:41,465 - __main__ - WARNING -    - Discarding هیوا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:00:43,965 - __main__ - WARNING -    - Discarding بذر: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:00:44,376 - __main__ - ERROR -   - ❌ An unexpected error occurred for قهکمتح: single positional indexer is out-of-bounds
+2025-07-12 01:00:46,849 - __main__ - WARNING -    - Discarding اتوآگاه: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:00:49,255 - __main__ - WARNING -    - Discarding سفارح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:00:49,676 - __main__ - ERROR -   - ❌ An unexpected error occurred for شلوان: single positional indexer is out-of-bounds
+2025-07-12 01:00:54,342 - __main__ - WARNING -    - Discarding فاماح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:00:58,198 - __main__ - INFO -   (534/956) Fetched for فبیرا
+2025-07-12 01:01:02,060 - __main__ - INFO -   (535/956) Fetched for شلرد
+2025-07-12 01:01:04,265 - __main__ - ERROR -   - ❌ An unexpected error occurred for سفاسیت: Cannot get realtime data from inactive ticker سفاسیت
+2025-07-12 01:01:06,824 - __main__ - WARNING -    - Discarding شیرازح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:01:09,693 - __main__ - WARNING -    - Discarding دهدشت: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:01:12,354 - __main__ - WARNING -    - Discarding غچینح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:01:15,412 - __main__ - WARNING -    - Discarding ثغرب: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:01:19,459 - __main__ - WARNING -    - Discarding وصناح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:01:22,327 - __main__ - WARNING -    - Discarding وسخوز: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:01:25,130 - __main__ - WARNING -    - Discarding مهریران: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:01:31,039 - __main__ - INFO -   (544/956) Fetched for کارام
+2025-07-12 01:01:33,759 - __main__ - WARNING -    - Discarding معیارح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:01:36,328 - __main__ - WARNING -    - Discarding فخاسح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:01:40,482 - __main__ - INFO -   (547/956) Fetched for وآتوس
+2025-07-12 01:01:43,499 - __main__ - WARNING -    - Discarding سخزرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:01:48,499 - __main__ - INFO -   (549/956) Fetched for نبروج
+2025-07-12 01:01:51,705 - __main__ - WARNING -    - Discarding کی بی سی: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:01:54,461 - __main__ - WARNING -    - Discarding کاریس: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:01:57,042 - __main__ - WARNING -    - Discarding نمرینوح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:02:00,643 - __main__ - INFO -   (553/956) Fetched for تاتمس
+2025-07-12 01:02:01,477 - __main__ - ERROR -   - ❌ An unexpected error occurred for ثاصفاح: Cannot get realtime data from inactive ticker ثاصفاح
+2025-07-12 01:02:04,189 - __main__ - WARNING -    - Discarding ماح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:02:09,490 - __main__ - INFO -   (556/956) Fetched for پکرمان
+2025-07-12 01:02:12,379 - __main__ - ERROR -   - ❌ An unexpected error occurred for نگین: unsupported operand type(s) for *: 'NoneType' and 'float'
+2025-07-12 01:02:15,658 - __main__ - WARNING -    - Discarding چبسپا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:02:18,443 - __main__ - WARNING -    - Discarding کلوندح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:02:19,005 - __main__ - ERROR -   - ❌ An unexpected error occurred for چکارمح: single positional indexer is out-of-bounds
+2025-07-12 01:02:22,585 - __main__ - WARNING -    - Discarding فنوالح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:02:25,322 - __main__ - WARNING -    - Discarding ولملتح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:02:30,216 - __main__ - INFO -   (563/956) Fetched for کباده
+2025-07-12 01:02:33,265 - __main__ - WARNING -    - Discarding ولکار: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:02:35,189 - __main__ - ERROR -   - ❌ An unexpected error occurred for نبروجح: Cannot get realtime data from inactive ticker نبروجح
+2025-07-12 01:02:38,384 - __main__ - INFO -   (566/956) Fetched for وسکهبو
+2025-07-12 01:02:40,889 - __main__ - WARNING -    - Discarding اخابرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:02:43,908 - __main__ - WARNING -    - Discarding پارند: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:02:47,157 - __main__ - WARNING -    - Discarding ثنور: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:02:49,528 - __main__ - WARNING -    - Discarding آبادح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:02:53,146 - __main__ - WARNING -    - Discarding قزوینح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:02:56,629 - __main__ - INFO -   (572/956) Fetched for کورز
+2025-07-12 01:02:57,062 - __main__ - ERROR -   - ❌ An unexpected error occurred for تمحرکهح: single positional indexer is out-of-bounds
+2025-07-12 01:03:01,072 - __main__ - WARNING -    - Discarding شکلرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:03:03,823 - __main__ - WARNING -    - Discarding تمشک: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:03:06,478 - __main__ - WARNING -    - Discarding غشهدح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:03:10,097 - __main__ - WARNING -    - Discarding یاقوت: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:03:12,627 - __main__ - WARNING -    - Discarding فردا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:03:14,731 - __main__ - ERROR -   - ❌ An unexpected error occurred for پدناح: Cannot get realtime data from inactive ticker پدناح
+2025-07-12 01:03:15,722 - __main__ - ERROR -   - ❌ An unexpected error occurred for خاورح: Cannot get realtime data from inactive ticker خاورح
+2025-07-12 01:03:16,124 - __main__ - ERROR -   - ❌ An unexpected error occurred for قپیراح: single positional indexer is out-of-bounds
+2025-07-12 01:03:20,087 - __main__ - WARNING -    - Discarding ولرازح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:03:21,272 - __main__ - ERROR -   - ❌ An unexpected error occurred for ثفارسح: Cannot get realtime data from inactive ticker ثفارسح
+2025-07-12 01:03:21,713 - __main__ - ERROR -   - ❌ An unexpected error occurred for لابساح: single positional indexer is out-of-bounds
+2025-07-12 01:03:24,972 - __main__ - INFO -   (585/956) Fetched for واحیا
+2025-07-12 01:03:25,791 - __main__ - ERROR -   - ❌ An unexpected error occurred for فجوشح: Cannot get realtime data from inactive ticker فجوشح
+2025-07-12 01:03:30,044 - __main__ - INFO -   (587/956) Fetched for فاهواز
+2025-07-12 01:03:33,181 - __main__ - WARNING -    - Discarding طلا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:03:37,240 - __main__ - INFO -   (589/956) Fetched for افق
+2025-07-12 01:03:40,966 - __main__ - INFO -   (590/956) Fetched for پلاست
+2025-07-12 01:03:41,848 - __main__ - ERROR -   - ❌ An unexpected error occurred for سفارودح: Cannot get realtime data from inactive ticker سفارودح
+2025-07-12 01:03:44,543 - __main__ - WARNING -    - Discarding کترامح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:03:48,198 - __main__ - WARNING -    - Discarding خچرخشح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:03:48,655 - __main__ - ERROR -   - ❌ An unexpected error occurred for غنوشح: single positional indexer is out-of-bounds
+2025-07-12 01:03:51,172 - __main__ - WARNING -    - Discarding پایا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:03:52,216 - __main__ - ERROR -   - ❌ An unexpected error occurred for تراکح: Cannot get realtime data from inactive ticker تراکح
+2025-07-12 01:03:56,262 - __main__ - WARNING -    - Discarding ثنوسا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:03:59,561 - __main__ - INFO -   (598/956) Fetched for کمینا
+2025-07-12 01:04:02,872 - __main__ - INFO -   (599/956) Fetched for ثامان
+2025-07-12 01:04:08,543 - __main__ - INFO -   (600/956) Fetched for فرآور
+2025-07-12 01:04:13,146 - __main__ - INFO -   (601/956) Fetched for غدانه
+2025-07-12 01:04:15,763 - __main__ - WARNING -    - Discarding آوا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:04:16,804 - __main__ - ERROR -   - ❌ An unexpected error occurred for کایگچ: Cannot get realtime data from inactive ticker کایگچ
+2025-07-12 01:04:19,345 - __main__ - WARNING -    - Discarding امین شهر: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:04:23,128 - __main__ - INFO -   (605/956) Fetched for وفتخار
+2025-07-12 01:04:26,592 - __main__ - INFO -   (606/956) Fetched for خلیبل
+2025-07-12 01:04:30,076 - __main__ - WARNING -    - Discarding پتروداریوش: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:04:32,953 - __main__ - WARNING -    - Discarding ملتح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:04:36,709 - __main__ - WARNING -    - Discarding پویا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:04:40,174 - __main__ - WARNING -    - Discarding ولیز: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:04:42,909 - __main__ - WARNING -    - Discarding ولکارح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:04:46,404 - __main__ - WARNING -    - Discarding شکف: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:04:49,461 - __main__ - INFO -   (613/956) Fetched for کابگن
+2025-07-12 01:04:53,387 - __main__ - WARNING -    - Discarding وغدیرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:04:56,761 - __main__ - INFO -   (615/956) Fetched for فوکا
+2025-07-12 01:04:59,876 - __main__ - INFO -   (616/956) Fetched for لازما
+2025-07-12 01:05:00,231 - __main__ - ERROR -   - ❌ An unexpected error occurred for نشار: single positional indexer is out-of-bounds
+2025-07-12 01:05:02,989 - __main__ - WARNING -    - Discarding گنجینه: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:05:06,856 - __main__ - INFO -   (619/956) Fetched for دکیمی
+2025-07-12 01:05:07,248 - __main__ - ERROR -   - ❌ An unexpected error occurred for وسمنان: single positional indexer is out-of-bounds
+2025-07-12 01:05:09,932 - __main__ - WARNING -    - Discarding پارسیانح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:05:13,924 - __main__ - INFO -   (622/956) Fetched for وسمازن
+2025-07-12 01:05:16,841 - __main__ - WARNING -    - Discarding سپرمی: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:05:19,830 - __main__ - INFO -   (624/956) Fetched for شسم
+2025-07-12 01:05:30,845 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=5, read=4, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='old.tsetmc.com', port=80): Read timed out. (read timeout=10)")': /Loader.aspx?ParTree=151311&i=34856765062083074
+2025-07-12 01:05:32,594 - __main__ - WARNING -    - Discarding بازده: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:05:35,384 - __main__ - WARNING -    - Discarding شبهرنح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:05:36,666 - __main__ - ERROR -   - ❌ An unexpected error occurred for پدنا: Cannot get realtime data from inactive ticker پدنا
+2025-07-12 01:05:37,076 - __main__ - ERROR -   - ❌ An unexpected error occurred for فرومح: single positional indexer is out-of-bounds
+2025-07-12 01:05:39,913 - __main__ - WARNING -    - Discarding وصنعتح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:05:42,716 - __main__ - WARNING -    - Discarding وخارزمح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:05:45,328 - __main__ - WARNING -    - Discarding امیدح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:05:48,448 - __main__ - INFO -   (632/956) Fetched for حگهر
+2025-07-12 01:05:49,549 - __main__ - ERROR -   - ❌ An unexpected error occurred for آکنتور: Cannot get realtime data from inactive ticker آکنتور
+2025-07-12 01:05:51,876 - __main__ - WARNING -    - Discarding فارما کیان: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:05:52,249 - __main__ - ERROR -   - ❌ An unexpected error occurred for کورزح: single positional indexer is out-of-bounds
+2025-07-12 01:05:53,582 - __main__ - ERROR -   - ❌ An unexpected error occurred for خپارسح: Cannot get realtime data from inactive ticker خپارسح
+2025-07-12 01:05:58,958 - __main__ - INFO -   (637/956) Fetched for فلوله
+2025-07-12 01:06:03,239 - __main__ - INFO -   (638/956) Fetched for گکیش
+2025-07-12 01:06:05,803 - __main__ - WARNING -    - Discarding سیناد: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:06:08,450 - __main__ - WARNING -    - Discarding غبهنوشح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:06:11,277 - __main__ - WARNING -    - Discarding وساغربی: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:06:13,925 - __main__ - WARNING -    - Discarding پرسپولیس: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:06:14,872 - __main__ - ERROR -   - ❌ An unexpected error occurred for لجام: Cannot get realtime data from inactive ticker لجام
+2025-07-12 01:06:17,527 - __main__ - WARNING -    - Discarding استقلال: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:06:19,876 - __main__ - WARNING -    - Discarding البرزح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:06:22,556 - __main__ - WARNING -    - Discarding لپارسح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:06:24,949 - __main__ - WARNING -    - Discarding آوند: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:06:28,659 - __main__ - WARNING -    - Discarding درسا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:06:31,389 - __main__ - WARNING -    - Discarding خاهنح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:06:34,067 - __main__ - WARNING -    - Discarding کبافقح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:06:37,348 - __main__ - INFO -   (651/956) Fetched for بتک
+2025-07-12 01:06:39,964 - __main__ - WARNING -    - Discarding فجرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:06:45,247 - __main__ - INFO -   (653/956) Fetched for خودرو
+2025-07-12 01:06:47,963 - __main__ - WARNING -    - Discarding سمان: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:06:48,339 - __main__ - ERROR -   - ❌ An unexpected error occurred for فپنتاح: single positional indexer is out-of-bounds
+2025-07-12 01:06:50,909 - __main__ - WARNING -    - Discarding برکتح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:06:51,378 - __main__ - ERROR -   - ❌ An unexpected error occurred for کچینیح: single positional indexer is out-of-bounds
+2025-07-12 01:06:51,799 - __main__ - ERROR -   - ❌ An unexpected error occurred for شتهرانح: single positional indexer is out-of-bounds
+2025-07-12 01:06:55,671 - __main__ - INFO -   (659/956) Fetched for قپیرا
+2025-07-12 01:06:58,415 - __main__ - WARNING -    - Discarding فیروزه: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:07:03,816 - __main__ - WARNING -    - Discarding سکارون: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:07:07,036 - __main__ - INFO -   (662/956) Fetched for وارس
+2025-07-12 01:07:10,407 - __main__ - INFO -   (663/956) Fetched for لکما
+2025-07-12 01:07:14,073 - __main__ - INFO -   (664/956) Fetched for بمپنا
+2025-07-12 01:07:17,557 - __main__ - INFO -   (665/956) Fetched for وساشرقی
+2025-07-12 01:07:18,511 - __main__ - ERROR -   - ❌ An unexpected error occurred for لجامح: Cannot get realtime data from inactive ticker لجامح
+2025-07-12 01:07:21,484 - __main__ - WARNING -    - Discarding فیروزا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:07:25,684 - __main__ - INFO -   (668/956) Fetched for معیار
+2025-07-12 01:07:29,290 - __main__ - WARNING -    - Discarding کارین: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:07:33,214 - __main__ - WARNING -    - Discarding بنیروح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:07:36,015 - __main__ - WARNING -    - Discarding دسبحانح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:07:39,779 - __main__ - INFO -   (672/956) Fetched for کقزوی
+2025-07-12 01:07:42,437 - __main__ - WARNING -    - Discarding کابگنح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:07:45,076 - __main__ - WARNING -    - Discarding فجوش: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:07:45,465 - __main__ - ERROR -   - ❌ An unexpected error occurred for قصفهاح: single positional indexer is out-of-bounds
+2025-07-12 01:07:48,097 - __main__ - WARNING -    - Discarding امینح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:07:53,466 - __main__ - INFO -   (677/956) Fetched for تشتاد
+2025-07-12 01:07:54,328 - __main__ - ERROR -   - ❌ An unexpected error occurred for انرژی1: Cannot get realtime data from inactive ticker انرژی1
+2025-07-12 01:07:57,455 - __main__ - WARNING -    - Discarding های وب: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:07:59,809 - __main__ - WARNING -    - Discarding جاودان: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:08:02,593 - __main__ - WARNING -    - Discarding فالومح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:08:07,262 - __main__ - INFO -   (682/956) Fetched for شیران
+2025-07-12 01:08:09,833 - __main__ - WARNING -    - Discarding شپلیح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:08:13,923 - __main__ - INFO -   (684/956) Fetched for خفناور
+2025-07-12 01:08:16,616 - __main__ - WARNING -    - Discarding لخانهح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:08:18,850 - __main__ - WARNING -    - Discarding آذرین: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:08:21,166 - __main__ - WARNING -    - Discarding بمان: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:08:23,662 - __main__ - WARNING -    - Discarding وبملتح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:08:24,061 - __main__ - ERROR -   - ❌ An unexpected error occurred for شسمح: single positional indexer is out-of-bounds
+2025-07-12 01:08:27,910 - __main__ - WARNING -    - Discarding ثاصفا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:08:31,609 - __main__ - WARNING -    - Discarding اوصتا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:08:34,434 - __main__ - WARNING -    - Discarding رافزاح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:08:36,831 - __main__ - WARNING -    - Discarding مثقال: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:08:39,468 - __main__ - WARNING -    - Discarding وتوکاح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:08:39,923 - __main__ - ERROR -   - ❌ An unexpected error occurred for شپناح: single positional indexer is out-of-bounds
+2025-07-12 01:08:43,373 - __main__ - WARNING -    - Discarding حاریا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:08:46,523 - __main__ - WARNING -    - Discarding فولادح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:08:49,150 - __main__ - WARNING -    - Discarding کاج: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:08:52,527 - __main__ - INFO -   (699/956) Fetched for کاریز
+2025-07-12 01:08:56,024 - __main__ - INFO -   (700/956) Fetched for دشیری
+2025-07-12 01:08:56,435 - __main__ - ERROR -   - ❌ An unexpected error occurred for وستهران: single positional indexer is out-of-bounds
+2025-07-12 01:09:00,357 - __main__ - INFO -   (702/956) Fetched for ثفارس
+2025-07-12 01:09:02,788 - __main__ - WARNING -    - Discarding طلوع: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:09:06,292 - __main__ - INFO -   (704/956) Fetched for بایکا
+2025-07-12 01:09:08,836 - __main__ - WARNING -    - Discarding قرنح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:09:12,514 - __main__ - INFO -   (706/956) Fetched for کگهر
+2025-07-12 01:09:12,938 - __main__ - ERROR -   - ❌ An unexpected error occurred for فمرادح: single positional indexer is out-of-bounds
+2025-07-12 01:09:15,521 - __main__ - WARNING -    - Discarding وبانکح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:09:20,227 - __main__ - WARNING -    - Discarding وبازار: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:09:23,904 - __main__ - INFO -   (710/956) Fetched for سیستم
+2025-07-12 01:09:24,403 - __main__ - ERROR -   - ❌ An unexpected error occurred for کهرامح: single positional indexer is out-of-bounds
+2025-07-12 01:09:27,078 - __main__ - WARNING -    - Discarding فاراکح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:09:30,238 - __main__ - WARNING -    - Discarding بکامح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:09:32,806 - __main__ - WARNING -    - Discarding قنیشاح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:09:35,308 - __main__ - WARNING -    - Discarding وتجارتح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:09:35,691 - __main__ - ERROR -   - ❌ An unexpected error occurred for ومعین: single positional indexer is out-of-bounds
+2025-07-12 01:09:38,223 - __main__ - WARNING -    - Discarding خوسازح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:09:41,137 - __main__ - INFO -   (718/956) Fetched for وسیستا
+2025-07-12 01:09:45,585 - __main__ - INFO -   (719/956) Fetched for خوساز
+2025-07-12 01:09:48,471 - __main__ - WARNING -    - Discarding فاذرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:09:48,847 - __main__ - ERROR -   - ❌ An unexpected error occurred for غنابح: single positional indexer is out-of-bounds
+2025-07-12 01:09:51,520 - __main__ - WARNING -    - Discarding خرینگح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:09:54,354 - __main__ - WARNING -    - Discarding بهین رو: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:09:57,457 - __main__ - WARNING -    - Discarding میدکوح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:10:01,338 - __main__ - INFO -   (725/956) Fetched for زنگان
+2025-07-12 01:10:03,874 - __main__ - WARNING -    - Discarding دلقماح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:10:06,399 - __main__ - WARNING -    - Discarding استیل: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:10:10,701 - __main__ - INFO -   (728/956) Fetched for فماک
+2025-07-12 01:10:14,697 - __main__ - INFO -   (729/956) Fetched for بپردیس
+2025-07-12 01:10:17,283 - __main__ - WARNING -    - Discarding خلنتح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:10:21,355 - __main__ - WARNING -    - Discarding عیار: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:10:25,646 - __main__ - INFO -   (732/956) Fetched for شفارا
+2025-07-12 01:10:29,844 - __main__ - INFO -   (733/956) Fetched for پلاسک
+2025-07-12 01:10:34,133 - __main__ - INFO -   (734/956) Fetched for گشان
+2025-07-12 01:10:36,665 - __main__ - WARNING -    - Discarding غشانح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:10:39,690 - __main__ - WARNING -    - Discarding چکارم: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:10:42,167 - __main__ - WARNING -    - Discarding پتایرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:10:45,710 - __main__ - INFO -   (738/956) Fetched for چافست
+2025-07-12 01:10:48,651 - __main__ - INFO -   (739/956) Fetched for خفولا
+2025-07-12 01:10:49,474 - __main__ - ERROR -   - ❌ An unexpected error occurred for تکالا: Cannot get realtime data from inactive ticker تکالا
+2025-07-12 01:10:52,124 - __main__ - WARNING -    - Discarding دارا یکم: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:10:54,739 - __main__ - WARNING -    - Discarding داریک: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:10:59,109 - __main__ - INFO -   (743/956) Fetched for وسالت
+2025-07-12 01:11:01,981 - __main__ - WARNING -    - Discarding وسهرمز: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:11:03,106 - __main__ - ERROR -   - ❌ An unexpected error occurred for باختر: Cannot get realtime data from inactive ticker باختر
+2025-07-12 01:11:03,545 - __main__ - ERROR -   - ❌ An unexpected error occurred for بتکح: single positional indexer is out-of-bounds
+2025-07-12 01:11:06,201 - __main__ - WARNING -    - Discarding لبوتانح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:11:06,577 - __main__ - ERROR -   - ❌ An unexpected error occurred for دتهرانح: single positional indexer is out-of-bounds
+2025-07-12 01:11:10,745 - __main__ - INFO -   (749/956) Fetched for بهیر
+2025-07-12 01:11:11,244 - __main__ - ERROR -   - ❌ An unexpected error occurred for اروند: single positional indexer is out-of-bounds
+2025-07-12 01:11:13,537 - __main__ - ERROR -   - ❌ An unexpected error occurred for فنفت: unsupported operand type(s) for *: 'NoneType' and 'float'
+2025-07-12 01:11:16,223 - __main__ - WARNING -    - Discarding چکارنح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:11:16,589 - __main__ - ERROR -   - ❌ An unexpected error occurred for وکغدیرح: single positional indexer is out-of-bounds
+2025-07-12 01:11:18,945 - __main__ - WARNING -    - Discarding خفنرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:11:21,558 - __main__ - WARNING -    - Discarding غپینوح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:11:24,549 - __main__ - WARNING -    - Discarding همراهح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:11:27,154 - __main__ - WARNING -    - Discarding ددامح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:11:29,772 - __main__ - WARNING -    - Discarding شاملاح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:11:32,402 - __main__ - WARNING -    - Discarding سام: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:11:35,932 - __main__ - INFO -   (760/956) Fetched for وایرا
+2025-07-12 01:11:38,545 - __main__ - WARNING -    - Discarding زرفام: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:11:41,805 - __main__ - WARNING -    - Discarding شدوصح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:11:46,514 - __main__ - INFO -   (763/956) Fetched for رتکو
+2025-07-12 01:11:49,067 - __main__ - WARNING -    - Discarding غشصفاح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:11:52,685 - __main__ - WARNING -    - Discarding تپولا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:11:55,533 - __main__ - WARNING -    - Discarding سخاشح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:11:58,083 - __main__ - WARNING -    - Discarding رایکا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:12:00,828 - __main__ - WARNING -    - Discarding بترانسح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:12:04,047 - __main__ - WARNING -    - Discarding میهن: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:12:06,905 - __main__ - WARNING -    - Discarding رنیک: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:12:10,691 - __main__ - WARNING -    - Discarding سایرا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:12:13,328 - __main__ - WARNING -    - Discarding شصفهاح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:12:15,696 - __main__ - WARNING -    - Discarding آفرین: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:12:18,574 - __main__ - WARNING -    - Discarding کپشیرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:12:21,323 - __main__ - WARNING -    - Discarding شاراکح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:12:25,379 - __main__ - INFO -   (776/956) Fetched for فالوم
+2025-07-12 01:12:29,775 - __main__ - INFO -   (777/956) Fetched for خودکفا
+2025-07-12 01:12:32,567 - __main__ - WARNING -    - Discarding شگلح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:12:36,760 - __main__ - INFO -   (779/956) Fetched for هجرت
+2025-07-12 01:12:39,522 - __main__ - WARNING -    - Discarding صنم: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:12:42,335 - __main__ - WARNING -    - Discarding دزهراویح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:12:45,769 - __main__ - INFO -   (782/956) Fetched for شستان
+2025-07-12 01:12:48,255 - __main__ - WARNING -    - Discarding توسکا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:12:54,985 - __main__ - INFO -   (784/956) Fetched for خکاوه
+2025-07-12 01:12:57,481 - __main__ - WARNING -    - Discarding تابش: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:12:59,467 - __main__ - ERROR -   - ❌ An unexpected error occurred for ثاژنح: Cannot get realtime data from inactive ticker ثاژنح
+2025-07-12 01:12:59,968 - __main__ - ERROR -   - ❌ An unexpected error occurred for فبستمح: single positional indexer is out-of-bounds
+2025-07-12 01:13:03,727 - __main__ - INFO -   (788/956) Fetched for شکبیر
+2025-07-12 01:13:04,160 - __main__ - ERROR -   - ❌ An unexpected error occurred for کایگچح: single positional indexer is out-of-bounds
+2025-07-12 01:13:08,240 - __main__ - WARNING -    - Discarding ولملت: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:13:12,273 - __main__ - INFO -   (791/956) Fetched for چخزر
+2025-07-12 01:13:15,844 - __main__ - INFO -   (792/956) Fetched for حپرتو
+2025-07-12 01:13:18,397 - __main__ - WARNING -    - Discarding ثشرقح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:13:21,088 - __main__ - WARNING -    - Discarding گوهر: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:13:24,932 - __main__ - INFO -   (795/956) Fetched for ثقزوی
+2025-07-12 01:13:27,506 - __main__ - WARNING -    - Discarding آکام: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:13:30,603 - __main__ - WARNING -    - Discarding وثخوز: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:13:33,509 - __main__ - WARNING -    - Discarding شلعابح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:13:36,227 - __main__ - WARNING -    - Discarding وبهمنح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:13:40,856 - __main__ - INFO -   (800/956) Fetched for غمارگ
+2025-07-12 01:13:43,526 - __main__ - WARNING -    - Discarding لسرماح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:13:49,126 - __main__ - INFO -   (802/956) Fetched for ثتوسا
+2025-07-12 01:13:51,653 - __main__ - WARNING -    - Discarding تایراح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:13:56,683 - __main__ - INFO -   (804/956) Fetched for غدام
+2025-07-12 01:13:59,233 - __main__ - WARNING -    - Discarding فلزفارابی: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:14:02,862 - __main__ - INFO -   (806/956) Fetched for فافق
+2025-07-12 01:14:05,782 - __main__ - WARNING -    - Discarding غمارگح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:14:10,125 - __main__ - INFO -   (808/956) Fetched for شفارس
+2025-07-12 01:14:11,174 - __main__ - ERROR -   - ❌ An unexpected error occurred for سفاسیتح: Cannot get realtime data from inactive ticker سفاسیتح
+2025-07-12 01:14:14,113 - __main__ - WARNING -    - Discarding شفنح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:14:17,127 - __main__ - INFO -   (811/956) Fetched for وسکرشا
+2025-07-12 01:14:22,007 - __main__ - WARNING -    - Discarding ثاژن: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:14:25,997 - __main__ - WARNING -    - Discarding کفراح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:14:28,706 - __main__ - WARNING -    - Discarding کهربا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:14:31,390 - __main__ - WARNING -    - Discarding ثنا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:14:34,744 - __main__ - WARNING -    - Discarding تراک: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:14:38,141 - __main__ - INFO -   (817/956) Fetched for سمتاز
+2025-07-12 01:14:41,007 - __main__ - WARNING -    - Discarding تکمباح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:14:43,634 - __main__ - WARNING -    - Discarding کارا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:14:46,030 - __main__ - WARNING -    - Discarding رکیشح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:14:49,486 - __main__ - INFO -   (821/956) Fetched for تجلی
+2025-07-12 01:14:51,979 - __main__ - WARNING -    - Discarding خکارح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:14:54,532 - __main__ - WARNING -    - Discarding پرداختح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:14:58,338 - __main__ - WARNING -    - Discarding وسپهح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:15:02,607 - __main__ - INFO -   (825/956) Fetched for وتوسکا
+2025-07-12 01:15:07,400 - __main__ - INFO -   (826/956) Fetched for قنیشا
+2025-07-12 01:15:11,652 - __main__ - INFO -   (827/956) Fetched for شپترو
+2025-07-12 01:15:14,362 - __main__ - WARNING -    - Discarding کنورح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:15:16,971 - __main__ - WARNING -    - Discarding وکارح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:15:19,758 - __main__ - WARNING -    - Discarding ارزش: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:15:23,079 - __main__ - INFO -   (831/956) Fetched for وسهمدا
+2025-07-12 01:15:26,389 - __main__ - ERROR -   - ❌ An unexpected error occurred for سباقر: unsupported operand type(s) for *: 'NoneType' and 'float'
+2025-07-12 01:15:29,972 - __main__ - WARNING -    - Discarding سنیرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:15:34,048 - __main__ - WARNING -    - Discarding افرا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:15:38,223 - __main__ - INFO -   (835/956) Fetched for چکاوه
+2025-07-12 01:15:41,700 - __main__ - WARNING -    - Discarding نیرو: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:15:45,109 - __main__ - INFO -   (837/956) Fetched for وسصفا
+2025-07-12 01:15:47,963 - __main__ - WARNING -    - Discarding آلتون: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:15:50,859 - __main__ - WARNING -    - Discarding ناب: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:15:55,835 - __main__ - INFO -   (840/956) Fetched for شصفها
+2025-07-12 01:15:58,497 - __main__ - WARNING -    - Discarding ورناح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:16:02,302 - __main__ - WARNING -    - Discarding موج: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:16:05,227 - __main__ - WARNING -    - Discarding الماس: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:16:09,403 - __main__ - INFO -   (844/956) Fetched for وسقم
+2025-07-12 01:16:12,101 - __main__ - WARNING -    - Discarding سکردح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:16:14,802 - __main__ - WARNING -    - Discarding دجابرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:16:18,306 - __main__ - INFO -   (847/956) Fetched for اخابر
+2025-07-12 01:16:20,853 - __main__ - WARNING -    - Discarding غگلح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:16:24,513 - __main__ - WARNING -    - Discarding تمحرکه: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:16:27,052 - __main__ - WARNING -    - Discarding سصوفیح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:16:29,601 - __main__ - WARNING -    - Discarding خساپاح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:16:33,132 - __main__ - WARNING -    - Discarding دفراح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:16:35,507 - __main__ - WARNING -    - Discarding ساربیلح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:16:35,873 - __main__ - ERROR -   - ❌ An unexpected error occurred for لکماح: single positional indexer is out-of-bounds
+2025-07-12 01:16:38,669 - __main__ - INFO -   (855/956) Fetched for ورازی
+2025-07-12 01:16:39,033 - __main__ - ERROR -   - ❌ An unexpected error occurred for قستونح: single positional indexer is out-of-bounds
+2025-07-12 01:16:41,362 - __main__ - WARNING -    - Discarding دروزح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:16:44,357 - __main__ - INFO -   (858/956) Fetched for ثشرق
+2025-07-12 01:16:47,806 - __main__ - WARNING -    - Discarding سخوزح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:16:50,360 - __main__ - WARNING -    - Discarding ثامانح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:16:53,663 - __main__ - WARNING -    - Discarding رتاپح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:16:57,200 - __main__ - INFO -   (862/956) Fetched for غشوکو
+2025-07-12 01:17:00,371 - __main__ - INFO -   (863/956) Fetched for دتهران
+2025-07-12 01:17:03,863 - __main__ - WARNING -    - Discarding فجهانح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:17:06,246 - __main__ - WARNING -    - Discarding سرودح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:17:08,778 - __main__ - WARNING -    - Discarding سشمالح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:17:09,130 - __main__ - ERROR -   - ❌ An unexpected error occurred for قمروح: single positional indexer is out-of-bounds
+2025-07-12 01:17:11,770 - __main__ - WARNING -    - Discarding سحرخیز: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:17:14,242 - __main__ - WARNING -    - Discarding ونیکیح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:17:17,233 - __main__ - INFO -   (870/956) Fetched for وسفارس
+2025-07-12 01:17:19,596 - __main__ - WARNING -    - Discarding سبهانح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:17:23,973 - __main__ - INFO -   (872/956) Fetched for کاما
+2025-07-12 01:17:24,327 - __main__ - ERROR -   - ❌ An unexpected error occurred for شرنگیح: single positional indexer is out-of-bounds
+2025-07-12 01:17:27,968 - __main__ - INFO -   (874/956) Fetched for وسخراش
+2025-07-12 01:17:28,731 - __main__ - ERROR -   - ❌ An unexpected error occurred for فمتال: Cannot get realtime data from inactive ticker فمتال
+2025-07-12 01:17:31,525 - __main__ - WARNING -    - Discarding سخواف: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:17:34,747 - __main__ - INFO -   (877/956) Fetched for سفار
+2025-07-12 01:17:38,483 - __main__ - WARNING -    - Discarding لپیام: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:17:40,882 - __main__ - WARNING -    - Discarding پاساح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:17:43,699 - __main__ - WARNING -    - Discarding دلرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:17:47,094 - __main__ - WARNING -    - Discarding دامون: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:17:49,482 - __main__ - WARNING -    - Discarding رویین: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:17:51,973 - __main__ - WARNING -    - Discarding فخوزح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:17:55,111 - __main__ - INFO -   (884/956) Fetched for وسرضوی
+2025-07-12 01:17:57,540 - __main__ - WARNING -    - Discarding بفجرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:18:01,682 - __main__ - INFO -   (886/956) Fetched for فخاس
+2025-07-12 01:18:04,164 - __main__ - WARNING -    - Discarding سارابح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:18:05,222 - __main__ - ERROR -   - ❌ An unexpected error occurred for پارتاح: Cannot get realtime data from inactive ticker پارتاح
+2025-07-12 01:18:08,438 - __main__ - INFO -   (889/956) Fetched for ومهان
+2025-07-12 01:18:08,821 - __main__ - ERROR -   - ❌ An unexpected error occurred for فبیستون: single positional indexer is out-of-bounds
+2025-07-12 01:18:09,661 - __main__ - ERROR -   - ❌ An unexpected error occurred for غساساح: Cannot get realtime data from inactive ticker غساساح
+2025-07-12 01:18:13,434 - __main__ - INFO -   (892/956) Fetched for کساوه
+2025-07-12 01:18:15,932 - __main__ - WARNING -    - Discarding کرازیح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:18:16,322 - __main__ - ERROR -   - ❌ An unexpected error occurred for نتوسح: single positional indexer is out-of-bounds
+2025-07-12 01:18:20,644 - __main__ - INFO -   (895/956) Fetched for بسویچ
+2025-07-12 01:18:23,076 - __main__ - WARNING -    - Discarding خشرقح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:18:25,698 - __main__ - WARNING -    - Discarding ولساپاح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:18:26,064 - __main__ - ERROR -   - ❌ An unexpected error occurred for اجداد: single positional indexer is out-of-bounds
+2025-07-12 01:18:26,737 - __main__ - ERROR -   - ❌ An unexpected error occurred for سکارونح: single positional indexer is out-of-bounds
+2025-07-12 01:18:29,702 - __main__ - INFO -   (900/956) Fetched for خبنیان
+2025-07-12 01:18:32,261 - __main__ - WARNING -    - Discarding فلولهح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:18:36,820 - __main__ - INFO -   (902/956) Fetched for خریخت
+2025-07-12 01:18:39,093 - __main__ - WARNING -    - Discarding خورشید: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:18:41,552 - __main__ - WARNING -    - Discarding شکربنح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:18:41,976 - __main__ - ERROR -   - ❌ An unexpected error occurred for حفجر: single positional indexer is out-of-bounds
+2025-07-12 01:18:46,656 - __main__ - WARNING -    - Discarding کطبسح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:18:47,458 - __main__ - ERROR -   - ❌ An unexpected error occurred for اکالا: Cannot get realtime data from inactive ticker اکالا
+2025-07-12 01:18:50,018 - __main__ - WARNING -    - Discarding فجامح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:18:52,480 - __main__ - WARNING -    - Discarding وپتروح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:18:56,059 - __main__ - INFO -   (910/956) Fetched for حشکوه
+2025-07-12 01:18:58,694 - __main__ - WARNING -    - Discarding واعتبارح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:19:02,576 - __main__ - WARNING -    - Discarding بسویچح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:19:07,351 - __main__ - INFO -   (913/956) Fetched for فافزا
+2025-07-12 01:19:10,272 - __main__ - WARNING -    - Discarding دفاراح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:19:12,780 - __main__ - WARNING -    - Discarding ونفتح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:19:15,358 - __main__ - WARNING -    - Discarding وسکابح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:19:18,442 - __main__ - INFO -   (917/956) Fetched for شساخت
+2025-07-12 01:19:21,134 - __main__ - WARNING -    - Discarding کاردان: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:19:23,969 - __main__ - WARNING -    - Discarding حکشتیح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:19:26,463 - __main__ - WARNING -    - Discarding قشیرح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:19:28,836 - __main__ - WARNING -    - Discarding شتاب: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:19:31,152 - __main__ - WARNING -    - Discarding ونوینح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:19:32,094 - __main__ - ERROR -   - ❌ An unexpected error occurred for غبهپاک: Cannot get realtime data from inactive ticker غبهپاک
+2025-07-12 01:19:34,907 - __main__ - INFO -   (924/956) Fetched for وساربیل
+2025-07-12 01:19:37,532 - __main__ - WARNING -    - Discarding کدماح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:19:40,914 - __main__ - INFO -   (926/956) Fetched for خپارس
+2025-07-12 01:19:44,275 - __main__ - WARNING -    - Discarding نشان: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:19:47,354 - __main__ - WARNING -    - Discarding سدبیر: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:19:49,829 - __main__ - WARNING -    - Discarding غگرجیح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:19:52,887 - __main__ - INFO -   (930/956) Fetched for وسکرمان
+2025-07-12 01:19:55,357 - __main__ - WARNING -    - Discarding تملتح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:19:58,754 - __main__ - INFO -   (932/956) Fetched for گنگین
+2025-07-12 01:20:01,094 - __main__ - WARNING -    - Discarding سپح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:20:03,858 - __main__ - WARNING -    - Discarding زمگساح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:20:06,421 - __main__ - WARNING -    - Discarding سغربح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:20:08,779 - __main__ - WARNING -    - Discarding گنج: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:20:09,205 - __main__ - ERROR -   - ❌ An unexpected error occurred for لخزرح: single positional indexer is out-of-bounds
+2025-07-12 01:20:13,526 - __main__ - INFO -   (938/956) Fetched for شتهران
+2025-07-12 01:20:17,114 - __main__ - WARNING -    - Discarding دارا: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:20:19,596 - __main__ - WARNING -    - Discarding سمازنح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:20:21,038 - __main__ - ERROR -   - ❌ An unexpected error occurred for وشستان: single positional indexer is out-of-bounds
+2025-07-12 01:20:30,632 - __main__ - WARNING -    - Discarding سفارود: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:20:36,053 - __main__ - INFO -   (943/956) Fetched for فتوسا
+2025-07-12 01:20:39,279 - __main__ - INFO -   (944/956) Fetched for وگردش
+2025-07-12 01:20:40,129 - __main__ - ERROR -   - ❌ An unexpected error occurred for پکیانح: Cannot get realtime data from inactive ticker پکیانح
+2025-07-12 01:20:40,935 - __main__ - ERROR -   - ❌ An unexpected error occurred for لپویا: Cannot get realtime data from inactive ticker لپویا
+2025-07-12 01:20:46,254 - __main__ - INFO -   (947/956) Fetched for رمپنا
+2025-07-12 01:20:48,684 - __main__ - WARNING -    - Discarding فنوردح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:20:51,274 - __main__ - WARNING -    - Discarding لازماح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:20:54,130 - __main__ - INFO -   (950/956) Fetched for قاروم
+2025-07-12 01:20:56,868 - __main__ - WARNING -    - Discarding اهرم: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:20:59,603 - __main__ - WARNING -    - Discarding چنوپاح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:21:02,839 - __main__ - INFO -   (953/956) Fetched for مرقام
+2025-07-12 01:21:06,079 - __main__ - INFO -   (954/956) Fetched for کاصفا
+2025-07-12 01:21:07,940 - __main__ - ERROR -   - ❌ An unexpected error occurred for پکیان: Cannot get realtime data from inactive ticker پکیان
+2025-07-12 01:21:11,430 - __main__ - WARNING -    - Discarding وپاسارح: Does not have at least one valid key factor (P/E or P/S).
+2025-07-12 01:21:11,448 - __main__ - INFO - --- Stage 3: Combining and Processing Data ---
+2025-07-12 01:21:11,450 - __main__ - INFO - Successfully created combined DataFrame with 674 total records.
+2025-07-12 01:21:11,451 - __main__ - INFO - --- Stage 4: Imputing Missing Data on Combined DataFrame ---
+2025-07-12 01:21:11,494 - __main__ - INFO -    - Imputed 16 missing 'P/E' values using industry group averages.
+2025-07-12 01:21:11,496 - __main__ - INFO -    - Imputed 137 missing 'P/S' values using industry group averages.
+2025-07-12 01:21:11,516 - __main__ - INFO -    - Filled 7 remaining 'P/S' NaNs with overall median (1.39).
+2025-07-12 01:21:11,517 - __main__ - INFO - --- Stage 5: Handling Outliers on Combined DataFrame ---
+2025-07-12 01:21:11,534 - __main__ - INFO -    - Capped outliers in 'P/E' at the 1st and 99th percentiles.
+2025-07-12 01:21:11,535 - __main__ - INFO -    - Capped outliers in 'P/S' at the 1st and 99th percentiles.
+2025-07-12 01:21:11,535 - __main__ - INFO - --- Stage 6: Saving Full, Analysis-Ready Data ---
+2025-07-12 01:21:11,662 - __main__ - INFO - 💾 Successfully saved final, cleaned dataset to C:\Portfolio-Optimizer\data\full_fundamental_data.feather
+2025-07-12 01:21:11,663 - __main__ - INFO - --- 📊 FINAL DATA QUALITY REPORT 📊 ---
+2025-07-12 01:21:11,663 - __main__ - INFO - - Symbols loaded from full universe file: 1392
+2025-07-12 01:21:11,664 - __main__ - INFO - - Symbols loaded from initial cache: 437
+2025-07-12 01:21:11,664 - __main__ - INFO - - New symbols processed: 956
+2025-07-12 01:21:11,664 - __main__ - INFO - - New symbols discarded (poor quality): 573
+2025-07-12 01:21:11,664 - __main__ - INFO - - Total symbols in final dataset: 674
+2025-07-12 01:21:11,672 - __main__ - INFO - - Missing values summary (after imputation):
+symbol        0
+group_name    0
+P/E           0
+P/S           0
+EPS           0
+dtype: int64
+2025-07-12 01:21:11,673 - __main__ - INFO - ==================================================
+2025-07-12 01:21:11,673 - __main__ - INFO - ✅ Full market fundamental data pipeline finished successfully.

@@ -603,3 +603,170 @@ symbol
 2025-07-11 23:21:29,649 - __main__ - INFO - Benchmark Total Return: 101.18%
 2025-07-11 23:21:29,649 - __main__ - INFO - Benchmark Annualized Volatility: 18.35%
 2025-07-11 23:21:29,649 - __main__ - INFO - ========================================
+2025-07-12 02:10:14,307 - __main__ - INFO - ======================================================================
+2025-07-12 02:10:14,307 - __main__ - INFO -       Initializing Multi-Factor Optimizer
+2025-07-12 02:10:14,308 - __main__ - INFO - ======================================================================
+2025-07-12 02:10:14,308 - __main__ - INFO - 🚀 Multi-Factor Optimizer Initialized
+2025-07-12 02:10:14,308 - __main__ - INFO - --- Loading All Required Data for Backtest ---
+2025-07-12 02:10:21,369 - __main__ - INFO - ✅ Loaded analysis data for 663 symbols.
+2025-07-12 02:10:21,371 - __main__ - INFO - ✅ Loaded price data for 664 symbols.
+2025-07-12 02:10:21,394 - __main__ - INFO - --- Screening Stocks with Multi-Factor Model ---
+2025-07-12 02:10:21,409 - __main__ - INFO - Top 15 Candidates based on Composite Score:
+2025-07-12 02:10:21,422 - __main__ - INFO - 
+                P/E       P/S  Momentum_12M  Volatility  Composite_Score
+symbol                                                                  
+تپسی      19.183673  6.825205      1.587136    0.127729         0.959050
+عالیس     21.566964  3.698533      0.440961    0.102260         0.889216
+حپرتو     46.258824  1.387166      3.257028    0.098931         0.880543
+سآبیک      7.463106  3.254560      1.860764    0.121292         0.862217
+فزر        7.942974  6.825205      0.717534    0.153589         0.862142
+سغدیر      8.251913  2.771024      1.025316    0.123207         0.848115
+اردستان    7.193576  3.592953      1.020749    0.106559         0.836501
+بگیلان    17.447307  4.705117      0.206868    0.156745         0.829638
+تاصیکو     8.846831  6.443168      0.381418    0.188829         0.828356
+سصفها     20.766871  5.981755      0.590185    0.384860         0.824284
+ثتوسا    158.563536  1.387166      1.013212    0.326104         0.816591
+سیتا       7.536356  2.771024      0.982923    0.151902         0.812293
+ساوه       7.260156  3.363186      0.920878    0.188065         0.807541
+آردینه     7.953709  3.053687      0.456619    0.088605         0.806259
+بمپنا      8.744921  4.406694      0.544595    0.296344         0.804148
+2025-07-12 02:10:21,424 - __main__ - INFO - 
+--- Starting 3-Year Backtest for Top 15 Candidates ---
+2025-07-12 02:10:22,895 - __main__ - INFO - --- Analyzing and Plotting Backtest Results ---
+2025-07-12 02:10:24,098 - __main__ - INFO - ✅ Backtest chart saved to 'C:\Portfolio-Optimizer\results\multifactor_backtest_result.png'
+2025-07-12 02:10:24,106 - __main__ - INFO - 
+--- BACKTEST FINAL STATS ---
+2025-07-12 02:10:24,106 - __main__ - INFO - Strategy Total Return: 302.68%
+2025-07-12 02:10:24,107 - __main__ - INFO - Strategy Annualized Volatility: 13.97%
+2025-07-12 02:10:24,107 - __main__ - INFO - --------------------
+2025-07-12 02:10:24,107 - __main__ - INFO - Benchmark Total Return: 77.30%
+2025-07-12 02:10:24,107 - __main__ - INFO - Benchmark Annualized Volatility: 18.32%
+2025-07-12 02:10:24,107 - __main__ - INFO - ========================================
+2025-07-12 13:22:15,128 - __main__ - INFO - ======================================================================
+2025-07-12 13:22:15,128 - __main__ - INFO -       Initializing Multi-Factor Optimizer
+2025-07-12 13:22:15,128 - __main__ - INFO - ======================================================================
+2025-07-12 13:22:15,129 - __main__ - INFO - 🚀 Multi-Factor Optimizer Initialized
+2025-07-12 13:22:15,129 - __main__ - INFO - --- Loading All Required Data for Backtest ---
+2025-07-12 13:22:28,373 - __main__ - INFO - ✅ Loaded analysis data for 663 symbols.
+2025-07-12 13:22:28,375 - __main__ - INFO - ✅ Loaded price data for 664 symbols.
+2025-07-12 13:22:28,396 - __main__ - INFO - --- Screening Stocks with Multi-Factor Model ---
+2025-07-12 13:22:28,396 - __main__ - INFO - Running experiment with factor weights: {'Value': 0.7, 'Momentum': 0.2, 'Low_Volatility': 0.1}
+2025-07-12 13:22:28,410 - __main__ - INFO - Top 15 Candidates based on Composite Score:
+2025-07-12 13:22:28,417 - __main__ - INFO - 
+              P/E       P/S  Momentum_12M  Volatility  Composite_Score
+symbol                                                                
+تپسی    19.183673  6.825205      1.587136    0.127729         0.966591
+عالیس   21.566964  3.698533      0.440961    0.102260         0.910332
+سصفها   20.766871  5.981755      0.590185    0.384860         0.889291
+دامین   66.086957  6.030034      0.380520    0.437369         0.873605
+بگیلان  17.447307  4.705117      0.206868    0.156745         0.873379
+غنیلی   78.843137  6.825205     -0.012422    0.183169         0.861388
+فزر      7.942974  6.825205      0.717534    0.153589         0.861388
+بکام    30.320755  5.653863      0.309334    0.432624         0.859729
+خعمرا   22.761062  6.716953      0.017599    0.204302         0.857164
+سغرب    11.495063  3.180890      2.007769    0.469476         0.853544
+تاصیکو   8.846831  6.443168      0.381418    0.188829         0.852640
+سبجنو   12.207602  2.541630      1.619264    0.438760         0.847587
+حپرتو   46.258824  1.387166      3.257028    0.098931         0.843891
+دفرا    10.415168  5.045490      0.940449    0.487875         0.842986
+فبستم   62.119816  6.825205      0.313917    2.044702         0.838160
+2025-07-12 13:22:28,417 - __main__ - INFO - 
+--- Starting 3-Year Backtest for Top 15 Candidates ---
+2025-07-12 13:22:29,765 - __main__ - INFO - --- Analyzing and Plotting Backtest Results ---
+2025-07-12 13:22:31,049 - __main__ - INFO - ✅ Backtest chart saved to 'C:\Portfolio-Optimizer\results\multifactor_backtest_result.png'
+2025-07-12 13:22:31,090 - __main__ - INFO - 
+--- BACKTEST FINAL STATS ---
+2025-07-12 13:22:31,093 - __main__ - INFO - Strategy Total Return: 122.13%
+2025-07-12 13:22:31,094 - __main__ - INFO - Strategy Annualized Volatility: 13.60%
+2025-07-12 13:22:31,094 - __main__ - INFO - --------------------
+2025-07-12 13:22:31,095 - __main__ - INFO - Benchmark Total Return: 77.30%
+2025-07-12 13:22:31,096 - __main__ - INFO - Benchmark Annualized Volatility: 18.32%
+2025-07-12 13:22:31,096 - __main__ - INFO - ========================================
+2025-07-12 13:41:40,624 - __main__ - INFO - ======================================================================
+2025-07-12 13:41:40,625 - __main__ - INFO -       Initializing Multi-Factor Optimizer
+2025-07-12 13:41:40,626 - __main__ - INFO - ======================================================================
+2025-07-12 13:41:40,626 - __main__ - INFO - 🚀 Multi-Factor Optimizer Initialized
+2025-07-12 13:41:40,626 - __main__ - INFO - --- Loading All Required Data for Backtest ---
+2025-07-12 13:41:47,835 - __main__ - INFO - ✅ Loaded analysis data for 663 symbols.
+2025-07-12 13:41:47,835 - __main__ - INFO - ✅ Loaded price data for 664 symbols.
+2025-07-12 13:41:47,856 - __main__ - INFO - --- Screening Stocks with Multi-Factor Model ---
+2025-07-12 13:41:47,857 - __main__ - INFO - Running experiment with factor weights: {'Value': 0.3, 'Momentum': 0.5, 'Low_Volatility': 0.2}
+2025-07-12 13:41:47,869 - __main__ - INFO - Top 15 Candidates based on Composite Score:
+2025-07-12 13:41:47,874 - __main__ - INFO - 
+                P/E       P/S  Momentum_12M  Volatility  Composite_Score
+symbol                                                                  
+تپسی      19.183673  6.825205      1.587136    0.127729         0.960106
+حپرتو     46.258824  1.387166      3.257028    0.098931         0.923379
+سآبیک      7.463106  3.254560      1.860764    0.121292         0.906109
+سغدیر      8.251913  2.771024      1.025316    0.123207         0.880995
+اردستان    7.193576  3.592953      1.020749    0.106559         0.875716
+فزر        7.942974  6.825205      0.717534    0.153589         0.863952
+سیتا       7.536356  2.771024      0.982923    0.151902         0.853469
+عالیس     21.566964  3.698533      0.440961    0.102260         0.850151
+آپ       257.450980  1.197598      2.781295    0.248014         0.843288
+ساوه       7.260156  3.363186      0.920878    0.188065         0.843137
+دقاضی      7.576112  2.657385      1.148895    0.239330         0.842157
+ثتوسا    158.563536  1.387166      1.013212    0.326104         0.835294
+وفردا     49.725000  1.387166      1.461634    0.358617         0.831146
+غدانه     19.506173  1.273534      1.732131    0.139488         0.825943
+ثامان     87.071770  1.387166      1.748177    0.415586         0.818703
+2025-07-12 13:41:47,875 - __main__ - INFO - 
+--- Starting 3-Year Backtest for Top 15 Candidates ---
+2025-07-12 13:41:48,423 - __main__ - INFO - --- Analyzing and Plotting Backtest Results ---
+2025-07-12 13:41:49,121 - __main__ - INFO - ✅ Backtest chart saved to 'C:\Portfolio-Optimizer\results\multifactor_backtest_result.png'
+2025-07-12 13:41:49,128 - __main__ - INFO - 
+--- BACKTEST FINAL STATS ---
+2025-07-12 13:41:49,128 - __main__ - INFO - Strategy Total Return: 436.60%
+2025-07-12 13:41:49,129 - __main__ - INFO - Strategy Annualized Volatility: 16.31%
+2025-07-12 13:41:49,129 - __main__ - INFO - --------------------
+2025-07-12 13:41:49,129 - __main__ - INFO - Benchmark Total Return: 77.30%
+2025-07-12 13:41:49,129 - __main__ - INFO - Benchmark Annualized Volatility: 18.32%
+2025-07-12 13:41:49,130 - __main__ - INFO - ========================================
+2025-07-12 13:48:15,606 - __main__ - INFO - ======================================================================
+2025-07-12 13:48:15,607 - __main__ - INFO -       Initializing Multi-Factor Optimizer
+2025-07-12 13:48:15,607 - __main__ - INFO - ======================================================================
+2025-07-12 13:48:15,607 - __main__ - INFO - 🚀 Multi-Factor Optimizer Initialized
+2025-07-12 13:48:15,607 - __main__ - INFO - --- Loading All Required Data for Backtest ---
+2025-07-12 13:48:21,952 - __main__ - INFO - ✅ Loaded analysis data for 663 symbols.
+2025-07-12 13:48:21,952 - __main__ - INFO - ✅ Loaded price data for 664 symbols.
+2025-07-12 13:48:21,975 - __main__ - INFO - --- Screening Stocks with Multi-Factor Model ---
+2025-07-12 13:49:08,913 - __main__ - INFO - ======================================================================
+2025-07-12 13:49:08,913 - __main__ - INFO -       Initializing Multi-Factor Optimizer
+2025-07-12 13:49:08,914 - __main__ - INFO - ======================================================================
+2025-07-12 13:49:08,914 - __main__ - INFO - 🚀 Multi-Factor Optimizer Initialized
+2025-07-12 13:49:08,914 - __main__ - INFO - --- Loading All Required Data for Backtest ---
+2025-07-12 13:49:14,816 - __main__ - INFO - ✅ Loaded analysis data for 663 symbols.
+2025-07-12 13:49:14,816 - __main__ - INFO - ✅ Loaded price data for 664 symbols.
+2025-07-12 13:49:14,839 - __main__ - INFO - --- Screening Stocks with Multi-Factor Model ---
+2025-07-12 13:49:14,839 - __main__ - INFO - Running experiment with factor weights from config: {'Value': 0.33, 'Momentum': 0.33, 'Low_Volatility': 0.34}
+2025-07-12 13:49:14,858 - __main__ - INFO - Top 15 Candidates based on Composite Score:
+2025-07-12 13:49:14,864 - __main__ - INFO - 
+               P/E       P/S  Momentum_12M  Volatility  Composite_Score
+symbol                                                                 
+تپسی     19.183673  6.825205      1.587136    0.127729         0.947911
+حپرتو    46.258824  1.387166      3.257028    0.098931         0.908296
+سآبیک     7.463106  3.254560      1.860764    0.121292         0.888333
+عالیس    21.566964  3.698533      0.440961    0.102260         0.881139
+سغدیر     8.251913  2.771024      1.025316    0.123207         0.870573
+اردستان   7.193576  3.592953      1.020749    0.106559         0.869412
+فزر       7.942974  6.825205      0.717534    0.153589         0.862202
+سیتا      7.536356  2.771024      0.982923    0.151902         0.837579
+آردینه    7.953709  3.053687      0.456619    0.088605         0.831003
+ساوه      7.260156  3.363186      0.920878    0.188065         0.823439
+غمایه    13.216783  1.632415      0.310236    0.103507         0.814427
+تاصیکو    8.846831  6.443168      0.381418    0.188829         0.811946
+آلومینا   6.878527  1.579463      0.960530    0.045033         0.811644
+بگیلان   17.447307  4.705117      0.206868    0.156745         0.805649
+دقاضی     7.576112  2.657385      1.148895    0.239330         0.804020
+2025-07-12 13:49:14,864 - __main__ - INFO - 
+--- Starting 3-Year Backtest for Top 15 Candidates ---
+2025-07-12 13:49:15,295 - __main__ - INFO - --- Analyzing and Plotting Backtest Results ---
+2025-07-12 13:49:15,904 - __main__ - INFO - ✅ Backtest chart saved to 'C:\Portfolio-Optimizer\results\multifactor_backtest_result.png'
+2025-07-12 13:49:15,911 - __main__ - INFO - 
+--- BACKTEST FINAL STATS ---
+2025-07-12 13:49:15,911 - __main__ - INFO - Strategy Total Return: 189.31%
+2025-07-12 13:49:15,912 - __main__ - INFO - Strategy Annualized Volatility: 11.64%
+2025-07-12 13:49:15,912 - __main__ - INFO - --------------------
+2025-07-12 13:49:15,912 - __main__ - INFO - Benchmark Total Return: 77.30%
+2025-07-12 13:49:15,912 - __main__ - INFO - Benchmark Annualized Volatility: 18.32%
+2025-07-12 13:49:15,912 - __main__ - INFO - ========================================

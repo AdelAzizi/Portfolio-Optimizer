@@ -13,3 +13,23 @@ MIN_LIQUIDITY_THRESHOLD = 10000000 # Minimum average daily volume
 PREPROCESSED_DATA_FILE = "analysis_ready_data.feather"
 MASTER_PRICE_DATA_FILE = "master_price_data.feather"
 CACHE_DIR = "cache"
+
+# --- Multi-Factor Model Weights ---
+# The sum of these weights should ideally be 1.0
+# FACTOR_WEIGHTS = {
+#     'Value': 0.7,         # STRATEGY 1: "Value is King"
+#     'Momentum': 0.2,
+#     'Low_Volatility': 0.1
+# }
+# آزمایش ۳: رویکرد متعادل
+FACTOR_WEIGHTS = {
+    'Value': 0.33,
+    'Momentum': 0.33,
+    'Low_Volatility': 0.34
+}
+
+
+
+# You can add other configurations for different experiments here
+# FACTOR_WEIGHTS_MOMENTUM_FOCUS = { ... }
+# FACTOR_WEIGHTS_BALANCED = { ... }
