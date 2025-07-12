@@ -14,6 +14,7 @@ import numpy as np
 import logging
 from pathlib import Path
 
+
 # --- Define Project Root Path ---
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
@@ -37,7 +38,7 @@ class DataPreprocessor:
     def __init__(self, data_dir: str = 'data', cache_dir: str = 'cache'):
         self.data_dir = PROJECT_ROOT / data_dir
         self.cache_dir = PROJECT_ROOT / cache_dir
-        self.price_data_dir = self.data_dir / 'tickers_data'
+        self.price_data_dir = self.data_dir / 'full_market_data_csvs'
         
         self.fundamental_data_file = self.data_dir / 'fundamental_data.feather'
         self.output_file = self.cache_dir / 'analysis_ready_data.feather'

@@ -27,3 +27,61 @@ symbol
 سبزوا           سيمان، آهك و گچ  20.601896  2.061080   211.0  0.259361    0.449287    -0.082505     -0.038572
 اپال      استخراج كانه هاي فلزي   5.868436  6.443168  1733.0  0.013224    0.110067    -0.267251     -0.178840
 وبملت   بانكها و موسسات اعتباري   2.215873  1.387166  1669.0  0.369605    0.347834     0.202355      0.804016
+2025-07-12 17:18:24,989 - __main__ - INFO - Fundamental data source: C:\Portfolio-Optimizer\data\full_fundamental_data.feather
+2025-07-12 17:18:24,989 - __main__ - INFO - Price data source: C:\Portfolio-Optimizer\data\full_market_data_csvs
+2025-07-12 17:18:24,989 - __main__ - INFO - Output file: C:\Portfolio-Optimizer\cache\full_analysis_ready_data.feather
+2025-07-12 17:18:24,989 - __main__ - INFO - 🚀 Starting Full Market Master Analysis Data Builder...
+2025-07-12 17:18:24,989 - __main__ - INFO - --- Stage 1: Loading Full Market Fundamental Data ---
+2025-07-12 17:18:25,062 - __main__ - INFO - ✅ Loaded fundamental data for 674 symbols.
+2025-07-12 17:18:25,062 - __main__ - INFO - --- Stage 2: Loading and Processing Full Market Price Data ---
+2025-07-12 17:18:28,689 - __main__ - WARNING - ⚠️ Price CSV for symbol 'وصندوق' not found. Skipping.
+2025-07-12 17:18:37,483 - __main__ - INFO - 🛠️ Creating and cleaning master price DataFrame for 673 symbols...
+2025-07-12 17:18:39,967 - __main__ - INFO - ✅ Master price DataFrame created and cleaned.
+2025-07-12 17:18:39,992 - __main__ - INFO - --- Stage 3: Calculating Quantitative Metrics for Full Market ---
+2025-07-12 17:18:42,127 - __main__ - INFO - ✅ Quantitative metrics calculated.
+2025-07-12 17:18:42,237 - __main__ - INFO - --- Stage 4: Merging Full Market Fundamental and Quantitative Data ---
+2025-07-12 17:18:42,335 - __main__ - INFO - ✅ Successfully merged dataframes.
+2025-07-12 17:18:42,370 - __main__ - INFO - --- Stage 5: Saving Final Full Market Analysis-Ready Data ---
+2025-07-12 17:18:42,464 - __main__ - INFO - ==================================================
+2025-07-12 17:18:42,477 - __main__ - INFO - 🎉 FULL MARKET MASTER PREPROCESSING COMPLETE 🎉
+2025-07-12 17:18:42,487 - __main__ - INFO - ==================================================
+2025-07-12 17:18:42,487 - __main__ - INFO - Final analysis-ready DataFrame shape: (663, 8)
+2025-07-12 17:18:42,487 - __main__ - INFO - 💾 Successfully saved final data to: C:\Portfolio-Optimizer\cache\full_analysis_ready_data.feather
+2025-07-12 17:18:42,487 - __main__ - INFO - Final DataFrame preview:
+2025-07-12 17:18:42,487 - __main__ - INFO - 
+                     group_name        P/E       P/S     EPS    Return  Volatility  Momentum_6M  Momentum_12M
+symbol                                                                                                       
+وسپهر            سرمايه گذاريها   3.463102  1.387166   935.0  0.018200    0.163624    -0.238870      0.220729
+شصدف            محصولات شيميايي   5.735294  0.773766  2176.0  0.130383    0.282488    -0.212753      0.106379
+سبزوا           سيمان، آهك و گچ  20.601896  2.061080   211.0  0.259361    0.449287    -0.099647     -0.023198
+اپال      استخراج كانه هاي فلزي   5.868436  6.443168  1733.0  0.013224    0.110067    -0.272395     -0.171041
+وبملت   بانكها و موسسات اعتباري   2.215873  1.387166  1669.0  0.369605    0.347834     0.178384      0.830481
+2025-07-12 17:45:58,174 - __main__ - INFO - Fundamental data source: C:\Portfolio-Optimizer\data\full_fundamental_data.feather
+2025-07-12 17:45:58,174 - __main__ - INFO - Price data source: C:\Portfolio-Optimizer\data\full_market_data_csvs
+2025-07-12 17:45:58,175 - __main__ - INFO - Output file: C:\Portfolio-Optimizer\cache\full_analysis_ready_data.feather
+2025-07-12 17:45:58,175 - __main__ - INFO - 🚀 Starting Full Market Master Analysis Data Builder...
+2025-07-12 17:45:58,175 - __main__ - INFO - --- Stage 1: Loading Full Market Fundamental Data ---
+2025-07-12 17:45:58,221 - __main__ - INFO - ✅ Loaded fundamental data for 674 symbols.
+2025-07-12 17:45:58,221 - __main__ - INFO - --- Stage 2: Loading and Processing Full Market Price Data ---
+2025-07-12 17:46:00,554 - __main__ - WARNING - ⚠️ Price CSV for symbol 'وصندوق' not found. Skipping.
+2025-07-12 17:46:04,088 - __main__ - INFO - 🛠️ Creating and cleaning master price DataFrame for 673 symbols...
+2025-07-12 17:46:05,298 - __main__ - INFO - ✅ Master price DataFrame created and cleaned.
+2025-07-12 17:46:05,313 - __main__ - INFO - --- Stage 3: Calculating Quantitative Metrics for Full Market ---
+2025-07-12 17:46:06,303 - __main__ - INFO - ✅ Quantitative metrics calculated.
+2025-07-12 17:46:06,313 - __main__ - INFO - --- Stage 4: Merging Full Market Fundamental and Quantitative Data ---
+2025-07-12 17:46:06,320 - __main__ - INFO - ✅ Successfully merged dataframes.
+2025-07-12 17:46:06,320 - __main__ - INFO - --- Stage 5: Saving Final Full Market Analysis-Ready Data ---
+2025-07-12 17:46:06,343 - __main__ - INFO - ==================================================
+2025-07-12 17:46:06,344 - __main__ - INFO - 🎉 FULL MARKET MASTER PREPROCESSING COMPLETE 🎉
+2025-07-12 17:46:06,344 - __main__ - INFO - ==================================================
+2025-07-12 17:46:06,345 - __main__ - INFO - Final analysis-ready DataFrame shape: (663, 9)
+2025-07-12 17:46:06,345 - __main__ - INFO - 💾 Successfully saved final data to: C:\Portfolio-Optimizer\cache\full_analysis_ready_data.feather
+2025-07-12 17:46:06,349 - __main__ - INFO - Final DataFrame preview:
+2025-07-12 17:46:06,357 - __main__ - INFO - 
+                     group_name        P/E       P/S     EPS    Return  Volatility  Momentum_3M  Momentum_6M  Momentum_12M
+symbol                                                                                                                    
+وسپهر            سرمايه گذاريها   3.463102  1.387166   935.0  0.018200    0.163624     0.033138    -0.238870      0.220729
+شصدف            محصولات شيميايي   5.735294  0.773766  2176.0  0.130383    0.282488    -0.208254    -0.212753      0.106379
+سبزوا           سيمان، آهك و گچ  20.601896  2.061080   211.0  0.259361    0.449287    -0.029754    -0.099647     -0.023198
+اپال      استخراج كانه هاي فلزي   5.868436  6.443168  1733.0  0.013224    0.110067    -0.049756    -0.272395     -0.171041
+وبملت   بانكها و موسسات اعتباري   2.215873  1.387166  1669.0  0.369605    0.347834     0.008079     0.178384      0.830481

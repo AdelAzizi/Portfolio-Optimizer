@@ -38,7 +38,7 @@ class DataDownloader:
     """
     Intelligently downloads and updates local stock data CSV files.
     """
-    def __init__(self, data_dir: str = 'data/tickers_data', cache_dir: str = 'cache'):
+    def __init__(self, data_dir: str = 'data/full_market_data_csvs', cache_dir: str = 'cache'):
         """
         Initialize the downloader.
 
@@ -293,6 +293,6 @@ class DataDownloader:
 
 if __name__ == "__main__":
     # The script assumes it's run from the project root or that the
-    # 'data/tickers_data' and 'cache' directories are relative to the project root.
-    downloader = DataDownloader(data_dir='data/tickers_data', cache_dir='cache')
+    # 'data/full_market_data_csvs' and 'cache' directories are relative to the project root.
+    downloader = DataDownloader(data_dir='data/full_market_data_csvs', cache_dir='cache')
     downloader.run_update()

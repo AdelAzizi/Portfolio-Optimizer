@@ -14,6 +14,7 @@ import numpy as np
 import logging
 from pathlib import Path
 
+
 # --- Define Project Root Path ---
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
@@ -104,12 +105,19 @@ class FullMarketDataPreprocessor:
         annualized_volatility = returns.std() * np.sqrt(252)
         
         # Momentum
-        momentum_6m = price_df.iloc[-1] / price_df.iloc[-126] - 1
-        momentum_12m = price_df.iloc[-1] / price_df.iloc[-252] - 1
+        # Calculate 12-month momentum
+        momentum_12m = price_df.pct_change(periods=252).iloc[-1]
+
+        # Calculate 6-month momentum
+        momentum_6m = price_df.pct_change(periods=126).iloc[-1]
+
+        # Calculate 3-month momentum
+        momentum_3m = price_df.pct_change(periods=63).iloc[-1]
         
         metrics_df = pd.DataFrame({
             'Return': annualized_return,
             'Volatility': annualized_volatility,
+            'Momentum_3M': momentum_3m,
             'Momentum_6M': momentum_6m,
             'Momentum_12M': momentum_12m
         })
