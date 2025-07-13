@@ -115,11 +115,17 @@ async def optimize_strategy(request: StrategyRequest):
             )
 
         logger.info(f"✅ Successfully generated optimization results for strategy: '{strategy_name}'")
-        return results
+        
+        # The structure from run_full_analysis is now nested.
+        # The API will return the entire comprehensive dictionary.
+        return {
+            "strategy_name": strategy_name,
+            "results": results
+        }
 
     except FileNotFoundError as e:
         logger.error(f"Data file not found: {e}")
         raise HTTPException(status_code=500, detail=f"A required data file was not found: {e}")
     except Exception as e:
         logger.error(f"An unexpected error occurred in the API: {e}", exc_info=True)
-        raise HTTPException(status_code=500, detail=f"An internal server error occurred: {e}")
+        raise HTTPException(status_code=500, detail=f"An internal server error occurred: {str(e)}")

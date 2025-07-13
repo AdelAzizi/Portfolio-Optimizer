@@ -2050,3 +2050,241 @@ Processing Period: 2025-04-01 to 2025-06-30
 2025-07-13 01:05:25,069 - src.optimizer - INFO - ✅ Generated backtest time-series data.
 2025-07-13 01:05:25,070 - src.optimizer - INFO - ✅ Full analysis complete. Returning comprehensive results.
 2025-07-13 01:05:25,070 - src.main_api - INFO - ✅ Successfully generated optimization results for strategy: 'aggressive'
+2025-07-13 13:24:52,920 - __main__ - INFO - ================================================================================
+2025-07-13 13:24:52,920 - __main__ - INFO - 📈 Orchestrating Full Analysis for All Pre-defined Strategies 📈
+2025-07-13 13:24:52,921 - __main__ - INFO - ================================================================================
+2025-07-13 13:24:52,921 - __main__ - INFO - 
+============================== Running Analysis for: AGGRESSIVE ==============================
+2025-07-13 13:24:52,921 - __main__ - INFO - 🚀 Initialized Optimizer with Momentum: 12M, Weights: {'Value': 0.05, 'Momentum': 0.9, 'Low_Volatility': 0.05}
+2025-07-13 13:24:52,921 - __main__ - INFO - --- Loading All Required Data for Analysis ---
+2025-07-13 13:25:07,231 - __main__ - INFO - ✅ Loaded data for 663 symbols.
+2025-07-13 13:25:07,252 - __main__ - INFO - --- Starting Rolling Backtest: 3 years, rebalancing every 90 days ---
+2025-07-13 13:25:07,263 - __main__ - INFO - 🔄 Processing rebalance for date: 2022-07-09
+2025-07-13 13:25:07,266 - __main__ - INFO - --- Screening with weights: {'Value': 0.05, 'Momentum': 0.9, 'Low_Volatility': 0.05} & period: 12M ---
+2025-07-13 13:25:07,829 - __main__ - INFO - 🔄 Processing rebalance for date: 2022-10-07
+2025-07-13 13:25:07,833 - __main__ - INFO - --- Screening with weights: {'Value': 0.05, 'Momentum': 0.9, 'Low_Volatility': 0.05} & period: 12M ---
+2025-07-13 13:25:07,872 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-01-05
+2025-07-13 13:25:07,872 - __main__ - INFO - --- Screening with weights: {'Value': 0.05, 'Momentum': 0.9, 'Low_Volatility': 0.05} & period: 12M ---
+2025-07-13 13:25:07,899 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-04-05
+2025-07-13 13:25:07,900 - __main__ - INFO - --- Screening with weights: {'Value': 0.05, 'Momentum': 0.9, 'Low_Volatility': 0.05} & period: 12M ---
+2025-07-13 13:25:07,928 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-07-04
+2025-07-13 13:25:07,928 - __main__ - INFO - --- Screening with weights: {'Value': 0.05, 'Momentum': 0.9, 'Low_Volatility': 0.05} & period: 12M ---
+2025-07-13 13:25:07,950 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-10-02
+2025-07-13 13:25:07,951 - __main__ - INFO - --- Screening with weights: {'Value': 0.05, 'Momentum': 0.9, 'Low_Volatility': 0.05} & period: 12M ---
+2025-07-13 13:25:07,980 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-12-31
+2025-07-13 13:25:07,981 - __main__ - INFO - --- Screening with weights: {'Value': 0.05, 'Momentum': 0.9, 'Low_Volatility': 0.05} & period: 12M ---
+2025-07-13 13:25:08,004 - __main__ - INFO - 🔄 Processing rebalance for date: 2024-03-30
+2025-07-13 13:25:08,005 - __main__ - INFO - --- Screening with weights: {'Value': 0.05, 'Momentum': 0.9, 'Low_Volatility': 0.05} & period: 12M ---
+2025-07-13 13:25:08,031 - __main__ - INFO - 🔄 Processing rebalance for date: 2024-06-28
+2025-07-13 13:25:08,031 - __main__ - INFO - --- Screening with weights: {'Value': 0.05, 'Momentum': 0.9, 'Low_Volatility': 0.05} & period: 12M ---
+2025-07-13 13:25:08,055 - __main__ - INFO - 🔄 Processing rebalance for date: 2024-09-26
+2025-07-13 13:25:08,055 - __main__ - INFO - --- Screening with weights: {'Value': 0.05, 'Momentum': 0.9, 'Low_Volatility': 0.05} & period: 12M ---
+2025-07-13 13:25:08,082 - __main__ - INFO - 🔄 Processing rebalance for date: 2024-12-25
+2025-07-13 13:25:08,082 - __main__ - INFO - --- Screening with weights: {'Value': 0.05, 'Momentum': 0.9, 'Low_Volatility': 0.05} & period: 12M ---
+2025-07-13 13:25:08,111 - __main__ - INFO - 🔄 Processing rebalance for date: 2025-03-25
+2025-07-13 13:25:08,112 - __main__ - INFO - --- Screening with weights: {'Value': 0.05, 'Momentum': 0.9, 'Low_Volatility': 0.05} & period: 12M ---
+2025-07-13 13:25:08,133 - __main__ - INFO - 🔄 Processing rebalance for date: 2025-06-23
+2025-07-13 13:25:08,134 - __main__ - INFO - --- Screening with weights: {'Value': 0.05, 'Momentum': 0.9, 'Low_Volatility': 0.05} & period: 12M ---
+2025-07-13 13:25:08,163 - __main__ - INFO - --- Running Comparative Backtest Data Generation ---
+2025-07-13 13:25:08,167 - __main__ - INFO - ✅ Generated backtest time-series data.
+2025-07-13 13:25:08,168 - __main__ - INFO - ✅ Rolling backtest complete.
+2025-07-13 13:25:08,170 - __main__ - INFO - ✅ Full analysis complete. Returning comprehensive results.
+2025-07-13 13:25:08,171 - __main__ - INFO - ✅ Successfully completed analysis for 'aggressive'.
+2025-07-13 13:25:08,171 - __main__ - INFO - 
+============================== Running Analysis for: BALANCED ==============================
+2025-07-13 13:25:08,171 - __main__ - INFO - 🚀 Initialized Optimizer with Momentum: 12M, Weights: {'Value': 0.3, 'Momentum': 0.5, 'Low_Volatility': 0.2}
+2025-07-13 13:25:08,175 - __main__ - INFO - --- Loading All Required Data for Analysis ---
+2025-07-13 13:25:15,201 - __main__ - INFO - ✅ Loaded data for 663 symbols.
+2025-07-13 13:25:15,226 - __main__ - INFO - --- Starting Rolling Backtest: 3 years, rebalancing every 90 days ---
+2025-07-13 13:25:15,227 - __main__ - INFO - 🔄 Processing rebalance for date: 2022-07-09
+2025-07-13 13:25:15,228 - __main__ - INFO - --- Screening with weights: {'Value': 0.3, 'Momentum': 0.5, 'Low_Volatility': 0.2} & period: 12M ---
+2025-07-13 13:25:15,256 - __main__ - INFO - 🔄 Processing rebalance for date: 2022-10-07
+2025-07-13 13:25:15,256 - __main__ - INFO - --- Screening with weights: {'Value': 0.3, 'Momentum': 0.5, 'Low_Volatility': 0.2} & period: 12M ---
+2025-07-13 13:25:15,285 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-01-05
+2025-07-13 13:25:15,286 - __main__ - INFO - --- Screening with weights: {'Value': 0.3, 'Momentum': 0.5, 'Low_Volatility': 0.2} & period: 12M ---
+2025-07-13 13:25:15,316 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-04-05
+2025-07-13 13:25:15,317 - __main__ - INFO - --- Screening with weights: {'Value': 0.3, 'Momentum': 0.5, 'Low_Volatility': 0.2} & period: 12M ---
+2025-07-13 13:25:15,349 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-07-04
+2025-07-13 13:25:15,350 - __main__ - INFO - --- Screening with weights: {'Value': 0.3, 'Momentum': 0.5, 'Low_Volatility': 0.2} & period: 12M ---
+2025-07-13 13:25:15,395 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-10-02
+2025-07-13 13:25:15,397 - __main__ - INFO - --- Screening with weights: {'Value': 0.3, 'Momentum': 0.5, 'Low_Volatility': 0.2} & period: 12M ---
+2025-07-13 13:25:15,430 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-12-31
+2025-07-13 13:25:15,431 - __main__ - INFO - --- Screening with weights: {'Value': 0.3, 'Momentum': 0.5, 'Low_Volatility': 0.2} & period: 12M ---
+2025-07-13 13:25:15,461 - __main__ - INFO - 🔄 Processing rebalance for date: 2024-03-30
+2025-07-13 13:25:15,462 - __main__ - INFO - --- Screening with weights: {'Value': 0.3, 'Momentum': 0.5, 'Low_Volatility': 0.2} & period: 12M ---
+2025-07-13 13:25:15,491 - __main__ - INFO - 🔄 Processing rebalance for date: 2024-06-28
+2025-07-13 13:25:15,491 - __main__ - INFO - --- Screening with weights: {'Value': 0.3, 'Momentum': 0.5, 'Low_Volatility': 0.2} & period: 12M ---
+2025-07-13 13:25:15,517 - __main__ - INFO - 🔄 Processing rebalance for date: 2024-09-26
+2025-07-13 13:25:15,518 - __main__ - INFO - --- Screening with weights: {'Value': 0.3, 'Momentum': 0.5, 'Low_Volatility': 0.2} & period: 12M ---
+2025-07-13 13:25:15,538 - __main__ - INFO - 🔄 Processing rebalance for date: 2024-12-25
+2025-07-13 13:25:15,538 - __main__ - INFO - --- Screening with weights: {'Value': 0.3, 'Momentum': 0.5, 'Low_Volatility': 0.2} & period: 12M ---
+2025-07-13 13:25:15,562 - __main__ - INFO - 🔄 Processing rebalance for date: 2025-03-25
+2025-07-13 13:25:15,565 - __main__ - INFO - --- Screening with weights: {'Value': 0.3, 'Momentum': 0.5, 'Low_Volatility': 0.2} & period: 12M ---
+2025-07-13 13:25:15,605 - __main__ - INFO - 🔄 Processing rebalance for date: 2025-06-23
+2025-07-13 13:25:15,606 - __main__ - INFO - --- Screening with weights: {'Value': 0.3, 'Momentum': 0.5, 'Low_Volatility': 0.2} & period: 12M ---
+2025-07-13 13:25:15,639 - __main__ - INFO - --- Running Comparative Backtest Data Generation ---
+2025-07-13 13:25:15,649 - __main__ - INFO - ✅ Generated backtest time-series data.
+2025-07-13 13:25:15,650 - __main__ - INFO - ✅ Rolling backtest complete.
+2025-07-13 13:25:15,652 - __main__ - INFO - ✅ Full analysis complete. Returning comprehensive results.
+2025-07-13 13:25:15,652 - __main__ - INFO - ✅ Successfully completed analysis for 'balanced'.
+2025-07-13 13:25:15,653 - __main__ - INFO - 
+============================== Running Analysis for: DEFENSIVE ==============================
+2025-07-13 13:25:15,653 - __main__ - INFO - 🚀 Initialized Optimizer with Momentum: 12M, Weights: {'Value': 0.33, 'Momentum': 0.33, 'Low_Volatility': 0.34}
+2025-07-13 13:25:15,656 - __main__ - INFO - --- Loading All Required Data for Analysis ---
+2025-07-13 13:25:22,572 - __main__ - INFO - ✅ Loaded data for 663 symbols.
+2025-07-13 13:25:22,594 - __main__ - INFO - --- Starting Rolling Backtest: 3 years, rebalancing every 90 days ---
+2025-07-13 13:25:22,596 - __main__ - INFO - 🔄 Processing rebalance for date: 2022-07-09
+2025-07-13 13:25:22,597 - __main__ - INFO - --- Screening with weights: {'Value': 0.33, 'Momentum': 0.33, 'Low_Volatility': 0.34} & period: 12M ---
+2025-07-13 13:25:22,632 - __main__ - INFO - 🔄 Processing rebalance for date: 2022-10-07
+2025-07-13 13:25:22,633 - __main__ - INFO - --- Screening with weights: {'Value': 0.33, 'Momentum': 0.33, 'Low_Volatility': 0.34} & period: 12M ---
+2025-07-13 13:25:22,662 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-01-05
+2025-07-13 13:25:22,664 - __main__ - INFO - --- Screening with weights: {'Value': 0.33, 'Momentum': 0.33, 'Low_Volatility': 0.34} & period: 12M ---
+2025-07-13 13:25:22,695 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-04-05
+2025-07-13 13:25:22,696 - __main__ - INFO - --- Screening with weights: {'Value': 0.33, 'Momentum': 0.33, 'Low_Volatility': 0.34} & period: 12M ---
+2025-07-13 13:25:22,728 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-07-04
+2025-07-13 13:25:22,729 - __main__ - INFO - --- Screening with weights: {'Value': 0.33, 'Momentum': 0.33, 'Low_Volatility': 0.34} & period: 12M ---
+2025-07-13 13:25:22,761 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-10-02
+2025-07-13 13:25:22,762 - __main__ - INFO - --- Screening with weights: {'Value': 0.33, 'Momentum': 0.33, 'Low_Volatility': 0.34} & period: 12M ---
+2025-07-13 13:25:22,792 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-12-31
+2025-07-13 13:25:22,792 - __main__ - INFO - --- Screening with weights: {'Value': 0.33, 'Momentum': 0.33, 'Low_Volatility': 0.34} & period: 12M ---
+2025-07-13 13:25:22,821 - __main__ - INFO - 🔄 Processing rebalance for date: 2024-03-30
+2025-07-13 13:25:22,824 - __main__ - INFO - --- Screening with weights: {'Value': 0.33, 'Momentum': 0.33, 'Low_Volatility': 0.34} & period: 12M ---
+2025-07-13 13:25:22,852 - __main__ - INFO - 🔄 Processing rebalance for date: 2024-06-28
+2025-07-13 13:25:22,853 - __main__ - INFO - --- Screening with weights: {'Value': 0.33, 'Momentum': 0.33, 'Low_Volatility': 0.34} & period: 12M ---
+2025-07-13 13:25:22,883 - __main__ - INFO - 🔄 Processing rebalance for date: 2024-09-26
+2025-07-13 13:25:22,884 - __main__ - INFO - --- Screening with weights: {'Value': 0.33, 'Momentum': 0.33, 'Low_Volatility': 0.34} & period: 12M ---
+2025-07-13 13:25:22,914 - __main__ - INFO - 🔄 Processing rebalance for date: 2024-12-25
+2025-07-13 13:25:22,914 - __main__ - INFO - --- Screening with weights: {'Value': 0.33, 'Momentum': 0.33, 'Low_Volatility': 0.34} & period: 12M ---
+2025-07-13 13:25:22,941 - __main__ - INFO - 🔄 Processing rebalance for date: 2025-03-25
+2025-07-13 13:25:22,941 - __main__ - INFO - --- Screening with weights: {'Value': 0.33, 'Momentum': 0.33, 'Low_Volatility': 0.34} & period: 12M ---
+2025-07-13 13:25:22,974 - __main__ - INFO - 🔄 Processing rebalance for date: 2025-06-23
+2025-07-13 13:25:22,975 - __main__ - INFO - --- Screening with weights: {'Value': 0.33, 'Momentum': 0.33, 'Low_Volatility': 0.34} & period: 12M ---
+2025-07-13 13:25:23,007 - __main__ - INFO - --- Running Comparative Backtest Data Generation ---
+2025-07-13 13:25:23,010 - __main__ - INFO - ✅ Generated backtest time-series data.
+2025-07-13 13:25:23,011 - __main__ - INFO - ✅ Rolling backtest complete.
+2025-07-13 13:25:23,014 - __main__ - INFO - ✅ Full analysis complete. Returning comprehensive results.
+2025-07-13 13:25:23,015 - __main__ - INFO - ✅ Successfully completed analysis for 'defensive'.
+2025-07-13 13:25:23,015 - __main__ - INFO - 
+💾 Saving consolidated results for all strategies to: C:\Portfolio-Optimizer\results\final_results.json
+2025-07-13 13:25:23,027 - __main__ - INFO - ✅ Successfully saved the final JSON output.
+2025-07-13 13:25:23,027 - __main__ - INFO - 
+🏁 Orchestration complete. 🏁
+2025-07-13 13:44:58,664 - __main__ - INFO - ================================================================================
+2025-07-13 13:44:58,664 - __main__ - INFO - 📈 Orchestrating Full Analysis for All Pre-defined Strategies 📈
+2025-07-13 13:44:58,664 - __main__ - INFO - ================================================================================
+2025-07-13 13:44:58,665 - __main__ - INFO - 
+============================== Running Analysis for: AGGRESSIVE ==============================
+2025-07-13 13:44:58,665 - __main__ - INFO - 🚀 Initialized Optimizer with Momentum: 12M, Weights: {'Value': 0.05, 'Momentum': 0.9, 'Low_Volatility': 0.05}
+2025-07-13 13:44:58,665 - __main__ - INFO - --- Loading All Required Data for Analysis ---
+2025-07-13 13:45:06,529 - __main__ - INFO - ✅ Loaded data for 663 symbols.
+2025-07-13 13:45:06,552 - __main__ - INFO - --- Starting Rolling Backtest: 3 years, rebalancing every 90 days ---
+2025-07-13 13:45:06,565 - __main__ - INFO - 🔄 Processing rebalance for date: 2022-07-09
+2025-07-13 13:45:06,567 - __main__ - INFO - --- Screening with weights: {'Value': 0.05, 'Momentum': 0.9, 'Low_Volatility': 0.05} & period: 12M ---
+2025-07-13 13:45:07,091 - __main__ - INFO - 🔄 Processing rebalance for date: 2022-10-07
+2025-07-13 13:45:07,092 - __main__ - INFO - --- Screening with weights: {'Value': 0.05, 'Momentum': 0.9, 'Low_Volatility': 0.05} & period: 12M ---
+2025-07-13 13:45:07,116 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-01-05
+2025-07-13 13:45:07,117 - __main__ - INFO - --- Screening with weights: {'Value': 0.05, 'Momentum': 0.9, 'Low_Volatility': 0.05} & period: 12M ---
+2025-07-13 13:45:07,146 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-04-05
+2025-07-13 13:45:07,148 - __main__ - INFO - --- Screening with weights: {'Value': 0.05, 'Momentum': 0.9, 'Low_Volatility': 0.05} & period: 12M ---
+2025-07-13 13:45:07,172 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-07-04
+2025-07-13 13:45:07,172 - __main__ - INFO - --- Screening with weights: {'Value': 0.05, 'Momentum': 0.9, 'Low_Volatility': 0.05} & period: 12M ---
+2025-07-13 13:45:07,194 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-10-02
+2025-07-13 13:45:07,195 - __main__ - INFO - --- Screening with weights: {'Value': 0.05, 'Momentum': 0.9, 'Low_Volatility': 0.05} & period: 12M ---
+2025-07-13 13:45:07,219 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-12-31
+2025-07-13 13:45:07,220 - __main__ - INFO - --- Screening with weights: {'Value': 0.05, 'Momentum': 0.9, 'Low_Volatility': 0.05} & period: 12M ---
+2025-07-13 13:45:07,239 - __main__ - INFO - 🔄 Processing rebalance for date: 2024-03-30
+2025-07-13 13:45:07,240 - __main__ - INFO - --- Screening with weights: {'Value': 0.05, 'Momentum': 0.9, 'Low_Volatility': 0.05} & period: 12M ---
+2025-07-13 13:45:07,260 - __main__ - INFO - 🔄 Processing rebalance for date: 2024-06-28
+2025-07-13 13:45:07,260 - __main__ - INFO - --- Screening with weights: {'Value': 0.05, 'Momentum': 0.9, 'Low_Volatility': 0.05} & period: 12M ---
+2025-07-13 13:45:07,282 - __main__ - INFO - 🔄 Processing rebalance for date: 2024-09-26
+2025-07-13 13:45:07,283 - __main__ - INFO - --- Screening with weights: {'Value': 0.05, 'Momentum': 0.9, 'Low_Volatility': 0.05} & period: 12M ---
+2025-07-13 13:45:07,305 - __main__ - INFO - 🔄 Processing rebalance for date: 2024-12-25
+2025-07-13 13:45:07,305 - __main__ - INFO - --- Screening with weights: {'Value': 0.05, 'Momentum': 0.9, 'Low_Volatility': 0.05} & period: 12M ---
+2025-07-13 13:45:07,326 - __main__ - INFO - 🔄 Processing rebalance for date: 2025-03-25
+2025-07-13 13:45:07,327 - __main__ - INFO - --- Screening with weights: {'Value': 0.05, 'Momentum': 0.9, 'Low_Volatility': 0.05} & period: 12M ---
+2025-07-13 13:45:07,346 - __main__ - INFO - 🔄 Processing rebalance for date: 2025-06-23
+2025-07-13 13:45:07,347 - __main__ - INFO - --- Screening with weights: {'Value': 0.05, 'Momentum': 0.9, 'Low_Volatility': 0.05} & period: 12M ---
+2025-07-13 13:45:07,376 - __main__ - INFO - --- Running Comparative Backtest Data Generation ---
+2025-07-13 13:45:07,379 - __main__ - INFO - ✅ Generated backtest time-series data.
+2025-07-13 13:45:07,379 - __main__ - INFO - ✅ Rolling backtest complete.
+2025-07-13 13:45:07,383 - __main__ - INFO - ✅ Full analysis complete. Returning comprehensive results.
+2025-07-13 13:45:07,383 - __main__ - INFO - ✅ Successfully completed analysis for 'aggressive'.
+2025-07-13 13:45:07,384 - __main__ - INFO - 
+============================== Running Analysis for: BALANCED ==============================
+2025-07-13 13:45:07,384 - __main__ - INFO - 🚀 Initialized Optimizer with Momentum: 12M, Weights: {'Value': 0.3, 'Momentum': 0.5, 'Low_Volatility': 0.2}
+2025-07-13 13:45:07,387 - __main__ - INFO - --- Loading All Required Data for Analysis ---
+2025-07-13 13:45:13,571 - __main__ - INFO - ✅ Loaded data for 663 symbols.
+2025-07-13 13:45:13,594 - __main__ - INFO - --- Starting Rolling Backtest: 3 years, rebalancing every 90 days ---
+2025-07-13 13:45:13,594 - __main__ - INFO - 🔄 Processing rebalance for date: 2022-07-09
+2025-07-13 13:45:13,595 - __main__ - INFO - --- Screening with weights: {'Value': 0.3, 'Momentum': 0.5, 'Low_Volatility': 0.2} & period: 12M ---
+2025-07-13 13:45:13,624 - __main__ - INFO - 🔄 Processing rebalance for date: 2022-10-07
+2025-07-13 13:45:13,625 - __main__ - INFO - --- Screening with weights: {'Value': 0.3, 'Momentum': 0.5, 'Low_Volatility': 0.2} & period: 12M ---
+2025-07-13 13:45:13,649 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-01-05
+2025-07-13 13:45:13,649 - __main__ - INFO - --- Screening with weights: {'Value': 0.3, 'Momentum': 0.5, 'Low_Volatility': 0.2} & period: 12M ---
+2025-07-13 13:45:13,675 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-04-05
+2025-07-13 13:45:13,675 - __main__ - INFO - --- Screening with weights: {'Value': 0.3, 'Momentum': 0.5, 'Low_Volatility': 0.2} & period: 12M ---
+2025-07-13 13:45:13,696 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-07-04
+2025-07-13 13:45:13,696 - __main__ - INFO - --- Screening with weights: {'Value': 0.3, 'Momentum': 0.5, 'Low_Volatility': 0.2} & period: 12M ---
+2025-07-13 13:45:13,717 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-10-02
+2025-07-13 13:45:13,718 - __main__ - INFO - --- Screening with weights: {'Value': 0.3, 'Momentum': 0.5, 'Low_Volatility': 0.2} & period: 12M ---
+2025-07-13 13:45:13,739 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-12-31
+2025-07-13 13:45:13,739 - __main__ - INFO - --- Screening with weights: {'Value': 0.3, 'Momentum': 0.5, 'Low_Volatility': 0.2} & period: 12M ---
+2025-07-13 13:45:13,758 - __main__ - INFO - 🔄 Processing rebalance for date: 2024-03-30
+2025-07-13 13:45:13,758 - __main__ - INFO - --- Screening with weights: {'Value': 0.3, 'Momentum': 0.5, 'Low_Volatility': 0.2} & period: 12M ---
+2025-07-13 13:45:13,778 - __main__ - INFO - 🔄 Processing rebalance for date: 2024-06-28
+2025-07-13 13:45:13,778 - __main__ - INFO - --- Screening with weights: {'Value': 0.3, 'Momentum': 0.5, 'Low_Volatility': 0.2} & period: 12M ---
+2025-07-13 13:45:13,797 - __main__ - INFO - 🔄 Processing rebalance for date: 2024-09-26
+2025-07-13 13:45:13,798 - __main__ - INFO - --- Screening with weights: {'Value': 0.3, 'Momentum': 0.5, 'Low_Volatility': 0.2} & period: 12M ---
+2025-07-13 13:45:13,821 - __main__ - INFO - 🔄 Processing rebalance for date: 2024-12-25
+2025-07-13 13:45:13,821 - __main__ - INFO - --- Screening with weights: {'Value': 0.3, 'Momentum': 0.5, 'Low_Volatility': 0.2} & period: 12M ---
+2025-07-13 13:45:13,844 - __main__ - INFO - 🔄 Processing rebalance for date: 2025-03-25
+2025-07-13 13:45:13,844 - __main__ - INFO - --- Screening with weights: {'Value': 0.3, 'Momentum': 0.5, 'Low_Volatility': 0.2} & period: 12M ---
+2025-07-13 13:45:13,872 - __main__ - INFO - 🔄 Processing rebalance for date: 2025-06-23
+2025-07-13 13:45:13,872 - __main__ - INFO - --- Screening with weights: {'Value': 0.3, 'Momentum': 0.5, 'Low_Volatility': 0.2} & period: 12M ---
+2025-07-13 13:45:13,892 - __main__ - INFO - --- Running Comparative Backtest Data Generation ---
+2025-07-13 13:45:13,895 - __main__ - INFO - ✅ Generated backtest time-series data.
+2025-07-13 13:45:13,896 - __main__ - INFO - ✅ Rolling backtest complete.
+2025-07-13 13:45:13,898 - __main__ - INFO - ✅ Full analysis complete. Returning comprehensive results.
+2025-07-13 13:45:13,898 - __main__ - INFO - ✅ Successfully completed analysis for 'balanced'.
+2025-07-13 13:45:13,899 - __main__ - INFO - 
+============================== Running Analysis for: DEFENSIVE ==============================
+2025-07-13 13:45:13,899 - __main__ - INFO - 🚀 Initialized Optimizer with Momentum: 12M, Weights: {'Value': 0.33, 'Momentum': 0.33, 'Low_Volatility': 0.34}
+2025-07-13 13:45:13,902 - __main__ - INFO - --- Loading All Required Data for Analysis ---
+2025-07-13 13:45:20,109 - __main__ - INFO - ✅ Loaded data for 663 symbols.
+2025-07-13 13:45:20,130 - __main__ - INFO - --- Starting Rolling Backtest: 3 years, rebalancing every 90 days ---
+2025-07-13 13:45:20,131 - __main__ - INFO - 🔄 Processing rebalance for date: 2022-07-09
+2025-07-13 13:45:20,131 - __main__ - INFO - --- Screening with weights: {'Value': 0.33, 'Momentum': 0.33, 'Low_Volatility': 0.34} & period: 12M ---
+2025-07-13 13:45:20,156 - __main__ - INFO - 🔄 Processing rebalance for date: 2022-10-07
+2025-07-13 13:45:20,157 - __main__ - INFO - --- Screening with weights: {'Value': 0.33, 'Momentum': 0.33, 'Low_Volatility': 0.34} & period: 12M ---
+2025-07-13 13:45:20,176 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-01-05
+2025-07-13 13:45:20,176 - __main__ - INFO - --- Screening with weights: {'Value': 0.33, 'Momentum': 0.33, 'Low_Volatility': 0.34} & period: 12M ---
+2025-07-13 13:45:20,197 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-04-05
+2025-07-13 13:45:20,197 - __main__ - INFO - --- Screening with weights: {'Value': 0.33, 'Momentum': 0.33, 'Low_Volatility': 0.34} & period: 12M ---
+2025-07-13 13:45:20,218 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-07-04
+2025-07-13 13:45:20,219 - __main__ - INFO - --- Screening with weights: {'Value': 0.33, 'Momentum': 0.33, 'Low_Volatility': 0.34} & period: 12M ---
+2025-07-13 13:45:20,239 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-10-02
+2025-07-13 13:45:20,240 - __main__ - INFO - --- Screening with weights: {'Value': 0.33, 'Momentum': 0.33, 'Low_Volatility': 0.34} & period: 12M ---
+2025-07-13 13:45:20,261 - __main__ - INFO - 🔄 Processing rebalance for date: 2023-12-31
+2025-07-13 13:45:20,262 - __main__ - INFO - --- Screening with weights: {'Value': 0.33, 'Momentum': 0.33, 'Low_Volatility': 0.34} & period: 12M ---
+2025-07-13 13:45:20,281 - __main__ - INFO - 🔄 Processing rebalance for date: 2024-03-30
+2025-07-13 13:45:20,282 - __main__ - INFO - --- Screening with weights: {'Value': 0.33, 'Momentum': 0.33, 'Low_Volatility': 0.34} & period: 12M ---
+2025-07-13 13:45:20,303 - __main__ - INFO - 🔄 Processing rebalance for date: 2024-06-28
+2025-07-13 13:45:20,304 - __main__ - INFO - --- Screening with weights: {'Value': 0.33, 'Momentum': 0.33, 'Low_Volatility': 0.34} & period: 12M ---
+2025-07-13 13:45:20,323 - __main__ - INFO - 🔄 Processing rebalance for date: 2024-09-26
+2025-07-13 13:45:20,324 - __main__ - INFO - --- Screening with weights: {'Value': 0.33, 'Momentum': 0.33, 'Low_Volatility': 0.34} & period: 12M ---
+2025-07-13 13:45:20,343 - __main__ - INFO - 🔄 Processing rebalance for date: 2024-12-25
+2025-07-13 13:45:20,344 - __main__ - INFO - --- Screening with weights: {'Value': 0.33, 'Momentum': 0.33, 'Low_Volatility': 0.34} & period: 12M ---
+2025-07-13 13:45:20,362 - __main__ - INFO - 🔄 Processing rebalance for date: 2025-03-25
+2025-07-13 13:45:20,363 - __main__ - INFO - --- Screening with weights: {'Value': 0.33, 'Momentum': 0.33, 'Low_Volatility': 0.34} & period: 12M ---
+2025-07-13 13:45:20,382 - __main__ - INFO - 🔄 Processing rebalance for date: 2025-06-23
+2025-07-13 13:45:20,383 - __main__ - INFO - --- Screening with weights: {'Value': 0.33, 'Momentum': 0.33, 'Low_Volatility': 0.34} & period: 12M ---
+2025-07-13 13:45:20,406 - __main__ - INFO - --- Running Comparative Backtest Data Generation ---
+2025-07-13 13:45:20,409 - __main__ - INFO - ✅ Generated backtest time-series data.
+2025-07-13 13:45:20,409 - __main__ - INFO - ✅ Rolling backtest complete.
+2025-07-13 13:45:20,411 - __main__ - INFO - ✅ Full analysis complete. Returning comprehensive results.
+2025-07-13 13:45:20,411 - __main__ - INFO - ✅ Successfully completed analysis for 'defensive'.
+2025-07-13 13:45:20,411 - __main__ - INFO - 
+💾 Saving consolidated results for all strategies to: C:\Portfolio-Optimizer\results\final_results.json
+2025-07-13 13:45:20,422 - __main__ - INFO - ✅ Successfully saved the final JSON output.
+2025-07-13 13:45:20,422 - __main__ - INFO - 
+🏁 Orchestration complete. 🏁

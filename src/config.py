@@ -15,6 +15,7 @@ MIN_DATA_POINTS = 252 # Require at least 1 year of trading data
 MIN_LIQUIDITY_THRESHOLD = 10000000 # Minimum average daily volume
 TOP_N_CANDIDATES = 20
 
+TRADE_COST_PERCENT = 0.005 # 0.5% cost on each trade (buy/sell)
 
 # Data Paths
 CACHE_DIR = PROJECT_ROOT / "cache"
