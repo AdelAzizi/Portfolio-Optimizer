@@ -47,11 +47,11 @@ class FullMarketFundamentalCollector:
         self.data_dir.mkdir(exist_ok=True)
 
         # Define paths for input, initial cache, and final output
-        self.universe_file = self.cache_dir / 'full_universe.json'
-        self.initial_cache_file = self.data_dir / 'fundamental_data.feather'
-        self.output_file = self.data_dir / 'full_fundamental_data.feather'
+        self.universe_file = self.cache_dir / 'universe.json'
+        self.initial_cache_file = self.cache_dir / 'fundamental_data.csv' # Using the CSV from project structure
+        self.output_file = self.cache_dir / 'master_fundamental_data.feather' # Aligning with project structure
 
-        logger.info(f"Full universe file path: {self.universe_file}")
+        logger.info(f"Universe file path: {self.universe_file}")
         logger.info(f"Initial cache file path: {self.initial_cache_file}")
         logger.info(f"Final output data path: {self.output_file}")
 
@@ -59,22 +59,35 @@ class FullMarketFundamentalCollector:
         """Loads the full stock universe from the JSON file."""
         logger.info("--- Stage 1: Loading Full Market Universe ---")
         if not self.universe_file.exists():
-            logger.error(f"CRITICAL: Full universe file not found at '{self.universe_file}'.")
-            logger.error("Please run the `full_market_downloader.py` script first.")
-            raise FileNotFoundError("Full universe file is missing.")
+            logger.error(f"CRITICAL: Universe file not found at '{self.universe_file}'.")
+            logger.error("Please run the `universe_creator.py` script first.")
+            raise FileNotFoundError("Universe file is missing.")
 
         with open(self.universe_file, 'r', encoding='utf-8') as f:
             universe = json.load(f)
-        logger.info(f"✅ Loaded {len(universe)} symbols from full_universe.json.")
+        logger.info(f"✅ Loaded {len(universe)} symbols from universe.json.")
         return universe
 
     def _load_initial_cache(self) -> pd.DataFrame:
-        """Loads the initial, smaller fundamental data cache if it exists."""
-        if self.initial_cache_file.exists():
-            logger.info(f"Found initial cache at {self.initial_cache_file}. Loading to accelerate process.")
-            return pd.read_feather(self.initial_cache_file)
-        logger.info("No initial cache file found. Will proceed to fetch all data from scratch.")
-        return pd.DataFrame()
+        """Loads the initial fundamental data cache if it exists and is less than 1 week old."""
+        if not self.initial_cache_file.exists():
+            logger.info("No initial cache file found. Will proceed to fetch all data from scratch.")
+            return pd.DataFrame()
+
+        last_modified_hours = (time.time() - self.initial_cache_file.stat().st_mtime) / 3600
+        if last_modified_hours > 168: # 1 week
+            logger.warning(f"Cache file is {last_modified_hours:.1f} hours old (older than 1 week). Discarding.")
+            return pd.DataFrame()
+
+        logger.info(f"Found valid initial cache at {self.initial_cache_file} ({last_modified_hours:.1f} hours old). Loading.")
+        try:
+            if self.initial_cache_file.suffix == '.feather':
+                return pd.read_feather(self.initial_cache_file)
+            else:
+                return pd.read_csv(self.initial_cache_file)
+        except Exception as e:
+            logger.error(f"Could not read cache file {self.initial_cache_file}: {e}")
+            return pd.DataFrame()
 
     def _impute_missing_data(self, df: pd.DataFrame) -> pd.DataFrame:
         """Imputes missing values using group means and then overall medians."""
@@ -113,9 +126,9 @@ class FullMarketFundamentalCollector:
                 logger.info(f"   - Capped outliers in '{col}' at the 1st and 99th percentiles.")
         return df_clean
 
-    def run(self):
+    def run_collection(self):
         """Executes the full data collection and cleaning pipeline."""
-        logger.info("🚀 Starting Full Market Fundamental Data Collector...")
+        logger.info("🚀 Starting Fundamental Data Collector...")
 
         try:
             full_universe = self._load_full_universe()
@@ -207,4 +220,4 @@ class FullMarketFundamentalCollector:
 
 if __name__ == "__main__":
     collector = FullMarketFundamentalCollector()
-    collector.run()
+    collector.run_collection()

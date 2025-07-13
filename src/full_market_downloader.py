@@ -51,7 +51,7 @@ class FullMarketDownloader:
         self.cache_dir = PROJECT_ROOT / cache_dir
         self.data_dir.mkdir(exist_ok=True)
         self.cache_dir.mkdir(exist_ok=True)
-        self.symbols_cache_file = self.cache_dir / 'symbols_data_v3.json'
+        self.universe_file = self.cache_dir / 'universe.json'
         logger.info(f"Full Market Data directory set to: {self.data_dir}")
         logger.info(f"Cache directory set to: {self.cache_dir}")
 
@@ -91,64 +91,27 @@ class FullMarketDownloader:
             logger.error(f"❌ ERROR: Could not fetch symbols: {e}")
             return None
 
-    def filter_investment_universe(self, symbols_data: List[Dict]) -> List[str]:
-        """
-        Applies basic filters to get a broad list of tradable stocks.
-        """
-        logger.info("🔍 Starting basic filtering for the full market...")
-        
-        if not symbols_data:
-            logger.error("No symbols data provided to filter.")
-            return []
-
-        df = pd.DataFrame(symbols_data)
-        initial_count = len(df)
-        logger.info(f"   Initial symbols from master list: {initial_count}")
-
-        # Filter 1: Market Type (must be 'بورس' or 'فرابورس')
-        df = df[df['market'].isin(['بورس', 'فرابورس'])]
-        count_after_market = len(df)
-        logger.info(f"   {initial_count} → {count_after_market} (After market type filter)")
-
-        # Filter 2: Instrument Type (exclude non-stocks)
-        exclusion_keywords = ['صندوق', 'اوراق', 'تسهیلات', 'پذیره', 'اختیار', 'حذف شده', 'سخاب', 'اجاره', 'مرابحه']
-        
-        # Create a boolean mask for rows to exclude
-        mask = df['name'].str.contains('|'.join(exclusion_keywords), case=False, na=False)
-        df = df[~mask]
-        
-        count_after_instrument = len(df)
-        logger.info(f"   {count_after_market} → {count_after_instrument} (After instrument type filter)")
-
-        universe = df['symbol'].drop_duplicates().tolist()
-        final_count = len(universe)
-        
-        logger.info(f"✅ Basic filtering complete. Final universe size: {final_count} stocks.")
-        return universe
-
     def run_update(self):
         """
         Runs the main update process for the full market.
         """
         logger.info("🚀 Starting Full Market Downloader...")
 
-        # STAGE 1: GET AND FILTER UNIVERSE
-        logger.info("--- Stage 1: Defining Full Market Universe ---")
-        all_symbols_data = self.fetch_all_symbols()
-        if not all_symbols_data:
-            logger.error("❌ Could not fetch master symbols list. Aborting.")
+        # STAGE 1: LOAD THE PRE-DEFINED UNIVERSE
+        logger.info(f"--- Stage 1: Loading Pre-defined Universe from {self.universe_file} ---")
+        if not self.universe_file.exists():
+            logger.error(f"CRITICAL: Universe file not found at '{self.universe_file}'.")
+            logger.error("Please run the `universe_creator.py` script first.")
+            raise FileNotFoundError("Universe file is missing.")
+
+        with open(self.universe_file, 'r', encoding='utf-8') as f:
+            universe = json.load(f)
+        
+        if not universe:
+            logger.error("❌ Universe file is empty. Aborting.")
             return
         
-        universe = self.filter_investment_universe(all_symbols_data)
-        if not universe:
-            logger.error("❌ No symbols passed the basic filter. Aborting.")
-            return
-
-        # Save the filtered universe for the fundamental collector
-        full_universe_path = self.cache_dir / 'full_universe.json'
-        with open(full_universe_path, 'w', encoding='utf-8') as f:
-            json.dump(universe, f, ensure_ascii=False, indent=2)
-        logger.info(f"✅ Saved filtered universe of {len(universe)} symbols to {full_universe_path}")
+        logger.info(f"✅ Successfully loaded {len(universe)} symbols from the universe file.")
 
         # Add the benchmark index to the list to be downloaded
         universe.append('شاخص کل')
@@ -166,7 +129,7 @@ class FullMarketDownloader:
 
             if file_path.exists():
                 last_modified_hours = (time.time() - file_path.stat().st_mtime) / 3600
-                if last_modified_hours < 24:
+                if last_modified_hours < 12:
                     skipped_count += 1
                     continue
                 else:

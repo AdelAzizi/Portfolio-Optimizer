@@ -14,7 +14,9 @@ import pandas as pd
 import numpy as np
 
 # --- Import pipeline components ---
+from src.universe_creator import UniverseCreator
 from src.full_market_downloader import FullMarketDownloader
+from src.full_market_fundamental_collector import FullMarketFundamentalCollector
 from src.full_market_preprocessor import FullMarketDataPreprocessor
 from src.strategy_tester import run_strategy_grid_search
 from src.validator import StrategyValidator
@@ -46,20 +48,32 @@ def run_pipeline():
     logger.info("="*80)
 
     try:
-        # --- STAGE 1: DATA PREPARATION ---
-        logger.info("\n--- PIPELINE STAGE 1: RUNNING DATA DOWNLOADER ---")
-        downloader = FullMarketDownloader()
-        downloader.run_update()
-        logger.info("✅ Data Downloader complete.")
+        # --- STAGE 0: UNIVERSE CREATION ---
+        logger.info("\n--- PIPELINE STAGE 0: CREATING INVESTMENT UNIVERSE ---")
+        universe_creator = UniverseCreator()
+        universe_creator.run()
+        logger.info("✅ Universe creation complete.")
 
-        # --- STAGE 2: DATA PREPROCESSING ---
-        logger.info("\n--- PIPELINE STAGE 2: RUNNING DATA PREPROCESSOR ---")
+        # --- STAGE 1: PRICE DATA COLLECTION ---
+        logger.info("\n--- PIPELINE STAGE 1: RUNNING PRICE DATA DOWNLOADER ---")
+        price_downloader = FullMarketDownloader()
+        price_downloader.run_update()
+        logger.info("✅ Price Data Downloader complete.")
+
+        # --- STAGE 2: FUNDAMENTAL DATA COLLECTION ---
+        logger.info("\n--- PIPELINE STAGE 2: RUNNING FUNDAMENTAL DATA COLLECTOR ---")
+        fundamental_collector = FullMarketFundamentalCollector()
+        fundamental_collector.run_collection()
+        logger.info("✅ Fundamental Data Collector complete.")
+
+        # --- STAGE 3: DATA PREPROCESSING ---
+        logger.info("\n--- PIPELINE STAGE 3: RUNNING DATA PREPROCESSOR ---")
         preprocessor = FullMarketDataPreprocessor()
         preprocessor.run()
         logger.info("✅ Data Preprocessor complete.")
 
-        # --- STAGE 3: STRATEGY DISCOVERY (GRID SEARCH) ---
-        logger.info("\n--- PIPELINE STAGE 3: RUNNING STRATEGY GRID SEARCH ---")
+        # --- STAGE 4: STRATEGY DISCOVERY (GRID SEARCH) ---
+        logger.info("\n--- PIPELINE STAGE 4: RUNNING STRATEGY GRID SEARCH ---")
         run_strategy_grid_search()
         strategy_results_path = RESULTS_DIR / 'strategy_test_results.csv'
         if not strategy_results_path.exists():
@@ -68,8 +82,8 @@ def run_pipeline():
         all_tested_strategies_df = pd.read_csv(strategy_results_path)
         logger.info(f"✅ Strategy Grid Search complete. Found {len(all_tested_strategies_df)} potential strategies.")
 
-        # --- STAGE 4: CANDIDATE SELECTION ---
-        logger.info("\n--- PIPELINE STAGE 4: SELECTING TOP 3 CANDIDATE STRATEGIES ---")
+        # --- STAGE 5: CANDIDATE SELECTION ---
+        logger.info("\n--- PIPELINE STAGE 5: SELECTING TOP 3 CANDIDATE STRATEGIES ---")
         top_10_strategies = all_tested_strategies_df.head(10)
         
         # Ensure the columns are numeric for correct sorting
@@ -89,8 +103,8 @@ def run_pipeline():
         for name, params in final_candidates.items():
             logger.info(f"  - {name.upper()}: P={params['Momentum Period']}, W_V={params['Value Weight']:.2f}, W_M={params['Momentum Weight']:.2f}, W_LV={params['Low Volatility Weight']:.2f}")
 
-        # --- STAGE 5: FINAL VALIDATION (WALK-FORWARD ANALYSIS) ---
-        logger.info("\n--- PIPELINE STAGE 5: RUNNING WALK-FORWARD VALIDATION ON CANDIDATES ---")
+        # --- STAGE 6: FINAL VALIDATION (WALK-FORWARD ANALYSIS) ---
+        logger.info("\n--- PIPELINE STAGE 6: RUNNING WALK-FORWARD VALIDATION ON CANDIDATES ---")
         final_api_output = {}
 
         for strategy_name, params in final_candidates.items():
@@ -121,8 +135,8 @@ def run_pipeline():
                  logger.warning(f"⚠️ Validation failed for '{strategy_name}'.")
 
 
-        # --- STAGE 6: PRODUCE FINAL OUTPUT ---
-        logger.info("\n--- PIPELINE STAGE 6: SAVING FINAL CONSOLIDATED JSON ---")
+        # --- STAGE 7: PRODUCE FINAL OUTPUT ---
+        logger.info("\n--- PIPELINE STAGE 7: SAVING FINAL CONSOLIDATED JSON ---")
         if final_api_output:
             output_path = RESULTS_DIR / 'final_results.json'
             logger.info(f"💾 Saving final results to: {output_path}")
