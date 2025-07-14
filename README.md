@@ -55,7 +55,7 @@ To set up the project, follow these steps:
 
 3.  **Install the required packages:**
     ```bash
-    pip install -r requirements_v3.txt
+    pip install -r requirements.txt
     ```
 
 ## Usage

@@ -12,7 +12,8 @@ import pandas as pd
 
 # --- Import the refactored optimizer ---
 from src.optimizer import MultiFactorOptimizer
-from src.config import RISK_FREE_RATE, TOP_N_CANDIDATES
+from src.config import RISK_FREE_RATE
+from src.strategy_tester import re_evaluate_top_strategies
 
 
 # --- Define Project Root and Paths ---
@@ -34,87 +35,184 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-class StrategyValidator:
+def validate_and_select_best_strategies(top_200_df: pd.DataFrame):
     """
-    Performs a walk-forward analysis to validate a given portfolio strategy.
+    Categorizes strategies by risk, selects the best candidates from each category,
+    runs walk-forward validation on them, and selects the final best strategy for each approach.
+
+    Args:
+        top_200_df (pd.DataFrame): DataFrame of the top 200 strategies to be validated.
     """
-    def __init__(self, factor_weights: dict, momentum_period: str, top_n: int):
-        self.factor_weights = factor_weights
-        self.momentum_period = momentum_period
-        self.top_n = top_n
-        
-        self.analysis_df = None
-        self.master_price_df = None
-        
-        self._load_data()
+    if top_200_df.empty:
+        logger.error("Received an empty DataFrame. Cannot proceed with validation.")
+        return
 
-    def _load_data(self):
-        """Loads the master analysis and price data files."""
-        logger.info("--- Loading Master Data for Validation ---")
-        analysis_data_path = CACHE_DIR / 'full_analysis_ready_data.feather'
-        price_data_dir = DATA_DIR / 'full_market_data_csvs'
-        
-        if not analysis_data_path.exists():
-            raise FileNotFoundError(f"Analysis data not found at {analysis_data_path}")
-        self.analysis_df = pd.read_feather(analysis_data_path).set_index('symbol')
-        
-        all_symbols = self.analysis_df.index.tolist() + ['شاخص کل']
-        price_data = {}
-        for symbol in all_symbols:
-            file_path = price_data_dir / f"{symbol}.csv"
-            if file_path.exists():
-                price_data[symbol] = pd.read_csv(file_path, index_col='date', parse_dates=True)['close']
-        
-        self.master_price_df = pd.DataFrame(price_data).sort_index().ffill().bfill()
-        logger.info("✅ Master data loaded successfully.")
+    # --- 1. Categorize by Risk ---
+    logger.info("\n--- Categorizing Top 200 Strategies by Risk (Annualized Volatility) ---")
+    
+    # Ensure 'Annualized Volatility' column exists
+    if 'Annualized Volatility' not in top_200_df.columns:
+        logger.error("CRITICAL: 'Annualized Volatility' column not found in the input DataFrame.")
+        return
 
-    def run_walk_forward_analysis(self) -> dict:
-        """
-        Executes the walk-forward backtest and returns a comprehensive results dictionary.
-        """
-        logger.info(f"\n--- Starting Walk-Forward Validation for Strategy ---")
-        logger.info(f"   Momentum Period: {self.momentum_period}")
-        logger.info(f"   Factor Weights: {self.factor_weights}")
+    sorted_by_volatility = top_200_df.sort_values(by='Annualized Volatility', ascending=True)
+    
+    n = len(sorted_by_volatility)
+    defensive_count = int(n * 0.30)
+    aggressive_start_index = int(n * 0.70)
 
-        optimizer = MultiFactorOptimizer(
-            analysis_data_path=CACHE_DIR / 'full_analysis_ready_data.feather',
-            price_data_dir=DATA_DIR / 'full_market_data_csvs',
-            max_position_size=0.20, # This could be a parameter
-            factor_weights=self.factor_weights,
-            momentum_period=self.momentum_period,
-            top_n_candidates=self.top_n
-        )
+    defensive_strategies = sorted_by_volatility.iloc[:defensive_count]
+    balanced_strategies = sorted_by_volatility.iloc[defensive_count:aggressive_start_index]
+    aggressive_strategies = sorted_by_volatility.iloc[aggressive_start_index:]
+
+    logger.info(f"Defensive Strategies (Lowest 30% Volatility): {len(defensive_strategies)} strategies")
+    logger.info(f"Balanced Strategies (Middle 40% Volatility): {len(balanced_strategies)} strategies")
+    logger.info(f"Aggressive Strategies (Highest 30% Volatility): {len(aggressive_strategies)} strategies")
+
+    # --- 2. Select Top 5 Candidates from Each Category by Sharpe Ratio ---
+    logger.info("\n--- Selecting Top 5 Candidates from Each Risk Category by Sharpe Ratio ---")
+    
+    candidate_portfolios = {
+        "Defensive": defensive_strategies.nlargest(5, 'Sharpe Ratio'),
+        "Balanced": balanced_strategies.nlargest(5, 'Sharpe Ratio'),
+        "Aggressive": aggressive_strategies.nlargest(5, 'Sharpe Ratio')
+    }
+
+    final_results = {}
+
+    # --- 3. Combine and Save the 15 Candidates to a CSV File ---
+    all_candidates_list = []
+    for approach, df in candidate_portfolios.items():
+        df_copy = df.copy()
+        df_copy['Risk Profile'] = approach
+        all_candidates_list.append(df_copy)
+    
+    all_candidates_df = pd.concat(all_candidates_list, ignore_index=True)
+    
+    # Ensure the data directory exists
+    (DATA_DIR).mkdir(exist_ok=True)
+    candidates_output_path = DATA_DIR / 'top_15_validation_candidates.csv'
+    
+    try:
+        all_candidates_df.to_csv(candidates_output_path, index=False, encoding='utf-8-sig')
+        logger.info(f"💾 Successfully saved the 15 validation candidates to {candidates_output_path}")
+    except Exception as e:
+        logger.error(f"❌ Failed to save candidates CSV: {e}")
+
+    # --- 4. Run Walk-Forward Validation on All 15 Candidates ---
+    for approach, candidates_df in candidate_portfolios.items():
+        logger.info(f"\n" + "="*70)
+        logger.info(f"      VALIDATING CANDIDATES FOR: {approach.upper()} APPROACH")
+        logger.info("="*70)
         
-        # The run_full_analysis method now performs the rolling backtest and returns
-        # the exact structure needed for the API. We can call it directly.
-        # We pass a shorter period for validation to speed it up.
-        validation_results = optimizer.run_full_analysis(years=3)
+        validation_results_list = []
 
-        if not validation_results:
-            logger.error("Validation run failed to produce results.")
-            return None
+        for index, candidate in candidates_df.iterrows():
+            factor_weights = {
+                'Value': candidate['Value Weight'],
+                'Momentum': candidate['Momentum Weight'],
+                'Low_Volatility': candidate['Low Volatility Weight']
+            }
+            momentum_period = candidate['Momentum Period']
+            top_n = int(candidate['Top N'])
+            max_weight = candidate['Max Weight']
+
+            logger.info(f"\n--- Running Validation for Candidate: P={momentum_period}, W={factor_weights}, TopN={top_n}, MaxW={max_weight} ---")
             
-        logger.info("✅ Walk-forward validation complete.")
-        return validation_results
+            try:
+                # Use MultiFactorOptimizer directly for validation run
+                optimizer = MultiFactorOptimizer(
+                    analysis_data_path=CACHE_DIR / 'full_analysis_ready_data.feather',
+                    price_data_dir=DATA_DIR / 'full_market_data_csvs',
+                    max_position_size=max_weight,
+                    factor_weights=factor_weights,
+                    momentum_period=momentum_period,
+                    top_n_candidates=top_n
+                )
+                
+                # Perform a 3-year walk-forward validation
+                validation_run_results = optimizer.run_full_analysis(years=3)
 
+                if validation_run_results and 'performance_summary' in validation_run_results:
+                    # Store the original candidate info within the full results object
+                    validation_run_results['original_candidate'] = candidate.to_dict()
+                    validation_results_list.append(validation_run_results)
+                    logger.info(f"✅ Validation Success! Sharpe: {validation_run_results['performance_summary'].get('Sharpe Ratio', 'N/A')}")
+                else:
+                    logger.warning("Validation run did not produce a performance summary.")
+
+            except Exception as e:
+                logger.error(f"❌ FAILED validation for candidate. Error: {e}", exc_info=True)
+
+        # --- 4. Select the Best Strategy for the Approach Based on Validation ---
+        if not validation_results_list:
+            logger.error(f"No successful validation runs for {approach} approach. Cannot select a final strategy.")
+            continue
+
+        # Select the best strategy based on the Sharpe Ratio in the performance summary
+        best_strategy_result = max(
+            validation_results_list,
+            key=lambda x: float(x.get('performance_summary', {}).get('Sharpe Ratio', -100))
+        )
+
+        # Extract original candidate info to create a dedicated strategy configuration dict
+        original_candidate = best_strategy_result.pop('original_candidate', {})
+        strategy_config = {
+            'Momentum Period': original_candidate.get('Momentum Period'),
+            'Value Weight': original_candidate.get('Value Weight'),
+            'Momentum Weight': original_candidate.get('Momentum Weight'),
+            'Low Volatility Weight': original_candidate.get('Low Volatility Weight'),
+            'Top N': original_candidate.get('Top N'),
+            'Max Weight': original_candidate.get('Max Weight')
+        }
+
+        # Re-structure the final result for this approach
+        final_results[approach] = {
+            "strategy_configuration": strategy_config,
+            **best_strategy_result
+        }
+        
+        logger.info(f"\n--- 🏆 BEST STRATEGY FOR {approach.upper()} APPROACH (Post-Validation) ---")
+        logger.info(f"Sharpe Ratio: {final_results[approach]['performance_summary'].get('Sharpe Ratio')}")
+        logger.info(f"Configuration: {strategy_config}")
+
+    # --- 5. Log Final Selections ---
+    logger.info("\n\n" + "="*80)
+    logger.info("🎉🎉🎉 FINAL STRATEGY SELECTION COMPLETE 🎉🎉🎉")
+    logger.info("="*80)
+    for approach, result in final_results.items():
+        logger.info(f"\n--- FINAL SELECTION for {approach.upper()} ---")
+        logger.info(f"  Validation Sharpe Ratio: {result.get('performance_summary', {}).get('Sharpe Ratio')}")
+        logger.info(f"  Original Candidate Config:")
+        for key, val in result.get('original_candidate', {}).items():
+            logger.info(f"    {key}: {val}")
+    
+    return final_results
 
 
 def main():
-    """Example of running the validator with a top strategy."""
+    """
+    Main pipeline execution:
+    1. Re-evaluates the top 200 strategies.
+    2. Validates and selects the best final strategies based on risk profiles.
+    """
     logger.info("="*70)
-    logger.info("      Initializing Walk-Forward Validator")
+    logger.info("      STARTING FULL STRATEGY VALIDATION PIPELINE")
     logger.info("="*70)
 
-    # Example: Use the best strategy found by the grid search
-    top_strategy_weights = {'Value': 0.05, 'Momentum': 0.9, 'Low_Volatility': 0.05}
-    top_strategy_period = '12M'
+    # 1. Get the top 200 re-evaluated strategies
+    top_200_results_df = re_evaluate_top_strategies()
 
-    validator = StrategyValidator(
-        factor_weights=top_strategy_weights,
-        momentum_period=top_strategy_period,
-        top_n=TOP_N_CANDIDATES
-    )
-    validator.run_walk_forward_analysis()
+    # 2. Validate and select the best strategies from the top 200
+    if top_200_results_df is not None and not top_200_results_df.empty:
+        validate_and_select_best_strategies(top_200_results_df)
+    else:
+        logger.error("Halting pipeline because re-evaluation of top strategies failed or returned no results.")
+
+    logger.info("\n" + "="*70)
+    logger.info("      PIPELINE FINISHED")
+    logger.info("="*70)
+
 
 if __name__ == "__main__":
     main()

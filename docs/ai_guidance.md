@@ -11,8 +11,8 @@ This document provides a step-by-step guide for an AI agent to perform initial c
 1.  **Verify Repository Access:** Confirm that the 'Portfolio-Optimizer' repository is cloned and accessible in the working directory.
     *   **Prompt Example:** `shell_exec(brief="Verify repository existence", command="ls -d Portfolio-Optimizer/", session_id="setup")`
 
-2.  **Install Dependencies:** Ensure all required Python packages are installed. Refer to `requirements_v3.txt`.
-    *   **Prompt Example:** `shell_exec(brief="Install Python dependencies", command="pip install -r Portfolio-Optimizer/requirements_v3.txt", session_id="setup", working_dir="/home/ubuntu")`
+2.  **Install Dependencies:** Ensure all required Python packages are installed. Refer to `requirements.txt`.
+    *   **Prompt Example:** `shell_exec(brief="Install Python dependencies", command="pip install -r Portfolio-Optimizer/requirements.txt", session_id="setup", working_dir="/home/ubuntu")`
 
 3.  **Run Existing Tests (Baseline):** Execute the `test_v3.py` suite to establish a baseline of current functionality and identify any immediate errors. Document the test results.
     *   **Prompt Example:** `shell_exec(brief="Run project tests to establish baseline", command="python -m pytest test_v3.py", session_id="testing", working_dir="/home/ubuntu/Portfolio-Optimizer")`

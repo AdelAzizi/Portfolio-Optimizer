@@ -21,7 +21,9 @@ xlsxwriter>=3.0.3
 # Optional: For better performance
 numba>=0.56.0
 
-pyarrow>=10.0.0 # Required for feather file format
+# Required for feather file format
+pyarrow>=10.0.0 
+
 # Development and testing
 pytest>=7.0.0
 pytest-cov>=4.0.0

@@ -40,7 +40,7 @@ class FullMarketDataPreprocessor:
         self.cache_dir = PROJECT_ROOT / cache_dir
         self.price_data_dir = self.data_dir / 'full_market_data_csvs'
         
-        self.fundamental_data_file = self.data_dir / 'full_fundamental_data.feather'
+        self.fundamental_data_file = self.cache_dir / 'master_fundamental_data.feather'
         self.output_file = self.cache_dir / 'full_analysis_ready_data.feather'
         
         logger.info(f"Fundamental data source: {self.fundamental_data_file}")
