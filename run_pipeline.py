@@ -83,16 +83,31 @@ def run_pipeline():
         logger.info(f"✅ Strategy Grid Search complete. Found {len(all_tested_strategies_df)} potential strategies.")
 
         # --- STAGE 5: CANDIDATE SELECTION ---
-        logger.info("\n--- PIPELINE STAGE 5: SELECTING TOP 3 CANDIDATE STRATEGIES ---")
-        top_10_strategies = all_tested_strategies_df.head(10)
+        logger.info("\n--- PIPELINE STAGE 5: SELECTING FINAL CANDIDATE STRATEGIES ---")
         
-        # Ensure the columns are numeric for correct sorting
-        top_10_strategies['Total Return'] = pd.to_numeric(top_10_strategies['Total Return'])
-        top_10_strategies['Annualized Volatility'] = pd.to_numeric(top_10_strategies['Annualized Volatility'])
+        # Ensure the columns are numeric for correct sorting/filtering
+        all_tested_strategies_df['Total Return'] = pd.to_numeric(all_tested_strategies_df['Total Return'], errors='coerce')
+        all_tested_strategies_df['Annualized Volatility'] = pd.to_numeric(all_tested_strategies_df['Annualized Volatility'], errors='coerce')
+        all_tested_strategies_df['Sharpe Ratio'] = pd.to_numeric(all_tested_strategies_df['Sharpe Ratio'], errors='coerce')
+        all_tested_strategies_df.dropna(subset=['Total Return', 'Annualized Volatility', 'Sharpe Ratio'], inplace=True)
 
-        aggressive_strategy = top_10_strategies.loc[top_10_strategies['Total Return'].idxmax()]
-        defensive_strategy = top_10_strategies.loc[top_10_strategies['Annualized Volatility'].idxmin()]
-        balanced_strategy = top_10_strategies.iloc[0] # Highest Sharpe Ratio
+        if all_tested_strategies_df.empty:
+            raise ValueError("Strategy results are empty after cleaning. Cannot select candidates.")
+
+        # Aggressive: Highest Total Return
+        aggressive_strategy = all_tested_strategies_df.loc[all_tested_strategies_df['Total Return'].idxmax()]
+        
+        # Balanced: Highest Sharpe Ratio
+        balanced_strategy = all_tested_strategies_df.loc[all_tested_strategies_df['Sharpe Ratio'].idxmax()]
+
+        # Defensive: Lowest Volatility among strategies with >200% return
+        high_return_strategies = all_tested_strategies_df[all_tested_strategies_df['Total Return'] > 2.0]
+        if not high_return_strategies.empty:
+            defensive_strategy = high_return_strategies.loc[high_return_strategies['Annualized Volatility'].idxmin()]
+            logger.info(f"Found {len(high_return_strategies)} strategies with >200% return for defensive candidate selection.")
+        else:
+            logger.warning("No strategies found with >200% total return. Falling back to the overall lowest volatility strategy.")
+            defensive_strategy = all_tested_strategies_df.loc[all_tested_strategies_df['Annualized Volatility'].idxmin()]
 
         final_candidates = {
             "aggressive": aggressive_strategy.to_dict(),

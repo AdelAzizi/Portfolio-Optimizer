@@ -46,47 +46,49 @@ class FullMarketFundamentalCollector:
         self.data_dir = PROJECT_ROOT / data_dir
         self.data_dir.mkdir(exist_ok=True)
 
-        # Define paths for input, initial cache, and final output
+        # Define paths for input and output. The output file also serves as the cache.
         self.universe_file = self.cache_dir / 'universe.json'
-        self.initial_cache_file = self.cache_dir / 'fundamental_data.csv' # Using the CSV from project structure
-        self.output_file = self.cache_dir / 'master_fundamental_data.feather' # Aligning with project structure
-
+        self.output_file = self.cache_dir / 'master_fundamental_data.feather'
+        self.blacklist_file = self.cache_dir / 'failed_symbols.json' # New: Blacklist file
+        
         logger.info(f"Universe file path: {self.universe_file}")
-        logger.info(f"Initial cache file path: {self.initial_cache_file}")
-        logger.info(f"Final output data path: {self.output_file}")
+        logger.info(f"Resumable cache & output file path: {self.output_file}")
+        logger.info(f"Blacklist file path: {self.blacklist_file}")
 
     def _load_full_universe(self) -> list:
         """Loads the full stock universe from the JSON file."""
         logger.info("--- Stage 1: Loading Full Market Universe ---")
         if not self.universe_file.exists():
             logger.error(f"CRITICAL: Universe file not found at '{self.universe_file}'.")
-            logger.error("Please run the `universe_creator.py` script first.")
-            raise FileNotFoundError("Universe file is missing.")
+            logger.error("Please run the universe_creator.py script first to generate the universe.")
+            raise FileNotFoundError(f"Universe file not found at {self.universe_file}")
 
         with open(self.universe_file, 'r', encoding='utf-8') as f:
             universe = json.load(f)
         logger.info(f"✅ Loaded {len(universe)} symbols from universe.json.")
         return universe
 
-    def _load_initial_cache(self) -> pd.DataFrame:
-        """Loads the initial fundamental data cache if it exists and is less than 1 week old."""
-        if not self.initial_cache_file.exists():
-            logger.info("No initial cache file found. Will proceed to fetch all data from scratch.")
+    def _load_resumable_cache(self) -> pd.DataFrame:
+        """
+        Loads the output data from a previous run to resume gracefully.
+        The cache is considered valid for 168 hours (1 week).
+        """
+        cache_file = self.output_file
+        if not cache_file.exists():
+            logger.info("No previous data file found. Will fetch all data from scratch.")
             return pd.DataFrame()
 
-        last_modified_hours = (time.time() - self.initial_cache_file.stat().st_mtime) / 3600
-        if last_modified_hours > 168: # 1 week
-            logger.warning(f"Cache file is {last_modified_hours:.1f} hours old (older than 1 week). Discarding.")
+        last_modified_hours = (time.time() - cache_file.stat().st_mtime) / 3600
+        if last_modified_hours > 168:  # 1 week
+            logger.warning(f"Data file is {last_modified_hours:.1f} hours old (older than 1 week). Discarding and re-fetching all.")
             return pd.DataFrame()
 
-        logger.info(f"Found valid initial cache at {self.initial_cache_file} ({last_modified_hours:.1f} hours old). Loading.")
+        logger.info(f"Found recent data file at {cache_file} ({last_modified_hours:.1f} hours old). Loading to resume.")
         try:
-            if self.initial_cache_file.suffix == '.feather':
-                return pd.read_feather(self.initial_cache_file)
-            else:
-                return pd.read_csv(self.initial_cache_file)
+            # The output is always feather
+            return pd.read_feather(cache_file)
         except Exception as e:
-            logger.error(f"Could not read cache file {self.initial_cache_file}: {e}")
+            logger.error(f"Could not read resumable cache file {cache_file}: {e}")
             return pd.DataFrame()
 
     def _impute_missing_data(self, df: pd.DataFrame) -> pd.DataFrame:
@@ -135,21 +137,35 @@ class FullMarketFundamentalCollector:
         except FileNotFoundError:
             return  # Stop execution if universe file is not found
 
-        # --- Stage 2: Smart Resumable Logic ---
+        # --- Stage 2: Smart Resumable Logic & Blacklisting ---
         logger.info("--- Stage 2: Determining Symbols to Process ---")
-        initial_cache_df = self._load_initial_cache()
-        cached_symbols = set(initial_cache_df['symbol']) if not initial_cache_df.empty else set()
-        symbols_to_process = [s for s in full_universe if s not in cached_symbols]
+        processed_df = self._load_resumable_cache()
+        cached_symbols = set(processed_df['symbol']) if not processed_df.empty else set()
+        
+        # Load existing blacklist
+        blacklisted_symbols = set()
+        if self.blacklist_file.exists():
+            try:
+                with open(self.blacklist_file, 'r', encoding='utf-8') as f:
+                    blacklisted_symbols = set(json.load(f))
+                logger.info(f"Loaded {len(blacklisted_symbols)} symbols from blacklist.")
+            except Exception as e:
+                logger.warning(f"Could not load blacklist file: {e}. Starting with an empty blacklist.")
+        
+        # Filter out already cached and blacklisted symbols
+        symbols_to_process = [s for s in full_universe if s not in cached_symbols and s not in blacklisted_symbols]
 
-        logger.info(f"Found {len(cached_symbols)} symbols in the initial cache.")
+        logger.info(f"Found {len(cached_symbols)} symbols in the resumable cache.")
+        logger.info(f"Found {len(blacklisted_symbols)} symbols in the blacklist.")
         
         new_data_df = pd.DataFrame()
         if not symbols_to_process:
-            logger.info("✅ All symbols from the full universe are already in the initial cache. No new data to fetch.")
+            logger.info("✅ All symbols from the universe are already in cache or blacklisted. No new data to fetch.")
         else:
-            logger.info(f"Identified {len(symbols_to_process)} new symbols to process.")
+            logger.info(f"Identified {len(symbols_to_process)} new or outdated symbols to process.")
             new_data_list = []
-            discarded_count = 0
+            newly_discarded_symbols = [] # To store symbols to add to blacklist
+            
             for i, symbol in enumerate(symbols_to_process):
                 try:
                     time.sleep(0.2)  # Respectful delay
@@ -161,8 +177,8 @@ class FullMarketFundamentalCollector:
 
                     # Record-Level Validation
                     if pd.isna(pe) and pd.isna(ps):
-                        logger.warning(f"   - Discarding {symbol}: Does not have at least one valid key factor (P/E or P/S).")
-                        discarded_count += 1
+                        logger.warning(f"   - Discarding {symbol}: Does not have at least one valid key factor (P/E or P/S). Adding to blacklist.")
+                        newly_discarded_symbols.append(symbol)
                         continue
 
                     new_data_list.append({
@@ -177,16 +193,24 @@ class FullMarketFundamentalCollector:
                 except RequestException as re:
                     logger.warning(f"  - ⚠️ Network error for {symbol}: {re}. Skipping.")
                 except Exception as e:
-                    logger.error(f"  - ❌ An unexpected error occurred for {symbol}: {e}")
+                    logger.warning(f"  - ⚠️ An unexpected error occurred for {symbol}: {e}. Adding to blacklist.")
+                    newly_discarded_symbols.append(symbol) # Add to blacklist for any unexpected error
             
             if new_data_list:
                 new_data_df = pd.DataFrame(new_data_list)
+
+            # Save newly discarded symbols to blacklist
+            if newly_discarded_symbols:
+                updated_blacklist = list(blacklisted_symbols.union(set(newly_discarded_symbols)))
+                with open(self.blacklist_file, 'w', encoding='utf-8') as f:
+                    json.dump(updated_blacklist, f, indent=4, ensure_ascii=False)
+                logger.info(f"Added {len(newly_discarded_symbols)} symbols to blacklist. Total blacklisted: {len(updated_blacklist)}")
 
         # --- Stage 3: Combine, Process, and Save ---
         logger.info("--- Stage 3: Combining and Processing Data ---")
         
         # Combine initial cache with newly fetched data
-        combined_df = pd.concat([initial_cache_df, new_data_df], ignore_index=True)
+        combined_df = pd.concat([processed_df, new_data_df], ignore_index=True)
         
         if combined_df.empty:
             logger.error("❌ No data available to process after collection phase. Aborting.")
@@ -211,8 +235,8 @@ class FullMarketFundamentalCollector:
         logger.info(f"- Symbols loaded from full universe file: {len(full_universe)}")
         logger.info(f"- Symbols loaded from initial cache: {len(cached_symbols)}")
         logger.info(f"- New symbols processed: {len(symbols_to_process)}")
-        if 'discarded_count' in locals():
-             logger.info(f"- New symbols discarded (poor quality): {discarded_count}")
+        logger.info(f"- New symbols discarded (poor quality/errors): {len(newly_discarded_symbols) if 'newly_discarded_symbols' in locals() else 0}")
+        logger.info(f"- Total symbols in blacklist: {len(blacklisted_symbols.union(set(newly_discarded_symbols))) if 'newly_discarded_symbols' in locals() else len(blacklisted_symbols)}")
         logger.info(f"- Total symbols in final dataset: {len(df_clean)}")
         logger.info(f"- Missing values summary (after imputation):\n{df_clean.isnull().sum()}")
         logger.info("="*50)

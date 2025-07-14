@@ -5574,3 +5574,147 @@ symbol
 2025-07-13 15:54:58,990 - __main__ - INFO - ✅ Successfully saved the final JSON output.
 2025-07-13 15:54:58,991 - __main__ - INFO - 
 🏁 MASTER PIPELINE RUN COMPLETE. 🏁
+2025-07-13 19:13:23,428 - __main__ - INFO - ================================================================================
+2025-07-13 19:13:23,429 - __main__ - INFO - 🚀 LAUNCHING MASTER STRATEGY DISCOVERY & VALIDATION PIPELINE 🚀
+2025-07-13 19:13:23,429 - __main__ - INFO - ================================================================================
+2025-07-13 19:13:23,429 - __main__ - INFO - 
+--- PIPELINE STAGE 0: CREATING INVESTMENT UNIVERSE ---
+2025-07-13 19:13:23,429 - __main__ - CRITICAL - 💥 MASTER PIPELINE FAILED! 💥
+Traceback (most recent call last):
+  File "c:\Portfolio-Optimizer\run_pipeline.py", line 52, in run_pipeline
+    universe_creator = UniverseCreator()
+                       ^^^^^^^^^^^^^^^
+NameError: name 'UniverseCreator' is not defined
+2025-07-13 19:13:23,431 - __main__ - INFO - 
+🏁 MASTER PIPELINE RUN COMPLETE. 🏁
+2025-07-13 19:17:00,866 - __main__ - INFO - ================================================================================
+2025-07-13 19:17:00,866 - __main__ - INFO - 🚀 LAUNCHING MASTER STRATEGY DISCOVERY & VALIDATION PIPELINE 🚀
+2025-07-13 19:17:00,867 - __main__ - INFO - ================================================================================
+2025-07-13 19:17:00,867 - __main__ - INFO - 
+--- PIPELINE STAGE 0: CREATING INVESTMENT UNIVERSE ---
+2025-07-13 19:17:00,867 - __main__ - CRITICAL - 💥 MASTER PIPELINE FAILED! 💥
+Traceback (most recent call last):
+  File "c:\Portfolio-Optimizer\run_pipeline.py", line 52, in run_pipeline
+    universe_creator = UniverseCreator()
+                       ^^^^^^^^^^^^^^^
+NameError: name 'UniverseCreator' is not defined
+2025-07-13 19:17:00,868 - __main__ - INFO - 
+🏁 MASTER PIPELINE RUN COMPLETE. 🏁
+2025-07-13 19:17:57,929 - __main__ - INFO - ================================================================================
+2025-07-13 19:17:57,929 - __main__ - INFO - 🚀 LAUNCHING MASTER STRATEGY DISCOVERY & VALIDATION PIPELINE 🚀
+2025-07-13 19:17:57,930 - __main__ - INFO - ================================================================================
+2025-07-13 19:17:57,930 - __main__ - INFO - 
+--- PIPELINE STAGE 0: CREATING INVESTMENT UNIVERSE ---
+2025-07-13 19:17:57,930 - __main__ - CRITICAL - 💥 MASTER PIPELINE FAILED! 💥
+Traceback (most recent call last):
+  File "c:\Portfolio-Optimizer\run_pipeline.py", line 52, in run_pipeline
+    universe_creator = UniverseCreator()
+                       ^^^^^^^^^^^^^^^
+NameError: name 'UniverseCreator' is not defined
+2025-07-13 19:17:57,931 - __main__ - INFO - 
+🏁 MASTER PIPELINE RUN COMPLETE. 🏁
+2025-07-13 19:18:03,957 - __main__ - INFO - ================================================================================
+2025-07-13 19:18:03,958 - __main__ - INFO - 🚀 LAUNCHING MASTER STRATEGY DISCOVERY & VALIDATION PIPELINE 🚀
+2025-07-13 19:18:03,958 - __main__ - INFO - ================================================================================
+2025-07-13 19:18:03,958 - __main__ - INFO - 
+--- PIPELINE STAGE 0: CREATING INVESTMENT UNIVERSE ---
+2025-07-13 19:18:03,958 - __main__ - CRITICAL - 💥 MASTER PIPELINE FAILED! 💥
+Traceback (most recent call last):
+  File "c:\Portfolio-Optimizer\run_pipeline.py", line 52, in run_pipeline
+    universe_creator = UniverseCreator()
+                       ^^^^^^^^^^^^^^^
+NameError: name 'UniverseCreator' is not defined
+2025-07-13 19:18:03,960 - __main__ - INFO - 
+🏁 MASTER PIPELINE RUN COMPLETE. 🏁
+2025-07-14 10:42:06,688 - __main__ - INFO - Full Market Data directory set to: C:\Portfolio-Optimizer\data\full_market_data_csvs
+2025-07-14 10:42:06,688 - __main__ - INFO - Cache directory set to: C:\Portfolio-Optimizer\cache
+2025-07-14 10:42:06,688 - __main__ - INFO - 🚀 Starting Full Market Downloader...
+2025-07-14 10:42:06,688 - __main__ - INFO - --- Stage 1: Loading Pre-defined Universe from C:\Portfolio-Optimizer\cache\universe.json ---
+2025-07-14 10:42:06,688 - __main__ - INFO - ✅ Successfully loaded 571 symbols from the universe file.
+2025-07-14 10:42:06,688 - __main__ - INFO - ✅ 'شاخص کل' added to the download queue as the benchmark.
+2025-07-14 10:42:06,688 - __main__ - INFO - 
+--- Stage 2: Updating Price Data for 572 Selected Symbols ---
+2025-07-14 10:42:07,196 - __main__ - INFO - ⬇️  Downloading data for وسپهر...
+2025-07-14 10:42:18,523 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=4, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPConnection object at 0x00000215E74A7390>: Failed to resolve 'old.tsetmc.com' ([Errno 11001] getaddrinfo failed)")': /tsev2/data/Export-txt.aspx?t=i&a=1&b=0&i=114312662654155
+2025-07-14 10:42:19,127 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=3, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPConnection object at 0x00000215E74C0510>: Failed to resolve 'old.tsetmc.com' ([Errno 11001] getaddrinfo failed)")': /tsev2/data/Export-txt.aspx?t=i&a=1&b=0&i=114312662654155
+2025-07-14 10:42:20,329 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=2, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPConnection object at 0x00000215E74C1090>: Failed to resolve 'old.tsetmc.com' ([Errno 11001] getaddrinfo failed)")': /tsev2/data/Export-txt.aspx?t=i&a=1&b=0&i=114312662654155
+2025-07-14 10:42:22,733 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=1, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPConnection object at 0x00000215E74C1C10>: Failed to resolve 'old.tsetmc.com' ([Errno 11001] getaddrinfo failed)")': /tsev2/data/Export-txt.aspx?t=i&a=1&b=0&i=114312662654155
+2025-07-14 10:42:27,537 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=0, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPConnection object at 0x00000215E74C2750>: Failed to resolve 'old.tsetmc.com' ([Errno 11001] getaddrinfo failed)")': /tsev2/data/Export-txt.aspx?t=i&a=1&b=0&i=114312662654155
+2025-07-14 10:42:37,775 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسپهر.
+2025-07-14 10:42:38,277 - __main__ - INFO - ⬇️  Downloading data for شصدف...
+2025-07-14 10:42:39,346 - __main__ - INFO - 💾 Successfully downloaded and updated price for شصدف.
+2025-07-14 10:42:39,848 - __main__ - INFO - ⬇️  Downloading data for آکام...
+2025-07-14 10:42:40,834 - __main__ - INFO - 💾 Successfully downloaded and updated price for آکام.
+2025-07-14 10:42:41,339 - __main__ - INFO - ⬇️  Downloading data for سبزوا...
+2025-07-14 10:42:43,290 - __main__ - INFO - 💾 Successfully downloaded and updated price for سبزوا.
+2025-07-14 10:42:43,799 - __main__ - INFO - ⬇️  Downloading data for اپال...
+2025-07-14 10:42:45,227 - __main__ - INFO - 💾 Successfully downloaded and updated price for اپال.
+2025-07-14 10:42:45,735 - __main__ - INFO - ⬇️  Downloading data for وبملت...
+2025-07-14 10:42:58,323 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=4, read=5, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x00000215E76AF490>, 'Connection to service.tsetmc.com timed out. (connect timeout=5)')': /tsev2/data/TseClient2.aspx?t=LastPossibleDeven
+2025-07-14 10:42:59,820 - __main__ - INFO - 💾 Successfully downloaded and updated price for وبملت.
+2025-07-14 10:43:00,332 - __main__ - INFO - ⬇️  Downloading data for گارانتی...
+2025-07-14 10:43:01,605 - __main__ - INFO - 💾 Successfully downloaded and updated price for گارانتی.
+2025-07-14 10:43:02,107 - __main__ - INFO - ⬇️  Downloading data for نشان...
+2025-07-14 10:43:02,938 - __main__ - INFO - 💾 Successfully downloaded and updated price for نشان.
+2025-07-14 10:43:03,446 - __main__ - INFO - ⬇️  Downloading data for وآذر...
+2025-07-14 10:43:05,876 - __main__ - INFO - 💾 Successfully downloaded and updated price for وآذر.
+2025-07-14 10:43:06,383 - __main__ - INFO - ⬇️  Downloading data for یاقوت...
+2025-07-14 10:43:07,895 - __main__ - INFO - 💾 Successfully downloaded and updated price for یاقوت.
+2025-07-14 10:43:08,409 - __main__ - INFO - ⬇️  Downloading data for حسینا...
+2025-07-14 10:43:09,648 - __main__ - INFO - 💾 Successfully downloaded and updated price for حسینا.
+2025-07-14 10:43:10,161 - __main__ - INFO - ⬇️  Downloading data for کلر...
+2025-07-14 10:43:11,155 - __main__ - INFO - 💾 Successfully downloaded and updated price for کلر.
+2025-07-14 10:43:11,667 - __main__ - INFO - ⬇️  Downloading data for پتروداریوش...
+2025-07-14 10:43:12,359 - __main__ - INFO - 💾 Successfully downloaded and updated price for پتروداریوش.
+2025-07-14 10:43:12,864 - __main__ - INFO - ⬇️  Downloading data for سپیدما...
+2025-07-14 10:43:14,223 - __main__ - INFO - 💾 Successfully downloaded and updated price for سپیدما.
+2025-07-14 10:43:14,725 - __main__ - INFO - ⬇️  Downloading data for وسپه...
+2025-07-14 10:43:16,873 - __main__ - INFO - 💾 Successfully downloaded and updated price for وسپه.
+2025-07-14 10:43:17,381 - __main__ - INFO - ⬇️  Downloading data for شستا...
+2025-07-14 10:43:18,357 - __main__ - INFO - 💾 Successfully downloaded and updated price for شستا.
+2025-07-14 10:43:18,858 - __main__ - INFO - ⬇️  Downloading data for غدشت...
+2025-07-14 10:43:21,027 - __main__ - INFO - 💾 Successfully downloaded and updated price for غدشت.
+2025-07-14 10:43:21,532 - __main__ - INFO - ⬇️  Downloading data for خزامیا...
+2025-07-14 10:43:27,536 - __main__ - INFO - 💾 Successfully downloaded and updated price for خزامیا.
+2025-07-14 10:43:28,045 - __main__ - INFO - ⬇️  Downloading data for وتوصا...
+2025-07-14 10:43:33,061 - __main__ - INFO - 💾 Successfully downloaded and updated price for وتوصا.
+2025-07-14 10:43:33,568 - __main__ - INFO - ⬇️  Downloading data for شاروم...
+2025-07-14 10:43:35,237 - __main__ - INFO - 💾 Successfully downloaded and updated price for شاروم.
+2025-07-14 10:43:35,745 - __main__ - INFO - ⬇️  Downloading data for غدیس...
+2025-07-14 10:43:37,871 - __main__ - INFO - 💾 Successfully downloaded and updated price for غدیس.
+2025-07-14 10:43:38,376 - __main__ - INFO - ⬇️  Downloading data for کدما...
+2025-07-14 10:43:40,546 - __main__ - INFO - 💾 Successfully downloaded and updated price for کدما.
+2025-07-14 10:43:41,048 - __main__ - INFO - ⬇️  Downloading data for تکنو...
+2025-07-14 10:43:42,861 - __main__ - INFO - 💾 Successfully downloaded and updated price for تکنو.
+2025-07-14 10:43:43,370 - __main__ - INFO - ⬇️  Downloading data for حتاید...
+2025-07-14 10:43:45,365 - __main__ - INFO - 💾 Successfully downloaded and updated price for حتاید.
+2025-07-14 10:43:45,877 - __main__ - INFO - ⬇️  Downloading data for افران...
+2025-07-14 10:43:46,983 - __main__ - INFO - 💾 Successfully downloaded and updated price for افران.
+2025-07-14 10:43:47,491 - __main__ - INFO - ⬇️  Downloading data for ثمسکن...
+2025-07-14 10:43:49,924 - __main__ - INFO - 💾 Successfully downloaded and updated price for ثمسکن.
+2025-07-14 10:43:50,431 - __main__ - INFO - ⬇️  Downloading data for وطوبی...
+2025-07-14 10:43:51,335 - __main__ - INFO - 💾 Successfully downloaded and updated price for وطوبی.
+2025-07-14 10:43:51,839 - __main__ - INFO - ⬇️  Downloading data for برلیان...
+2025-07-14 10:43:52,916 - __main__ - INFO - 💾 Successfully downloaded and updated price for برلیان.
+2025-07-14 10:43:53,431 - __main__ - INFO - ⬇️  Downloading data for مفاخر...
+2025-07-14 10:43:55,606 - __main__ - INFO - 💾 Successfully downloaded and updated price for مفاخر.
+2025-07-14 10:43:56,109 - __main__ - INFO - ⬇️  Downloading data for غزر...
+2025-07-14 10:43:58,272 - __main__ - INFO - 💾 Successfully downloaded and updated price for غزر.
+2025-07-14 10:43:58,781 - __main__ - INFO - ⬇️  Downloading data for دلر...
+2025-07-14 10:44:11,661 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=4, read=5, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x00000215E760CCD0>, 'Connection to service.tsetmc.com timed out. (connect timeout=5)')': /tsev2/data/TseClient2.aspx?t=LastPossibleDeven
+2025-07-14 10:44:22,291 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=3, read=5, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x00000215E760C410>, 'Connection to service.tsetmc.com timed out. (connect timeout=5)')': /tsev2/data/TseClient2.aspx?t=LastPossibleDeven
+2025-07-14 10:44:33,520 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=2, read=5, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x00000215E760FE10>, 'Connection to service.tsetmc.com timed out. (connect timeout=5)')': /tsev2/data/TseClient2.aspx?t=LastPossibleDeven
+2025-07-14 10:44:41,738 - __main__ - INFO - 💾 Successfully downloaded and updated price for دلر.
+2025-07-14 10:44:42,250 - __main__ - INFO - ⬇️  Downloading data for سخاش...
+2025-07-14 10:44:53,510 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=4, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPConnection object at 0x00000215E74EE4D0>: Failed to resolve 'old.tsetmc.com' ([Errno 11001] getaddrinfo failed)")': /tsev2/data/Export-txt.aspx?t=i&a=1&b=0&i=4470657233334072
+2025-07-14 10:45:05,393 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=3, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPConnection object at 0x00000215E74EDC90>: Failed to resolve 'old.tsetmc.com' ([Errno 11001] getaddrinfo failed)")': /tsev2/data/Export-txt.aspx?t=i&a=1&b=0&i=4470657233334072
+2025-07-14 10:45:27,117 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=5, read=4, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='service.tsetmc.com', port=80): Read timed out. (read timeout=5)")': /tsev2/data/TseClient2.aspx?t=LastPossibleDeven
+2025-07-14 10:45:37,761 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=4, read=4, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x00000215E77C1BD0>, 'Connection to service.tsetmc.com timed out. (connect timeout=5)')': /tsev2/data/TseClient2.aspx?t=LastPossibleDeven
+2025-07-14 10:45:49,002 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=3, read=4, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x00000215E74ED850>, 'Connection to service.tsetmc.com timed out. (connect timeout=5)')': /tsev2/data/TseClient2.aspx?t=LastPossibleDeven
+2025-07-14 10:46:01,044 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=3, read=3, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='service.tsetmc.com', port=80): Read timed out. (read timeout=5)")': /tsev2/data/TseClient2.aspx?t=LastPossibleDeven
+2025-07-14 10:46:05,270 - __main__ - INFO - 💾 Successfully downloaded and updated price for سخاش.
+2025-07-14 10:46:05,785 - __main__ - INFO - ⬇️  Downloading data for زماهان...
+2025-07-14 10:46:40,407 - __main__ - INFO - 💾 Successfully downloaded and updated price for زماهان.
+2025-07-14 10:46:40,912 - __main__ - INFO - ⬇️  Downloading data for خورشید...
+2025-07-14 10:46:46,048 - __main__ - INFO - 💾 Successfully downloaded and updated price for خورشید.
+2025-07-14 10:46:46,550 - __main__ - INFO - ⬇️  Downloading data for سفانو...

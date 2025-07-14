@@ -55,45 +55,9 @@ class FullMarketDownloader:
         logger.info(f"Full Market Data directory set to: {self.data_dir}")
         logger.info(f"Cache directory set to: {self.cache_dir}")
 
-    def _is_cache_valid(self, cache_file: Path, max_age_hours: int) -> bool:
-        """Check if a cache file is valid."""
-        if not cache_file.exists():
-            return False
-        cache_age_hours = (time.time() - cache_file.stat().st_mtime) / 3600
-        if cache_age_hours > max_age_hours:
-            logger.info(f"⏰ Cache {cache_file.name} is {cache_age_hours:.1f} hours old, refreshing...")
-            return False
-        logger.info(f"✅ Using valid cache {cache_file.name} ({cache_age_hours:.1f} hours old)")
-        return True
-
-    def fetch_all_symbols(self) -> Optional[List[Dict]]:
-        """Fetch all available symbols using pytse-client, with local caching."""
-        try:
-            logger.info("📊 Fetching all symbols from TSE...")
-            if self._is_cache_valid(self.symbols_cache_file, max_age_hours=168):  # 1 week cache
-                with open(self.symbols_cache_file, 'r', encoding='utf-8') as f:
-                    symbols_data = json.load(f)
-                logger.info(f"   Loaded {len(symbols_data)} symbols from cache")
-                return symbols_data
-
-            symbols_data = tse.symbols_data.all_symbols()
-            # Convert sets to lists for JSON serialization
-            for symbol_info in symbols_data:
-                for key, value in symbol_info.items():
-                    if isinstance(value, set):
-                        symbol_info[key] = list(value)
-            
-            with open(self.symbols_cache_file, 'w', encoding='utf-8') as f:
-                json.dump(symbols_data, f, ensure_ascii=False, indent=2)
-            logger.info(f"   Fetched and cached {len(symbols_data)} symbols")
-            return symbols_data
-        except Exception as e:
-            logger.error(f"❌ ERROR: Could not fetch symbols: {e}")
-            return None
-
     def run_update(self):
         """
-        Runs the main update process for the full market.
+        Runs the main update process for the full market based on a pre-defined universe.
         """
         logger.info("🚀 Starting Full Market Downloader...")
 
@@ -101,21 +65,22 @@ class FullMarketDownloader:
         logger.info(f"--- Stage 1: Loading Pre-defined Universe from {self.universe_file} ---")
         if not self.universe_file.exists():
             logger.error(f"CRITICAL: Universe file not found at '{self.universe_file}'.")
-            logger.error("Please run the `universe_creator.py` script first.")
-            raise FileNotFoundError("Universe file is missing.")
+            logger.error("Please run the universe_creator.py script first to generate the universe.")
+            raise FileNotFoundError(f"Universe file not found at {self.universe_file}")
 
         with open(self.universe_file, 'r', encoding='utf-8') as f:
             universe = json.load(f)
         
-        if not universe:
-            logger.error("❌ Universe file is empty. Aborting.")
+        if not isinstance(universe, list) or not universe:
+            logger.error("❌ Universe file is empty or invalid. Aborting.")
             return
         
         logger.info(f"✅ Successfully loaded {len(universe)} symbols from the universe file.")
 
-        # Add the benchmark index to the list to be downloaded
-        universe.append('شاخص کل')
-        logger.info("✅ 'شاخص کل' added to the download queue as the benchmark.")
+        # Add the benchmark index to the list if it's not already there
+        if 'شاخص کل' not in universe:
+            universe.append('شاخص کل')
+            logger.info("✅ 'شاخص کل' added to the download queue as the benchmark.")
         
         # STAGE 2: INCREMENTAL PRICE DATA DOWNLOAD
         logger.info(f"\n--- Stage 2: Updating Price Data for {len(universe)} Selected Symbols ---")
@@ -125,46 +90,43 @@ class FullMarketDownloader:
 
         for symbol in universe:
             file_path = self.data_dir / f"{symbol}.csv"
-            should_download = False
-
+            
+            # Check if the local CSV file is up-to-date (cache validity: 12 hours)
             if file_path.exists():
                 last_modified_hours = (time.time() - file_path.stat().st_mtime) / 3600
                 if last_modified_hours < 12:
                     skipped_count += 1
-                    continue
+                    continue  # Skip download if file is recent
+
+            # Download data if the file doesn't exist or is outdated
+            try:
+                time.sleep(0.5)  # Be respectful to the API
+                hist = None
+                logger.info(f"⬇️  Downloading data for {symbol}...")
+                if symbol == 'شاخص کل':
+                    index_ticker = tse.FinancialIndex(symbol)
+                    hist = index_ticker.history
                 else:
-                    should_download = True
-            else:
-                should_download = True
+                    ticker = tse.Ticker(symbol, adjust=True)
+                    hist = ticker.history
 
-            if should_download:
-                try:
-                    time.sleep(0.5)  # Be respectful to the API
-                    hist = None
-                    if symbol == 'شاخص کل':
-                        index_ticker = tse.FinancialIndex(symbol)
-                        hist = index_ticker.history
-                    else:
-                        ticker = tse.Ticker(symbol, adjust=True)
-                        hist = ticker.history
-
-                    if hist is not None and not hist.empty:
-                        hist.to_csv(file_path, encoding='utf-8')
-                        logger.info(f"💾 Successfully downloaded and updated price for {symbol}.")
-                        successful_downloads += 1
-                    else:
-                        logger.warning(f"⚠️ No price data returned for {symbol}.")
-                        failed_downloads += 1
-                
-                except IndexError as ie:
-                    if 'single positional indexer is out-of-bounds' in str(ie):
-                        logger.warning(f"🟡 Skipping {symbol}: No historical data available from the source.")
-                    else:
-                        logger.error(f"❌ An unexpected indexing error occurred for {symbol}: {ie}.")
+                if hist is not None and not hist.empty:
+                    hist.to_csv(file_path, encoding='utf-8')
+                    logger.info(f"💾 Successfully downloaded and updated price for {symbol}.")
+                    successful_downloads += 1
+                else:
+                    logger.warning(f"⚠️ No price data returned for {symbol}.")
                     failed_downloads += 1
-                except Exception as e:
-                    logger.error(f"❌ A critical error occurred for {symbol}: {e}.")
-                    failed_downloads += 1
+            
+            except IndexError as ie:
+                if 'single positional indexer is out-of-bounds' in str(ie):
+                    logger.warning(f"🟡 Skipping {symbol}: No historical data available from the source.")
+                else:
+                    logger.error(f"❌ An unexpected indexing error occurred for {symbol}: {ie}.")
+                failed_downloads += 1
+            except Exception as e:
+                logger.error(f"❌ A critical error occurred for {symbol}: {e}.")
+                failed_downloads += 1
         
         logger.info("="*50)
         logger.info("📊 FULL MARKET DOWNLOAD SUMMARY")
