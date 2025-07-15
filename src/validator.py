@@ -14,6 +14,7 @@ import pandas as pd
 from src.optimizer import MultiFactorOptimizer
 from src.config import RISK_FREE_RATE
 from src.strategy_tester import re_evaluate_top_strategies
+from src.strategy_selector import StrategySelector
 
 
 # --- Define Project Root and Paths ---
@@ -35,48 +36,23 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-def validate_and_select_best_strategies(top_200_df: pd.DataFrame):
+def validate_and_select_best_strategies(top_100_df: pd.DataFrame):
     """
     Categorizes strategies by risk, selects the best candidates from each category,
     runs walk-forward validation on them, and selects the final best strategy for each approach.
 
     Args:
-        top_200_df (pd.DataFrame): DataFrame of the top 200 strategies to be validated.
+        top_100_df (pd.DataFrame): DataFrame of the top 100 strategies to be validated.
     """
-    if top_200_df.empty:
+    if top_100_df.empty:
         logger.error("Received an empty DataFrame. Cannot proceed with validation.")
         return
 
-    # --- 1. Categorize by Risk ---
-    logger.info("\n--- Categorizing Top 200 Strategies by Risk (Annualized Volatility) ---")
+    # --- 1. Use Strategy Selector for Risk Categorization and Candidate Selection ---
+    logger.info("\n--- Using Strategy Selector for Risk-Based Categorization and Candidate Selection ---")
     
-    # Ensure 'Annualized Volatility' column exists
-    if 'Annualized Volatility' not in top_200_df.columns:
-        logger.error("CRITICAL: 'Annualized Volatility' column not found in the input DataFrame.")
-        return
-
-    sorted_by_volatility = top_200_df.sort_values(by='Annualized Volatility', ascending=True)
-    
-    n = len(sorted_by_volatility)
-    defensive_count = int(n * 0.30)
-    aggressive_start_index = int(n * 0.70)
-
-    defensive_strategies = sorted_by_volatility.iloc[:defensive_count]
-    balanced_strategies = sorted_by_volatility.iloc[defensive_count:aggressive_start_index]
-    aggressive_strategies = sorted_by_volatility.iloc[aggressive_start_index:]
-
-    logger.info(f"Defensive Strategies (Lowest 30% Volatility): {len(defensive_strategies)} strategies")
-    logger.info(f"Balanced Strategies (Middle 40% Volatility): {len(balanced_strategies)} strategies")
-    logger.info(f"Aggressive Strategies (Highest 30% Volatility): {len(aggressive_strategies)} strategies")
-
-    # --- 2. Select Top 5 Candidates from Each Category by Sharpe Ratio ---
-    logger.info("\n--- Selecting Top 5 Candidates from Each Risk Category by Sharpe Ratio ---")
-    
-    candidate_portfolios = {
-        "Defensive": defensive_strategies.nlargest(5, 'Sharpe Ratio'),
-        "Balanced": balanced_strategies.nlargest(5, 'Sharpe Ratio'),
-        "Aggressive": aggressive_strategies.nlargest(5, 'Sharpe Ratio')
-    }
+    strategy_selector = StrategySelector()
+    candidate_portfolios = strategy_selector.select_final_candidates(top_100_df, candidates_per_category=5)
 
     final_results = {}
 
@@ -130,8 +106,8 @@ def validate_and_select_best_strategies(top_200_df: pd.DataFrame):
                     top_n_candidates=top_n
                 )
                 
-                # Perform a 3-year walk-forward validation
-                validation_run_results = optimizer.run_full_analysis(years=3)
+                # Perform a 5-year walk-forward validation
+                validation_run_results = optimizer.run_full_analysis(years=5)
 
                 if validation_run_results and 'performance_summary' in validation_run_results:
                     # Store the original candidate info within the full results object

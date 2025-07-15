@@ -22,7 +22,7 @@ from src.optimizer import MultiFactorOptimizer
 # --- Define Project Root Path ---
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 RESULTS_CACHE_PATH = PROJECT_ROOT / 'cache' / 'strategy_test_results.csv'
-REEVALUATION_CACHE_PATH = PROJECT_ROOT / 'cache' / 'top_200_reevaluation_results.feather'
+REEVALUATION_CACHE_PATH = PROJECT_ROOT / 'cache' / 'top_300_reevaluation_results.feather'
 
 # --- Setup Logging ---
 LOGS_DIR = PROJECT_ROOT / 'logs'
@@ -49,12 +49,12 @@ def get_file_hash(filepath: Path) -> str:
 
 def re_evaluate_top_strategies() -> pd.DataFrame:
     """
-    Loads existing strategy test results, filters the top 200 strategies by Sharpe Ratio,
-    and then re-evaluates only these top strategies using the MultiFactorOptimizer.
+    Loads existing strategy test results, filters the top 300 strategies by Sharpe Ratio,
+    and then re-evaluates only these top strategies using the MultiFactorOptimizer with 1-year backtest.
     Results are cached for 12 hours.
 
     Returns:
-        pd.DataFrame: A DataFrame containing the re-evaluated results of the top 200 strategies.
+        pd.DataFrame: A DataFrame containing the top 100 strategies from re-evaluated results.
     """
     # --- Define paths ---
     cache_dir = PROJECT_ROOT / 'cache'
@@ -97,16 +97,16 @@ def re_evaluate_top_strategies() -> pd.DataFrame:
         logger.error("Loaded strategy results are empty or missing 'Sharpe Ratio' column. Cannot filter.")
         return pd.DataFrame()
 
-    # Filter the top 200 strategies by Sharpe Ratio
-    top_200_strategies = full_results_df.sort_values(by='Sharpe Ratio', ascending=False).head(200)
-    logger.info(f"Selected top 200 strategies by Sharpe Ratio from {len(full_results_df)} total strategies.")
+    # Filter the top 300 strategies by Sharpe Ratio
+    top_300_strategies = full_results_df.sort_values(by='Sharpe Ratio', ascending=False).head(300)
+    logger.info(f"Selected top 300 strategies by Sharpe Ratio from {len(full_results_df)} total strategies.")
 
-    all_results_from_top_200 = []
+    all_results_from_top_300 = []
     run_count = 0
-    total_runs = len(top_200_strategies)
+    total_runs = len(top_300_strategies)
 
-    # Iterate over these top 200 strategies and re-run the optimizer for them
-    for index, strategy_row in top_200_strategies.iterrows():
+    # Iterate over these top 300 strategies and re-run the optimizer for them
+    for index, strategy_row in top_300_strategies.iterrows():
         run_count += 1
         period = strategy_row['Momentum Period']
         factor_weights = {
@@ -118,7 +118,9 @@ def re_evaluate_top_strategies() -> pd.DataFrame:
         max_weight = strategy_row['Max Weight']
 
         param_string = f"P={period}, W={factor_weights}, TopN={top_n}, MaxW={max_weight}"
-        logger.info(f"\n--- Re-evaluating Strategy {run_count}/{total_runs}: {param_string} ---")
+        logger.info(f"\n🔄 STRATEGY BACKTEST {run_count}/{total_runs} (1-YEAR VALIDATION)")
+        logger.info(f"📊 Testing: {param_string}")
+        logger.info(f"⏳ Progress: {(run_count/total_runs)*100:.1f}% complete")
 
         try:
             optimizer = MultiFactorOptimizer(
@@ -151,40 +153,54 @@ def re_evaluate_top_strategies() -> pd.DataFrame:
                     'Data Hash': current_data_hash,
                     **performance_stats
                 }
-                all_results_from_top_200.append(result_entry)
+                all_results_from_top_300.append(result_entry)
                 logger.info(f"✅ Success! Sharpe: {performance_stats.get('Sharpe Ratio', 0):.2f}.")
+                
+                # 💾 INCREMENTAL CACHE SAVE - Save progress every 10 strategies
+                if run_count % 10 == 0 and all_results_from_top_300:
+                    try:
+                        temp_df = pd.DataFrame(all_results_from_top_300)
+                        temp_df.sort_values(by='Sharpe Ratio', ascending=False, inplace=True)
+                        temp_df.reset_index(drop=True).to_feather(REEVALUATION_CACHE_PATH)
+                        logger.info(f"💾 Incremental cache saved: {len(all_results_from_top_300)} results")
+                    except Exception as cache_error:
+                        logger.warning(f"⚠️ Failed to save incremental cache: {cache_error}")
             else:
                 logger.warning("Re-evaluation returned no valid stats.")
 
         except Exception as e:
             logger.error(f"❌ FAILED re-evaluation for {param_string}. Error: {e}", exc_info=False)
 
-    if not all_results_from_top_200:
-        logger.error("No results were generated from the top 200 strategies. Halting analysis.")
+    if not all_results_from_top_300:
+        logger.error("No results were generated from the top 300 strategies. Halting analysis.")
         return pd.DataFrame()
 
-    results_df_from_top_200 = pd.DataFrame(all_results_from_top_200)
-    if 'Sharpe Ratio' in results_df_from_top_200.columns:
-        results_df_from_top_200.sort_values(by='Sharpe Ratio', ascending=False, inplace=True)
+    results_df_from_top_300 = pd.DataFrame(all_results_from_top_300)
+    if 'Sharpe Ratio' in results_df_from_top_300.columns:
+        results_df_from_top_300.sort_values(by='Sharpe Ratio', ascending=False, inplace=True)
     else:
         logger.error("Sharpe Ratio column not found in re-evaluated results. Cannot sort.")
         return pd.DataFrame()
 
+    # Select top 100 strategies for strategy selector
+    top_100_strategies = results_df_from_top_300.head(100)
+
     logger.info("\n\n" + "="*80)
-    logger.info("🎉 TOP 200 STRATEGIES RE-EVALUATION COMPLETE 🎉")
+    logger.info("🎉 TOP 300 STRATEGIES RE-EVALUATION COMPLETE 🎉")
     logger.info("="*80)
     
     logger.info("\n--- Top 10 Performing Strategies from Re-evaluation by Sharpe Ratio ---")
-    logger.info("\n" + results_df_from_top_200.head(10).to_string())
+    logger.info("\n" + top_100_strategies.head(10).to_string())
 
     # Save the final results to the new cache file
     try:
-        results_df_from_top_200.reset_index(drop=True).to_feather(REEVALUATION_CACHE_PATH)
+        results_df_from_top_300.reset_index(drop=True).to_feather(REEVALUATION_CACHE_PATH)
         logger.info(f"💾 Successfully saved re-evaluation results to cache: {REEVALUATION_CACHE_PATH}")
     except Exception as e:
         logger.error(f"❌ Failed to save re-evaluation results to cache: {e}")
 
-    return results_df_from_top_200
+    # Return top 100 strategies for strategy selector
+    return top_100_strategies
 
 if __name__ == "__main__":
     re_evaluate_top_strategies()
