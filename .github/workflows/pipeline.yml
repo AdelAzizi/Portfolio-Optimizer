@@ -1,0 +1,78 @@
+name: Iranian Stock Market Investment Pipeline
+
+on:
+  schedule:
+    # اجرای خودکار هر 12 ساعت (ساعت 6 صبح و 6 عصر UTC)
+    - cron: '0 6,18 * * *'
+  push:
+    branches: [main]
+  workflow_dispatch:  # اجرای دستی
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 480  # 8 ساعت timeout
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Cache Python dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+          
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: Create necessary directories
+      run: |
+        mkdir -p cache data results logs
+        
+    - name: Run Investment Pipeline
+      run: |
+        echo "🚀 Starting Iranian Stock Market Investment Pipeline..."
+        python run_pipeline.py
+        
+    - name: Check results
+      run: |
+        if [ -f "results/final_results.json" ]; then
+          echo "✅ Pipeline completed successfully!"
+          echo "📊 Final results generated:"
+          ls -la results/
+        else
+          echo "❌ Pipeline failed - no final results found"
+          exit 1
+        fi
+        
+    - name: Upload results to GitHub Pages
+      if: success()
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./results
+        publish_branch: gh-pages
+        
+    - name: Upload logs as artifacts
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: pipeline-logs
+        path: logs/
+        retention-days: 7
+        
+    - name: Notify on failure
+      if: failure()
+      run: |
+        echo "💥 Pipeline failed! Check logs for details."
+        # اینجا می‌توانید notification به Slack/Email اضافه کنید

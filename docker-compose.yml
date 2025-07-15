@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  iranian-stock-pipeline:
+    build: .
+    container_name: iranian-stock-pipeline
+    volumes:
+      # Mount cache directory برای حفظ کش بین اجراها
+      - ./cache:/app/cache
+      - ./data:/app/data
+      - ./results:/app/results
+      - ./logs:/app/logs
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    
+  # سرویس برای اجرای دوره‌ای (هر 12 ساعت)
+  pipeline-scheduler:
+    build: .
+    container_name: pipeline-scheduler
+    volumes:
+      - ./cache:/app/cache
+      - ./data:/app/data
+      - ./results:/app/results
+      - ./logs:/app/logs
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: >
+      sh -c "
+        while true; do
+          echo '🚀 Starting scheduled pipeline run...'
+          python run_pipeline.py
+          echo '✅ Pipeline completed. Sleeping for 12 hours...'
+          sleep 43200
+        done
+      "
+    restart: unless-stopped

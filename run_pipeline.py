@@ -71,16 +71,16 @@ def run_pipeline():
         preprocessor.run()
         logger.info("✅ Data Preprocessor complete.")
 
-        # --- STAGE 4: RE-EVALUATE TOP 200 STRATEGIES ---
-        logger.info("\n--- PIPELINE STAGE 4: RE-EVALUATING TOP 200 STRATEGIES ---")
-        top_200_results_df = re_evaluate_top_strategies()
-        if top_200_results_df is None or top_200_results_df.empty:
+        # --- STAGE 4: RE-EVALUATE TOP 300 STRATEGIES AND SELECT TOP 100 ---
+        logger.info("\n--- PIPELINE STAGE 4: RE-EVALUATING TOP 300 STRATEGIES ---")
+        top_100_results_df = re_evaluate_top_strategies()
+        if top_100_results_df is None or top_100_results_df.empty:
             raise RuntimeError("Strategy re-evaluation failed to produce results.")
-        logger.info("✅ Top 200 strategies re-evaluated successfully.")
+        logger.info("✅ Top 300 strategies re-evaluated and top 100 selected successfully.")
 
         # --- STAGE 5: VALIDATE AND SELECT FINAL STRATEGIES ---
         logger.info("\n--- PIPELINE STAGE 5: VALIDATING AND SELECTING FINAL STRATEGIES ---")
-        final_strategies = validate_and_select_best_strategies(top_200_results_df)
+        final_strategies = validate_and_select_best_strategies(top_100_results_df)
         
         if final_strategies:
             logger.info("✅ Final strategy validation and selection process complete.")

@@ -1,3 +1,139 @@
+# 🇮🇷 سیستم هوشمند بهینه‌سازی سبد سهام ایران
+
+یک سیستم کاملاً خودکار برای کشف، اعتبارسنجی و ارائه بهترین استراتژی‌های سرمایه‌گذاری در بازار بورس ایران.
+
+## 🎯 ویژگی‌های کلیدی
+
+- 🤖 **کاملاً خودکار**: اجرای خودکار هر 12 ساعت
+- 📊 **تحلیل 300 استراتژی**: بک‌تست و انتخاب بهترین‌ها
+- 🎭 **سه پروفایل ریسک**: دفاعی 🐢، متعادل 🐺، تهاجمی 🦅
+- 💾 **سیستم کش هوشمند**: بهینه‌سازی عملکرد
+- 🔄 **بک‌تست 5 ساله**: اعتبارسنجی دقیق استراتژی‌ها
+- 📈 **خروجی JSON**: آماده برای فرانت‌اند
+
+## 🏗️ معماری سیستم
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    Frontend (Next.js + TypeScript)              │
+│                         🦅 🐺 🐢                                │
+└─────────────────────────┬───────────────────────────────────────┘
+                          │ HTTP/JSON
+                          ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                   API Contract Layer                            │
+│                 final_results.json                              │
+│                   (GitHub Pages)                                │
+└─────────────────────────┬───────────────────────────────────────┘
+                          │ File I/O
+                          ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                Backend Pipeline (Python)                        │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐             │
+│  │   Stage 1   │  │   Stage 2   │  │   Stage 3   │             │
+│  │Strategy     │→ │Strategy     │→ │Validator    │             │
+│  │Tester       │  │Selector     │  │             │             │
+│  └─────────────┘  └─────────────┘  └─────────────┘             │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+## 🚀 راه‌اندازی سریع
+
+### با Docker (توصیه شده)
+
+```bash
+# کلون پروژه
+git clone https://github.com/your-repo/iranian-stock-optimizer.git
+cd iranian-stock-optimizer
+
+# اجرای یکباره
+docker-compose up iranian-stock-pipeline
+
+# اجرای دوره‌ای (هر 12 ساعت)
+docker-compose up pipeline-scheduler
+```
+
+### نصب محلی
+
+```bash
+# نصب وابستگی‌ها
+pip install -r requirements.txt
+
+# اجرای پایپ‌لاین
+python run_pipeline.py
+```
+
+## 📋 مراحل پایپ‌لاین
+
+1. **Universe Creation** - انتخاب ~700 سهم برتر
+2. **Data Collection** - دانلود داده‌های قیمتی و بنیادی  
+3. **Data Processing** - محاسبه فاکتورهای مالی
+4. **Strategy Testing** - بک‌تست 300 استراتژی برتر
+5. **Strategy Selection** - دسته‌بندی ریسک و انتخاب 15 کاندیدا
+6. **Validation** - اعتبارسنجی 5 ساله و انتخاب 3 استراتژی نهایی
+
+## 📊 خروجی نهایی
+
+فایل `results/final_results.json` شامل:
+
+```json
+{
+  "Defensive": {
+    "strategy_profile": {
+      "name": "لاک‌پشت دانا",
+      "icon": "🐢",
+      "description": "استراتژی محافظه‌کارانه با ریسک کم"
+    },
+    "optimal_weights": { "symbol1": 0.15, "symbol2": 0.12 },
+    "performance_summary": {
+      "Total Return": "205.84%",
+      "Sharpe Ratio": "3.50"
+    },
+    "backtest_data": { ... }
+  }
+}
+```
+
+## ⚙️ تنظیمات
+
+فایل `src/config.py` شامل تمام تنظیمات قابل تغییر:
+
+- نرخ بدون ریسک
+- حداکثر وزن هر سهم
+- تعداد کاندیداهای برتر
+- وزن فاکتورهای مختلف
+
+## 🔄 اتوماسیون
+
+سیستم از GitHub Actions استفاده می‌کند:
+- اجرای خودکار هر 12 ساعت
+- استقرار نتایج در GitHub Pages
+- نظارت و گزارش‌دهی خطاها
+
+## 📈 نظارت
+
+- لاگ‌های جامع در پوشه `logs/`
+- کش هوشمند برای بهینه‌سازی عملکرد
+- گزارش‌های پیشرفت در real-time
+
+## 🤝 مشارکت
+
+1. Fork کنید
+2. Feature branch ایجاد کنید
+3. تغییرات را commit کنید  
+4. Pull request ارسال کنید
+
+## 📄 مجوز
+
+این پروژه تحت مجوز MIT منتشر شده است.
+
+---
+
+## 📚 مستندات قدیمی
+
+<details>
+<summary>مستندات نسخه قبلی (کلیک کنید)</summary>
+
 # Quantitative Investment System for the Iranian Stock Market
 
 This project is a quantitative investment system designed to analyze the Iranian stock market and identify potential investment opportunities based on various financial factors. It includes tools for data preprocessing, stock screening, portfolio optimization, and backtesting.
@@ -19,57 +155,4 @@ The project is organized into the following directories:
 -   `cache/`: Caches intermediate data to speed up processing.
 -   `results/`: Stores the output of the analysis, such as plots and reports.
 
-## Architectural Overview
-
-The system is designed with a modular architecture that separates data preprocessing from the main analysis and optimization tasks.
-
-1.  **Data Preprocessing (`preprocessor.py`):**
-    -   Fetches historical stock data from the Tehran Stock Exchange using the `pytse_client` library.
-    -   Cleans and preprocesses the data, handling missing values and ensuring data integrity.
-    -   Caches the cleaned data in the `cache/` directory for fast access.
-
-2.  **Factor Calculation (`factors/calculator.py`):**
-    -   Computes various financial factors, such as momentum and volatility, from the preprocessed data.
-
-3.  **Stock Screening & Optimization (`screener_v3_optimized.py`):**
-    -   Loads the preprocessed data and calculated factors.
-    -   Screens stocks based on a multi-factor model that combines momentum and low-volatility.
-    -   Optimizes the portfolio of selected stocks to maximize the Sharpe ratio.
-    -   Performs backtesting to evaluate the strategy's historical performance.
-
-## Installation
-
-To set up the project, follow these steps:
-
-1.  **Clone the repository:**
-    ```bash
-    git clone <repository_url>
-    cd Portfolio-Optimizer
-    ```
-
-2.  **Create a virtual environment:**
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-    ```
-
-3.  **Install the required packages:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-## Usage
-
-To run the system, execute the following scripts in order:
-
-1.  **Run the preprocessor to download and prepare the data:**
-    ```bash
-    python src/preprocessor.py
-    ```
-
-2.  **Run the screener and optimizer to perform the analysis:**
-    ```bash
-    python src/screener_v3_optimized.py
-    ```
-
-The results, including the optimized portfolio and backtesting analysis, will be displayed in the console and saved to the `logs/` and `results/` directories.
+</details>
