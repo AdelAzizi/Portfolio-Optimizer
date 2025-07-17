@@ -33,6 +33,26 @@ class UniverseCreator:
         applies quantitative filters, and saves the resulting stock universe.
         """
         self.logger.info("Starting efficient universe creation process using pytse_client...")
+        
+        # Check if cache is valid (11 hours)
+        if os.path.exists(self.universe_path):
+            import time
+            last_modified_hours = (time.time() - os.path.getmtime(self.universe_path)) / 3600
+            if last_modified_hours < 11:
+                self.logger.info(f"Found valid cache for universe (created {last_modified_hours:.2f} hours ago). Loading from cache.")
+                try:
+                    with open(self.universe_path, 'r', encoding='utf-8') as f:
+                        cached_universe = json.load(f)
+                    if cached_universe:
+                        self.logger.info(f"✅ Successfully loaded {len(cached_universe)} symbols from cache.")
+                        return
+                    else:
+                        self.logger.warning("Cache file is empty. Re-creating universe.")
+                except Exception as e:
+                    self.logger.warning(f"Could not read cache file: {e}. Re-creating universe.")
+            else:
+                self.logger.info(f"Universe cache is outdated ({last_modified_hours:.2f} hours old). Re-creating universe.")
+        
         try:
             # 1. Fetch all market-wide statistics at once using pytse_client
             self.logger.info("Fetching market-wide stats using pytse_client.get_stats()...")

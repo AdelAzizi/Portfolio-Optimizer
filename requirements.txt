@@ -24,6 +24,14 @@ numba>=0.56.0
 # Required for feather file format
 pyarrow>=10.0.0 
 
+# Configuration and data processing
+pyyaml>=6.0.0
+scipy>=1.9.0
+
+# Report generation
+jinja2>=3.1.0
+reportlab>=3.6.0
+
 # Development and testing
 pytest>=7.0.0
 pytest-cov>=4.0.0
