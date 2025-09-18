@@ -200,6 +200,7 @@ class MultiFactorOptimizer:
         portfolio_values = []
         dates = []
         previous_weights = {}
+        all_trades = []
         total_costs = 0
         turnover_history = []
         rebalance_history = []
@@ -207,10 +208,21 @@ class MultiFactorOptimizer:
 
         # --- Main Backtest Loop ---
         for i, current_rebalance_date in enumerate(backtest_range):
-            logger.info(f"🔄 Processing rebalance for date: {current_rebalance_date.date()}")
+            # Find the closest available trading day for the rebalance date
+
+            try:
+                # Get the index of the last valid date on or before the rebalance date
+                # Using get_indexer for broader pandas version compatibility
+                loc = self.master_price_df.index.get_indexer([current_rebalance_date], method='ffill')[0]
+                actual_rebalance_date = self.master_price_df.index[loc]
+            except Exception as e:
+                logger.warning(f"Could not find a valid trading day near {current_rebalance_date.date()}. Error: {e}. Skipping rebalance.")
+                continue
+
+            logger.info(f"🔄 Processing rebalance for date: {current_rebalance_date.date()} (Actual Trading Day: {actual_rebalance_date.date()})")
 
             # Define the lookback window for this period's optimization
-            lookback_end_date = current_rebalance_date - pd.Timedelta(days=1)
+            lookback_end_date = actual_rebalance_date - pd.Timedelta(days=1)
             lookback_start_date = lookback_end_date - pd.DateOffset(years=1) # 1-year lookback for optimization
             historical_prices = self.master_price_df.loc[lookback_start_date:lookback_end_date]
 
@@ -227,9 +239,22 @@ class MultiFactorOptimizer:
                 new_weights = previous_weights
 
             # --- Transaction & Turnover Calculation ---
-            trades = {sym: new_weights.get(sym, 0) - previous_weights.get(sym, 0) for sym in set(previous_weights) | set(new_weights)}
-            bought_value = sum(v for v in trades.values() if v > 0)
-            sold_value = abs(sum(v for v in trades.values() if v < 0))
+            trades_diff = {sym: new_weights.get(sym, 0) - previous_weights.get(sym, 0) for sym in set(previous_weights) | set(new_weights)}
+            
+            # Log individual trades
+            for symbol, weight_change in trades_diff.items():
+                if abs(weight_change) > 1e-6: # If there was a trade
+                    trade_value = abs(weight_change) * (portfolio_values[-1] if portfolio_values else 100)
+                    all_trades.append({
+                        "date": actual_rebalance_date,
+                        "symbol": symbol,
+                        "amount": trade_value if weight_change > 0 else -trade_value,
+                        "price": self.master_price_df.loc[actual_rebalance_date, symbol],
+                        "cost": trade_value * TRADE_COST_PERCENT
+                    })
+
+            bought_value = sum(v for v in trades_diff.values() if v > 0)
+            sold_value = abs(sum(v for v in trades_diff.values() if v < 0))
             turnover = min(bought_value, sold_value) # Standard turnover calculation
             turnover_history.append(turnover)
 
@@ -239,14 +264,14 @@ class MultiFactorOptimizer:
             
             # --- Log Rebalancing Actions ---
             rebalance_history.append({
-                "date": current_rebalance_date.strftime('%Y-%m-%d'),
-                "sold": {s: f"{abs(w):.2%}" for s, w in trades.items() if w < -0.001},
-                "bought": {s: f"{w:.2%}" for s, w in trades.items() if w > 0.001}
+                "date": actual_rebalance_date.strftime('%Y-%m-%d'),
+                "sold": {s: f"{abs(w):.2%}" for s, w in trades_diff.items() if w < -0.001},
+                "bought": {s: f"{w:.2%}" for s, w in trades_diff.items() if w > 0.001}
             })
 
             # --- Performance Calculation for the Period ---
-            period_end_date = current_rebalance_date + pd.DateOffset(days=rebalance_period_days)
-            prices_for_period = self.master_price_df.loc[current_rebalance_date:period_end_date]
+            period_end_date = actual_rebalance_date + pd.DateOffset(days=rebalance_period_days)
+            prices_for_period = self.master_price_df.loc[actual_rebalance_date:period_end_date]
 
             if not prices_for_period.empty and new_weights:
                 period_returns = prices_for_period[list(new_weights.keys())].pct_change().dropna()
@@ -268,11 +293,14 @@ class MultiFactorOptimizer:
 
         if not dates:
             logger.error("❌ Rolling backtest generated no data points.")
-            return None, None
+            return None, None, None, None
 
         # --- Final Data Assembly ---
-        performance_series = pd.Series(portfolio_values, index=pd.to_datetime(dates)).groupby(level=0).last()
-        backtest_data = self.run_comparative_backtest(performance_series.pct_change(), self.master_price_df)
+        equity_curve = pd.Series(portfolio_values, index=pd.to_datetime(dates)).groupby(level=0).last()
+        equity_curve.name = "Equity"
+        trades_df = pd.DataFrame(all_trades)
+
+        backtest_data = self.run_comparative_backtest(equity_curve.pct_change(), self.master_price_df)
 
         # --- Turnover Calculation ---
         avg_period_turnover = np.mean(turnover_history) if turnover_history else 0
@@ -288,7 +316,7 @@ class MultiFactorOptimizer:
                 "rebalance_history": rebalance_history
             }
         }
-        return performance_data, final_optimal_weights
+        return performance_data, final_optimal_weights, equity_curve, trades_df
 
     def run_full_analysis(self, years: int = 3) -> dict:
         """
@@ -298,7 +326,7 @@ class MultiFactorOptimizer:
         self._load_data()
         
         # We now call the rolling backtest, which returns performance and final weights
-        backtest_results, final_weights = self.run_rolling_backtest(years=years)
+        backtest_results, final_weights, equity_curve, trades_df = self.run_rolling_backtest(years=years)
 
         if not backtest_results or not final_weights:
             logger.error("❌ Rolling backtest failed to produce results or final weights.")
@@ -311,7 +339,9 @@ class MultiFactorOptimizer:
                 'optimal_weights': final_weights,
                 'performance_summary': {},
                 'backtest_data': backtest_results['performance_data'],
-                'transaction_analysis': backtest_results['transaction_analysis']
+                'transaction_analysis': backtest_results['transaction_analysis'],
+                'equity_curve': None,
+                'trades': None
             }
 
         total_return = (strategy_values.iloc[-1] / strategy_values.iloc[0]) - 1
@@ -339,7 +369,9 @@ class MultiFactorOptimizer:
             'optimal_weights': final_weights,
             'performance_summary': performance_summary,
             'backtest_data': backtest_results['performance_data'],
-            'transaction_analysis': backtest_results['transaction_analysis']
+            'transaction_analysis': backtest_results['transaction_analysis'],
+            'equity_curve': equity_curve,
+            'trades': trades_df
         }
 
 def main():

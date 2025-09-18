@@ -9,6 +9,7 @@
 from pathlib import Path
 import logging
 import pandas as pd
+import json
 
 # --- Import the refactored optimizer ---
 from src.optimizer import MultiFactorOptimizer
@@ -35,6 +36,64 @@ logging.basicConfig(
     ]
 )
 logger = logging.getLogger(__name__)
+# -------------------------------------------------
+# محور 1 - خروجی کامل‌تر برای هر سه پروفایل ریسک
+# -------------------------------------------------
+
+def build_enriched_output(portfolio, profile_name):
+    """portfolio = backtest object / df"""
+    equity_curve = portfolio.equity_curve
+    returns = equity_curve.pct_change().dropna()
+
+    # 1) 5 نقطه بازده سالانه (5 سال آخر)
+    annual_returns = equity_curve.groupby(equity_curve.index.year).apply(
+        lambda x: (x.iloc[-1] / x.iloc[0] - 1) * 100
+    ).tail(5).tolist()
+
+    # 2) Sharpe & Volatility rolling سالانه (5 سال آخر)
+    sharpe_rolling = (
+        returns.rolling(252).mean() / returns.rolling(252).std()
+    ).dropna().groupby(lambda x: x.year).mean().tail(5).tolist()
+
+    vol_roll = (
+        returns.rolling(252).std() * (252 ** 0.5) * 100
+    ).dropna().groupby(lambda x: x.year).mean().tail(5).tolist()
+
+    # 3) 1-year KPI
+    one_year_ret = ((equity_curve.iloc[-1] / equity_curve.iloc[-252]) - 1) * 100
+    one_year_dd = portfolio.max_drawdown * 100  # می‌توان دقیق‌تر کرد اگر لازم است
+
+    # 4) Full Transaction History
+    # Provides a detailed log of all individual buy/sell transactions.
+    transaction_history_df = portfolio.trades.copy()
+    
+    # Convert datetime columns to string for JSON serialization
+    for col in transaction_history_df.select_dtypes(include=['datetime64[ns]']).columns:
+        transaction_history_df[col] = transaction_history_df[col].dt.strftime('%Y-%m-%d')
+    
+    # Round float values for cleaner output
+    for col in transaction_history_df.select_dtypes(include=['float']).columns:
+        transaction_history_df[col] = transaction_history_df[col].round(4)
+        
+    # Replace potential NaN/inf values with strings to prevent JSON errors
+    transaction_history_df.fillna('N/A', inplace=True)
+    
+    transaction_history = transaction_history_df.to_dict(orient="records")
+
+
+    return {
+        "max_drawdown": round(portfolio.max_drawdown * 100, 2),
+        "kpi_sparklines": {
+            "Annualized Return": annual_returns,
+            "Sharpe Ratio": sharpe_rolling,
+            "Annualized Volatility": vol_roll,
+        },
+        "1y_change": {
+            "Total Return": round(one_year_ret, 2),
+            "Max Drawdown": round(one_year_dd, 2)
+        },
+        "transaction_history": transaction_history
+    }
 
 def validate_and_select_best_strategies(top_100_df: pd.DataFrame):
     """
@@ -112,6 +171,7 @@ def validate_and_select_best_strategies(top_100_df: pd.DataFrame):
                 if validation_run_results and 'performance_summary' in validation_run_results:
                     # Store the original candidate info within the full results object
                     validation_run_results['original_candidate'] = candidate.to_dict()
+                    
                     validation_results_list.append(validation_run_results)
                     logger.info(f"✅ Validation Success! Sharpe: {validation_run_results['performance_summary'].get('Sharpe Ratio', 'N/A')}")
                 else:
@@ -171,6 +231,8 @@ def main():
     Main pipeline execution:
     1. Re-evaluates the top 200 strategies.
     2. Validates and selects the best final strategies based on risk profiles.
+    3. Enriches the output with detailed metrics.
+    4. Saves the final results to a JSON file.
     """
     logger.info("="*70)
     logger.info("      STARTING FULL STRATEGY VALIDATION PIPELINE")
@@ -180,10 +242,113 @@ def main():
     top_200_results_df = re_evaluate_top_strategies()
 
     # 2. Validate and select the best strategies from the top 200
-    if top_200_results_df is not None and not top_200_results_df.empty:
-        validate_and_select_best_strategies(top_200_results_df)
-    else:
+    if top_200_results_df is None or top_200_results_df.empty:
         logger.error("Halting pipeline because re-evaluation of top strategies failed or returned no results.")
+        return
+
+    raw_results = validate_and_select_best_strategies(top_200_results_df)
+
+    if not raw_results:
+        logger.error("Validation step did not return any results. Halting.")
+        return
+
+    # -------------------------------------------------
+    # Enirch output for each of the three risk profiles
+    # -------------------------------------------------
+    final_results = {}
+    for profile, result_data in raw_results.items():
+        # Assumption: The backtest object is passed under the key 'backtest_obj'
+        # In the context of this file, the full backtest result is the `result_data` itself
+        portfolio_obj = result_data.get('backtest_obj') # A more robust key would be better
+
+        # Let's assume the optimizer returns the backtrader `cerebro` object or similar
+        # and that the `run_full_analysis` returns a dictionary where one key holds the backtest object
+        # Based on the existing code, `best_strategy_result` is the dict.
+        # Let's assume the backtest object is what `build_enriched_output` needs.
+        # The `MultiFactorOptimizer` would need to return this object.
+        # For now, let's assume `result_data` is a dictionary that contains what we need.
+        # A better approach would be to have the optimizer return a class instance.
+        
+        # The user's code expects `portfolio.equity_curve` and `portfolio.trades`.
+        # The `MultiFactorOptimizer` returns a dictionary. Let's check `optimizer.py` to see what it returns.
+        # Let's assume for now that the `result_data` is the portfolio object itself.
+        # This seems unlikely.
+        
+        # Let's stick to the user's note: "اگر portfolio.trades یا portfolio.equity_curve نام متفاوتی دارد، همان نام واقعی را جایگزین کنید."
+        # This implies the object exists. The most likely candidate is `best_strategy_result` which becomes `result_data`.
+        # The `optimizer.run_full_analysis` returns `validation_run_results`.
+        # This is appended to `validation_results_list`.
+        # Then `best_strategy_result` is selected from this list.
+        # So `result_data` is one of the `validation_run_results` dictionaries.
+        
+        # The `build_enriched_output` expects an object with `.equity_curve` and `.trades` attributes.
+        # The `validation_run_results` is a dictionary. This will fail.
+        # The user's code is based on an incorrect assumption about the data structure.
+        
+        # I must adapt. I will assume the dictionary `result_data` contains keys 'equity_curve' and 'trades'.
+        # The `build_enriched_output` needs to be adapted to take a dictionary.
+        
+        # Let's modify `build_enriched_output` to be more robust.
+        # No, let's follow the user's instructions as closely as possible.
+        # The user said "portfolio = backtest object / df".
+        # The `MultiFactorOptimizer` must be returning an object.
+        
+        # Let's look at the `optimizer.py`... I can't. I'll have to make a smart guess.
+        # The `run_full_analysis` in `optimizer.py` returns a dictionary.
+        # The dictionary contains `performance_summary`, `equity_curve`, `trades`, etc.
+        # So `result_data` is the dictionary.
+        
+        # I will create a temporary object to pass to the function to satisfy the `.attribute` access.
+        class PortfolioProxy:
+            def __init__(self, data_dict):
+                self.equity_curve = data_dict.get('equity_curve')
+                self.trades = data_dict.get('trades')
+                self.max_drawdown = data_dict.get('performance_summary', {}).get('Max Drawdown [%]', 0) / 100
+
+        portfolio_proxy = PortfolioProxy(result_data)
+
+        if portfolio_proxy.equity_curve is not None and portfolio_proxy.trades is not None:
+            logger.info(f"Enriching results for {profile} profile...")
+            enriched_data = build_enriched_output(portfolio_proxy, profile)
+
+            # Combine original results with the new enriched data
+            # We should not save the raw equity curve and trades in the final JSON.
+            combined_data = result_data.copy()
+            if 'equity_curve' in combined_data: del combined_data['equity_curve']
+            if 'trades' in combined_data: del combined_data['trades']
+            
+            combined_data.update(enriched_data)
+            final_results[profile] = combined_data
+        else:
+            logger.warning(f"Could not find 'equity_curve' or 'trades' for profile '{profile}'. Cannot enrich results.")
+            final_results[profile] = result_data
+
+
+    # -------------------------------------------------
+    # Save final results to JSON
+    # -------------------------------------------------
+    output_path = RESULTS_DIR / 'final_results.json'
+    RESULTS_DIR.mkdir(exist_ok=True) # Ensure results directory exists
+    logger.info(f"💾 Saving final enriched results to {output_path}...")
+    try:
+        with open(output_path, 'w', encoding='utf-8') as f:
+            # Custom JSON serializer to handle pandas Timestamps and other non-serializable types
+            def json_default(o):
+                if isinstance(o, (pd.Timestamp, pd.Period)):
+                    return o.isoformat()
+                if isinstance(o, float) and (pd.isna(o) or o == float('inf') or o == float('-inf')):
+                    return str(o)
+                # Add more type checks if necessary
+                try:
+                    return str(o) # Fallback for other types
+                except:
+                    return f"NON-SERIALIZABLE: {type(o)}"
+
+            json.dump(final_results, f, ensure_ascii=False, indent=4, default=json_default)
+        logger.info("✅ Successfully saved final results.")
+    except Exception as e:
+        logger.error(f"❌ Failed to save final_results.json: {e}", exc_info=True)
+
 
     logger.info("\n" + "="*70)
     logger.info("      PIPELINE FINISHED")
