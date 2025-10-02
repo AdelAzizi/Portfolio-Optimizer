@@ -10,9 +10,24 @@ venv/
 env/
 
 # Data, Logs, Cache
-data/
-logs/
-cache/
+/data/
+/logs/
+/cache/
+/results/backtest_results/
+/results/images/
+/results/reports/
+
+# Ignoring large data files individually, allowing READMEs in folders
+*.csv
+*.json
+*.feather
+*.pkl
+
+# But keep the final result and necessary READMEs
+!/results/final_results.json
+!/data/README.md
+!/results/README.md
+
 
 # IDE specific files
 .idea/
