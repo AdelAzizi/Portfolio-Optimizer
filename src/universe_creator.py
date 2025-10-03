@@ -3,6 +3,11 @@ import pandas as pd
 import json
 import os
 import logging
+import time
+from pathlib import Path
+
+# Import configurations from the central config file
+from src.config import UNIVERSE_CREATOR
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -10,35 +15,34 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(level
 class UniverseCreator:
     """
     Creates a stock universe by fetching market-wide stats using pytse_client, 
-    applying quantitative filters, and saving the resulting list of symbols.
+    applying quantitative filters defined in the config, and saving the resulting list of symbols.
     """
     def __init__(self):
         """
-        Initializes the UniverseCreator.
+        Initializes the UniverseCreator using settings from the config file.
         """
         self.logger = logging.getLogger('UniverseCreator')
-        self.cache_dir = 'cache'
-        self.universe_path = os.path.join(self.cache_dir, 'universe.json')
+        # Use settings from config for path definitions
+        self.cache_dir = Path(UNIVERSE_CREATOR["CACHE_DIR"])
+        self.universe_path = self.cache_dir / UNIVERSE_CREATOR["UNIVERSE_FILENAME"]
         self._setup_directories()
 
     def _setup_directories(self):
         """Create cache directory if it doesn't exist."""
-        if not os.path.exists(self.cache_dir):
-            os.makedirs(self.cache_dir)
-            self.logger.info(f"Created directory: {self.cache_dir}")
+        self.cache_dir.mkdir(exist_ok=True)
+        self.logger.info(f"Created directory: {self.cache_dir}")
 
     def run(self):
         """
-        Fetches market-wide stats using an efficient single API call from pytse_client, 
-        applies quantitative filters, and saves the resulting stock universe.
+        Fetches market-wide stats, applies quantitative filters from config, 
+        and saves the resulting stock universe.
         """
-        self.logger.info("Starting efficient universe creation process using pytse_client...")
+        self.logger.info("Starting efficient universe creation process using configurations...")
         
-        # Check if cache is valid (11 hours)
-        if os.path.exists(self.universe_path):
-            import time
-            last_modified_hours = (time.time() - os.path.getmtime(self.universe_path)) / 3600
-            if last_modified_hours < 11:
+        # Check if cache is valid using validity period from config
+        if self.universe_path.exists():
+            last_modified_hours = (time.time() - self.universe_path.stat().st_mtime) / 3600
+            if last_modified_hours < UNIVERSE_CREATOR["CACHE_VALIDITY_HOURS"]:
                 self.logger.info(f"Found valid cache for universe (created {last_modified_hours:.2f} hours ago). Loading from cache.")
                 try:
                     with open(self.universe_path, 'r', encoding='utf-8') as f:
@@ -54,7 +58,7 @@ class UniverseCreator:
                 self.logger.info(f"Universe cache is outdated ({last_modified_hours:.2f} hours old). Re-creating universe.")
         
         try:
-            # 1. Fetch all market-wide statistics at once using pytse_client
+            # 1. Fetch all market-wide statistics at once
             self.logger.info("Fetching market-wide stats using pytse_client.get_stats()...")
             market_stats_df = tse.get_stats(to_csv=False)
             
@@ -73,18 +77,23 @@ class UniverseCreator:
             market_stats_df.dropna(subset=numeric_cols, inplace=True)
             self.logger.info(f"After cleaning non-numeric data, {len(market_stats_df)} symbols remain.")
 
-            # 2. Apply a Multi-Layer Quantitative Filter
-            # a. Market Type Filter: Keep Bourse (1) and Fara Bourse (2)
-            filtered_df = market_stats_df[market_stats_df['flow'].isin([1, 2])].copy()
+            # 2. Apply a Multi-Layer Quantitative Filter using settings from config
+            filters = UNIVERSE_CREATOR["FILTERS"]
+            
+            # a. Market Type Filter
+            market_flow_types = filters["MARKET_FLOW_TYPES"]
+            filtered_df = market_stats_df[market_stats_df['flow'].isin(market_flow_types)].copy()
             self.logger.info(f"After market type filter (Bourse/Fara Bourse): {len(filtered_df)} stocks remaining.")
 
-            # b. Liquidity Filter: Volume greater than 100,000
-            filtered_df = filtered_df[filtered_df['volume_of_trans'] > 100000]
-            self.logger.info(f"After liquidity filter (>100,000 volume): {len(filtered_df)} stocks remaining.")
+            # b. Liquidity Filter
+            min_liquidity = filters["MIN_LIQUIDITY"]
+            filtered_df = filtered_df[filtered_df['volume_of_trans'] > min_liquidity]
+            self.logger.info(f"After liquidity filter (>{min_liquidity} volume): {len(filtered_df)} stocks remaining.")
 
-            # c. Size Filter: Market cap greater than 1e12 Toman
-            filtered_df = filtered_df[filtered_df['val_company_last_day'] > 1e12]
-            self.logger.info(f"After size filter (>1e12 market cap): {len(filtered_df)} stocks remaining.")
+            # c. Size Filter
+            min_market_cap = filters["MIN_MARKET_CAP"]
+            filtered_df = filtered_df[filtered_df['val_company_last_day'] > min_market_cap]
+            self.logger.info(f"After size filter (>{min_market_cap} market cap): {len(filtered_df)} stocks remaining.")
 
             # 3. Extract and Save the Final Universe
             if filtered_df.empty:

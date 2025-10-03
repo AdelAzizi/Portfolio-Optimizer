@@ -5,6 +5,30 @@ from pathlib import Path
 # by going up one level from the script's directory ('src').
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
+# --- Universe Creator Settings ---
+# Parameters for the script that selects the initial pool of stocks.
+UNIVERSE_CREATOR = {
+    "CACHE_VALIDITY_HOURS": 11,
+    "FILTERS": {
+        # Minimum trading volume to be considered liquid
+        "MIN_LIQUIDITY": 100000,
+        # Minimum market capitalization in Toman
+        "MIN_MARKET_CAP": 1e12,
+        # Market flow types to include: 1 for Bourse, 2 for Fara Bourse
+        "MARKET_FLOW_TYPES": [1, 2]
+    },
+    "CACHE_DIR": "cache",
+    "UNIVERSE_FILENAME": "universe.json"
+}
+
+# --- Full Market Downloader Settings ---
+FULL_MARKET_DOWNLOADER = {
+    "DATA_DIR": "data/full_market_data_csvs",
+    "BLACKLIST_FILENAME": "downloader_blacklist.json",
+    "BENCHMARK_SYMBOL": "شاخص کل",
+    "API_DELAY_SECONDS": 0.5  # Delay between each API call
+}
+
 # Global Configuration Parameters
 RISK_FREE_RATE = 0.05  # Example: 5% annual risk-free rate
 MIN_RETURN_THRESHOLD = 0.15 # Example: 15% minimum annual return for screening
