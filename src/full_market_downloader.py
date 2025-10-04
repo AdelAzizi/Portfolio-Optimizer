@@ -16,6 +16,11 @@ import logging
 import json
 from pathlib import Path
 from typing import List, Set, Optional
+import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+from tqdm import tqdm  # For progress bar
+import traceback  # For detailed error logging
 
 # --- Project-Specific Imports ---
 from src.config import PROJECT_ROOT, UNIVERSE_CREATOR, FULL_MARKET_DOWNLOADER
@@ -56,6 +61,8 @@ class FullMarketDownloader:
         self.data_dir.mkdir(exist_ok=True)
         self.cache_dir.mkdir(exist_ok=True)
         self.blacklist = self._load_blacklist()
+        self.failure_counts = {}  # Track consecutive failures for each symbol
+        self.max_consecutive_failures = 3  # Number of consecutive failures before blacklisting
         
         logger.info("Downloader initialized with the following settings:")
         logger.info(f"Data directory: {self.data_dir}")
@@ -80,6 +87,27 @@ class FullMarketDownloader:
         with open(self.blacklist_file, 'w', encoding='utf-8') as f:
             json.dump(list(self.blacklist), f, ensure_ascii=False, indent=4)
         logger.info(f"Saved {len(self.blacklist)} symbols to the blacklist.")
+
+    def _increment_failure_count(self, symbol: str):
+        """Increment the failure count for a symbol and check if it should be blacklisted."""
+        self.failure_counts[symbol] = self.failure_counts.get(symbol, 0) + 1
+        current_failures = self.failure_counts[symbol]
+        
+        if current_failures >= self.max_consecutive_failures:
+            logger.warning(f"🔴 Blacklisting {symbol} after {current_failures} consecutive failures.")
+            self.blacklist.add(symbol)
+            # Remove from failure counts since it's now blacklisted
+            if symbol in self.failure_counts:
+                del self.failure_counts[symbol]
+            return True
+        else:
+            logger.warning(f"⚠️  {symbol} failed, {current_failures}/{self.max_consecutive_failures} failures (will blacklist at {self.max_consecutive_failures}).")
+            return False
+
+    def _reset_failure_count(self, symbol: str):
+        """Reset the failure count for a symbol after successful download."""
+        if symbol in self.failure_counts:
+            del self.failure_counts[symbol]
 
     def _get_last_date(self, file_path: Path) -> Optional[str]:
         """
@@ -132,27 +160,76 @@ class FullMarketDownloader:
         failed_updates = 0
         newly_blacklisted = 0
 
-        for symbol in symbols_to_download:
+        # Add retry function for API calls
+        def fetch_with_retry(ticker, start_date, max_retries=3):
+            for attempt in range(max_retries):
+                try:
+                    # Add some logging to debug the 'DataFrame not callable' issue
+                    logger.debug(f"Attempt {attempt + 1}: Fetching history for symbol with start_date={start_date}, type={type(start_date)}")
+                    
+                    # Check if ticker.history is callable (function) or property
+                    if callable(ticker.history):
+                        # If it's callable, call it as a function
+                        hist = ticker.history(start_date=start_date)
+                    else:
+                        # If it's a property, access it directly and then filter by date
+                        hist = ticker.history
+                        if start_date and hasattr(hist, 'loc'):
+                            # Filter the history DataFrame by start_date if provided
+                            try:
+                                hist = hist[hist.index >= start_date]
+                            except Exception:
+                                logger.warning(f"Could not filter history by start_date {start_date}, returning full history")
+                
+                    # Check if hist is actually a DataFrame or if there's an issue
+                    if hist is not None and hasattr(hist, 'empty'):
+                        # It's a proper DataFrame
+                        logger.debug(f"Received valid DataFrame for {symbol}, shape: {hist.shape if not hist.empty else 'empty'}")
+                        return hist
+                    else:
+                        logger.warning(f"⚠️  Received unexpected object type for {symbol}: {type(hist)}, attempt {attempt + 1}")
+                        if attempt < max_retries - 1:
+                            time.sleep(2 ** attempt)  # Exponential backoff
+                            continue
+                        else:
+                            raise ValueError(f"Received unexpected object type instead of DataFrame for {symbol}: {type(hist)}")
+                    
+                except Exception as e:
+                    logger.warning(f"⚠️ Attempt {attempt + 1} failed for {symbol}: {e}")
+                    if attempt < max_retries - 1:
+                        time.sleep(2 ** attempt)  # Exponential backoff
+                    else:
+                        raise e
+
+        # Use tqdm for progress bar
+        for symbol in tqdm(symbols_to_download, desc="Downloading market data", unit="symbol"):
+            logger.debug(f"Starting processing for symbol: {symbol}")
             time.sleep(self.api_delay)  # Be respectful to the API
             file_path = self.data_dir / f"{symbol}.csv"
             start_date = None
 
             if file_path.exists():
                 start_date = self._get_last_date(file_path)
+                logger.debug(f"Found existing file for {symbol}, start_date: {start_date}")
 
             try:
-                logger.info(f"⬇️  Processing {symbol}...")
+                logger.info(f"⬇️  Processing {symbol} (start_date: {start_date})...")
                 
                 # Fetch data (either full or incremental)
                 if symbol == self.benchmark_symbol:
+                    logger.debug(f"Creating FinancialIndex for benchmark symbol: {symbol}")
                     ticker = tse.FinancialIndex(symbol)
                 else:
+                    logger.debug(f"Creating Ticker for symbol: {symbol}")
                     ticker = tse.Ticker(symbol, adjust=True)
                 
-                # The pytse_client library automatically handles incremental download if start_date is provided
-                hist = ticker.history(start_date=start_date)
+                # Fetch with retry mechanism
+                logger.debug(f"Calling fetch_with_retry for {symbol} with start_date: {start_date}")
+                hist = fetch_with_retry(ticker, start_date)
+                logger.debug(f"Received history for {symbol}, type: {type(hist)}, shape: {hist.shape if hist is not None and not hist.empty else 'N/A'}")
 
                 if hist is not None and not hist.empty:
+                    logger.debug(f"History for {symbol} is not empty, rows: {len(hist)}")
                     if start_date and len(hist) > 1:
                         # Append new data (excluding the first row which is a duplicate of the last known date)
                         hist.iloc[1:].to_csv(file_path, mode='a', header=False, index=True, encoding='utf-8')
@@ -162,20 +239,40 @@ class FullMarketDownloader:
                         hist.to_csv(file_path, index=True, encoding='utf-8')
                         logger.info(f"💾 Performed full download for {symbol} ({len(hist)} rows).")
                     successful_updates += 1
+                    logger.debug(f"Successfully updated {symbol}, total successful: {successful_updates}")
                 else:
                     logger.info(f"✅ No new data for {symbol}. Already up-to-date.")
             
             except IndexError as ie:
                 if 'single positional indexer is out-of-bounds' in str(ie):
-                    logger.warning(f"🟡 Blacklisting {symbol}: No historical data available from the source.")
-                    self.blacklist.add(symbol)
-                    newly_blacklisted += 1
+                    should_blacklist = self._increment_failure_count(symbol)
+                    if should_blacklist:
+                        newly_blacklisted += 1
                 else:
                     logger.error(f"❌ An unexpected indexing error occurred for {symbol}: {ie}.")
+                    logger.debug(f"Full traceback for {symbol}: {traceback.format_exc()}")
+                    # Increment failure count for other index errors too
+                    self._increment_failure_count(symbol)
                 failed_updates += 1
             except Exception as e:
                 logger.error(f"❌ A critical error occurred for {symbol}: {e}.")
+                logger.debug(f"Full traceback for {symbol}: {traceback.format_exc()}")
+                
+                # Check if this is a specific error that should trigger blacklisting
+                error_msg = str(e).lower()
+                if ('dataframe' in error_msg and 'callable' in error_msg) or 'no historical data' in error_msg:
+                    should_blacklist = self._increment_failure_count(symbol)
+                    if should_blacklist:
+                        newly_blacklisted += 1
+                else:
+                    # For other errors, increment failure count but don't immediately blacklist
+                    self._increment_failure_count(symbol)
+                
                 failed_updates += 1
+            else:
+                # If successful, reset failure count
+                self._reset_failure_count(symbol)
+                logger.debug(f"✅ Successfully processed {symbol}, reset failure count.")
         
         # STAGE 3: SAVE STATE AND SUMMARIZE
         logger.info("\n--- Stage 3: Finalizing Run ---")

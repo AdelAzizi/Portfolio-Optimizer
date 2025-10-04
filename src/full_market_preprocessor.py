@@ -14,6 +14,9 @@ import numpy as np
 import logging
 from pathlib import Path
 
+# --- Import Configuration ---
+from config import FULL_MARKET_PREPROCESSOR as config
+
 
 # --- Define Project Root Path ---
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -35,13 +38,14 @@ class FullMarketDataPreprocessor:
     """
     Builds the final analysis-ready dataset by merging full market fundamental and price data.
     """
-    def __init__(self, data_dir: str = 'data', cache_dir: str = 'cache'):
-        self.data_dir = PROJECT_ROOT / data_dir
-        self.cache_dir = PROJECT_ROOT / cache_dir
+    def __init__(self, data_dir: str = None, cache_dir: str = None):
+        # Use config values if not provided
+        self.data_dir = PROJECT_ROOT / (data_dir or config["DATA_DIR"])
+        self.cache_dir = PROJECT_ROOT / (cache_dir or config["CACHE_DIR"])
         self.price_data_dir = self.data_dir / 'full_market_data_csvs'
         
-        self.fundamental_data_file = self.cache_dir / 'master_fundamental_data.feather'
-        self.output_file = self.cache_dir / 'full_analysis_ready_data.feather'
+        self.fundamental_data_file = self.cache_dir / config["FUNDAMENTAL_FILE"]
+        self.output_file = self.cache_dir / config["OUTPUT_FILE"]
         
         logger.info(f"Fundamental data source: {self.fundamental_data_file}")
         logger.info(f"Price data source: {self.price_data_dir}")
@@ -98,28 +102,32 @@ class FullMarketDataPreprocessor:
         returns = price_df.pct_change()
         
         # Annualized Return (compounded)
-        # (1 + mean_daily_return)^252 - 1
-        annualized_return = (1 + returns.mean())**252 - 1
+        # (1 + mean_daily_return)^TRADING_DAYS_PER_YEAR - 1
+        annualized_return = (1 + returns.mean())**config["TRADING_DAYS_PER_YEAR"] - 1
         
         # Annualized Volatility
-        annualized_volatility = returns.std() * np.sqrt(252)
+        annualized_volatility = returns.std() * np.sqrt(config["TRADING_DAYS_PER_YEAR"])
         
-        # Momentum
-        # Calculate 12-month momentum
-        momentum_12m = price_df.pct_change(periods=252).iloc[-1]
+        # Momentum with fallback for short history symbols
+        momentum_metrics = {}
+        for period_name, periods in config["MOMENTUM_PERIODS"].items():
+            momentum = price_df.pct_change(periods=periods).iloc[-1]
+            # Fallback if NaN (for symbols with insufficient history)
+            if pd.isna(momentum).any() if hasattr(momentum, 'any') else pd.isna(momentum):
+                if len(price_df) > periods // 2:
+                    shorter_period = periods // 2
+                    momentum = price_df.pct_change(periods=shorter_period).iloc[-1]
+            momentum_metrics[f'Momentum_{period_name}'] = momentum
 
-        # Calculate 6-month momentum
-        momentum_6m = price_df.pct_change(periods=126).iloc[-1]
-
-        # Calculate 3-month momentum
-        momentum_3m = price_df.pct_change(periods=63).iloc[-1]
+        # Calculate Sharpe Ratio
+        risk_free_rate = config["RISK_FREE_RATE"]
+        sharpe_ratio = (annualized_return - risk_free_rate) / annualized_volatility
         
         metrics_df = pd.DataFrame({
             'Return': annualized_return,
             'Volatility': annualized_volatility,
-            'Momentum_3M': momentum_3m,
-            'Momentum_6M': momentum_6m,
-            'Momentum_12M': momentum_12m
+            'Sharpe': sharpe_ratio,
+            **momentum_metrics # Unpack momentum metrics
         })
         logger.info("✅ Quantitative metrics calculated.")
         return metrics_df

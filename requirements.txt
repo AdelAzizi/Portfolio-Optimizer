@@ -35,3 +35,6 @@ reportlab>=3.6.0
 # Development and testing
 pytest>=7.0.0
 pytest-cov>=4.0.0
+
+# Progress bar
+tqdm>=4.64.0

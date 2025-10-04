@@ -26,7 +26,18 @@ FULL_MARKET_DOWNLOADER = {
     "DATA_DIR": "data/full_market_data_csvs",
     "BLACKLIST_FILENAME": "downloader_blacklist.json",
     "BENCHMARK_SYMBOL": "شاخص کل",
-    "API_DELAY_SECONDS": 0.5  # Delay between each API call
+    "API_DELAY_SECONDS": 1.0  # Delay between each API call - increased to prevent rate limiting
+}
+
+# --- Full Market Fundamental Collector Settings ---
+FUNDAMENTAL_COLLECTOR = {
+    "CACHE_DIR": "cache",
+    "OUTPUT_FILE": "master_fundamental_data.feather",
+    "BLACKLIST_FILE": "failed_symbols.json",
+    "CACHE_VALIDITY_HOURS": 168,  # 1 week
+    "REQUEST_DELAY_SEC": 0.2,
+    "BLACKLIST_EXPIRY_DAYS": 30,
+    "FUNDAMENTAL_FIELDS": ['P/E', 'P/S', 'EPS']
 }
 
 # Global Configuration Parameters
@@ -45,6 +56,22 @@ TRADE_COST_PERCENT = 0.005 # 0.5% cost on each trade (buy/sell)
 CACHE_DIR = PROJECT_ROOT / "cache"
 PREPROCESSED_DATA_FILE = CACHE_DIR / "analysis_ready_data.feather"
 MASTER_PRICE_DATA_FILE = CACHE_DIR / "master_price_data.feather"
+
+# --- Full Market Preprocessor Settings ---
+FULL_MARKET_PREPROCESSOR = {
+    "DATA_DIR": "data",
+    "CACHE_DIR": "cache",
+    "FUNDAMENTAL_FILE": "master_fundamental_data.feather",
+    "OUTPUT_FILE": "full_analysis_ready_data.feather",
+    "TRADING_DAYS_PER_YEAR": 220,  # برای بازار ایران
+    "MOMENTUM_PERIODS": {
+        '3M': 63,
+        '6M': 126,
+        '12M': 252
+    },
+    "RISK_FREE_RATE": 0.15,  # ۱۵% نرخ بدون ریسک برای ایران
+    "MIN_DATA_POINTS": 30  # حداقل روزهای معاملاتی برای محاسبات
+}
 
 # --- Multi-Factor Model Weights ---
 # The sum of these weights should ideally be 1.0
