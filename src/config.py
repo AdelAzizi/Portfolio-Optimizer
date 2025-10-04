@@ -52,6 +52,25 @@ TOP_N_CANDIDATES = 20
 
 TRADE_COST_PERCENT = 0.005 # 0.5% cost on each trade (buy/sell)
 
+# Commission and Slippage Parameters
+COMMISSION_RATE = 0.002  # 0.2% commission per trade
+SLIPPAGE_PCT = 0.001     # 0.1% slippage per trade
+
+# Risk Metrics Weights for Multi-Criteria Scoring
+RISK_METRICS_WEIGHTS = {
+    'sharpe': 0.3,
+    'sortino': 0.2,
+    'calmar': 0.2,
+    'stability': 0.15,
+    'return': 0.15
+}
+
+# Re-evaluation count parameter
+TOP_REEVALUATION_COUNT = 100
+
+# Candidates per category parameter
+CANDIDATES_PER_CATEGORY = 5
+
 # Data Paths
 CACHE_DIR = PROJECT_ROOT / "cache"
 PREPROCESSED_DATA_FILE = CACHE_DIR / "analysis_ready_data.feather"

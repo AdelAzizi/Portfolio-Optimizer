@@ -11,6 +11,7 @@ import pandas as pd
 import logging
 from pathlib import Path
 from typing import Dict, Tuple
+from src.config import CANDIDATES_PER_CATEGORY
 
 # --- Define Project Root Path ---
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -80,10 +81,10 @@ class StrategySelector:
             'Aggressive': aggressive_strategies
         }
     
-    def select_top_candidates(self, categorized_strategies: Dict[str, pd.DataFrame], 
-                            candidates_per_category: int = 5) -> Dict[str, pd.DataFrame]:
+    def select_top_candidates(self, categorized_strategies: Dict[str, pd.DataFrame],
+                            candidates_per_category: int = CANDIDATES_PER_CATEGORY) -> Dict[str, pd.DataFrame]:
         """
-        Selects top candidates from each risk category based on Sharpe Ratio.
+        Selects top candidates from each risk category based on multi-criteria scoring.
         
         Args:
             categorized_strategies (Dict[str, pd.DataFrame]): Risk-categorized strategies
@@ -97,23 +98,85 @@ class StrategySelector:
         selected_candidates = {}
         
         for risk_level, strategies_df in categorized_strategies.items():
-            if 'Sharpe Ratio' not in strategies_df.columns:
-                raise ValueError(f"'Sharpe Ratio' column not found in {risk_level} strategies DataFrame")
+            # Calculate multi-criteria score for each strategy
+            def calculate_multi_criteria_score(row):
+                # Extract metrics with default values
+                sharpe = float(row.get('Sharpe Ratio', 0))
+                total_return = float(row.get('Total Return', 0))
+                annual_return = float(row.get('Annualized Return', 0))
+                volatility = float(row.get('Annualized Volatility', 1.0))
+                
+                # Get max drawdown and convert from percentage if needed
+                max_dd = row.get('Max Drawdown [%]', 0)
+                if isinstance(max_dd, str) and '%' in max_dd:
+                    max_dd = float(max_dd.strip('%')) / 100
+                elif pd.isna(max_dd):
+                    max_dd = 0
+                else:
+                    max_dd = float(max_dd) / 100  # Convert from percentage
+                
+                # Calculate Sortino ratio approximation
+                downside_risk = volatility * 0.7  # Simplified approximation
+                risk_free_rate = 0.05  # Default risk-free rate
+                if volatility > 0 and downside_risk > 0:
+                    sortino = (annual_return if annual_return != 0 else 0.05) / downside_risk
+                else:
+                    sortino = sharpe  # Fallback to Sharpe if cannot calculate Sortino
+                
+                # Calculate stability score (inverse of volatility for lower risk)
+                stability_score = 1 / (1 + volatility) if volatility > 0 else 1
+                
+                # Calculate Calmar ratio (return over max drawdown)
+                if max_dd != 0:
+                    calmar = annual_return / abs(max_dd)
+                else:
+                    calmar = annual_return  # Handle case where max drawdown is 0
+                
+                # Define weights for different criteria
+                weights = {
+                    'sharpe': 0.3,
+                    'sortino': 0.2,
+                    'calmar': 0.2,
+                    'stability': 0.15,
+                    'return': 0.15
+                }
+                
+                # Calculate weighted score
+                weighted_score = (
+                    weights['sharpe'] * sharpe +
+                    weights['sortino'] * sortino +
+                    weights['calmar'] * calmar +
+                    weights['stability'] * stability_score +
+                    weights['return'] * annual_return
+                )
+                
+                return weighted_score
             
-            # Select top candidates by Sharpe Ratio
-            top_candidates = strategies_df.nlargest(candidates_per_category, 'Sharpe Ratio')
+            # Apply the multi-criteria score to each row and sort by score
+            strategies_df = strategies_df.copy()
+            strategies_df['MultiCriteriaScore'] = strategies_df.apply(calculate_multi_criteria_score, axis=1)
+            
+            # Select top candidates by multi-criteria score
+            top_candidates = strategies_df.nlargest(candidates_per_category, 'MultiCriteriaScore')
+            
+            # Remove the temporary score column before returning
+            top_candidates = top_candidates.drop(columns=['MultiCriteriaScore'])
+            
             selected_candidates[risk_level] = top_candidates
             
             self.logger.info(f"{risk_level} - Selected {len(top_candidates)} candidates:")
             for idx, (_, candidate) in enumerate(top_candidates.iterrows(), 1):
-                self.logger.info(f"  {idx}. Sharpe: {candidate['Sharpe Ratio']:.3f}, "
-                               f"Volatility: {candidate['Annualized Volatility']:.3f}, "
-                               f"Return: {candidate.get('Annualized Return', 'N/A')}")
+                sharpe = candidate.get('Sharpe Ratio', 0)
+                volatility = candidate.get('Annualized Volatility', 0)
+                annual_return = candidate.get('Annualized Return', 'N/A')
+                self.logger.info(f"  {idx}. Sharpe: {sharpe:.3f}, "
+                               f"Volatility: {volatility:.3f}, "
+                               f"Return: {annual_return}")
         
         return selected_candidates
     
-    def select_final_candidates(self, strategies_df: pd.DataFrame, 
-                              candidates_per_category: int = 5) -> Dict[str, pd.DataFrame]:
+    def select_final_candidates(self, strategies_df: pd.DataFrame,
+                              candidates_per_category: int = CANDIDATES_PER_CATEGORY) -> Dict[str, pd.DataFrame]:
         """
         Complete pipeline: categorize by risk and select top candidates.
         

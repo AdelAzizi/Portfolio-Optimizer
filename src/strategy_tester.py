@@ -16,6 +16,7 @@ import time
 
 # --- Import the refactored optimizer ---
 from src.optimizer import MultiFactorOptimizer
+from src.config import COMMISSION_RATE, SLIPPAGE_PCT, TOP_REEVALUATION_COUNT
 
 # --- Setup Logging ---
 
@@ -54,7 +55,7 @@ def re_evaluate_top_strategies() -> pd.DataFrame:
     Results are cached for 12 hours.
 
     Returns:
-        pd.DataFrame: A DataFrame containing the top 100 strategies from re-evaluated results.
+        pd.DataFrame: A DataFrame containing the top N strategies from re-evaluated results, where N is configurable via TOP_REEVALUATION_COUNT.
     """
     # --- Define paths ---
     cache_dir = PROJECT_ROOT / 'cache'
@@ -97,16 +98,16 @@ def re_evaluate_top_strategies() -> pd.DataFrame:
         logger.error("Loaded strategy results are empty or missing 'Sharpe Ratio' column. Cannot filter.")
         return pd.DataFrame()
 
-    # Filter the top 300 strategies by Sharpe Ratio
-    top_300_strategies = full_results_df.sort_values(by='Sharpe Ratio', ascending=False).head(300)
-    logger.info(f"Selected top 300 strategies by Sharpe Ratio from {len(full_results_df)} total strategies.")
+    # Filter the top strategies by Sharpe Ratio using configurable parameter
+    top_strategies = full_results_df.sort_values(by='Sharpe Ratio', ascending=False).head(300)  # Initially take top 300 for re-evaluation
+    logger.info(f"Selected top 300 strategies by Sharpe Ratio from {len(full_results_df)} total strategies for re-evaluation.")
 
     all_results_from_top_300 = []
     run_count = 0
-    total_runs = len(top_300_strategies)
+    total_runs = len(top_strategies)
 
-    # Iterate over these top 300 strategies and re-run the optimizer for them
-    for index, strategy_row in top_300_strategies.iterrows():
+    # Iterate over these top strategies and re-run the optimizer for them
+    for index, strategy_row in top_strategies.iterrows():
         run_count += 1
         period = strategy_row['Momentum Period']
         factor_weights = {
@@ -129,7 +130,9 @@ def re_evaluate_top_strategies() -> pd.DataFrame:
                 max_position_size=max_weight,
                 factor_weights=factor_weights,
                 momentum_period=period,
-                top_n_candidates=top_n
+                top_n_candidates=top_n,
+                commission_rate=COMMISSION_RATE,
+                slippage_pct=SLIPPAGE_PCT
             )
             
             results = optimizer.run_full_analysis()
@@ -182,15 +185,15 @@ def re_evaluate_top_strategies() -> pd.DataFrame:
         logger.error("Sharpe Ratio column not found in re-evaluated results. Cannot sort.")
         return pd.DataFrame()
 
-    # Select top 100 strategies for strategy selector
-    top_100_strategies = results_df_from_top_300.head(100)
+    # Select top strategies for strategy selector using configurable parameter
+    top_n_strategies = results_df_from_top_300.head(TOP_REEVALUATION_COUNT)
 
-    logger.info("\n\n" + "="*80)
-    logger.info("🎉 TOP 300 STRATEGIES RE-EVALUATION COMPLETE 🎉")
+    logger.info(f"\n\n" + "="*80)
+    logger.info(f"🎉 TOP {len(results_df_from_top_300)} STRATEGIES RE-EVALUATION COMPLETE 🎉")
     logger.info("="*80)
     
-    logger.info("\n--- Top 10 Performing Strategies from Re-evaluation by Sharpe Ratio ---")
-    logger.info("\n" + top_100_strategies.head(10).to_string())
+    logger.info(f"\n--- Top 10 Performing Strategies from Re-evaluation by Sharpe Ratio ---")
+    logger.info("\n" + top_n_strategies.head(10).to_string())
 
     # Save the final results to the new cache file
     try:
@@ -199,8 +202,9 @@ def re_evaluate_top_strategies() -> pd.DataFrame:
     except Exception as e:
         logger.error(f"❌ Failed to save re-evaluation results to cache: {e}")
 
-    # Return top 100 strategies for strategy selector
-    return top_100_strategies
+    # Return top N strategies for strategy selector
+    logger.info(f"Returning top {TOP_REEVALUATION_COUNT} strategies for strategy selector")
+    return top_n_strategies
 
 if __name__ == "__main__":
     re_evaluate_top_strategies()

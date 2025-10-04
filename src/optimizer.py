@@ -48,18 +48,21 @@ class MultiFactorOptimizer:
     """
     def __init__(self, analysis_data_path: Path, price_data_dir: Path,
                  max_position_size: float, factor_weights: dict, momentum_period: str,
-                 top_n_candidates: int = TOP_N_CANDIDATES):
+                 top_n_candidates: int = TOP_N_CANDIDATES, commission_rate: float = None, slippage_pct: float = None):
         self.analysis_data_path = analysis_data_path
         self.price_data_dir = price_data_dir
         self.max_position_size = max_position_size
         self.top_n_candidates = top_n_candidates
         self.factor_weights = factor_weights
         self.momentum_period = momentum_period
+        self.commission_rate = commission_rate if commission_rate is not None else TRADE_COST_PERCENT
+        self.slippage_pct = slippage_pct if slippage_pct is not None else 0.001  # Default slippage
         
         self.analysis_df = None
         self.master_price_df = None
         
-        logger.info(f"🚀 Initialized Optimizer with Momentum: {self.momentum_period}, Weights: {self.factor_weights}")
+        logger.info(f"🚀 Initialized Optimizer with Momentum: {self.momentum_period}, Weights: {self.factor_weights}, "
+                   f"Commission: {self.commission_rate:.3f}, Slippage: {self.slippage_pct:.3f}")
 
     def _load_data(self):
         """Loads all necessary analysis and price data into memory."""
@@ -250,7 +253,8 @@ class MultiFactorOptimizer:
                         "symbol": symbol,
                         "amount": trade_value if weight_change > 0 else -trade_value,
                         "price": self.master_price_df.loc[actual_rebalance_date, symbol],
-                        "cost": trade_value * TRADE_COST_PERCENT
+                        "commission": trade_value * self.commission_rate,
+                        "slippage": trade_value * self.slippage_pct
                     })
 
             bought_value = sum(v for v in trades_diff.values() if v > 0)
@@ -259,7 +263,7 @@ class MultiFactorOptimizer:
             turnover_history.append(turnover)
 
             # --- Cost Simulation ---
-            transaction_cost = (bought_value + sold_value) * TRADE_COST_PERCENT
+            transaction_cost = (bought_value + sold_value) * (self.commission_rate + self.slippage_pct)
             total_costs += transaction_cost
             
             # --- Log Rebalancing Actions ---
@@ -313,6 +317,8 @@ class MultiFactorOptimizer:
             "transaction_analysis": {
                 "annual_turnover": f"{annual_turnover:.2%}",
                 "estimated_total_cost": f"{total_costs:.4f}",
+                "commission_rate": self.commission_rate,
+                "slippage_pct": self.slippage_pct,
                 "rebalance_history": rebalance_history
             }
         }
@@ -365,14 +371,19 @@ class MultiFactorOptimizer:
         }
 
         logger.info("✅ Full analysis complete. Returning comprehensive results.")
-        return {
-            'optimal_weights': final_weights,
-            'performance_summary': performance_summary,
-            'backtest_data': backtest_results['performance_data'],
-            'transaction_analysis': backtest_results['transaction_analysis'],
+        
+        # Ensure all required fields are present in the schema
+        result_schema = {
+            'optimal_weights': final_weights or {},
+            'performance_summary': performance_summary or {},
+            'backtest_data': backtest_results.get('performance_data', {}) if backtest_results else {},
+            'transaction_analysis': backtest_results.get('transaction_analysis', {}) if backtest_results else {},
             'equity_curve': equity_curve,
-            'trades': trades_df
+            'trades': trades_df,
+            'success': True # Add explicit success flag
         }
+        
+        return result_schema
 
 def main():
     """

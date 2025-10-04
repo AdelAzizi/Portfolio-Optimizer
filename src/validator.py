@@ -13,9 +13,11 @@ import json
 
 # --- Import the refactored optimizer ---
 from src.optimizer import MultiFactorOptimizer
-from src.config import RISK_FREE_RATE
+from src.config import RISK_FREE_RATE, COMMISSION_RATE, SLIPPAGE_PCT
 from src.strategy_tester import re_evaluate_top_strategies
 from src.strategy_selector import StrategySelector
+from src.config import CANDIDATES_PER_CATEGORY
+import pandas as pd
 
 
 # --- Define Project Root and Paths ---
@@ -39,6 +41,45 @@ logger = logging.getLogger(__name__)
 # -------------------------------------------------
 # محور 1 - خروجی کامل‌تر برای هر سه پروفایل ریسک
 # -------------------------------------------------
+
+def validate_optimizer_output_schema(result):
+    """
+    Validates that the optimizer output conforms to the expected schema.
+    Returns the validated result or None if validation fails.
+    """
+    if not isinstance(result, dict):
+        logger.error("Optimizer output is not a dictionary")
+        return None
+    
+    required_keys = ['performance_summary', 'equity_curve', 'trades', 'success']
+    missing_keys = [key for key in required_keys if key not in result]
+    
+    if missing_keys:
+        logger.error(f"Optimizer output missing required keys: {missing_keys}")
+        return None
+    
+    # Validate performance_summary structure
+    perf_summary = result.get('performance_summary', {})
+    if not isinstance(perf_summary, dict):
+        logger.error("performance_summary is not a dictionary")
+        return None
+    
+    # Validate equity_curve
+    equity_curve = result.get('equity_curve')
+    if equity_curve is not None and not isinstance(equity_curve, (pd.Series, pd.DataFrame)):
+        logger.warning("equity_curve is not a pandas Series or DataFrame")
+    
+    # Validate trades
+    trades = result.get('trades')
+    if trades is not None and not isinstance(trades, pd.DataFrame):
+        logger.warning("trades is not a pandas DataFrame")
+    
+    # Check success flag
+    if result.get('success') is False:
+        logger.error("Optimizer reported failure in result")
+        return None
+    
+    return result
 
 def build_enriched_output(portfolio, profile_name):
     """portfolio = backtest object / df"""
@@ -95,15 +136,15 @@ def build_enriched_output(portfolio, profile_name):
         "transaction_history": transaction_history
     }
 
-def validate_and_select_best_strategies(top_100_df: pd.DataFrame):
+def validate_and_select_best_strategies(top_n_df: pd.DataFrame):
     """
     Categorizes strategies by risk, selects the best candidates from each category,
     runs walk-forward validation on them, and selects the final best strategy for each approach.
 
     Args:
-        top_100_df (pd.DataFrame): DataFrame of the top 100 strategies to be validated.
+        top_n_df (pd.DataFrame): DataFrame of the top N strategies to be validated (configurable via TOP_REEVALUATION_COUNT).
     """
-    if top_100_df.empty:
+    if top_n_df.empty:
         logger.error("Received an empty DataFrame. Cannot proceed with validation.")
         return
 
@@ -111,7 +152,7 @@ def validate_and_select_best_strategies(top_100_df: pd.DataFrame):
     logger.info("\n--- Using Strategy Selector for Risk-Based Categorization and Candidate Selection ---")
     
     strategy_selector = StrategySelector()
-    candidate_portfolios = strategy_selector.select_final_candidates(top_100_df, candidates_per_category=5)
+    candidate_portfolios = strategy_selector.select_final_candidates(top_n_df, candidates_per_category=CANDIDATES_PER_CATEGORY)
 
     final_results = {}
 
@@ -162,20 +203,25 @@ def validate_and_select_best_strategies(top_100_df: pd.DataFrame):
                     max_position_size=max_weight,
                     factor_weights=factor_weights,
                     momentum_period=momentum_period,
-                    top_n_candidates=top_n
+                    top_n_candidates=top_n,
+                    commission_rate=COMMISSION_RATE,
+                    slippage_pct=SLIPPAGE_PCT
                 )
                 
                 # Perform a 5-year walk-forward validation
                 validation_run_results = optimizer.run_full_analysis(years=5)
 
-                if validation_run_results and 'performance_summary' in validation_run_results:
+                # Validate the optimizer output against expected schema
+                validated_results = validate_optimizer_output_schema(validation_run_results)
+                
+                if validated_results:
                     # Store the original candidate info within the full results object
-                    validation_run_results['original_candidate'] = candidate.to_dict()
+                    validated_results['original_candidate'] = candidate.to_dict()
                     
-                    validation_results_list.append(validation_run_results)
-                    logger.info(f"✅ Validation Success! Sharpe: {validation_run_results['performance_summary'].get('Sharpe Ratio', 'N/A')}")
+                    validation_results_list.append(validated_results)
+                    logger.info(f"✅ Validation Success! Sharpe: {validated_results['performance_summary'].get('Sharpe Ratio', 'N/A')}")
                 else:
-                    logger.warning("Validation run did not produce a performance summary.")
+                    logger.warning("Validation run did not produce a valid output schema.")
 
             except Exception as e:
                 logger.error(f"❌ FAILED validation for candidate. Error: {e}", exc_info=True)
@@ -184,11 +230,58 @@ def validate_and_select_best_strategies(top_100_df: pd.DataFrame):
         if not validation_results_list:
             logger.error(f"No successful validation runs for {approach} approach. Cannot select a final strategy.")
             continue
-
-        # Select the best strategy based on the Sharpe Ratio in the performance summary
+   
+        # Calculate multi-criteria score for each strategy
+        def calculate_multi_criteria_score(result):
+            perf_summary = result.get('performance_summary', {})
+            
+            # Extract metrics with default values
+            sharpe = float(perf_summary.get('Sharpe Ratio', 0))
+            total_return = float(perf_summary.get('Total Return', 0))
+            annual_return = float(perf_summary.get('Annualized Return', 0))
+            volatility = float(perf_summary.get('Annualized Volatility', 1.0))
+            max_dd = float(perf_summary.get('Max Drawdown [%]', 0)) / 100 if perf_summary.get('Max Drawdown [%]') else 0
+            
+            # Calculate Sortino ratio (if possible)
+            downside_risk = volatility * 0.7  # Simplified approximation if not available
+            if volatility > 0 and downside_risk > 0:
+                sortino = (annual_return - RISK_FREE_RATE) / downside_risk
+            else:
+                sortino = sharpe  # Fallback to Sharpe if cannot calculate Sortino
+            
+            # Calculate stability score (inverse of volatility for lower risk)
+            stability_score = 1 / (1 + volatility) if volatility > 0 else 1
+            
+            # Calculate Calmar ratio (return over max drawdown)
+            if max_dd != 0:
+                calmar = annual_return / abs(max_dd)
+            else:
+                calmar = annual_return  # Handle case where max drawdown is 0
+            
+            # Define weights for different criteria (configurable)
+            weights = {
+                'sharpe': 0.3,
+                'sortino': 0.2,
+                'calmar': 0.2,
+                'stability': 0.15,
+                'return': 0.15
+            }
+            
+            # Calculate weighted score
+            weighted_score = (
+                weights['sharpe'] * sharpe +
+                weights['sortino'] * sortino +
+                weights['calmar'] * calmar +
+                weights['stability'] * stability_score +
+                weights['return'] * annual_return
+            )
+            
+            return weighted_score
+   
+        # Select the best strategy based on the multi-criteria score
         best_strategy_result = max(
             validation_results_list,
-            key=lambda x: float(x.get('performance_summary', {}).get('Sharpe Ratio', -100))
+            key=calculate_multi_criteria_score
         )
 
         # Extract original candidate info to create a dedicated strategy configuration dict
@@ -229,7 +322,7 @@ def validate_and_select_best_strategies(top_100_df: pd.DataFrame):
 def main():
     """
     Main pipeline execution:
-    1. Re-evaluates the top 200 strategies.
+    1. Re-evaluates the top N strategies (configurable via TOP_REEVALUATION_COUNT).
     2. Validates and selects the best final strategies based on risk profiles.
     3. Enriches the output with detailed metrics.
     4. Saves the final results to a JSON file.
@@ -238,15 +331,15 @@ def main():
     logger.info("      STARTING FULL STRATEGY VALIDATION PIPELINE")
     logger.info("="*70)
 
-    # 1. Get the top 200 re-evaluated strategies
-    top_200_results_df = re_evaluate_top_strategies()
+    # 1. Get the top N re-evaluated strategies (configurable via TOP_REEVALUATION_COUNT)
+    top_n_results_df = re_evaluate_top_strategies()
 
-    # 2. Validate and select the best strategies from the top 200
-    if top_200_results_df is None or top_200_results_df.empty:
+    # 2. Validate and select the best strategies from the top N (configurable)
+    if top_n_results_df is None or top_n_results_df.empty:
         logger.error("Halting pipeline because re-evaluation of top strategies failed or returned no results.")
         return
 
-    raw_results = validate_and_select_best_strategies(top_200_results_df)
+    raw_results = validate_and_select_best_strategies(top_n_results_df)
 
     if not raw_results:
         logger.error("Validation step did not return any results. Halting.")
@@ -298,14 +391,28 @@ def main():
         # The dictionary contains `performance_summary`, `equity_curve`, `trades`, etc.
         # So `result_data` is the dictionary.
         
+        # Validate the result data before creating the proxy object
+        validated_result = validate_optimizer_output_schema(result_data)
+        if not validated_result:
+            logger.warning(f"Schema validation failed for {profile} profile. Cannot enrich results.")
+            final_results[profile] = result_data
+            continue
+
         # I will create a temporary object to pass to the function to satisfy the `.attribute` access.
         class PortfolioProxy:
             def __init__(self, data_dict):
                 self.equity_curve = data_dict.get('equity_curve')
                 self.trades = data_dict.get('trades')
-                self.max_drawdown = data_dict.get('performance_summary', {}).get('Max Drawdown [%]', 0) / 100
+                # Handle max_drawdown properly by checking if it's a percentage string
+                max_dd_value = data_dict.get('performance_summary', {}).get('Max Drawdown [%]', 0)
+                if isinstance(max_dd_value, str) and '%' in max_dd_value:
+                    self.max_drawdown = float(max_dd_value.strip('%')) / 100
+                elif pd.isna(max_dd_value):
+                    self.max_drawdown = 0
+                else:
+                    self.max_drawdown = float(max_dd_value) / 100  # Convert from percentage
 
-        portfolio_proxy = PortfolioProxy(result_data)
+        portfolio_proxy = PortfolioProxy(validated_result)
 
         if portfolio_proxy.equity_curve is not None and portfolio_proxy.trades is not None:
             logger.info(f"Enriching results for {profile} profile...")
