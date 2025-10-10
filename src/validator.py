@@ -237,10 +237,23 @@ def validate_and_select_best_strategies(top_n_df: pd.DataFrame):
             
             # Extract metrics with default values
             sharpe = float(perf_summary.get('Sharpe Ratio', 0))
-            total_return = float(perf_summary.get('Total Return', 0))
+            
+            # Handle Total Return - convert percentage string to float
+            total_return_str = perf_summary.get('Total Return', 0)
+            if isinstance(total_return_str, str) and '%' in total_return_str:
+                total_return = float(total_return_str.strip('%'))
+            else:
+                total_return = float(total_return_str)
+            
             annual_return = float(perf_summary.get('Annualized Return', 0))
             volatility = float(perf_summary.get('Annualized Volatility', 1.0))
-            max_dd = float(perf_summary.get('Max Drawdown [%]', 0)) / 100 if perf_summary.get('Max Drawdown [%]') else 0
+            
+            # Handle Max Drawdown - convert percentage string to float
+            max_dd_str = perf_summary.get('Max Drawdown [%]', 0)
+            if isinstance(max_dd_str, str) and '%' in max_dd_str:
+                max_dd = float(max_dd_str.strip('%')) / 100
+            else:
+                max_dd = float(max_dd_str) / 100 if max_dd_str else 0
             
             # Calculate Sortino ratio (if possible)
             downside_risk = volatility * 0.7  # Simplified approximation if not available

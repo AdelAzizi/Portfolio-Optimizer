@@ -79,7 +79,10 @@ class MultiFactorOptimizer:
         for symbol in all_symbols:
             file_path = self.price_data_dir / f"{symbol}.csv"
             if file_path.exists():
-                price_data[symbol] = pd.read_csv(file_path, index_col='date', parse_dates=True)['close']
+                temp_df = pd.read_csv(file_path, index_col='date', parse_dates=True)['close']
+                # Remove duplicate dates by keeping the last occurrence
+                temp_df = temp_df[~temp_df.index.duplicated(keep='last')]
+                price_data[symbol] = temp_df
         
         self.master_price_df = pd.DataFrame(price_data).sort_index().ffill().bfill()
         logger.info(f"✅ Loaded data for {len(self.analysis_df)} symbols.")

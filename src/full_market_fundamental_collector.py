@@ -24,7 +24,7 @@ from tenacity import retry, stop_after_attempt, wait_exponential
 
 # --- Define Project Root Path and Import Config ---
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-from config import FUNDAMENTAL_COLLECTOR
+from src.config import FUNDAMENTAL_COLLECTOR
 
 # --- Setup Logging ---
 LOGS_DIR = PROJECT_ROOT / 'logs'

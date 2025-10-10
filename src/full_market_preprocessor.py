@@ -15,7 +15,7 @@ import logging
 from pathlib import Path
 
 # --- Import Configuration ---
-from config import FULL_MARKET_PREPROCESSOR as config
+from src.config import FULL_MARKET_PREPROCESSOR as config
 
 
 # --- Define Project Root Path ---
@@ -72,6 +72,7 @@ class FullMarketDataPreprocessor:
             if file_path.exists():
                 try:
                     df = pd.read_csv(file_path, usecols=['date', 'close'], parse_dates=['date'], index_col='date')
+                    # Remove duplicate dates by keeping the last occurrence
                     if not df.index.is_unique:
                         df = df[~df.index.duplicated(keep='last')]
                     price_data[symbol] = df['close']

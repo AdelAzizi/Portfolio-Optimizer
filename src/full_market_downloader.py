@@ -15,7 +15,7 @@ import time
 import logging
 import json
 from pathlib import Path
-from typing import List, Set, Optional
+from typing import List, Set, Optional, Dict
 import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
@@ -109,27 +109,52 @@ class FullMarketDownloader:
         if symbol in self.failure_counts:
             del self.failure_counts[symbol]
 
-    def _get_last_date(self, file_path: Path) -> Optional[str]:
+    def _get_last_date_batch(self, symbols: List[str]) -> Dict[str, Optional[str]]:
         """
-        Reads the last date from a CSV file to determine the starting point for an incremental update.
-        Assumes the date is in the first column.
+        Batch check of last dates for all symbols to avoid repeated file I/O operations.
+        Returns a dictionary mapping symbol to its last date or None if not recent.
         """
-        try:
-            # Read only the last row for efficiency
-            last_line = pd.read_csv(file_path, usecols=[0], skip_blank_lines=True).iloc[-1]
-            return last_line.iloc[0]  # Fixed: Use .iloc[0] instead of [0] to avoid pandas deprecation warning
-        except (pd.errors.EmptyDataError, IndexError):
-            logger.warning(f"File {file_path.name} is empty. A full download will be performed.")
-            return None
-        except Exception as e:
-            logger.error(f"Could not read last date from {file_path.name}: {e}. Triggering full download.")
-            return None
+        last_dates = {}
+        
+        for symbol in symbols:
+            file_path = self.data_dir / f"{symbol}.csv"
+            if file_path.exists():
+                try:
+                    # Read just the last few rows to get the most recent date
+                    df = pd.read_csv(file_path, parse_dates=['date'], index_col='date', usecols=['date'])
+                    if not df.empty:
+                        last_date = df.index.max()
+                        # Check if data is recent (within last 7 days)
+                        current_date = pd.Timestamp.now().normalize()
+                        days_diff = (current_date - last_date).days
+                        
+                        # Enhanced logging for debugging
+                        logger.debug(f"Symbol: {symbol}, Last Date: {last_date}, Current Date: {current_date}, Days Diff: {days_diff}")
+                        
+                        # Consider data recent if it's from today or within the last 3 days
+                        if days_diff <= 3:
+                            last_dates[symbol] = last_date.strftime('%Y-%m-%d')
+                            logger.debug(f"✅ {symbol} considered recent (last date: {last_dates[symbol]}), skipping download")
+                        else:
+                            last_dates[symbol] = None  # Not recent, needs update
+                            logger.debug(f"🔄 {symbol} needs update (last date: {last_date}, {days_diff} days old)")
+                    else:
+                        last_dates[symbol] = None
+                        logger.debug(f"⚠️ {symbol} file exists but is empty")
+                except Exception as e:
+                    last_dates[symbol] = None # Error reading file, treat as needs update
+                    logger.debug(f"⚠️ Error reading {symbol} file: {e}")
+            else:
+                last_dates[symbol] = None  # File doesn't exist, needs full download
+                logger.debug(f"📁 {symbol} file doesn't exist, needs full download")
+        
+        return last_dates
 
     def run_update(self):
         """
-        Runs the main incremental update process.
+        Runs the main incremental update process with optimized caching.
         """
-        logger.info("🚀 Starting Refactored Market Downloader...")
+        logger.info("🚀 Starting Optimized Market Downloader...")
 
         # STAGE 1: LOAD UNIVERSE
         logger.info(f"--- Stage 1: Loading Universe from {self.universe_file} ---")
@@ -154,8 +179,27 @@ class FullMarketDownloader:
         symbols_to_download = [s for s in universe if s not in self.blacklist]
         logger.info(f"Skipping {len(self.blacklist)} blacklisted symbols. Processing {len(symbols_to_download)} symbols.")
 
-        # STAGE 2: INCREMENTAL DOWNLOAD
-        logger.info(f"\n--- Stage 2: Performing Incremental Update for {len(symbols_to_download)} Symbols ---")
+        # STAGE 1.5: OPTIMIZED CACHING CHECK - BATCH PROCESS ALL SYMBOLS
+        logger.info(f"\n--- Stage 1.5: Optimized Caching Check for {len(symbols_to_download)} Symbols ---")
+        recent_symbols = set()
+        symbols_needing_update = []
+        
+        # Batch check all symbols for recency
+        last_dates = self._get_last_date_batch(symbols_to_download)
+        
+        for symbol, last_date in last_dates.items():
+            if last_date is not None:
+                # Data is recent, skip download
+                recent_symbols.add(symbol)
+                logger.debug(f"✅ {symbol} is already recent (last date: {last_date}). Will skip download.")
+            else:
+                # Data is not recent or doesn't exist, needs update
+                symbols_needing_update.append(symbol)
+        
+        logger.info(f"✅ Found {len(recent_symbols)} symbols with recent data. {len(symbols_needing_update)} symbols need updates.")
+
+        # STAGE 2: INCREMENTAL DOWNLOAD - ONLY FOR SYMBOLS THAT NEED UPDATES
+        logger.info(f"\n--- Stage 2: Downloading Updates for {len(symbols_needing_update)} Symbols ---")
         successful_updates = 0
         failed_updates = 0
         newly_blacklisted = 0
@@ -201,16 +245,12 @@ class FullMarketDownloader:
                     else:
                         raise e
 
-        # Use tqdm for progress bar
-        for symbol in tqdm(symbols_to_download, desc="Downloading market data", unit="symbol"):
+        # Use tqdm for progress bar - only for symbols that need updates
+        for symbol in tqdm(symbols_needing_update, desc="Downloading market data", unit="symbol"):
             logger.debug(f"Starting processing for symbol: {symbol}")
             time.sleep(self.api_delay)  # Be respectful to the API
             file_path = self.data_dir / f"{symbol}.csv"
-            start_date = None
-
-            if file_path.exists():
-                start_date = self._get_last_date(file_path)
-                logger.debug(f"Found existing file for {symbol}, start_date: {start_date}")
+            start_date = last_dates.get(symbol)
 
             try:
                 logger.info(f"⬇️  Processing {symbol} (start_date: {start_date})...")
@@ -273,19 +313,22 @@ class FullMarketDownloader:
                 # If successful, reset failure count
                 self._reset_failure_count(symbol)
                 logger.debug(f"✅ Successfully processed {symbol}, reset failure count.")
-        
-        # STAGE 3: SAVE STATE AND SUMMARIZE
+
+        # STAGE 3: SUMMARIZE - INCLUDE SKIPPED SYMBOLS
         logger.info("\n--- Stage 3: Finalizing Run ---")
         self._save_blacklist()
         
         logger.info("="*50)
-        logger.info("📊 DOWNLOADER SUMMARY")
+        logger.info("📊 OPTIMIZED DOWNLOADER SUMMARY")
         logger.info("="*50)
-        logger.info(f"- Total symbols processed: {len(symbols_to_download)}")
+        logger.info(f"- Total symbols in universe: {len(symbols_to_download)}")
+        logger.info(f"- ✅ Symbols with recent data (skipped): {len(recent_symbols)}")
+        logger.info(f"- 🔄 Symbols processed for updates: {len(symbols_needing_update)}")
         logger.info(f"- ✅ Successful updates/downloads: {successful_updates}")
         logger.info(f"- ❌ Failed updates: {failed_updates}")
         logger.info(f"- ⚫️ Newly blacklisted: {newly_blacklisted}")
-        logger.info("✅ Downloader finished its run.")
+        logger.info(f"- 💤 Total skipped (cached): {len(recent_symbols)}")
+        logger.info("✅ Optimized Downloader finished its run.")
 
 if __name__ == "__main__":
     downloader = FullMarketDownloader()
