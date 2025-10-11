@@ -1,7 +1,7 @@
 # config.py
 from pathlib import Path
 
-# This robustly finds the project root (C:\Portfolio-Optimizer)
+# This robustly finds the project root     "DATA_DIR": "data/full_market_data_csvs/",C:\Portfolio-Optimizer)
 # by going up one level from the script's directory ('src').
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 

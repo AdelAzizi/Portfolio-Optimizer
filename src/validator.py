@@ -245,8 +245,18 @@ def validate_and_select_best_strategies(top_n_df: pd.DataFrame):
             else:
                 total_return = float(total_return_str)
             
-            annual_return = float(perf_summary.get('Annualized Return', 0))
-            volatility = float(perf_summary.get('Annualized Volatility', 1.0))
+            # Handle Annualized Return - convert percentage string to float
+            annual_return_str = perf_summary.get('Annualized Return', 0)
+            if isinstance(annual_return_str, str) and '%' in annual_return_str:
+                annual_return = float(annual_return_str.strip('%'))
+            else:
+                annual_return = float(annual_return_str)
+            # Handle Annualized Volatility - convert percentage string to float
+            volatility_str = perf_summary.get('Annualized Volatility', 1.0)
+            if isinstance(volatility_str, str) and '%' in volatility_str:
+                volatility = float(volatility_str.strip('%'))
+            else:
+                volatility = float(volatility_str)
             
             # Handle Max Drawdown - convert percentage string to float
             max_dd_str = perf_summary.get('Max Drawdown [%]', 0)
@@ -452,19 +462,42 @@ def main():
     logger.info(f"💾 Saving final enriched results to {output_path}...")
     try:
         with open(output_path, 'w', encoding='utf-8') as f:
-            # Custom JSON serializer to handle pandas Timestamps and other non-serializable types
-            def json_default(o):
-                if isinstance(o, (pd.Timestamp, pd.Period)):
-                    return o.isoformat()
-                if isinstance(o, float) and (pd.isna(o) or o == float('inf') or o == float('-inf')):
-                    return str(o)
-                # Add more type checks if necessary
-                try:
-                    return str(o) # Fallback for other types
-                except:
-                    return f"NON-SERIALIZABLE: {type(o)}"
+            # Convert numpy/pandas types to native Python types for JSON serialization
+            def convert_for_json(obj):
+                if isinstance(obj, np.integer):
+                    return int(obj)
+                elif isinstance(obj, np.floating):
+                    return float(obj)
+                elif isinstance(obj, np.ndarray):
+                    return obj.tolist()
+                elif isinstance(obj, pd.Timestamp):
+                    return obj.isoformat()
+                elif isinstance(obj, pd.Series):
+                    # Convert Series to dict and ensure keys are strings
+                    series_dict = {}
+                    for key, value in obj.items():
+                        safe_key = str(key) if not isinstance(key, (str, int, float, bool, type(None))) else key
+                        series_dict[safe_key] = convert_for_json(value)
+                    return series_dict
+                elif isinstance(obj, pd.DataFrame):
+                    return obj.to_dict(orient='records')
+                elif isinstance(obj, dict):
+                    # Handle nested dictionaries
+                    result = {}
+                    for key, value in obj.items():
+                        # Convert key to string if it's not serializable
+                        safe_key = str(key) if not isinstance(key, (str, int, float, bool, type(None))) else key
+                        result[safe_key] = convert_for_json(value)
+                    return result
+                elif isinstance(obj, list):
+                    return [convert_for_json(item) for item in obj]
+                elif isinstance(obj, (str, int, float, bool)) or obj is None:
+                    return obj
+                else:
+                    # For any other non-serializable objects, convert to string representation
+                    return str(obj)
 
-            json.dump(final_results, f, ensure_ascii=False, indent=4, default=json_default)
+            json.dump(final_results, f, indent=4, ensure_ascii=False, default=convert_for_json)
         logger.info("✅ Successfully saved final results.")
     except Exception as e:
         logger.error(f"❌ Failed to save final_results.json: {e}", exc_info=True)

@@ -32,3 +32,10 @@ env/
 # IDE specific files
 .idea/
 .vscode/
+
+# Additional folders to ignore
+tests/
+docs/
+.continue/
+.kiro/
+.pytest_cache/

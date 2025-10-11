@@ -13,6 +13,7 @@ import pandas as pd
 import numpy as np
 import logging
 from pathlib import Path
+import json
 
 # --- Import Configuration ---
 from src.config import FULL_MARKET_PREPROCESSOR as config
@@ -46,10 +47,15 @@ class FullMarketDataPreprocessor:
         
         self.fundamental_data_file = self.cache_dir / config["FUNDAMENTAL_FILE"]
         self.output_file = self.cache_dir / config["OUTPUT_FILE"]
+        self.processing_log_file = self.cache_dir / "preprocessor_processing_log.json"  # Track when preprocessing was last done
+        
+        # Load processing log
+        self.processing_log = self._load_processing_log()
         
         logger.info(f"Fundamental data source: {self.fundamental_data_file}")
         logger.info(f"Price data source: {self.price_data_dir}")
         logger.info(f"Output file: {self.output_file}")
+        logger.info(f"Processing log file: {self.processing_log_file}")
 
     def _load_fundamental_data(self) -> pd.DataFrame:
         """Loads the clean fundamental data, which defines the stock universe."""
@@ -96,6 +102,31 @@ class FullMarketDataPreprocessor:
         logger.info("✅ Master price DataFrame created and cleaned.")
         return master_price_df
 
+    def _load_processing_log(self) -> dict:
+        """Loads the processing log that tracks when preprocessing was last done."""
+        if self.processing_log_file.exists():
+            try:
+                with open(self.processing_log_file, 'r', encoding='utf-8') as f:
+                    processing_log = json.load(f)
+                    logger.info(f"Loaded processing log.")
+                    return processing_log
+            except (json.JSONDecodeError, TypeError):
+                logger.warning("Processing log file is corrupted or empty. Starting with an empty log.")
+                return {}
+        return {}
+
+    def _save_processing_log(self):
+        """Saves the current processing log to a JSON file."""
+        with open(self.processing_log_file, 'w', encoding='utf-8') as f:
+            json.dump(self.processing_log, f, ensure_ascii=False, indent=4)
+        logger.info(f"Saved processing log.")
+
+    def _update_processing_log(self):
+        """Update the processing log with the current timestamp."""
+        from datetime import datetime
+        self.processing_log['last_preprocessing'] = datetime.now().isoformat()
+        self._save_processing_log()
+
     def _calculate_quantitative_metrics(self, price_df: pd.DataFrame) -> pd.DataFrame:
         """Calculates price-based metrics like returns, volatility, and momentum."""
         logger.info("--- Stage 3: Calculating Quantitative Metrics for Full Market ---")
@@ -136,6 +167,49 @@ class FullMarketDataPreprocessor:
     def run(self):
         """Executes the full offline data preprocessing and merging pipeline."""
         logger.info("🚀 Starting Full Market Master Analysis Data Builder...")
+        
+        # Check if output file exists and is up-to-date compared to input files
+        if self.output_file.exists():
+            try:
+                output_modified = self.output_file.stat().st_mtime
+                
+                # Check fundamental data file
+                if self.fundamental_data_file.exists():
+                    fundamental_modified = self.fundamental_data_file.stat().st_mtime
+                    if fundamental_modified > output_modified:
+                        logger.info("Fundamental data file has been updated since last preprocessing. Re-running.")
+                    else:
+                        # Check if any price data files are newer than output
+                        symbols = []
+                        if self.price_data_dir.exists():
+                            # Get all CSV files in the price data directory
+                            csv_files = list(self.price_data_dir.glob("*.csv"))
+                            if csv_files:
+                                latest_price_modified = max(f.stat().st_mtime for f in csv_files)
+                                if latest_price_modified > output_modified:
+                                    logger.info("Some price data files have been updated since last preprocessing. Re-running.")
+                                else:
+                                    logger.info("Output file is up-to-date with all input files. Skipping preprocessing.")
+                                    # Check if we should skip based on processing log as well
+                                    if 'last_preprocessing' in self.processing_log:
+                                        from datetime import datetime
+                                        try:
+                                            last_run_time = datetime.fromisoformat(self.processing_log['last_preprocessing'])
+                                            if output_modified >= last_run_time.timestamp():
+                                                logger.info("✅ Output file is already up-to-date. Preprocessing skipped.")
+                                                return
+                                        except ValueError:
+                                            pass
+                            else:
+                                logger.info("No price data files found in directory. Proceeding with preprocessing.")
+                        else:
+                            logger.info("Price data directory not found. Proceeding with preprocessing.")
+                else:
+                    logger.info("Fundamental data file not found. Proceeding with preprocessing.")
+            
+            except Exception as e:
+                logger.warning(f"Could not check file modification times: {e}. Proceeding with preprocessing.")
+        
         try:
             # Stage 1
             fundamental_df = self._load_fundamental_data()
@@ -160,6 +234,9 @@ class FullMarketDataPreprocessor:
             logger.info("--- Stage 5: Saving Final Full Market Analysis-Ready Data ---")
             self.output_file.parent.mkdir(exist_ok=True)
             master_analysis_df.reset_index().to_feather(self.output_file)
+            
+            # Update processing log
+            self._update_processing_log()
             
             logger.info("="*50)
             logger.info("🎉 FULL MARKET MASTER PREPROCESSING COMPLETE 🎉")

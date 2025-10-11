@@ -54,15 +54,25 @@ class FullMarketFundamentalCollector:
         self.output_file = self.cache_dir / FUNDAMENTAL_COLLECTOR["OUTPUT_FILE"]
         self.blacklist_file = self.cache_dir / FUNDAMENTAL_COLLECTOR["BLACKLIST_FILE"]
         
+        # Define paths for input and output using config
+        self.universe_file = self.cache_dir / 'universe.json'
+        self.output_file = self.cache_dir / FUNDAMENTAL_COLLECTOR["OUTPUT_FILE"]
+        self.blacklist_file = self.cache_dir / FUNDAMENTAL_COLLECTOR["BLACKLIST_FILE"]
+        self.processing_log_file = self.cache_dir / "fundamental_processing_log.json"  # Track last processing times
+        
         # Load configuration
         self.cache_validity_hours = FUNDAMENTAL_COLLECTOR["CACHE_VALIDITY_HOURS"]
         self.request_delay_sec = FUNDAMENTAL_COLLECTOR["REQUEST_DELAY_SEC"]
         self.blacklist_expiry_days = FUNDAMENTAL_COLLECTOR["BLACKLIST_EXPIRY_DAYS"]
         self.fundamental_fields = FUNDAMENTAL_COLLECTOR["FUNDAMENTAL_FIELDS"]
         
+        # Load processing log
+        self.processing_log = self._load_processing_log()
+        
         logger.info(f"Universe file path: {self.universe_file}")
         logger.info(f"Resumable cache & output file path: {self.output_file}")
         logger.info(f"Blacklist file path: {self.blacklist_file}")
+        logger.info(f"Processing log file path: {self.processing_log_file}")
         logger.info(f"Cache validity: {self.cache_validity_hours} hours")
         logger.info(f"Request delay: {self.request_delay_sec} seconds")
         logger.info(f"Blacklist expiry: {self.blacklist_expiry_days} days")
@@ -156,6 +166,32 @@ class FullMarketFundamentalCollector:
         """Fetch ticker data with retry mechanism and exponential backoff."""
         return tse.Ticker(symbol)
 
+    def _load_processing_log(self) -> dict:
+        """Loads the processing log that tracks when each symbol was last processed."""
+        if self.processing_log_file.exists():
+            try:
+                with open(self.processing_log_file, 'r', encoding='utf-8') as f:
+                    processing_log = json.load(f)
+                    logger.info(f"Loaded processing log for {len(processing_log)} symbols.")
+                    return processing_log
+            except (json.JSONDecodeError, TypeError):
+                logger.warning("Processing log file is corrupted or empty. Starting with an empty log.")
+                return {}
+        return {}
+
+    def _save_processing_log(self):
+        """Saves the current processing log to a JSON file."""
+        with open(self.processing_log_file, 'w', encoding='utf-8') as f:
+            json.dump(self.processing_log, f, ensure_ascii=False, indent=4)
+        logger.info(f"Saved processing log for {len(self.processing_log)} symbols.")
+
+    def _update_processing_log(self, symbol: str):
+        """Update the processing log with the current timestamp for a symbol."""
+        self.processing_log[symbol] = datetime.now().isoformat()
+        # Save periodically to preserve progress
+        if len(self.processing_log) % 10 == 0:  # Save every 10 updates
+            self._save_processing_log()
+
     def _validate_final_data(self, df: pd.DataFrame):
         """Perform final validation after imputation to ensure data quality."""
         logger.info("Performing final data validation...")
@@ -177,7 +213,7 @@ class FullMarketFundamentalCollector:
         if 'group_name' in df.columns:
             empty_groups = df['group_name'].isnull().sum() + (df['group_name'] == '').sum()
             total_count = len(df)
-            empty_percentage = (empty_groups / total_count) * 100 if total_count > 0 else 0
+            empty_percentage = (empty_groups / total_count) * 10 if total_count > 0 else 0
             
             if empty_percentage > 10:  # More than 10% empty group names
                 logger.warning(f"   ⚠️ High percentage of empty group names: {empty_percentage:.1f}% ({empty_groups}/{total_count})")
@@ -198,6 +234,15 @@ class FullMarketFundamentalCollector:
         processed_df = self._load_resumable_cache()
         cached_symbols = set(processed_df['symbol']) if not processed_df.empty else set()
         
+        # Check if the cache file is still valid based on modification time
+        cache_file = self.output_file
+        cache_is_valid = True
+        if cache_file.exists():
+            last_modified_hours = (time.time() - cache_file.stat().st_mtime) / 3600
+            if last_modified_hours > self.cache_validity_hours:
+                logger.warning(f"Data file is {last_modified_hours:.1f} hours old (older than {self.cache_validity_hours} hours). Will re-fetch all symbols.")
+                cache_is_valid = False
+        
         # Load existing blacklist with expiry handling
         blacklisted_symbols = {}
         if self.blacklist_file.exists():
@@ -212,7 +257,7 @@ class FullMarketFundamentalCollector:
                             # Handle old format (backward compatibility)
                             blacklisted_symbols[item] = {
                                 'symbol': item,
-                                'added_at': None,  # No timestamp in old format
+                                'added_at': None, # No timestamp in old format
                                 'reason': 'unknown'
                             }
                 # Remove expired symbols
@@ -236,9 +281,42 @@ class FullMarketFundamentalCollector:
             except Exception as e:
                 logger.warning(f"Could not load blacklist file: {e}. Starting with an empty blacklist.")
         
-        # Filter out already cached and blacklisted symbols (only get symbol names for filtering)
-        blacklisted_symbol_names = set(blacklisted_symbols.keys())
-        symbols_to_process = [s for s in full_universe if s not in cached_symbols and s not in blacklisted_symbol_names]
+        # Filter symbols based on cache validity and processing log
+        if cache_is_valid and not processed_df.empty:
+            # Use both file modification time and processing log to determine what needs processing
+            symbols_to_process = []
+            current_time = datetime.now()
+            cache_validity_timedelta = timedelta(hours=self.cache_validity_hours)
+            
+            for symbol in full_universe:
+                # Skip if blacklisted
+                if symbol in blacklisted_symbols:
+                    continue
+                    
+                # Check if symbol exists in cache
+                symbol_in_cache = symbol in cached_symbols
+                
+                # Check if symbol was recently processed
+                recently_processed = False
+                if symbol in self.processing_log:
+                    try:
+                        last_processed_time = datetime.fromisoformat(self.processing_log[symbol])
+                        if current_time - last_processed_time <= cache_validity_timedelta:
+                            recently_processed = True
+                    except ValueError:
+                        # Invalid timestamp format, treat as not recently processed
+                        pass
+                
+                # Add to process list if not in cache or not recently processed
+                if not symbol_in_cache or not recently_processed:
+                    symbols_to_process.append(symbol)
+        else:
+            # Cache is invalid, process all non-blacklisted symbols
+            blacklisted_symbol_names = set(blacklisted_symbols.keys())
+            symbols_to_process = [s for s in full_universe if s not in blacklisted_symbol_names]
+        
+        logger.info(f"Found {len(cached_symbols)} symbols in the resumable cache.")
+        logger.info(f"Found {len(blacklisted_symbols)} symbols in the blacklist.")
 
         logger.info(f"Found {len(cached_symbols)} symbols in the resumable cache.")
         logger.info(f"Found {len(blacklisted_symbols)} symbols in the blacklist.")
@@ -251,9 +329,14 @@ class FullMarketFundamentalCollector:
             new_data_list = []
             newly_discarded_symbols = [] # To store symbols to add to blacklist (with metadata)
             
+            # Add batch processing with checkpointing
+            batch_size = 10  # Process 10 symbols at a time before saving
+            current_batch = []
+            batch_number = 1
+            
             for i, symbol in enumerate(symbols_to_process):
                 try:
-                    time.sleep(self.request_delay_sec)  # Respectful delay from config
+                    time.sleep(self.request_delay_sec) # Respectful delay from config
                     ticker = self._fetch_ticker_with_retry(symbol)
                     
                     # Field-Level Validation
@@ -277,6 +360,8 @@ class FullMarketFundamentalCollector:
                         'P/S': ps,
                         'EPS': float(ticker.eps) if ticker.eps is not None else np.nan,
                     })
+                    # Update processing log for successfully fetched symbol
+                    self._update_processing_log(symbol)
                     logger.info(f"  ({i+1}/{len(symbols_to_process)}) Fetched for {symbol}")
                 
                 except RequestException as re:
@@ -288,6 +373,17 @@ class FullMarketFundamentalCollector:
                         'added_at': datetime.now().isoformat(),
                         'reason': str(type(e).__name__)
                     }) # Add to blacklist for any unexpected error with metadata
+                
+                # Add symbol to current batch
+                current_batch.append(symbol)
+                
+                # Save progress every batch_size symbols or at the end
+                if len(current_batch) >= batch_size or i == len(symbols_to_process) - 1:
+                    # Save the processing log periodically in case of interruption
+                    self._save_processing_log()
+                    logger.info(f"💾 Batch {batch_number} completed: Processed {len(current_batch)} symbols. Processing log saved.")
+                    current_batch = []
+                    batch_number += 1
             
             if new_data_list:
                 new_data_df = pd.DataFrame(new_data_list)
@@ -324,6 +420,9 @@ class FullMarketFundamentalCollector:
         except Exception as e:
             logger.error(f"❌ Failed to save the final dataset: {e}")
 
+        # Save processing log at the end
+        self._save_processing_log()
+        
         # --- Stage 7: Final Validation ---
         logger.info("--- Stage 7: Final Data Validation ---")
         self._validate_final_data(df_clean)
