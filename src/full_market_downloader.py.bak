@@ -1,0 +1,554 @@
+# -*- coding: utf-8 -*-
+
+import pandas as pd
+import pytse_client as tse
+import time
+import logging
+import json
+from pathlib import Path
+from typing import List, Set, Optional, Dict
+import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+from tqdm import tqdm
+
+from src.config import PROJECT_ROOT, UNIVERSE_CREATOR, FULL_MARKET_DOWNLOADER
+
+# Setup Logging
+LOGS_DIR = PROJECT_ROOT / 'logs'
+LOGS_DIR.mkdir(exist_ok=True)
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler(LOGS_DIR / 'full_downloader.log', encoding='utf-8'),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
+
+class FullMarketDownloader:
+    def __init__(self):
+        # Load settings from config
+        self.data_dir = PROJECT_ROOT / FULL_MARKET_DOWNLOADER["DATA_DIR"]
+        self.cache_dir = PROJECT_ROOT / FULL_MARKET_DOWNLOADER["CACHE_DIR"]
+        self.universe_file = self.cache_dir / UNIVERSE_CREATOR["UNIVERSE_FILENAME"]
+        self.blacklist_file = self.cache_dir / FULL_MARKET_DOWNLOADER["BLACKLIST_FILENAME"]
+        self.benchmark_symbol = FULL_MARKET_DOWNLOADER["BENCHMARK_SYMBOL"]
+        self.api_delay = FULL_MARKET_DOWNLOADER["API_DELAY_SECONDS"]
+        self.cache_validity_hours = FULL_MARKET_DOWNLOADER["CACHE_VALIDITY_HOURS"]
+        
+        # Cache file paths
+        self.price_cache_file = self.cache_dir / "master_price_data.feather"
+        self.volume_cache_file = self.cache_dir / "master_volume_data.feather"
+        
+        # Create directories
+        self.data_dir.mkdir(exist_ok=True, parents=True)
+        self.cache_dir.mkdir(exist_ok=True)
+        
+        # Initialize state
+        self.blacklist = self._load_blacklist()
+        self.failure_counts = {}
+        self.max_consecutive_failures = 3
+        
+        # Initialize data containers
+        self.all_price_data = pd.DataFrame()
+        self.all_volume_data = pd.DataFrame()
+        
+        logger.info("Downloader initialized with settings:")
+        logger.info(f"Data directory: {self.data_dir}")
+        logger.info(f"Cache directory: {self.cache_dir}")
+        logger.info(f"Cache validity: {self.cache_validity_hours} hours")
+
+    def _check_cache_validity(self) -> bool:
+        """Check if cached data is still valid."""
+        if not (self.price_cache_file.exists() and self.volume_cache_file.exists()):
+            logger.info("Cache files don't exist.")
+            return False
+            
+        # Check modification time
+        current_time = time.time()
+        price_mtime = self.price_cache_file.stat().st_mtime
+        volume_mtime = self.volume_cache_file.stat().st_mtime
+        
+        cache_validity_seconds = self.cache_validity_hours * 3600
+        price_age = current_time - price_mtime
+        volume_age = current_time - volume_mtime
+        
+        logger.info(f"Price cache age: {price_age/3600:.1f} hours")
+        logger.info(f"Volume cache age: {volume_age/3600:.1f} hours")
+        
+        is_valid = (price_age < cache_validity_seconds and volume_age < cache_validity_seconds)
+        return is_valid
+
+    def _load_cache(self) -> bool:
+        """Load data from cache files if they exist and are valid."""
+        try:
+            if self._check_cache_validity():
+                logger.info("Loading data from cache...")
+                self.all_price_data = pd.read_feather(self.price_cache_file)
+                self.all_volume_data = pd.read_feather(self.volume_cache_file)
+                logger.info("✅ Successfully loaded data from cache")
+                return True
+            return False
+        except Exception as e:
+            logger.error(f"❌ Failed to load cache: {str(e)}")
+            return False
+
+    def _save_cache(self):
+        """Save current data to cache files."""
+        try:
+            if not self.all_price_data.empty:
+                self.all_price_data.to_feather(self.price_cache_file)
+            if not self.all_volume_data.empty:
+                self.all_volume_data.to_feather(self.volume_cache_file)
+            logger.info("✅ Successfully saved data to cache")
+        except Exception as e:
+            logger.error(f"❌ Failed to save cache: {str(e)}")
+
+    def _load_blacklist(self) -> Set[str]:
+        """Load blacklisted symbols."""
+        if self.blacklist_file.exists():
+            try:
+                with open(self.blacklist_file, 'r', encoding='utf-8') as f:
+                    return set(json.load(f))
+            except json.JSONDecodeError:
+                return set()
+        return set()
+
+    def _save_blacklist(self):
+        """Save blacklisted symbols."""
+        with open(self.blacklist_file, 'w', encoding='utf-8') as f:
+            json.dump(list(self.blacklist), f, ensure_ascii=False, indent=4)
+
+    def run_update(self):
+        """Run the market data update process."""
+        logger.info("🚀 Starting Market Data Update...")
+
+        # Try loading from cache first
+        if self._load_cache():
+            logger.info("Using cached data (still valid)")
+            return
+            
+        # Load universe
+        if not self.universe_file.exists():
+            raise FileNotFoundError(f"Universe file not found at {self.universe_file}")
+            
+        with open(self.universe_file, 'r', encoding='utf-8') as f:
+            universe = json.load(f)
+            
+        if not isinstance(universe, list) or not universe:
+            raise ValueError("Universe file is empty or invalid")
+            
+        # Add benchmark and filter blacklist
+        if self.benchmark_symbol not in universe:
+            universe.append(self.benchmark_symbol)
+            
+        symbols_to_process = [s for s in universe if s not in self.blacklist]
+        logger.info(f"Processing {len(symbols_to_process)} symbols...")
+        
+        # Download data for each symbol
+        all_price_data = []
+        all_volume_data = []
+        
+        for symbol in tqdm(symbols_to_process, desc="Downloading market data"):
+            try:
+                ticker = tse.Ticker(symbol)
+                history = ticker.history
+                
+                if history is not None and not history.empty:
+                    all_price_data.append(history[['close']])
+                    all_volume_data.append(history[['volume']])
+                    logger.info(f"✅ Successfully downloaded data for {symbol}")
+                else:
+                    logger.warning(f"⚠️ No data available for {symbol}")
+                    
+                time.sleep(self.api_delay)  # Rate limiting
+                
+            except Exception as e:
+                logger.error(f"❌ Failed to download {symbol}: {str(e)}")
+                continue
+                
+        # Combine all data
+        if all_price_data:
+            self.all_price_data = pd.concat(all_price_data, axis=1)
+            self.all_volume_data = pd.concat(all_volume_data, axis=1)
+            
+            # Save to cache
+            self._save_cache()
+            logger.info("✅ Market data update complete!")
+        else:
+            logger.error("❌ No data was downloaded!")
+
+if __name__ == "__main__":
+    downloader = FullMarketDownloader()
+    downloader.run_update()
+
+# --- Core Libraries ---
+import pandas as pd
+import pytse_client as tse
+import time
+import logging
+import json
+from pathlib import Path
+from typing import List, Set, Optional, Dict
+import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+from tqdm import tqdm  # For progress bar
+import traceback  # For detailed error logging
+
+# --- Project-Specific Imports ---
+from src.config import PROJECT_ROOT, UNIVERSE_CREATOR, FULL_MARKET_DOWNLOADER
+
+
+# --- Setup Logging ---
+LOGS_DIR = PROJECT_ROOT / 'logs'
+LOGS_DIR.mkdir(exist_ok=True)
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler(LOGS_DIR / 'full_downloader.log', encoding='utf-8'),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
+
+class FullMarketDownloader:
+    """
+    Intelligently downloads and performs incremental updates for stock data.
+    It uses a central configuration, loads a universe of symbols, and maintains
+    a blacklist of symbols that consistently fail to download.
+    """
+    def __init__(self):
+        self.all_price_data = pd.DataFrame()
+        self.all_volume_data = pd.DataFrame()
+        self._initialize_settings()
+    def __init__(self):
+        """
+        Initializes the downloader using settings from the central config file.
+        """
+        # --- Load paths and settings from config ---
+        self.data_dir = PROJECT_ROOT / FULL_MARKET_DOWNLOADER["DATA_DIR"]
+        self.cache_dir = PROJECT_ROOT / FULL_MARKET_DOWNLOADER["CACHE_DIR"]
+        self.universe_file = self.cache_dir / UNIVERSE_CREATOR["UNIVERSE_FILENAME"]
+        self.blacklist_file = self.cache_dir / FULL_MARKET_DOWNLOADER["BLACKLIST_FILENAME"]
+        self.benchmark_symbol = FULL_MARKET_DOWNLOADER["BENCHMARK_SYMBOL"]
+        self.api_delay = FULL_MARKET_DOWNLOADER["API_DELAY_SECONDS"]
+        self.cache_validity_hours = FULL_MARKET_DOWNLOADER["CACHE_VALIDITY_HOURS"]
+        self.price_cache_file = self.cache_dir / FULL_MARKET_DOWNLOADER["PRICE_DATA_CACHE"]
+        self.volume_cache_file = self.cache_dir / FULL_MARKET_DOWNLOADER["VOLUME_DATA_CACHE"]
+
+        # --- Setup directories and load state ---
+        self.data_dir.mkdir(exist_ok=True)
+        self.cache_dir.mkdir(exist_ok=True)
+        self.blacklist = self._load_blacklist()
+        self.failure_counts = {}  # Track consecutive failures for each symbol
+        self.max_consecutive_failures = 3  # Number of consecutive failures before blacklisting
+        
+        logger.info("Downloader initialized with the following settings:")
+        logger.info(f"Data directory: {self.data_dir}")
+        logger.info(f"Cache directory: {self.cache_dir}")
+        logger.info(f"Blacklist file: {self.blacklist_file}")
+
+    def _load_blacklist(self) -> Set[str]:
+        """Loads the set of blacklisted symbols from a JSON file."""
+        if self.blacklist_file.exists():
+            try:
+                with open(self.blacklist_file, 'r', encoding='utf-8') as f:
+                    blacklisted_symbols = json.load(f)
+                    logger.info(f"Loaded {len(blacklisted_symbols)} blacklisted symbols.")
+                    return set(blacklisted_symbols)
+            except (json.JSONDecodeError, TypeError):
+                logger.warning("Blacklist file is corrupted or empty. Starting with an empty list.")
+                return set()
+        return set()
+
+    def _save_blacklist(self):
+        """Saves the current set of blacklisted symbols to a JSON file."""
+        with open(self.blacklist_file, 'w', encoding='utf-8') as f:
+            json.dump(list(self.blacklist), f, ensure_ascii=False, indent=4)
+        logger.info(f"Saved {len(self.blacklist)} symbols to the blacklist.")
+
+    def _increment_failure_count(self, symbol: str):
+        """Increment the failure count for a symbol and check if it should be blacklisted."""
+        self.failure_counts[symbol] = self.failure_counts.get(symbol, 0) + 1
+        current_failures = self.failure_counts[symbol]
+        
+        if current_failures >= self.max_consecutive_failures:
+            logger.warning(f"🔴 Blacklisting {symbol} after {current_failures} consecutive failures.")
+            self.blacklist.add(symbol)
+            # Remove from failure counts since it's now blacklisted
+            if symbol in self.failure_counts:
+                del self.failure_counts[symbol]
+            return True
+        else:
+            logger.warning(f"⚠️  {symbol} failed, {current_failures}/{self.max_consecutive_failures} failures (will blacklist at {self.max_consecutive_failures}).")
+            return False
+
+    def _reset_failure_count(self, symbol: str):
+        """Reset the failure count for a symbol after successful download."""
+        if symbol in self.failure_counts:
+            del self.failure_counts[symbol]
+            
+    def _check_cache_validity(self) -> bool:
+        """
+        Check if cached data is still valid based on cache_validity_hours.
+        Returns True if cache is valid, False otherwise.
+        """
+        if not (self.price_cache_file.exists() and self.volume_cache_file.exists()):
+            return False
+            
+        # Check modification time of cache files
+        price_mtime = self.price_cache_file.stat().st_mtime
+        volume_mtime = self.volume_cache_file.stat().st_mtime
+        current_time = time.time()
+        
+        # Convert cache validity hours to seconds
+        cache_validity_seconds = self.cache_validity_hours * 3600
+        
+        # Check if both files are within validity period
+        price_valid = (current_time - price_mtime) < cache_validity_seconds
+        volume_valid = (current_time - volume_mtime) < cache_validity_seconds
+        
+        return price_valid and volume_valid
+
+    def _get_last_date_batch(self, symbols: List[str]) -> Dict[str, Optional[str]]:
+        """
+        Batch check of last dates for all symbols to avoid repeated file I/O operations.
+        Returns a dictionary mapping symbol to its last date or None if not recent.
+        """
+        last_dates = {}
+        
+        for symbol in symbols:
+            file_path = self.data_dir / f"{symbol}.csv"
+            if file_path.exists():
+                try:
+                    # Read just the last few rows to get the most recent date
+                    df = pd.read_csv(file_path, parse_dates=['date'], index_col='date', usecols=['date'])
+                    if not df.empty:
+                        last_date = df.index.max()
+                        # Check if data is recent (within last 7 days)
+                        current_date = pd.Timestamp.now().normalize()
+                        if (current_date - last_date).days <= 7:
+                            last_dates[symbol] = last_date.strftime('%Y-%m-%d')
+                        else:
+                            last_dates[symbol] = None  # Not recent, needs update
+                    else:
+                        last_dates[symbol] = None
+                except Exception:
+                    last_dates[symbol] = None # Error reading file, treat as needs update
+            else:
+                last_dates[symbol] = None  # File doesn't exist, needs full download
+        
+        return last_dates
+
+    def run_update(self):
+        """
+        Runs the main incremental update process with optimized caching.
+        """
+        logger.info("🚀 Starting Optimized Market Downloader...")
+        
+        # Check if cache is valid
+        if self._check_cache_validity():
+            logger.info("✅ Cache is still valid. Using cached data.")
+            return
+            
+        logger.info("Cache is invalid or missing. Starting fresh download...")
+
+        # STAGE 1: LOAD UNIVERSE
+        logger.info(f"--- Stage 1: Loading Universe from {self.universe_file} ---")
+        if not self.universe_file.exists():
+            logger.error(f"CRITICAL: Universe file not found at '{self.universe_file}'. Run universe_creator.py first.")
+            raise FileNotFoundError(f"Universe file not found at {self.universe_file}")
+
+        with open(self.universe_file, 'r', encoding='utf-8') as f:
+            universe = json.load(f)
+        
+        if not isinstance(universe, list) or not universe:
+            logger.error("❌ Universe file is empty or invalid. Aborting.")
+            return
+        
+        logger.info(f"✅ Successfully loaded {len(universe)} symbols from the universe file.")
+
+        # Add benchmark and filter out blacklisted symbols
+        if self.benchmark_symbol not in universe:
+            universe.append(self.benchmark_symbol)
+            logger.info(f"✅ '{self.benchmark_symbol}' added to the download queue.")
+        
+        symbols_to_download = [s for s in universe if s not in self.blacklist]
+        logger.info(f"Skipping {len(self.blacklist)} blacklisted symbols. Processing {len(symbols_to_download)} symbols.")
+
+        # STAGE 1.5: OPTIMIZED CACHING CHECK - BATCH PROCESS ALL SYMBOLS
+        logger.info(f"\n--- Stage 1.5: Optimized Caching Check for {len(symbols_to_download)} Symbols ---")
+        recent_symbols = set()
+        symbols_needing_update = []
+        
+        # Batch check all symbols for recency
+        last_dates = self._get_last_date_batch(symbols_to_download)
+        
+        for symbol, last_date in last_dates.items():
+            if last_date is not None:
+                # Data is recent, skip download
+                recent_symbols.add(symbol)
+                logger.debug(f"✅ {symbol} is already recent (last date: {last_date}). Will skip download.")
+            else:
+                # Data is not recent or doesn't exist, needs update
+                symbols_needing_update.append(symbol)
+        
+        logger.info(f"✅ Found {len(recent_symbols)} symbols with recent data. {len(symbols_needing_update)} symbols need updates.")
+
+        # STAGE 2: INCREMENTAL DOWNLOAD - ONLY FOR SYMBOLS THAT NEED UPDATES
+        logger.info(f"\n--- Stage 2: Downloading Updates for {len(symbols_needing_update)} Symbols ---")
+        successful_updates = 0
+        failed_updates = 0
+        newly_blacklisted = 0
+
+        # Add retry function for API calls
+        def fetch_with_retry(ticker, start_date, max_retries=3):
+            # Existing retry logic continues...
+            
+        def save_to_cache(self, price_data, volume_data):
+            """Save the downloaded data to cache files"""
+            try:
+                # Convert data to DataFrames if they're not already
+                if not isinstance(price_data, pd.DataFrame):
+                    price_data = pd.DataFrame(price_data)
+                if not isinstance(volume_data, pd.DataFrame):
+                    volume_data = pd.DataFrame(volume_data)
+                    
+                # Save to cache files
+                price_data.to_feather(self.price_cache_file)
+                volume_data.to_feather(self.volume_cache_file)
+                logger.info("✅ Successfully saved data to cache files")
+            except Exception as e:
+                logger.error(f"❌ Failed to save cache files: {str(e)}")
+```
+            for attempt in range(max_retries):
+                try:
+                    # Add some logging to debug the 'DataFrame not callable' issue
+                    logger.debug(f"Attempt {attempt + 1}: Fetching history for symbol with start_date={start_date}, type={type(start_date)}")
+                    
+                    # Check if ticker.history is callable (function) or property
+                    if callable(ticker.history):
+                        # If it's callable, call it as a function
+                        hist = ticker.history(start_date=start_date)
+                    else:
+                        # If it's a property, access it directly and then filter by date
+                        hist = ticker.history
+                        if start_date and hasattr(hist, 'loc'):
+                            # Filter the history DataFrame by start_date if provided
+                            try:
+                                hist = hist[hist.index >= start_date]
+                            except Exception:
+                                logger.warning(f"Could not filter history by start_date {start_date}, returning full history")
+                
+                    # Check if hist is actually a DataFrame or if there's an issue
+                    if hist is not None and hasattr(hist, 'empty'):
+                        # It's a proper DataFrame
+                        logger.debug(f"Received valid DataFrame for {symbol}, shape: {hist.shape if not hist.empty else 'empty'}")
+                        return hist
+                    else:
+                        logger.warning(f"⚠️  Received unexpected object type for {symbol}: {type(hist)}, attempt {attempt + 1}")
+                        if attempt < max_retries - 1:
+                            time.sleep(2 ** attempt)  # Exponential backoff
+                            continue
+                        else:
+                            raise ValueError(f"Received unexpected object type instead of DataFrame for {symbol}: {type(hist)}")
+                    
+                except Exception as e:
+                    logger.warning(f"⚠️ Attempt {attempt + 1} failed for {symbol}: {e}")
+                    if attempt < max_retries - 1:
+                        time.sleep(2 ** attempt)  # Exponential backoff
+                    else:
+                        raise e
+
+        # Use tqdm for progress bar - only for symbols that need updates
+        for symbol in tqdm(symbols_needing_update, desc="Downloading market data", unit="symbol"):
+            logger.debug(f"Starting processing for symbol: {symbol}")
+            time.sleep(self.api_delay)  # Be respectful to the API
+            file_path = self.data_dir / f"{symbol}.csv"
+            start_date = last_dates.get(symbol)
+
+            try:
+                logger.info(f"⬇️  Processing {symbol} (start_date: {start_date})...")
+                
+                # Fetch data (either full or incremental)
+                if symbol == self.benchmark_symbol:
+                    logger.debug(f"Creating FinancialIndex for benchmark symbol: {symbol}")
+                    ticker = tse.FinancialIndex(symbol)
+                else:
+                    logger.debug(f"Creating Ticker for symbol: {symbol}")
+                    ticker = tse.Ticker(symbol, adjust=True)
+                
+                # Fetch with retry mechanism
+                logger.debug(f"Calling fetch_with_retry for {symbol} with start_date: {start_date}")
+                hist = fetch_with_retry(ticker, start_date)
+                logger.debug(f"Received history for {symbol}, type: {type(hist)}, shape: {hist.shape if hist is not None and not hist.empty else 'N/A'}")
+
+                if hist is not None and not hist.empty:
+                    logger.debug(f"History for {symbol} is not empty, rows: {len(hist)}")
+                    if start_date and len(hist) > 1:
+                        # Append new data (excluding the first row which is a duplicate of the last known date)
+                        hist.iloc[1:].to_csv(file_path, mode='a', header=False, index=True, encoding='utf-8')
+                        logger.info(f"💾 Appended {len(hist)-1} new rows for {symbol}.")
+                    else:
+                        # Full download
+                        hist.to_csv(file_path, index=True, encoding='utf-8')
+                        logger.info(f"💾 Performed full download for {symbol} ({len(hist)} rows).")
+                    successful_updates += 1
+                    logger.debug(f"Successfully updated {symbol}, total successful: {successful_updates}")
+                else:
+                    logger.info(f"✅ No new data for {symbol}. Already up-to-date.")
+            
+            except IndexError as ie:
+                if 'single positional indexer is out-of-bounds' in str(ie):
+                    should_blacklist = self._increment_failure_count(symbol)
+                    if should_blacklist:
+                        newly_blacklisted += 1
+                else:
+                    logger.error(f"❌ An unexpected indexing error occurred for {symbol}: {ie}.")
+                    logger.debug(f"Full traceback for {symbol}: {traceback.format_exc()}")
+                    # Increment failure count for other index errors too
+                    self._increment_failure_count(symbol)
+                failed_updates += 1
+            except Exception as e:
+                logger.error(f"❌ A critical error occurred for {symbol}: {e}.")
+                logger.debug(f"Full traceback for {symbol}: {traceback.format_exc()}")
+                
+                # Check if this is a specific error that should trigger blacklisting
+                error_msg = str(e).lower()
+                if ('dataframe' in error_msg and 'callable' in error_msg) or 'no historical data' in error_msg:
+                    should_blacklist = self._increment_failure_count(symbol)
+                    if should_blacklist:
+                        newly_blacklisted += 1
+                else:
+                    # For other errors, increment failure count but don't immediately blacklist
+                    self._increment_failure_count(symbol)
+                
+                failed_updates += 1
+            else:
+                # If successful, reset failure count
+                self._reset_failure_count(symbol)
+                logger.debug(f"✅ Successfully processed {symbol}, reset failure count.")
+
+        # STAGE 3: SUMMARIZE - INCLUDE SKIPPED SYMBOLS
+        logger.info("\n--- Stage 3: Finalizing Run ---")
+        self._save_blacklist()
+        
+        logger.info("="*50)
+        logger.info("📊 OPTIMIZED DOWNLOADER SUMMARY")
+        logger.info("="*50)
+        logger.info(f"- Total symbols in universe: {len(symbols_to_download)}")
+        logger.info(f"- ✅ Symbols with recent data (skipped): {len(recent_symbols)}")
+        logger.info(f"- 🔄 Symbols processed for updates: {len(symbols_needing_update)}")
+        logger.info(f"- ✅ Successful updates/downloads: {successful_updates}")
+        logger.info(f"- ❌ Failed updates: {failed_updates}")
+        logger.info(f"- ⚫️ Newly blacklisted: {newly_blacklisted}")
+        logger.info(f"- 💤 Total skipped (cached): {len(recent_symbols)}")
+        logger.info("✅ Optimized Downloader finished its run.")
+
+if __name__ == "__main__":
+    downloader = FullMarketDownloader()
+    downloader.run_update()

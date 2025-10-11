@@ -39,3 +39,4 @@ docs/
 .continue/
 .kiro/
 .pytest_cache/
+memory-bank/

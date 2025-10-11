@@ -89,8 +89,8 @@ def run_pipeline():
             RESULTS_DIR.mkdir(exist_ok=True)
             final_results_path = RESULTS_DIR / 'final_results.json'
             
-            # Convert numpy types to native Python types for JSON serialization
-            def convert_numpy(obj):
+            # Convert numpy/pandas types to native Python types for JSON serialization
+            def convert_for_json(obj):
                 if isinstance(obj, np.integer):
                     return int(obj)
                 elif isinstance(obj, np.floating):
@@ -99,11 +99,34 @@ def run_pipeline():
                     return obj.tolist()
                 elif isinstance(obj, pd.Timestamp):
                     return obj.isoformat()
-                return obj
+                elif isinstance(obj, pd.Series):
+                    # Convert Series to dict and ensure keys are strings
+                    series_dict = {}
+                    for key, value in obj.items():
+                        safe_key = str(key) if not isinstance(key, (str, int, float, bool, type(None))) else key
+                        series_dict[safe_key] = convert_for_json(value)
+                    return series_dict
+                elif isinstance(obj, pd.DataFrame):
+                    return obj.to_dict(orient='records')
+                elif isinstance(obj, dict):
+                    # Handle nested dictionaries
+                    result = {}
+                    for key, value in obj.items():
+                        # Convert key to string if it's not serializable
+                        safe_key = str(key) if not isinstance(key, (str, int, float, bool, type(None))) else key
+                        result[safe_key] = convert_for_json(value)
+                    return result
+                elif isinstance(obj, list):
+                    return [convert_for_json(item) for item in obj]
+                elif isinstance(obj, (str, int, float, bool)) or obj is None:
+                    return obj
+                else:
+                    # For any other non-serializable objects, convert to string representation
+                    return str(obj)
 
             try:
                 with open(final_results_path, 'w', encoding='utf-8') as f:
-                    json.dump(final_strategies, f, indent=4, ensure_ascii=False, default=convert_numpy)
+                    json.dump(final_strategies, f, indent=4, ensure_ascii=False, default=convert_for_json)
                 logger.info(f"💾 Successfully saved final strategies to {final_results_path}")
             except Exception as e:
                 logger.error(f"❌ Failed to save final results to JSON: {e}")
