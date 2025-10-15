@@ -14,6 +14,7 @@ import numpy as np
 import logging
 from pathlib import Path
 import json
+from scipy.stats.mstats import winsorize
 
 # --- Import Configuration ---
 from src.config import FULL_MARKET_PREPROCESSOR as config
@@ -95,9 +96,8 @@ class FullMarketDataPreprocessor:
         master_price_df = pd.DataFrame(price_data)
         master_price_df.sort_index(inplace=True)
         
-        # Fill NaNs from non-overlapping trading days
-        master_price_df.ffill(inplace=True)
-        master_price_df.bfill(inplace=True)
+        # Skip forward/backward fill on price data to preserve data integrity and avoid creating artificial prices.
+        self.logger.info("Skipping forward/backward fill on price data to preserve data integrity and avoid creating artificial prices.")
         
         logger.info("✅ Master price DataFrame created and cleaned.")
         return master_price_df
@@ -127,9 +127,57 @@ class FullMarketDataPreprocessor:
         self.processing_log['last_preprocessing'] = datetime.now().isoformat()
         self._save_processing_log()
 
+    def _impute_missing_data(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Imputes missing values using group means and then overall medians."""
+        logger.info("--- Stage 3: Imputing Missing Data on Combined DataFrame ---")
+        numeric_cols = ['P/E', 'P/S', 'EPS']
+        df_imputed = df.copy()
+        
+        # Handle group_name imputation first
+        if df_imputed['group_name'].isnull().any():
+            missing_before = df_imputed['group_name'].isnull().sum()
+            df_imputed['group_name'] = df_imputed['group_name'].fillna('نامشخص')
+            imputed_count = missing_before - df_imputed['group_name'].isnull().sum()
+            if imputed_count > 0:
+                logger.info(f"   - Filled {imputed_count} missing 'group_name' values with 'نامشخص'.")
+        
+        for col in numeric_cols:
+            if col in df_imputed.columns and df_imputed[col].isnull().any():
+                missing_before = df_imputed[col].isnull().sum()
+                
+                # Impute with industry group mean (only for numeric columns)
+                group_means = df_imputed.groupby('group_name')[col].transform('mean')
+                df_imputed[col] = df_imputed[col].fillna(group_means)
+                imputed_by_group = missing_before - df_imputed[col].isnull().sum()
+                if imputed_by_group > 0:
+                    logger.info(f"   - Imputed {imputed_by_group} missing '{col}' values using industry group averages.")
+                
+                # Impute any remaining with overall median
+                if df_imputed[col].isnull().any():
+                    remaining_missing_before = df_imputed[col].isnull().sum()
+                    col_median = df_imputed[col].median()
+                    df_imputed[col] = df_imputed[col].fillna(col_median)
+                    logger.info(f"   - Filled {remaining_missing_before} remaining '{col}' NaNs with overall median ({col_median:.2f}).")
+        
+        return df_imputed
+
+    def _handle_outliers(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Caps outliers at the 1st and 99th percentiles."""
+        logger.info("--- Stage 4: Handling Outliers on Combined DataFrame ---")
+        numeric_cols = ['P/E', 'P/S', 'EPS']  # Extended to include EPS
+        df_clean = df.copy()
+        for col in numeric_cols:
+            if col in df_clean.columns and pd.api.types.is_numeric_dtype(df_clean[col]):
+                # Only apply winsorize to non-null values
+                mask = df_clean[col].notna()
+                if mask.any():
+                    df_clean.loc[mask, col] = winsorize(df_clean.loc[mask, col], limits=[0.01, 0.01])
+                    logger.info(f"   - Capped outliers in '{col}' at the 1st and 99th percentiles.")
+        return df_clean
+
     def _calculate_quantitative_metrics(self, price_df: pd.DataFrame) -> pd.DataFrame:
         """Calculates price-based metrics like returns, volatility, and momentum."""
-        logger.info("--- Stage 3: Calculating Quantitative Metrics for Full Market ---")
+        logger.info("--- Stage 5: Calculating Quantitative Metrics for Full Market ---")
         # Calculate daily returns
         returns = price_df.pct_change()
         
@@ -225,13 +273,37 @@ class FullMarketDataPreprocessor:
             logger.info("--- Stage 4: Merging Full Market Fundamental and Quantitative Data ---")
             master_analysis_df = fundamental_df.join(quantitative_df)
             
-            # Drop any rows that couldn't be joined properly
-            master_analysis_df.dropna(inplace=True)
-            
             logger.info("✅ Successfully merged dataframes.")
             
-            # Stage 5: Save the Final Output
-            logger.info("--- Stage 5: Saving Final Full Market Analysis-Ready Data ---")
+            # Impute NaN values for quantitative columns using industry group medians
+            quant_cols = ['Return', 'Volatility', 'Sharpe'] + [col for col in master_analysis_df.columns if 'Momentum_' in col]
+            
+            self.logger.info(f"Imputing NaN values for {len(quant_cols)} quantitative columns using industry group medians.")
+            
+            for col in quant_cols:
+                # Calculate the number of NaNs before imputation for logging
+                nan_count_before = master_analysis_df[col].isnull().sum()
+                if nan_count_before > 0:
+                    # Use transform to broadcast the median of each group to all its members
+                    master_analysis_df[col] = master_analysis_df.groupby('group_name')[col].transform(lambda x: x.fillna(x.median()))
+                    self.logger.info(f"Imputed {nan_count_before} NaN values in column '{col}'.")
+
+            # After filling by group, there might still be NaNs if a whole group is NaN. Fill these with the global median.
+            for col in quant_cols:
+                if master_analysis_df[col].isnull().any():
+                    global_median = master_analysis_df[col].median()
+                    master_analysis_df[col].fillna(global_median, inplace=True)
+                    self.logger.info(f"Filled remaining NaNs in '{col}' with global median.")
+            
+            logger.info("✅ Successfully merged dataframes with imputed values.")
+            
+            # Stage 5: Apply data cleaning (imputation and outlier handling)
+            logger.info("--- Stage 5: Applying Data Cleaning ---")
+            master_analysis_df = self._impute_missing_data(master_analysis_df)
+            master_analysis_df = self._handle_outliers(master_analysis_df)
+            
+            # Stage 6: Save the Final Output
+            logger.info("--- Stage 6: Saving Final Full Market Analysis-Ready Data ---")
             self.output_file.parent.mkdir(exist_ok=True)
             master_analysis_df.reset_index().to_feather(self.output_file)
             
@@ -254,3 +326,4 @@ class FullMarketDataPreprocessor:
 if __name__ == "__main__":
     preprocessor = FullMarketDataPreprocessor()
     preprocessor.run()
+

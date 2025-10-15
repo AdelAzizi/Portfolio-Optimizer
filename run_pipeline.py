@@ -17,7 +17,7 @@ import numpy as np
 from src.universe_creator import UniverseCreator
 from src.full_market_downloader import FullMarketDownloader
 from src.full_market_fundamental_collector import FullMarketFundamentalCollector
-from src.full_market_preprocessor import FullMarketDataPreprocessor
+from src.data_provider import DataProvider
 from src.strategy_tester import re_evaluate_top_strategies
 from src.validator import validate_and_select_best_strategies
 
@@ -47,45 +47,27 @@ def run_pipeline():
     logger.info("="*80)
 
     try:
-        # --- STAGE 0: UNIVERSE CREATION ---
-        logger.info("\n--- PIPELINE STAGE 0: CREATING INVESTMENT UNIVERSE ---")
-        universe_creator = UniverseCreator()
-        universe_creator.run()
-        logger.info("✅ Universe creation complete.")
+        # --- STAGE 0-2: COMBINED DATA COLLECTION ---
+        logger.info("\n--- PIPELINE STAGE 0-2: RUNNING COMPREHENSIVE DATA COLLECTION ---")
+        data_provider = DataProvider()
+        data_provider.update_market_data()
+        logger.info("✅ Comprehensive data collection complete.")
 
-        # --- STAGE 1: PRICE DATA COLLECTION ---
-        logger.info("\n--- PIPELINE STAGE 1: RUNNING PRICE DATA DOWNLOADER ---")
-        price_downloader = FullMarketDownloader()
-        price_downloader.run_update()
-        logger.info("✅ Price Data Downloader complete.")
-
-        # --- STAGE 2: FUNDAMENTAL DATA COLLECTION ---
-        logger.info("\n--- PIPELINE STAGE 2: RUNNING FUNDAMENTAL DATA COLLECTOR ---")
-        fundamental_collector = FullMarketFundamentalCollector()
-        fundamental_collector.run_collection()
-        logger.info("✅ Fundamental Data Collector complete.")
-
-        # --- STAGE 3: DATA PREPROCESSING ---
-        logger.info("\n--- PIPELINE STAGE 3: RUNNING DATA PREPROCESSOR ---")
-        preprocessor = FullMarketDataPreprocessor()
-        preprocessor.run()
-        logger.info("✅ Data Preprocessor complete.")
-
-        # --- STAGE 4: RE-EVALUATE TOP 300 STRATEGIES AND SELECT TOP 100 ---
-        logger.info("\n--- PIPELINE STAGE 4: RE-EVALUATING TOP 300 STRATEGIES ---")
+        # --- STAGE 3: RE-EVALUATE TOP 30 STRATEGIES ---
+        logger.info("\n--- PIPELINE STAGE 3: RE-EVALUATING TOP 30 STRATEGIES ---")
         top_100_results_df = re_evaluate_top_strategies()
         if top_100_results_df is None or top_100_results_df.empty:
             raise RuntimeError("Strategy re-evaluation failed to produce results.")
         logger.info("✅ Top 300 strategies re-evaluated and top 100 selected successfully.")
 
-        # --- STAGE 5: VALIDATE AND SELECT FINAL STRATEGIES ---
-        logger.info("\n--- PIPELINE STAGE 5: VALIDATING AND SELECTING FINAL STRATEGIES ---")
+        # --- STAGE 4: VALIDATE AND SELECT FINAL STRATEGIES ---
+        logger.info("\n--- PIPELINE STAGE 4: VALIDATING AND SELECTING FINAL STRATEGIES ---")
         final_strategies = validate_and_select_best_strategies(top_100_results_df)
         
         if final_strategies:
             logger.info("✅ Final strategy validation and selection process complete.")
-            # --- STAGE 6: SAVE FINAL RESULTS ---
-            logger.info("\n--- PIPELINE STAGE 6: SAVING FINAL STRATEGY RESULTS ---")
+            # --- STAGE 5: SAVE FINAL RESULTS ---
+            logger.info("\n--- PIPELINE STAGE 5: SAVING FINAL STRATEGY RESULTS ---")
             RESULTS_DIR.mkdir(exist_ok=True)
             final_results_path = RESULTS_DIR / 'final_results.json'
             

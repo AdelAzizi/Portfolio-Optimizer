@@ -17,6 +17,7 @@ UNIVERSE_CREATOR = {
         # Market flow types to include: 1 for Bourse, 2 for Fara Bourse
         "MARKET_FLOW_TYPES": [1, 2]
     },
+    "MIN_TRADING_DAYS": 30,
     "CACHE_DIR": "cache",
     "UNIVERSE_FILENAME": "universe.json"
 }

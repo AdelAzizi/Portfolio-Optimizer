@@ -40,3 +40,5 @@ docs/
 .kiro/
 .pytest_cache/
 memory-bank/
+.venv/
+prompts/

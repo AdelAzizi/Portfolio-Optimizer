@@ -25,6 +25,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_ROOT / 'data'
 CACHE_DIR = PROJECT_ROOT / 'cache'
 RESULTS_DIR = PROJECT_ROOT / 'results'
+FUNDAMENTAL_DATA_PATH = CACHE_DIR / 'master_fundamental_data.feather'
 
 # --- Setup Logging ---
 LOGS_DIR = PROJECT_ROOT / 'logs'
@@ -200,6 +201,7 @@ def validate_and_select_best_strategies(top_n_df: pd.DataFrame):
                 optimizer = MultiFactorOptimizer(
                     analysis_data_path=CACHE_DIR / 'full_analysis_ready_data.feather',
                     price_data_dir=DATA_DIR / 'full_market_data_csvs',
+                    fundamental_data_path=FUNDAMENTAL_DATA_PATH,
                     max_position_size=max_weight,
                     factor_weights=factor_weights,
                     momentum_period=momentum_period,

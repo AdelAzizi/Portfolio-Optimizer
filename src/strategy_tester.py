@@ -62,6 +62,7 @@ def re_evaluate_top_strategies() -> pd.DataFrame:
     data_dir = PROJECT_ROOT / 'data'
     analysis_data_path = cache_dir / 'full_analysis_ready_data.feather'
     price_data_dir = data_dir / 'full_market_data_csvs'
+    fundamental_data_path = cache_dir / 'master_fundamental_data.feather'
 
     # --- Check for a valid cache first ---
     if REEVALUATION_CACHE_PATH.exists():
@@ -127,6 +128,7 @@ def re_evaluate_top_strategies() -> pd.DataFrame:
             optimizer = MultiFactorOptimizer(
                 analysis_data_path=analysis_data_path,
                 price_data_dir=price_data_dir,
+                fundamental_data_path=fundamental_data_path,
                 max_position_size=max_weight,
                 factor_weights=factor_weights,
                 momentum_period=period,

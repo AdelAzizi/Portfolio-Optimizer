@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+ # -*- coding: utf-8 -*-
 
 # ==============================================================================
 # Title: Multi-Factor Portfolio Optimizer & Backtester
@@ -19,6 +19,9 @@ from pathlib import Path
 from pypfopt import expected_returns, risk_models, EfficientFrontier, exceptions
 import matplotlib.pyplot as plt
 from .config import TOP_N_CANDIDATES, RISK_FREE_RATE, TRADE_COST_PERCENT
+
+# --- Import factor calculator for dynamic factor calculation ---
+from . import factor_calculator
 
 # --- Suppress warnings for cleaner output ---
 warnings.filterwarnings('ignore', category=UserWarning)
@@ -46,11 +49,12 @@ class MultiFactorOptimizer:
     """
     Performs and validates a portfolio strategy using a rolling-window backtest.
     """
-    def __init__(self, analysis_data_path: Path, price_data_dir: Path,
+    def __init__(self, analysis_data_path: Path, price_data_dir: Path, fundamental_data_path: Path,
                  max_position_size: float, factor_weights: dict, momentum_period: str,
                  top_n_candidates: int = TOP_N_CANDIDATES, commission_rate: float = None, slippage_pct: float = None):
         self.analysis_data_path = analysis_data_path
         self.price_data_dir = price_data_dir
+        self.fundamental_data_path = fundamental_data_path
         self.max_position_size = max_position_size
         self.top_n_candidates = top_n_candidates
         self.factor_weights = factor_weights
@@ -60,21 +64,23 @@ class MultiFactorOptimizer:
         
         self.analysis_df = None
         self.master_price_df = None
+        self.master_fundamental_df = None
         
         logger.info(f"🚀 Initialized Optimizer with Momentum: {self.momentum_period}, Weights: {self.factor_weights}, "
                    f"Commission: {self.commission_rate:.3f}, Slippage: {self.slippage_pct:.3f}")
 
     def _load_data(self):
-        """Loads all necessary analysis and price data into memory."""
-        if self.analysis_df is not None and self.master_price_df is not None:
+        """Loads all necessary analysis, price, and fundamental data into memory."""
+        if self.master_price_df is not None and self.master_fundamental_df is not None:
             return
         logger.info("--- Loading All Required Data for Analysis ---")
-        if not self.analysis_data_path.exists():
-            raise FileNotFoundError(f"Analysis data not found at {self.analysis_data_path}")
+        if not self.fundamental_data_path.exists():
+            raise FileNotFoundError(f"Fundamental data not found at {self.fundamental_data_path}")
         
-        self.analysis_df = pd.read_feather(self.analysis_data_path).set_index('symbol')
+        self.master_fundamental_df = pd.read_feather(self.fundamental_data_path).set_index('symbol')
         
-        all_symbols = self.analysis_df.index.tolist() + ['شاخص کل']
+        # Load price data for all symbols in the fundamental dataset plus the benchmark
+        all_symbols = self.master_fundamental_df.index.tolist() + ['شاخص کل']
         price_data = {}
         for symbol in all_symbols:
             file_path = self.price_data_dir / f"{symbol}.csv"
@@ -85,21 +91,24 @@ class MultiFactorOptimizer:
                 price_data[symbol] = temp_df
         
         self.master_price_df = pd.DataFrame(price_data).sort_index().ffill().bfill()
-        logger.info(f"✅ Loaded data for {len(self.analysis_df)} symbols.")
+        logger.info(f"✅ Loaded data for {len(self.master_fundamental_df)} symbols.")
 
-    def screen_stocks(self) -> list:
+    def screen_stocks(self, factors_df: pd.DataFrame) -> list:
         """
-        Screens and ranks stocks based on a multi-factor model.
+        Screens and ranks stocks based on a multi-factor model using dynamic factors.
+    
+        Args:
+            factors_df: DataFrame with calculated factors for the current date
     
         Returns:
             list: A list of the top N candidate stock symbols.
         """
         logger.info(f"--- Screening with weights: {self.factor_weights} & period: {self.momentum_period} ---")
-        df = self.analysis_df.copy()
+        df = factors_df.copy()
 
         momentum_col = f"Momentum_{self.momentum_period}"
         if momentum_col not in df.columns:
-            logger.error(f"CRITICAL: Momentum column '{momentum_col}' not found in analysis data.")
+            logger.error(f"CRITICAL: Momentum column '{momentum_col}' not found in factors data.")
             raise ValueError(f"Missing momentum column: {momentum_col}")
 
         # Factor 1: Value (lower is better)
@@ -192,7 +201,7 @@ class MultiFactorOptimizer:
     def run_rolling_backtest(self, years: int = 3, rebalance_period_days: int = 90) -> dict:
         """
         Performs a rolling backtest with periodic rebalancing, transaction cost
-        simulation, and turnover analysis.
+        simulation, and turnover analysis using dynamic factor calculation.
         """
         self._load_data()
         logger.info(f"--- Starting Rolling Backtest: {years} years, rebalancing every {rebalance_period_days} days ---")
@@ -236,8 +245,16 @@ class MultiFactorOptimizer:
                 logger.warning(f"  -> No historical price data for lookback ending {lookback_end_date.date()}. Skipping.")
                 continue
 
+            # --- Dynamic Factor Calculation ---
+            # Calculate factors dynamically for the current rebalance date using only historical data
+            factors_df = factor_calculator.calculate_factors_for_date(
+                price_df=historical_prices,
+                fundamental_df=self.master_fundamental_df,
+                current_date=actual_rebalance_date
+            )
+
             # --- Get New Portfolio Weights ---
-            candidate_symbols = self.screen_stocks()
+            candidate_symbols = self.screen_stocks(factors_df)
             new_weights = self._get_portfolio_for_date(historical_prices, candidate_symbols)
 
             if not new_weights:
@@ -405,6 +422,7 @@ def main():
     # --- Define common paths ---
     analysis_data_path = CACHE_DIR / 'full_analysis_ready_data.feather'
     price_data_dir = DATA_DIR / 'full_market_data_csvs'
+    fundamental_data_path = CACHE_DIR / 'clean_full_fundamental_data.feather'
     
     # --- Loop through each strategy, run analysis, and store results ---
     for strategy_name, strategy_config in STRATEGY_CONFIGS.items():
@@ -414,6 +432,7 @@ def main():
         optimizer = MultiFactorOptimizer(
             analysis_data_path=analysis_data_path,
             price_data_dir=price_data_dir,
+            fundamental_data_path=fundamental_data_path,
             max_position_size=MAX_POSITION_SIZE,
             factor_weights=strategy_config['factor_weights'],
             momentum_period=strategy_config['momentum_period']
